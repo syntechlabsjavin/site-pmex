@@ -1,6 +1,6 @@
 # PMEX content and design requirements
 
-Apply these requirements to every page and future edit. They supersede old reference copy and earlier styling instructions.
+Apply these requirements to every page and future edit. They supersede old reference copy and earlier styling instructions...
 
 ## Single stylesheet: dist/css/root.css (supersedes every rule below that names another CSS file)
 
