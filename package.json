@@ -1,0 +1,36 @@
+{
+  "name": "pmex2.0",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "http-server dist -p 8001 -c-1",
+    "serve": "http-server dist -p 8001 -c-1",
+    "build": "echo Static site: nothing to build. dist/ is published as it is.",
+    "start": "node server",
+    "generate:specialties": "node scripts/archive/generate-specialties.js",
+    "icons:clean": "node scripts/build/remove-decorative-emojis.js",
+    "icons:check": "node scripts/build/remove-decorative-emojis.js --check",
+    "check:typography": "node scripts/checks/check-site-typography.js",
+    "buttons:apply": "node scripts/build/apply-site-buttons.js",
+    "check:buttons": "node scripts/checks/check-site-buttons.js",
+    "shell:sync": "node scripts/build/sync-site-shell.js",
+    "shell:check": "node scripts/build/sync-site-shell.js --check",
+    "icons:share": "node scripts/build/share-site-icons.js",
+    "icons:shared:check": "node scripts/build/share-site-icons.js --check"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "colors": "*",
+    "express": "*",
+    "tailwindcss": "^4.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "http-server": "^14.1.1"
+  }
+}

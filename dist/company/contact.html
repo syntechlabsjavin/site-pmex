@@ -1,0 +1,387 @@
+<!doctype html><html lang="en" data-css="site-buttons reference-typography style specialty-site-palette contact site-motion-2 site-faq-accordion-3 specialty-homepage-layout navbar-d90c332f services-mega pmex-common"><head>
+<link rel="stylesheet" href="/css/root.css"/>
+
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="description" content="Get in touch with PMEX. Reach our billing specialists, request a free demo, or ask about our services. (516) 208-4446 | info@pmexinc.com"/><title>Contact Us | PMEX Medical Billing</title>
+
+
+
+<script src="/js/demo-modal.js" defer></script>
+<script src="/js/marquee-track.js" defer></script>
+<script src="/js/site-motion.js" defer></script>
+<script src="/js/reference-typography.js" defer></script>
+<script src="/js/services-mega.js" defer></script>
+</head>
+<body class="about-page contact-page">
+<script src="/js/site-shell.js" data-include="header"></script>
+<main id="main-content" class="specialty-content contact-content">
+
+<!-- HERO -->
+<section id="contact-hero" class="hero-bg-gradient pmex-hero-contact">
+  <div>
+    <p class="bh-eyebrow">Contact PMEX</p>
+    <h1 class="bh-hero-title">Get in touch with our <br><span>billing specialists.</span></h1>
+    <p class="bh-hero-para">Whether you are looking to switch billing companies, get a pricing quote, ask a specific billing question, or schedule a demo, we respond within 24 hours.</p>
+  </div>
+</section>
+
+<!-- PMEX INTEGRATION LOGO MARQUEE -->
+      <script src="/js/site-shell.js" data-include="marquee"></script>
+
+
+
+<!-- CONTACT -->
+<section id="contact-body">
+  <div class="contact-grid">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <div class="contact-card">
+        <div class="contact-card-head"><span class="contact-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><use href="/icons/site-icons.svg#phone-rounded"></use></svg></span><div class="contact-card-title">Call Us</div></div>
+        <a class="contact-link contact-link-lg" href="tel:5162084446">(516) 208-4446</a>
+        <p class="contact-note">Mon to Fri, 9am to 6pm EST</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-head"><span class="contact-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><use href="/icons/site-icons.svg#mail"></use></svg></span><div class="contact-card-title">Email Us</div></div>
+        <a class="contact-link" href="mailto:info@pmexinc.com">info@pmexinc.com</a><br>
+        <a class="contact-link" href="mailto:help@pmexinc.com">help@pmexinc.com</a>
+        <p class="contact-note">Response within 24 hours</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-head"><span class="contact-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><use href="/icons/site-icons.svg#map-pin"></use></svg></span><div class="contact-card-title">Our Address</div></div>
+        <p class="contact-address">1979 Marcus Ave, Suite 210<br>Lake Success, NY 11042</p>
+        <p class="contact-address contact-address-2">626 RexCorp Plaza, 6th Floor<br>Uniondale, NY 11556</p>
+      </div>
+      <div class="contact-card contact-card-dark">
+        <div class="contact-card-head"><span class="contact-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><use href="/icons/site-icons.svg#office-building"></use></svg></span><div class="contact-card-title">Company Based in USA</div></div>
+        <p class="contact-address">Serving healthcare providers across all 50 U.S. states. HIPAA Compliant. AAPC Certified. BBB A+.</p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrap">
+      <h2>Send us a message</h2>
+      <p class="contact-form-sub">Fill out the form below and a PMEX specialist will contact you within 24 hours.</p>
+      <form id="contact-form" onsubmit="handleContact(event)">
+        <div class="contact-row">
+          <div><label for="c-first">First Name <span>*</span></label><input id="c-first" type="text" required placeholder="First name"></div>
+          <div><label for="c-last">Last Name <span>*</span></label><input id="c-last" type="text" required placeholder="Last name"></div>
+        </div>
+        <div class="contact-row">
+          <div><label for="c-email">Email <span>*</span></label><input id="c-email" type="email" required placeholder="your@email.com"></div>
+          <div><label for="c-phone">Phone <span>*</span></label><input id="c-phone" type="tel" required placeholder="(555) 000-0000"></div>
+        </div>
+        <div><label for="c-practice">Practice Name</label><input id="c-practice" type="text" placeholder="Your practice or organization"></div>
+        <div><label for="c-topic">How Can We Help? <span>*</span></label>
+          <select id="c-topic" required>
+            <option value="">Select a topic</option>
+            <option>Medical Billing Services</option>
+            <option>Denial Management</option>
+            <option>Provider Credentialing</option>
+            <option>Revenue Cycle Management</option>
+            <option>Pricing and Plans</option>
+            <option>PMEX Portal Access</option>
+            <option>Switch from Current Billing Company</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div><label for="c-message">Message</label><textarea id="c-message" rows="4" placeholder="Tell us more about your practice and what you need..."></textarea></div>
+        <button type="submit" class="contact-submit">Send Message</button>
+        <p class="contact-fine">We respond within 24 hours. (516) 208-4446</p>
+      </form>
+      <div id="contact-success" role="status">
+        <div class="contact-icon">✓</div>
+        <h3>Message Sent!</h3>
+        <p>Thank you for reaching out. A PMEX specialist will contact you within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-specialty-marquee class="border-y border-[var(--c-AAD39C)] bg-[var(--c-FFFFFF)] py-6">
+        <div class="marquee-container w-full overflow-hidden" data-pmex-marquee>
+          <div
+            class="flex w-max animate-marquee whitespace-nowrap"
+            data-pmex-marquee-track
+          >
+            <!-- =====================================================
+                LOGO SET 01
+            ====================================================== -->
+
+            <div class="flex shrink-0 items-center gap-16 pr-16">
+              <!-- AdvancedMD -->
+              <img
+                src="/img/marquee logo/advancedmd.svg"
+                alt="AdvancedMD"
+                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
+              />
+
+              <!-- Allscripts -->
+              <img
+                src="/img/marquee logo/Allscripts.svg"
+                alt="Allscripts"
+                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- athenahealth -->
+              <img
+                src="/img/marquee logo/athenahealth.svg"
+                alt="athenahealth"
+                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- Cerner -->
+              <img
+                src="/img/marquee logo/Cerner.svg"
+                alt="Cerner"
+                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- ChiroTouch -->
+              <img
+                src="/img/marquee logo/ChiroTouch.svg"
+                alt="ChiroTouch"
+                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- Dentrix -->
+              <img
+                src="/img/marquee logo/dentrix-logo-1400.svg"
+                alt="Dentrix"
+                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- DrChrono -->
+              <img
+                src="/img/marquee logo/DrChrono.svg"
+                alt="DrChrono"
+                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- eClinicalWorks -->
+              <img
+                src="/img/marquee logo/eclinicalworks.svg"
+                alt="eClinicalWorks"
+                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- ECLIPSE -->
+              <img
+                src="/img/marquee logo/ECLIPSE.svg"
+                alt="ECLIPSE"
+                class="h-7 w-auto max-w-[140px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
+              />
+
+              <!-- Epic -->
+              <img
+                src="/img/marquee logo/epic.svg"
+                alt="Epic"
+                class="h-5 w-auto max-w-[100px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- Genesis Chiropractic -->
+              <img
+                src="/img/marquee logo/Genesis-Chiropractic-Software-Logo.svg"
+                alt="Genesis Chiropractic"
+                class="h-7 w-auto max-w-[150px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
+              />
+
+              <!-- Jane -->
+              <img
+                src="/img/marquee logo/Jane.svg"
+                alt="Jane App"
+                class="h-7 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
+              />
+
+              <!-- Jopari -->
+              <img
+                src="/img/marquee logo/Jopari.svg"
+                alt="Jopari"
+                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- Kareo -->
+              <img
+                src="/img/marquee logo/Kareo.svg"
+                alt="Kareo"
+                class="h-6 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
+              />
+
+              <!-- ModMed -->
+              <img
+                src="/img/marquee logo/modmed.svg"
+                alt="ModMed"
+                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- NextGen -->
+              <img
+                src="/img/marquee logo/NexGen.svg"
+                alt="NextGen"
+                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- Office Ally -->
+              <img
+                src="/img/marquee logo/office-ally.svg"
+                alt="Office Ally"
+                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- Optum -->
+              <img
+                src="/img/marquee logo/optum.svg"
+                alt="Optum"
+                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <!-- Practice Fusion -->
+              <img
+                src="/img/marquee logo/Practice-Fusion.svg"
+                alt="Practice Fusion"
+                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
+              />
+
+              <!-- Tebra -->
+              <img
+                src="/img/marquee logo/tebra.svg"
+                alt="Tebra"
+                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+            </div>
+
+            <!-- =====================================================
+                LOGO SET 02 — DUPLICATE FOR SEAMLESS LOOP
+            ====================================================== -->
+
+            <div
+              class="flex shrink-0 items-center gap-16 pr-16"
+              aria-hidden="true"
+            >
+              <img
+                src="/img/marquee logo/advancedmd.svg"
+                alt=""
+                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
+              />
+
+              <img
+                src="/img/marquee logo/Allscripts.svg"
+                alt=""
+                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/athenahealth.svg"
+                alt=""
+                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/Cerner.svg"
+                alt=""
+                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/ChiroTouch.svg"
+                alt=""
+                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/dentrix-logo-1400.svg"
+                alt=""
+                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/DrChrono.svg"
+                alt=""
+                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/eclinicalworks.svg"
+                alt=""
+                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/ECLIPSE.svg"
+                alt=""
+                class="h-7 w-auto max-w-[140px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
+              />
+
+              <img
+                src="/img/marquee logo/epic.svg"
+                alt=""
+                class="h-5 w-auto max-w-[100px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/Genesis-Chiropractic-Software-Logo.svg"
+                alt=""
+                class="h-7 w-auto max-w-[150px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
+              />
+
+              <img
+                src="/img/marquee logo/Jane.svg"
+                alt=""
+                class="h-7 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
+              />
+
+              <img
+                src="/img/marquee logo/Jopari.svg"
+                alt=""
+                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/Kareo.svg"
+                alt=""
+                class="h-6 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
+              />
+
+              <img
+                src="/img/marquee logo/modmed.svg"
+                alt=""
+                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/NexGen.svg"
+                alt=""
+                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/office-ally.svg"
+                alt=""
+                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/optum.svg"
+                alt=""
+                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+
+              <img
+                src="/img/marquee logo/Practice-Fusion.svg"
+                alt=""
+                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
+              />
+
+              <img
+                src="/img/marquee logo/tebra.svg"
+                alt=""
+                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+</main>
+<script src="/js/site-shell.js" data-include="footer"></script>
+<script>function handleContact(e){e.preventDefault();e.target.style.display="none";document.getElementById("contact-success").style.display="block";}</script>
+<script src="/js/metric-countup.js" defer></script>
+</body></html>

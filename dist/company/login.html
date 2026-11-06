@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-css="site-buttons reference-typography style site-motion site-faq-accordion specialty-site-palette navbar-d90c332f services-mega pmex-common">
+
+<head>
+<link rel="stylesheet" href="/css/root.css"/>
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login – PMEX | Financial Software for Healthcare</title>
+    <meta name="description" content="Log in to your PMEX account to manage billing and revenue operations.">
+    
+    <script src="/js/demo-modal.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="/js/nav-dropdown.js" defer></script>
+<script src="/js/site-motion.js" defer></script>
+<script src="/js/reference-typography.js" defer></script>
+<script src="/js/services-mega.js" defer></script>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between font-['Inter'] bg-[var(--c-F5F6F3)]">
+<script src="/js/site-shell.js" data-include="header"></script>
+
+    <!-- Top spacer for centering alignment -->
+    <div class="flex-grow flex items-center justify-center py-8 sm:py-10 px-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-[540px] flex flex-col items-center">
+
+            <!-- ===== LOGO HEADER ===== -->
+            <div class="flex items-center justify-center mb-6 sm:mb-8 md:mb-10 select-none">
+                <img src="/img/logo/grey-logo-login.svg" alt="PMEX Logo"
+                    class="w-auto h-auto max-w-[340px] sm:max-w-[520px] md:max-w-[560px] lg:max-w-[640px] max-h-[90px] sm:max-h-[110px] md:max-h-[135px] object-contain">
+            </div>
+
+            <!-- ===== LOGIN CARD ===== -->
+            <div
+                class="pmex-color-background w-full bg-[var(--c-F1F3EE)] border border-[var(--c-E2E5DD)] rounded-[12px] py-4 sm:py-6 px-4 sm:px-4 shadow-[0_4px_24px_var(--c-000000-a1)]">
+                <form action="#" method="POST" class="space-y-5 sm:space-y-7" onsubmit="event.preventDefault();">
+
+                    <!-- Email field -->
+                    <div>
+                        <label for="email"
+                            class="block text-[13px] sm:text-[14px] font-medium text-[var(--c-7C7C7A)] mb-2">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full bg-[var(--c-F8FBF0)] border border-[var(--c-D1D4CB)] rounded-lg px-3.5 sm:px-4.5 py-3 sm:py-3.5 text-[15px] sm:text-[16px] text-[var(--c-505050)] placeholder-gray-400 focus:outline-none focus:border-[var(--c-7BA175)] focus:ring-1 focus:ring-[var(--c-7BA175)] transition-all">
+                    </div>
+
+                    <!-- Password field -->
+                    <div>
+                        <label for="password"
+                            class="block text-[13px] sm:text-[14px] font-medium text-[var(--c-7C7C7A)] mb-2">Password</label>
+                        <input type="password" id="password" name="password" required
+                            class="w-full bg-[var(--c-F8FBF0)] border border-[var(--c-D1D4CB)] rounded-lg px-3.5 sm:px-4.5 py-3 sm:py-3.5 text-[15px] sm:text-[16px] text-[var(--c-505050)] placeholder-gray-400 focus:outline-none focus:border-[var(--c-7BA175)] focus:ring-1 focus:ring-[var(--c-7BA175)] transition-all">
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-1 sm:pt-2">
+                        <button type="submit"
+                            class="w-full bg-[var(--c-7BA175)] hover:bg-[var(--c-6C9167)] active:bg-[var(--c-5F805A)] text-[var(--c-FFFFFF)] py-3.5 sm:py-4 rounded-lg text-[15px] sm:text-[16px] font-medium transition-all cursor-pointer text-center border border-[var(--c-FFFFFF)]/10 pmex-st-a36b9b"
+                           >
+                            Login
+                        </button>
+                    </div>
+
+                    <!-- Reset Password Link -->
+                    <div class="text-center pt-1 sm:pt-2">
+                        <a href="#"
+                            class="text-[14px] sm:text-[16px] font-medium text-[var(--c-7BA175)] hover:text-[var(--c-6C9167)] hover:underline transition-colors">
+                            Reset Password
+                        </a>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- ===== FOOTER LINKS ===== -->
+            <div
+                class="mt-6 sm:mt-8 md:mt-10 flex flex-col items-center gap-3 sm:gap-4 text-[14px] sm:text-[16px] text-[var(--c-959085)] px-4">
+                <div class="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-8 gap-y-2">
+                    <a href="#"
+                        class="hover:text-[var(--c-505050)] transition-colors underline decoration-1 underline-offset-4 whitespace-nowrap">Privacy
+                        Policy</a>
+                    <a href="#"
+                        class="hover:text-[var(--c-505050)] transition-colors underline decoration-1 underline-offset-4 whitespace-nowrap">Responsible
+                        Disclosure</a>
+                    <a href="#"
+                        class="hover:text-[var(--c-505050)] transition-colors underline decoration-1 underline-offset-4 whitespace-nowrap">Terms
+                        of Service</a>
+                </div>
+                <p class="text-[10px] sm:text-[11px] text-[var(--c-B0ACA2)] tracking-wide select-none text-center">
+                    © 2026 Juniper Solutions, Inc. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+<script src="/js/metric-countup.js" defer></script>
+</body>
+
+</html>

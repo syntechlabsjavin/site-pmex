@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 36">
+  <rect x="2" y="2" width="32" height="32" rx="7" fill="#008080"/>
+  <path d="M10 11h16M10 18h16M10 25h9" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="44" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="800" fill="#1B3316" letter-spacing="-0.3">Therapy<tspan fill="#008080" font-weight="700">Notes</tspan></text>
+</svg>

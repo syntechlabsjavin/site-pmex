@@ -1,0 +1,44 @@
+# PMEX content and design requirements
+
+Apply these requirements to every page and future edit. They supersede old reference copy and earlier styling instructions.
+
+## Single stylesheet: dist/css/root.css (supersedes every rule below that names another CSS file)
+
+- Every page loads exactly one stylesheet: `<link rel="stylesheet" href="/css/root.css"/>`. There is no style.css, no other file in dist/css and no inline `<style>` block. Do not add any.
+- root.css holds, in order: the color variables `--c-HEX` (+ `--brand-*`), the design tokens (`--grad-*`, `--shadow-*`, `--transition-*`, `--lift-hover`), the `.c-HEX` / `.bg-c-HEX` / `.bdr-c-HEX` classes, then one block per former stylesheet or inline style block.
+- Every rule of those blocks starts with `[data-css~="name"]`. A page lists the blocks it uses in `<html data-css="...">`, in the same order it used to load them. A new page copies the `data-css` value of a sibling page of the same family. New styles go into the matching block of root.css (or a new block with a new name plus a `data-css` entry), never into a new file.
+- No color literal anywhere (root.css declarations, `style=""` attributes, page scripts). Write `var(--c-HEX)`. A color that does not exist yet is added once to the color variables of root.css first. The only exceptions are `@property` initial values and class names such as `bg-[#AAD39C]`.
+- Where older rules below say "site-buttons.css", "reference-typography.css", "specialty-site-palette.css" and so on, they now mean the block of root.css with that name (`[data-css~="site-buttons"]`, `[data-css~="reference-typography"]`, ...). The block order in root.css already keeps site-buttons first and reference-typography second.
+- Tailwind output (the old dist/style.css) is frozen inside root.css (block `style`). New Tailwind utility classes are not generated automatically; write plain CSS in root.css instead.
+
+- No em dashes, "No contracts", PMEX EHR product claims, offshore language, AI product claims, or descriptions of automated billing, scheduling, or reminders. PMEX staff perform this work.
+- Describe PMEX as a company based in USA serving USA clients. Do not claim a USA-based team.
+- Phone: (516) 208-4446. Links: tel:5162084446.
+- Homepage hero actions: Book a Demo and Book Free Consultation.
+- Specialty acquisition actions: Schedule a Demo and Request Free Audit. Preserve the purpose of functional links and controls.
+- PMEX Portal is a real-time reporting dashboard updated by the PMEX billing team. No EHR product; no integrations required.
+- Security language: HIPAA Compliant + Active Encryption. No SOC 2 certification claims. Encryption wording: encrypted in transit and at rest.
+- Approved pricing: from 2.49% of collections; fixed plans from $450/month. Other PMEX prices require user approval. Clinical reimbursement figures are distinct from PMEX service fees.
+- Keep headings concise and no more than two rendered lines. Do not use clipping or ellipses to hide content.
+- Primary #3F9A4B, dark #2E4A25, light #AAD39C, tint #F8FBF0, text #505050, borders #E0E0DA, white #FFFFFF. Orange #E85D3F is for H1 emphasis only.
+- Inter typography: desktop H1 48-56px/800, H2 32-36px/700-800, H3 22-26px/700, H4 16-18px/700, body 16px/400, meta 12-14px/400-600, CTA 15-16px/700. Adapt responsively while keeping complete headings visible.
+
+Run npm run content:apply after importing copy or rebuilding styles. Run npm run content:check and inspect desktop and mobile layouts. Review grammar and meaning as well as automated checks.
+
+- Do not add decorative emojis or emoji badges. Use restrained monochrome SVG icons for useful controls. Run npm run icons:clean after generating or importing pages, then npm run icons:check.
+
+- Latest typography reference: C:/Users/MY TRADERS/Downloads/physical-therapy.html. Its typography supersedes earlier heading scales: Inter; H1 22/30/36px, weight 400, line-height 1.25, #505050 with #3f9a4b emphasis; hero description 14/16px, #676767, line-height 1.625. Keep reference-typography.css first in the head and preserve smaller label/card roles.
+
+- After typography changes, run npm run check:typography. This checks every HTML page at 1440, 768, and 320 pixels for hero/card font size, weight, color, and horizontal overflow. Keep reference-typography.css before every other stylesheet; important cascade layers depend on that order. Use semantic data-reference-* and data-consistent-card-* roles for inline-styled and class-styled pages alike.
+
+- Button single source: dist/css/site-buttons.css and data-site-button. Load site-buttons.css first, then reference-typography.css, then legacy stylesheets. Shared CTA/form button: #AAD39C fill, #2E4A25 text, Inter 14px/400, 20px line-height, 10px 24px padding, pill radius. Run npm run buttons:apply for new pages and npm run check:buttons after changes. Do not restyle accordion, menu, or tab controls as CTA buttons.
+
+- Site shell single source: every imported specialty page (Tailwind pages with the hero-bg-gradient hero, such as physical-therapy, cardiology, orthopedic, chiropractic, behavioral-health, mental-health-billing, family-medicine) must keep the legacy header, logo marquee (both the one under the hero and the logo strip above the footer, when a page has one) and footer. Sources: dist/partials/header.html, marquee.html, footer.html. Pages do not carry a copy: each page has a loader tag (<script src="/js/site-shell.js" data-include="header"></script>, also "marquee" and "footer") that dist/js/site-shell.js replaces with the partial while the page is parsed. After importing or replacing any such page run npm run shell:sync (it turns an inline header, marquee or footer into loader tags), then npm run shell:check. Never put those three blocks inline in a page; edit the partial.
+
+- Audit form design: every "Free Billing Audit" form on a restyled specialty page uses the approved horizontal form card from the imported pages (orthopedic, chiropractic, behavioral-health, mental-health-billing): gradient card, centered title, three inline fields, uppercase submit pill, phone line below. Restyle generated pages with node scripts/build/restyle-generic-specialty.js <page...> (add --hero=<file in dist/img>), re-apply only the form with --forms-only, and verify with --check. Keep each page's own wording; only the layout and classes change.
+
+- Hero CTA exception: use data-site-button="link" for the assessment/audit action (transparent, green #3F9A4B, 16px, arrow); keep the adjacent demo action as the filled pill. Preserve this distinction when applying shared button styles.
+
+## Folder structure
+
+Pages live in category folders under `dist/` and every link uses root-absolute paths (`/css/root.css`, `/specialties/cardiology.html`). Scripts are split into `scripts/build`, `scripts/checks` and `scripts/archive`. See docs/PROJECT-STRUCTURE.md.

@@ -1,0 +1,1735 @@
+{
+  "screenshots": "C:\\Users\\MYTRAD~1\\AppData\\Local\\Temp\\pmex-for-you-review-9mhrEj",
+  "results": [
+    {
+      "page": "outsource-medical-billing-services",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "36px",
+      "grid": [
+        {
+          "class": "os-cards",
+          "cols": "277px 277px 277px 277px"
+        },
+        {
+          "class": "os-two",
+          "cols": "578px 578px"
+        }
+      ],
+      "cards": 20,
+      "icons": 12,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Submit",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Set Up a Discovery Call",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get Started",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Request Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [
+        {
+          "id": "os-demo-form",
+          "fields": 3,
+          "handler": "handleOsDemo(event)"
+        }
+      ],
+      "hover": {
+        "transform": "matrix(1, 0, 0, 1, 0, -4)",
+        "background": "linear-gradient(to top, rgb(216, 220, 227), rgb(248, 251, 240) 60%, rgb(255, 255, 255))",
+        "boxShadow": "rgba(0, 0, 0, 0.08) 0px 10px 24px 0px"
+      },
+      "errors": []
+    },
+    {
+      "page": "small-practices",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "36px",
+      "grid": [
+        {
+          "class": "sp-grid sp-grid-3",
+          "cols": "377.328px 377.328px 377.344px"
+        },
+        {
+          "class": "sp-grid sp-grid-3 sp-gap-lg",
+          "cols": "377.328px 377.328px 377.344px"
+        },
+        {
+          "class": "sp-grid sp-grid-3 sp-gap-lg",
+          "cols": "578px 578px"
+        },
+        {
+          "class": "sp-steps",
+          "cols": "578px 578px"
+        },
+        {
+          "class": "sp-eases",
+          "cols": "635.797px"
+        },
+        {
+          "class": "sp-mini",
+          "cols": "248.094px 248.109px"
+        }
+      ],
+      "cards": 15,
+      "icons": 15,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Book a Demo Now",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Learn More",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Learn More",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Learn More",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get Free Consultation, No Obligations",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get FREE Consultation, No Obligations",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Quick Call",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [
+        {
+          "id": "sp-form",
+          "fields": 4,
+          "handler": "handleSpecialty(event)"
+        }
+      ],
+      "hover": {
+        "transform": "matrix(1, 0, 0, 1, 0, -4)",
+        "background": "linear-gradient(to top, rgb(216, 220, 227), rgb(248, 251, 240) 60%, rgb(255, 255, 255))",
+        "boxShadow": "rgba(0, 0, 0, 0.08) 0px 10px 24px 0px"
+      },
+      "errors": []
+    },
+    {
+      "page": "large-practices",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "36px",
+      "grid": [
+        {
+          "class": "lp-stats-row",
+          "cols": "488px 488px"
+        },
+        {
+          "class": "lp-grid lp-grid-3",
+          "cols": "377.328px 377.328px 377.344px"
+        },
+        {
+          "class": "lp-rows",
+          "cols": "520.203px"
+        },
+        {
+          "class": "lp-grid lp-grid-4",
+          "cols": "578px 578px"
+        },
+        {
+          "class": "lp-grid lp-grid-4",
+          "cols": "277px 277px 277px 277px"
+        },
+        {
+          "class": "lp-grid lp-grid-3",
+          "cols": "377.328px 377.328px 377.344px"
+        },
+        {
+          "class": "lp-procs",
+          "cols": "1180px"
+        },
+        {
+          "class": "lp-grid lp-grid-4",
+          "cols": "277px 277px 277px 277px"
+        }
+      ],
+      "cards": 31,
+      "icons": 37,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Contact PMEX Now",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Let's Hop on a Quick Call",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Book Free Consultation Now",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Request Free Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [],
+      "hover": {
+        "transform": "matrix(1, 0, 0, 1, 0, -4)",
+        "background": "linear-gradient(to top, rgb(216, 220, 227), rgb(248, 251, 240) 60%, rgb(255, 255, 255))",
+        "boxShadow": "rgba(0, 0, 0, 0.08) 0px 10px 24px 0px"
+      },
+      "errors": []
+    },
+    {
+      "page": "denial-management",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "36px",
+      "grid": [
+        {
+          "class": "dm-stats",
+          "cols": "578px 578px"
+        },
+        {
+          "class": "dm-benefits",
+          "cols": "377.328px 377.328px 377.344px"
+        },
+        {
+          "class": "dm-pillars",
+          "cols": "377.328px 377.328px 377.344px"
+        },
+        {
+          "class": "dm-grid dm-grid-4",
+          "cols": "277px 277px 277px 277px"
+        },
+        {
+          "class": "dm-steps",
+          "cols": "578px 578px"
+        },
+        {
+          "class": "dm-grid dm-grid-4",
+          "cols": "277px 277px 277px 277px"
+        },
+        {
+          "class": "dm-grid dm-grid-4",
+          "cols": "277px 277px 277px 277px"
+        }
+      ],
+      "cards": 36,
+      "icons": 37,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Get Your Free Denial Review",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "See How It Works",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Request Free Review",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get Your Free Denial Review",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [
+        {
+          "id": "audit-form",
+          "fields": 4,
+          "handler": "handleDenial(event)"
+        }
+      ],
+      "accordion": true,
+      "hover": {
+        "transform": "matrix(1, 0, 0, 1, 0, -4)",
+        "background": "linear-gradient(to top, rgb(216, 220, 227), rgb(248, 251, 240) 60%, rgb(255, 255, 255))",
+        "boxShadow": "rgba(0, 0, 0, 0.08) 0px 10px 24px 0px"
+      },
+      "errors": []
+    },
+    {
+      "page": "physician-billing-services",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "36px",
+      "grid": [
+        {
+          "class": "pb-stats-row",
+          "cols": "488px 488px"
+        },
+        {
+          "class": "pb-notes",
+          "cols": "520.203px"
+        },
+        {
+          "class": "pb-mini",
+          "cols": "248.094px 248.109px"
+        },
+        {
+          "class": "pb-cards",
+          "cols": "377.328px 377.328px 377.344px"
+        }
+      ],
+      "cards": 9,
+      "icons": 17,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [],
+      "hover": {
+        "transform": "matrix(1, 0, 0, 1, 0, -4)",
+        "background": "linear-gradient(to top, rgb(216, 220, 227), rgb(248, 251, 240) 60%, rgb(255, 255, 255))",
+        "boxShadow": "rgba(0, 0, 0, 0.08) 0px 10px 24px 0px"
+      },
+      "errors": []
+    },
+    {
+      "page": "hospital-billing-services",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "36px",
+      "grid": [
+        {
+          "class": "hb-stats-row",
+          "cols": "488px 488px"
+        },
+        {
+          "class": "hb-cards",
+          "cols": "377.328px 377.328px 377.344px"
+        },
+        {
+          "class": "hb-steps",
+          "cols": "305.891px 305.906px"
+        },
+        {
+          "class": "hb-metrics",
+          "cols": "578px 578px"
+        }
+      ],
+      "cards": 6,
+      "icons": 15,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [],
+      "hover": {
+        "transform": "matrix(1, 0, 0, 1, 0, -4)",
+        "background": "linear-gradient(to top, rgb(216, 220, 227), rgb(248, 251, 240) 60%, rgb(255, 255, 255))",
+        "boxShadow": "rgba(0, 0, 0, 0.08) 0px 10px 24px 0px"
+      },
+      "errors": []
+    },
+    {
+      "page": "outsource-medical-billing-services",
+      "width": 768,
+      "scrollWidth": 753,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "30px",
+      "grid": [
+        {
+          "class": "os-cards",
+          "cols": "340.5px 340.5px"
+        },
+        {
+          "class": "os-two",
+          "cols": "340.5px 340.5px"
+        }
+      ],
+      "cards": 20,
+      "icons": 12,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Submit",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Set Up a Discovery Call",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get Started",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Request Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [
+        {
+          "id": "os-demo-form",
+          "fields": 3,
+          "handler": "handleOsDemo(event)"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "page": "small-practices",
+      "width": 768,
+      "scrollWidth": 753,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "30px",
+      "grid": [
+        {
+          "class": "sp-grid sp-grid-3",
+          "cols": "219px 219px 219px"
+        },
+        {
+          "class": "sp-grid sp-grid-3 sp-gap-lg",
+          "cols": "219px 219px 219px"
+        },
+        {
+          "class": "sp-grid sp-grid-3 sp-gap-lg",
+          "cols": "340.5px 340.5px"
+        },
+        {
+          "class": "sp-steps",
+          "cols": "340.5px 340.5px"
+        },
+        {
+          "class": "sp-eases",
+          "cols": "705px"
+        },
+        {
+          "class": "sp-mini",
+          "cols": "340.5px 340.5px"
+        }
+      ],
+      "cards": 15,
+      "icons": 15,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Book a Demo Now",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Learn More",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Learn More",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Learn More",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get Free Consultation, No Obligations",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get FREE Consultation, No Obligations",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Quick Call",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [
+        {
+          "id": "sp-form",
+          "fields": 4,
+          "handler": "handleSpecialty(event)"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "page": "large-practices",
+      "width": 768,
+      "scrollWidth": 753,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "30px",
+      "grid": [
+        {
+          "class": "lp-stats-row",
+          "cols": "344.5px 344.5px"
+        },
+        {
+          "class": "lp-grid lp-grid-3",
+          "cols": "219px 219px 219px"
+        },
+        {
+          "class": "lp-rows",
+          "cols": "705px"
+        },
+        {
+          "class": "lp-grid lp-grid-4",
+          "cols": "340.5px 340.5px"
+        },
+        {
+          "class": "lp-grid lp-grid-4",
+          "cols": "340.5px 340.5px"
+        },
+        {
+          "class": "lp-grid lp-grid-3",
+          "cols": "219px 219px 219px"
+        },
+        {
+          "class": "lp-procs",
+          "cols": "705px"
+        },
+        {
+          "class": "lp-grid lp-grid-4",
+          "cols": "340.5px 340.5px"
+        }
+      ],
+      "cards": 31,
+      "icons": 37,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Contact PMEX Now",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Let's Hop on a Quick Call",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Book Free Consultation Now",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Request Free Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [],
+      "errors": []
+    },
+    {
+      "page": "denial-management",
+      "width": 768,
+      "scrollWidth": 753,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "30px",
+      "grid": [
+        {
+          "class": "dm-stats",
+          "cols": "340.5px 340.5px"
+        },
+        {
+          "class": "dm-benefits",
+          "cols": "219px 219px 219px"
+        },
+        {
+          "class": "dm-pillars",
+          "cols": "219px 219px 219px"
+        },
+        {
+          "class": "dm-grid dm-grid-4",
+          "cols": "340.5px 340.5px"
+        },
+        {
+          "class": "dm-steps",
+          "cols": "340.5px 340.5px"
+        },
+        {
+          "class": "dm-grid dm-grid-4",
+          "cols": "340.5px 340.5px"
+        },
+        {
+          "class": "dm-grid dm-grid-4",
+          "cols": "340.5px 340.5px"
+        }
+      ],
+      "cards": 36,
+      "icons": 37,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Get Your Free Denial Review",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "See How It Works",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Request Free Review",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get Your Free Denial Review",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [
+        {
+          "id": "audit-form",
+          "fields": 4,
+          "handler": "handleDenial(event)"
+        }
+      ],
+      "accordion": true,
+      "errors": []
+    },
+    {
+      "page": "physician-billing-services",
+      "width": 768,
+      "scrollWidth": 753,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "30px",
+      "grid": [
+        {
+          "class": "pb-stats-row",
+          "cols": "344.5px 344.5px"
+        },
+        {
+          "class": "pb-notes",
+          "cols": "705px"
+        },
+        {
+          "class": "pb-mini",
+          "cols": "340.5px 340.5px"
+        },
+        {
+          "class": "pb-cards",
+          "cols": "219px 219px 219px"
+        }
+      ],
+      "cards": 9,
+      "icons": 17,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [],
+      "errors": []
+    },
+    {
+      "page": "hospital-billing-services",
+      "width": 768,
+      "scrollWidth": 753,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "30px",
+      "grid": [
+        {
+          "class": "hb-stats-row",
+          "cols": "344.5px 344.5px"
+        },
+        {
+          "class": "hb-cards",
+          "cols": "219px 219px 219px"
+        },
+        {
+          "class": "hb-steps",
+          "cols": "340.5px 340.5px"
+        },
+        {
+          "class": "hb-metrics",
+          "cols": "340.5px 340.5px"
+        }
+      ],
+      "cards": 6,
+      "icons": 15,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [],
+      "errors": []
+    },
+    {
+      "page": "outsource-medical-billing-services",
+      "width": 375,
+      "scrollWidth": 375,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "22px",
+      "grid": [
+        {
+          "class": "os-cards",
+          "cols": "335px"
+        },
+        {
+          "class": "os-two",
+          "cols": "335px"
+        }
+      ],
+      "cards": 20,
+      "icons": 12,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Submit",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Set Up a Discovery Call",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get Started",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Request Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [
+        {
+          "id": "os-demo-form",
+          "fields": 3,
+          "handler": "handleOsDemo(event)"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "page": "small-practices",
+      "width": 375,
+      "scrollWidth": 375,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "22px",
+      "grid": [
+        {
+          "class": "sp-grid sp-grid-3",
+          "cols": "335px"
+        },
+        {
+          "class": "sp-grid sp-grid-3 sp-gap-lg",
+          "cols": "335px"
+        },
+        {
+          "class": "sp-grid sp-grid-3 sp-gap-lg",
+          "cols": "335px"
+        },
+        {
+          "class": "sp-steps",
+          "cols": "335px"
+        },
+        {
+          "class": "sp-eases",
+          "cols": "335px"
+        },
+        {
+          "class": "sp-mini",
+          "cols": "335px"
+        }
+      ],
+      "cards": 15,
+      "icons": 15,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Book a Demo Now",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Learn More",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Learn More",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Learn More",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get Free Consultation, No Obligations",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get FREE Consultation, No Obligations",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Quick Call",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [
+        {
+          "id": "sp-form",
+          "fields": 4,
+          "handler": "handleSpecialty(event)"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "page": "large-practices",
+      "width": 375,
+      "scrollWidth": 375,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "22px",
+      "grid": [
+        {
+          "class": "lp-stats-row",
+          "cols": "335px"
+        },
+        {
+          "class": "lp-grid lp-grid-3",
+          "cols": "335px"
+        },
+        {
+          "class": "lp-rows",
+          "cols": "335px"
+        },
+        {
+          "class": "lp-grid lp-grid-4",
+          "cols": "335px"
+        },
+        {
+          "class": "lp-grid lp-grid-4",
+          "cols": "335px"
+        },
+        {
+          "class": "lp-grid lp-grid-3",
+          "cols": "335px"
+        },
+        {
+          "class": "lp-procs",
+          "cols": "335px"
+        },
+        {
+          "class": "lp-grid lp-grid-4",
+          "cols": "335px"
+        }
+      ],
+      "cards": 31,
+      "icons": 37,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Contact PMEX Now",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Let's Hop on a Quick Call",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Book Free Consultation Now",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Request Free Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [],
+      "errors": []
+    },
+    {
+      "page": "denial-management",
+      "width": 375,
+      "scrollWidth": 375,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "22px",
+      "grid": [
+        {
+          "class": "dm-stats",
+          "cols": "335px"
+        },
+        {
+          "class": "dm-benefits",
+          "cols": "335px"
+        },
+        {
+          "class": "dm-pillars",
+          "cols": "335px"
+        },
+        {
+          "class": "dm-grid dm-grid-4",
+          "cols": "335px"
+        },
+        {
+          "class": "dm-steps",
+          "cols": "335px"
+        },
+        {
+          "class": "dm-grid dm-grid-4",
+          "cols": "335px"
+        },
+        {
+          "class": "dm-grid dm-grid-4",
+          "cols": "335px"
+        }
+      ],
+      "cards": 36,
+      "icons": 37,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Get Your Free Denial Review",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "See How It Works",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Request Free Review",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get Your Free Denial Review",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [
+        {
+          "id": "audit-form",
+          "fields": 4,
+          "handler": "handleDenial(event)"
+        }
+      ],
+      "accordion": true,
+      "errors": []
+    },
+    {
+      "page": "physician-billing-services",
+      "width": 375,
+      "scrollWidth": 375,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "22px",
+      "grid": [
+        {
+          "class": "pb-stats-row",
+          "cols": "335px"
+        },
+        {
+          "class": "pb-notes",
+          "cols": "335px"
+        },
+        {
+          "class": "pb-mini",
+          "cols": "335px"
+        },
+        {
+          "class": "pb-cards",
+          "cols": "335px"
+        }
+      ],
+      "cards": 9,
+      "icons": 17,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [],
+      "errors": []
+    },
+    {
+      "page": "hospital-billing-services",
+      "width": 375,
+      "scrollWidth": 375,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "22px",
+      "grid": [
+        {
+          "class": "hb-stats-row",
+          "cols": "335px"
+        },
+        {
+          "class": "hb-cards",
+          "cols": "335px"
+        },
+        {
+          "class": "hb-steps",
+          "cols": "335px"
+        },
+        {
+          "class": "hb-metrics",
+          "cols": "335px"
+        }
+      ],
+      "cards": 6,
+      "icons": 15,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [],
+      "errors": []
+    },
+    {
+      "page": "outsource-medical-billing-services",
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "22px",
+      "grid": [
+        {
+          "class": "os-cards",
+          "cols": "280px"
+        },
+        {
+          "class": "os-two",
+          "cols": "280px"
+        }
+      ],
+      "cards": 20,
+      "icons": 12,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Submit",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Set Up a Discovery Call",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get Started",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Request Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [
+        {
+          "id": "os-demo-form",
+          "fields": 3,
+          "handler": "handleOsDemo(event)"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "page": "small-practices",
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "22px",
+      "grid": [
+        {
+          "class": "sp-grid sp-grid-3",
+          "cols": "280px"
+        },
+        {
+          "class": "sp-grid sp-grid-3 sp-gap-lg",
+          "cols": "280px"
+        },
+        {
+          "class": "sp-grid sp-grid-3 sp-gap-lg",
+          "cols": "280px"
+        },
+        {
+          "class": "sp-steps",
+          "cols": "280px"
+        },
+        {
+          "class": "sp-eases",
+          "cols": "280px"
+        },
+        {
+          "class": "sp-mini",
+          "cols": "280px"
+        }
+      ],
+      "cards": 15,
+      "icons": 15,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Book a Demo Now",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Learn More",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Learn More",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Learn More",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get Free Consultation, No Obligations",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get FREE Consultation, No Obligations",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Quick Call",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [
+        {
+          "id": "sp-form",
+          "fields": 4,
+          "handler": "handleSpecialty(event)"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "page": "large-practices",
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "22px",
+      "grid": [
+        {
+          "class": "lp-stats-row",
+          "cols": "280px"
+        },
+        {
+          "class": "lp-grid lp-grid-3",
+          "cols": "280px"
+        },
+        {
+          "class": "lp-rows",
+          "cols": "280px"
+        },
+        {
+          "class": "lp-grid lp-grid-4",
+          "cols": "280px"
+        },
+        {
+          "class": "lp-grid lp-grid-4",
+          "cols": "280px"
+        },
+        {
+          "class": "lp-grid lp-grid-3",
+          "cols": "280px"
+        },
+        {
+          "class": "lp-procs",
+          "cols": "280px"
+        },
+        {
+          "class": "lp-grid lp-grid-4",
+          "cols": "280px"
+        }
+      ],
+      "cards": 31,
+      "icons": 37,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Contact PMEX Now",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Let's Hop on a Quick Call",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Book Free Consultation Now",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Request Free Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [],
+      "errors": []
+    },
+    {
+      "page": "denial-management",
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "22px",
+      "grid": [
+        {
+          "class": "dm-stats",
+          "cols": "280px"
+        },
+        {
+          "class": "dm-benefits",
+          "cols": "280px"
+        },
+        {
+          "class": "dm-pillars",
+          "cols": "280px"
+        },
+        {
+          "class": "dm-grid dm-grid-4",
+          "cols": "280px"
+        },
+        {
+          "class": "dm-steps",
+          "cols": "280px"
+        },
+        {
+          "class": "dm-grid dm-grid-4",
+          "cols": "280px"
+        },
+        {
+          "class": "dm-grid dm-grid-4",
+          "cols": "280px"
+        }
+      ],
+      "cards": 36,
+      "icons": 37,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Get Your Free Denial Review",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "See How It Works",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Request Free Review",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "Get Your Free Denial Review",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [
+        {
+          "id": "audit-form",
+          "fields": 4,
+          "handler": "handleDenial(event)"
+        }
+      ],
+      "accordion": true,
+      "errors": []
+    },
+    {
+      "page": "physician-billing-services",
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "22px",
+      "grid": [
+        {
+          "class": "pb-stats-row",
+          "cols": "280px"
+        },
+        {
+          "class": "pb-notes",
+          "cols": "280px"
+        },
+        {
+          "class": "pb-mini",
+          "cols": "280px"
+        },
+        {
+          "class": "pb-cards",
+          "cols": "280px"
+        }
+      ],
+      "cards": 9,
+      "icons": 17,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [],
+      "errors": []
+    },
+    {
+      "page": "hospital-billing-services",
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenImages": [],
+      "overflow": [],
+      "heroSize": "22px",
+      "grid": [
+        {
+          "class": "hb-stats-row",
+          "cols": "280px"
+        },
+        {
+          "class": "hb-cards",
+          "cols": "280px"
+        },
+        {
+          "class": "hb-steps",
+          "cols": "280px"
+        },
+        {
+          "class": "hb-metrics",
+          "cols": "280px"
+        }
+      ],
+      "cards": 6,
+      "icons": 15,
+      "marquees": 2,
+      "buttons": [
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "16px",
+          "weight": "400"
+        },
+        {
+          "label": "Schedule a Demo",
+          "size": "14px",
+          "weight": "400"
+        },
+        {
+          "label": "(516) 208-4446",
+          "size": "14px",
+          "weight": "400"
+        }
+      ],
+      "forms": [],
+      "errors": []
+    }
+  ]
+}

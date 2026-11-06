@@ -1,0 +1,758 @@
+{
+  "pages": 93,
+  "viewports": [
+    1440,
+    768,
+    320
+  ],
+  "issues": [
+    {
+      "file": "account-receivable-management.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "anesthesiology.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "behavioral-health.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "cardiology.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "chiropractic.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "cpap-billing.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "credentialing-enrollment.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "customer-stories.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "dental-billing.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "dme-pos-services.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "family-medicine.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "front-desk-services-remote.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "gynecology.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "internal-medicine.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "medical-billing-services.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "mental-health-billing.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "nephrology.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "ophthalmology.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "orthopedic.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "physical-therapy.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "psychiatry.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "revenue-cycle-management.html",
+      "width": 1440,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "account-receivable-management.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "anesthesiology.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "behavioral-health.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "cardiology.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "chiropractic.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "cpap-billing.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "credentialing-enrollment.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "customer-stories.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "dental-billing.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "dme-pos-services.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "family-medicine.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "front-desk-services-remote.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "gynecology.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "internal-medicine.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "medical-billing-services.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "mental-health-billing.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "nephrology.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "ophthalmology.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "orthopedic.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "physical-therapy.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "psychiatry.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "revenue-cycle-management.html",
+      "width": 768,
+      "overflow": false,
+      "scrollWidth": 753,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "account-receivable-management.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "anesthesiology.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "behavioral-health.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "cardiology.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [
+        {
+          "text": "Revenue Analysis & Underpayment Detection",
+          "lines": 3,
+          "size": "12px",
+          "width": 134
+        }
+      ],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "chiropractic.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "cpap-billing.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "credentialing-enrollment.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "customer-stories.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "dental-billing.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "dme-pos-services.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "family-medicine.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "front-desk-services-remote.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "gynecology.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "internal-medicine.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "medical-billing-services.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "mental-health-billing.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "nephrology.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "ophthalmology.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "orthopedic.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [
+        {
+          "text": "U.S. orthopedic practices lose $150K–$300K per year to global period errors they never see coming.",
+          "lines": 3,
+          "size": "12px",
+          "width": 280
+        }
+      ],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "physical-therapy.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "psychiatry.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    },
+    {
+      "file": "revenue-cycle-management.html",
+      "width": 320,
+      "overflow": false,
+      "scrollWidth": 320,
+      "headings": [],
+      "prohibited": [],
+      "errors": [
+        "Uncaught: TypeError: Cannot read properties of null (reading 'classList')\n    at switchFeature (http://127.0.0.1:8037/js/platform.js:233:14)\n    at http://127.0.0.1:8037/js/platform.js:257:1"
+      ]
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\MYTRAD~1\\AppData\\Local\\Temp\\pmex-policy-family-medicine.html-1440.png",
+    "C:\\Users\\MYTRAD~1\\AppData\\Local\\Temp\\pmex-policy-index.html-1440.png",
+    "C:\\Users\\MYTRAD~1\\AppData\\Local\\Temp\\pmex-policy-see-pricing.html-1440.png",
+    "C:\\Users\\MYTRAD~1\\AppData\\Local\\Temp\\pmex-policy-family-medicine.html-320.png",
+    "C:\\Users\\MYTRAD~1\\AppData\\Local\\Temp\\pmex-policy-index.html-320.png",
+    "C:\\Users\\MYTRAD~1\\AppData\\Local\\Temp\\pmex-policy-see-pricing.html-320.png"
+  ]
+}
