@@ -25398,3 +25398,54 @@ html[data-css~="home-neutral"] body section:is(#pmex-claims-lifecycle, #pmex-spe
 [data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card > .relative > div:first-child > div svg { width: 20px; height: 20px; }
 [data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card > .relative > h3 { margin: 0 !important; }
 [data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card > .relative > p { margin: 4px 0 0 !important; }
+
+/* ===== home page nationwide section: equal column edges and a calm card hover  [data-css~="home-responsive"] ===== */
+/* Left column: eyebrow at the top edge, state pills at the bottom edge. Right card: fills the column height,
+   so both columns start and end on the same lines. Hover: light green border and a soft shadow (no lift, no grey wash). */
+@media (min-width: 1024px) {
+  [data-css~="home-responsive"] section#pmex-nationwide [data-nationwide-reveal] { display: flex; flex-direction: column; }
+  [data-css~="home-responsive"] section#pmex-nationwide [data-nationwide-reveal] > .mt-7 { margin-top: auto !important; padding-top: 28px; }
+  [data-css~="home-responsive"] section#pmex-nationwide [data-nationwide-reveal] > .feature-card { flex: 1 1 auto; display: flex; flex-direction: column; }
+  [data-css~="home-responsive"] section#pmex-nationwide [data-nationwide-reveal] > .feature-card > .grid { flex: 1 1 auto; }
+  [data-css~="home-responsive"] section#pmex-nationwide [data-nationwide-reveal] > .feature-card > .grid > div { display: flex; flex-direction: column; justify-content: center; }
+}
+[data-css~="home-responsive"] section#pmex-nationwide [data-nationwide-reveal] > div:first-child { line-height: 1; }
+[data-css~="home-responsive"] section#pmex-nationwide [data-nationwide-reveal] > div:first-child > .bh-eyebrow { display: block; line-height: 1.2; }
+[data-css~="home-responsive"] section#pmex-nationwide .feature-card {
+  box-shadow: 0 2px 8px var(--c-000000-a5) !important; border-color: var(--c-E0E0DA) !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+[data-css~="home-responsive"] section#pmex-nationwide .feature-card:hover {
+  translate: none !important; transform: none !important; border-color: var(--c-AAD39C) !important;
+  box-shadow: 0 4px 6px -1px var(--c-000000-a10), 0 2px 4px -2px var(--c-000000-a10) !important;
+}
+[data-css~="home-responsive"] section#pmex-nationwide .feature-card > .feature-card-gradient { display: none !important; }
+
+/* ===== home page testimonial cards: the 3px left border turns green on hover  [data-css~="home-responsive"] ===== */
+/* The markup asks for group-hover green, but the home-neutral grey line rule (!important) was overriding it. */
+[data-css~="home-responsive"] section#pmex-trusted-outcomes article.feature-card:is(:hover, :focus-within) > [class~="w-[3px]"] { background: var(--c-3F9A4B) !important; }
+/* nationwide state pills: a row that holds the taller "+42 More States" button no longer stretches the pills (text stays centered) */
+[data-css~="home-responsive"] section#pmex-nationwide [data-nationwide-reveal] > .flex-wrap { align-items: center; }
+[data-css~="home-responsive"] section#pmex-nationwide span[data-state-pill] { display: inline-flex; align-items: center; justify-content: center; }
+
+/* ===== home page FAQ: calm hover, no decorative circles  [data-css~="home-responsive"] ===== */
+/* FAQ items and the two CTA cards on the left: no lift, no grey wash, no big shadow. Hover is a light green
+   border and a soft shadow, the same as the service cards. The decorative circles in the CTA cards are removed. */
+[data-css~="home-responsive"] section#pmex-faq aside [aria-hidden="true"][class~="rounded-full"][class~="absolute"] { display: none !important; }
+[data-css~="home-responsive"] section#pmex-faq :is(article[data-faq-item], aside .group) > .feature-card-gradient { display: none !important; }
+[data-css~="home-responsive"] section#pmex-faq :is(article[data-faq-item], aside .group) {
+  box-shadow: none !important; transition: border-color .2s ease, box-shadow .2s ease, opacity .5s ease, translate .5s ease !important;
+}
+[data-css~="home-responsive"] section#pmex-faq :is(article[data-faq-item], aside .group):hover {
+  translate: none !important; transform: none !important; border-color: var(--c-AAD39C) !important;
+  box-shadow: 0 4px 6px -1px var(--c-000000-a10), 0 2px 4px -2px var(--c-000000-a10) !important;
+}
+
+/* ===== home page "Which challenges are you facing?" options: calm hover  [data-css~="home-responsive"] ===== */
+/* No lift, no grey wash, no big shadow: a light green border and a soft shadow, the same as the FAQ items. */
+[data-css~="home-responsive"] label.pmex-challenge-item > .feature-card-gradient { display: none !important; }
+[data-css~="home-responsive"] label.pmex-challenge-item { box-shadow: none !important; transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease !important; }
+[data-css~="home-responsive"] label.pmex-challenge-item:is(:hover, :focus-within) {
+  translate: none !important; transform: none !important; border-color: var(--c-AAD39C) !important;
+  box-shadow: 0 4px 6px -1px var(--c-000000-a10), 0 2px 4px -2px var(--c-000000-a10) !important;
+}
