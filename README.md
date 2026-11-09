@@ -44,7 +44,7 @@ Every page uses the same container, section spacing and gaps. The values live on
 - `pmex-section-head` goes on the block that holds the eyebrow, heading and intro. The element right after it gets no top margin, so do not add `mt-*` to it.
 - `pmex-card-grid` and `pmex-split` set only the gap. Keep the grid columns (`grid-cols-*`) on the element.
 - Sections touch each other directly; spacing comes from the section padding, never from margins between sections.
-- Home page platform section (`pmex-plat-*`, script `js/platform-tab.js`): plain tabs, no scroll effects. Only the active panel is shown, so each panel is as tall as its own content. The panels carry `data-typography-own`, which tells `js/reference-typography.js` not to give their text the card roles; they use the section's own sizes, with the title following the site H3 size (20px).
+- Home page platform section (`pmex-plat-*`, script `js/platform-tab.js`): on screens 1024px+ wide and 720px+ tall the script adds `is-stacking`. The tabs bar sticks under the navbar (80px) and the four panels become sticky cards of equal height, so each card slides over the previous one while scrolling; the tab of the card on top is highlighted and clicking a tab scrolls to its card. On smaller or shorter screens it is plain click tabs (only the active panel is shown). The panels carry `data-typography-own`, which tells `js/reference-typography.js` not to give their text the card roles; they use the section's own sizes, with the title following the site H3 size (20px).
 - The hero uses `pmex-section` like every other section; there is no separate hero padding. On the home page the floating hero cards (1024px and up) always stay at least 24px to the right of the hero text.
 - Cards with an offset backing plate (the home page "Medical billing results" cards): the plate points outwards, and the card is pulled in by the same amount (12px from 768px, 8px on mobile) so the outer edge of the plate sits on the content line.
 - Stacking cards (home page "Claims lifecycle", classes `pmex-stack-*`): from 1024px each card is `position: sticky`, 52px lower than the previous one (92, 144, 196, 248, 300px), so the number and title of every earlier card stay readable while the next card slides over it. The list has 80px of room after the last card so it can stick too. Inside a card the copy column and the 300px showcase box (260px on tablet) share the same top and bottom. Below 1024px the cards simply follow each other.
@@ -60,7 +60,7 @@ Every page uses the same container, section spacing and gaps. The values live on
 The header (`dist/partials/header.html`, styles in the `navbar-d90c332f` block) uses the same max width (1260px) and side padding (20px / 24px / 40px) as `pmex-container`, so the logo and the phone number line up with the page content on every screen. The open hamburger menu (up to 1200px) uses the same side padding.
 
 - Logo: the same file as the footer logo, `img/logo/grey-logo.svg`, 48px tall (44px up to 1200px). The file has empty space on the left, so the image is pulled left (`margin-left`) and the mark itself starts on the content line.
-- PMEX Portal button: a user icon and the label "PMEX Portal" on the shared button fill (#AAD39C, dark green text, #9FCB91 on hover).
+- PMEX Portal button: a user icon and the label "PMEX Portal" on the site pill gradient (`--grad-pill`, `--grad-a` on hover), dark green text.
 
 ### Checking a page
 

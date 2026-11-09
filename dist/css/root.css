@@ -23669,9 +23669,9 @@ html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>d
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-logo-link{display:block;flex-shrink:0}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-logo-img{display:block;height:48px;width:auto;max-width:none;margin-left:-16px}
 @media(max-width:1200px){[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-logo-img{height:44px;margin-left:-14.5px}}
-/* PMEX Portal button: plain label with a user icon on the shared button fill (#AAD39C, dark green text), no logo glyph inside. */
-[data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a.homepage-nav-demo{display:inline-flex!important;align-items:center;justify-content:center;gap:8px;padding:10px 20px!important;font-weight:500!important;white-space:nowrap!important;background:var(--c-AAD39C)!important}
-[data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a.homepage-nav-demo:is(:hover,:focus-visible){background:var(--c-9FCB91)!important;color:var(--c-2E4A25)!important}
+/* PMEX Portal button: plain label with a user icon on the site pill gradient (--grad-pill, --grad-a on hover), dark green text, no logo glyph inside. */
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a.homepage-nav-demo{display:inline-flex!important;align-items:center;justify-content:center;gap:8px;padding:10px 20px!important;font-weight:500!important;white-space:nowrap!important;background:var(--grad-pill)!important}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a.homepage-nav-demo:is(:hover,:focus-visible){background:var(--grad-a)!important;color:var(--c-2E4A25)!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a.homepage-nav-demo .pmex-nav-portal-icon{width:16px;height:16px;flex:0 0 16px}
 
 /* ===== inline <style> block  [data-css~="inline-19682d52"] ===== */
@@ -25227,3 +25227,15 @@ html[data-css~="pmex-common"] body h1 span.usa-flag { font-family: 'PMEX Inter B
 @media (min-width: 1024px) {
   [data-css~="home-responsive"] .pmex-plat-panel { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); }
 }
+/* Platform stacking mode (class set by js/platform-tab.js on screens 1024px+ wide and 720px+ tall): the tabs bar sticks under
+   the navbar and the panels are sticky cards of equal height; each card slides up over the previous one while scrolling. */
+[data-css~="home-responsive"] .pmex-plat.is-stacking .pmex-plat-tabs { position: sticky; top: 80px; z-index: 5; box-shadow: 0 0 0 12px var(--c-FFFFFF); }
+[data-css~="home-responsive"] .pmex-plat.is-stacking .pmex-plat-panels { display: flex; flex-direction: column; gap: 16px; }
+[data-css~="home-responsive"] .pmex-plat.is-stacking .pmex-plat-panel { display: grid; position: sticky; top: var(--pmex-plat-stick, 164px); animation: none; }
+/* Room after the last card so card 4 also stays on screen for a moment before the stack scrolls away. */
+[data-css~="home-responsive"] .pmex-plat.is-stacking .pmex-plat-panels::after { content: ""; display: block; height: 120px; }
+/* Billing services form card: white to brand tint background, soft green-tinted shadow that only lifts a little on hover. */
+[data-css~="home-responsive"] #pmex-billing-services [data-billing-card] > :first-child { background: linear-gradient(180deg, var(--c-FFFFFF) 0%, var(--c-F8FBF0) 100%); border-color: var(--c-E0E0DA); box-shadow: 0 12px 32px var(--c-2E4A25-a8); transition: box-shadow .3s ease, border-color .3s ease; }
+[data-css~="home-responsive"] #pmex-billing-services [data-billing-card] > :first-child:hover { box-shadow: 0 16px 40px var(--c-2E4A25-a12); border-color: var(--c-AAD39C); }
+[data-css~="home-responsive"] #pmex-billing-services [data-billing-card] :is(input, select, textarea) { background: var(--c-FFFFFF); }
+[data-css~="home-responsive"] #pmex-billing-services [data-billing-card] :is(input, select, textarea):focus { border-color: var(--c-3F9A4B); box-shadow: 0 0 0 3px var(--c-3F9A4B-a12); }
