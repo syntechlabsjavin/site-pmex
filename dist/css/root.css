@@ -25091,7 +25091,7 @@ html[data-css~="pmex-common"] body h1 span.usa-flag { font-family: 'PMEX Inter B
 [data-css~="home-responsive"] .pmex-stack-intro { margin-top: 16px; }
 [data-css~="home-responsive"] .pmex-stack-intro p { margin: 0 auto; max-width: 520px; font-size: 14px; line-height: 1.6; color: var(--c-676767); }
 [data-css~="home-responsive"] .pmex-stack-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 24px; }
-[data-css~="home-responsive"] .pmex-stack-panel { background: var(--c-FFFFFF); border: 1px solid var(--c-E0E0DA); border-radius: 24px; box-shadow: 0 18px 40px var(--c-283C26-a8); padding: 20px; }
+[data-css~="home-responsive"] .pmex-stack-panel { background: var(--c-FFFFFF); border: 1px solid var(--c-E0E0DA); border-radius: 24px; box-shadow: 0 2px 8px var(--c-000000-a5); padding: 20px; }
 [data-css~="home-responsive"] .pmex-stack-head { display: flex; align-items: center; gap: 12px; padding-bottom: 16px; margin-bottom: 20px; border-bottom: 1px solid var(--c-EDEAE0); }
 [data-css~="home-responsive"] .pmex-stack-num { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; min-width: 44px; height: 28px; padding: 0 10px; border-radius: 9999px; background: var(--c-F8FBF0); border: 1px solid var(--c-AAD39C); color: var(--c-3F9A4B); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
 [data-css~="home-responsive"] .pmex-stack-title { margin: 0; font-size: 18px; font-weight: 700; line-height: 1.25; color: var(--c-2E4A25); }
@@ -25106,7 +25106,7 @@ html[data-css~="pmex-common"] body h1 span.usa-flag { font-family: 'PMEX Inter B
 [data-css~="home-responsive"] .pmex-stack-feature-icon svg { width: 16px; height: 16px; }
 [data-css~="home-responsive"] .pmex-stack-feature h4 { margin: 0 0 2px; font-size: 12px; font-weight: 800; line-height: 1.4; letter-spacing: .04em; text-transform: uppercase; color: var(--c-2E4A25); }
 [data-css~="home-responsive"] .pmex-stack-feature p { margin: 0; font-size: 12px; line-height: 1.5; color: var(--c-676767); }
-[data-css~="home-responsive"] .pmex-stack-showcase { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; padding: 16px; text-align: center; border: 1px solid var(--c-EDEAE0); border-radius: 16px; box-shadow: 0 10px 28px var(--c-2E4A25-a8); }
+[data-css~="home-responsive"] .pmex-stack-showcase { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; padding: 16px; text-align: center; border: 1px solid var(--c-EDEAE0); border-radius: 16px; box-shadow: none; }
 [data-css~="home-responsive"] .pmex-stack-showcase img { width: 56px; height: 56px; object-fit: contain; }
 [data-css~="home-responsive"] .pmex-stack-sub { margin: 0; max-width: 300px; font-size: 14px; line-height: 1.55; color: var(--c-676767); }
 [data-css~="home-responsive"] .pmex-stack-metric { width: 100%; padding: 12px; border: 1px solid var(--c-EDEAE0); border-radius: 12px; background: var(--c-F8FBF0); }
@@ -25239,3 +25239,162 @@ html[data-css~="pmex-common"] body h1 span.usa-flag { font-family: 'PMEX Inter B
 [data-css~="home-responsive"] #pmex-billing-services [data-billing-card] > :first-child:hover { box-shadow: 0 16px 40px var(--c-2E4A25-a12); border-color: var(--c-AAD39C); }
 [data-css~="home-responsive"] #pmex-billing-services [data-billing-card] :is(input, select, textarea) { background: var(--c-FFFFFF); }
 [data-css~="home-responsive"] #pmex-billing-services [data-billing-card] :is(input, select, textarea):focus { border-color: var(--c-3F9A4B); box-shadow: 0 0 0 3px var(--c-3F9A4B-a12); }
+
+/* ===== home page neutral re-skin: green only as a minimal accent  [data-css~="home-neutral"] ===== */
+/* Green stays on: section eyebrows, icons, checkmarks, primary buttons, the hero emphasis and live/status dots.
+   The billing results section (#billing-results) is left out and keeps its original green design.
+   Everything else uses white, light grey (#F4F5F3 / #FAFAFA), grey borders (#E0E0DA) and grey text (#505050 / #676767).
+   Only index.html lists this block; remove "home-neutral" from its data-css to switch the re-skin off. */
+
+/* 0. Card hover wash: the cards fade in --grad-w on hover (feature-card-gradient, FAQ items). On the home page it is a
+      light grey wash instead of green. */
+/* translucent (like the original), so card content that sits under the overlay stays fully readable */
+:root[data-css~="home-neutral"] { --grad-w: linear-gradient(to top, var(--c-000000-a5) 0%, var(--c-000000-a2) 35%, var(--c-000000-a0) 72%); }
+/* Provider challenges stats card: no wash; it lifts a little with a soft shadow and a light green border */
+[data-css~="home-neutral"] section#pmex-provider-challenges .feature-card > .feature-card-gradient { display: none !important; }
+[data-css~="home-neutral"] section#pmex-provider-challenges .feature-card { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, opacity .7s ease; }
+[data-css~="home-neutral"] section#pmex-provider-challenges .feature-card:hover { transform: translateY(-3px); box-shadow: 0 14px 32px var(--c-2E4A25-a8); border-color: var(--c-AAD39C) !important; }
+@media (prefers-reduced-motion: reduce) { [data-css~="home-neutral"] section#pmex-provider-challenges .feature-card:hover { transform: none; } }
+[data-css~="home-neutral"] section:not(#billing-results) .group:hover [class~="group-hover:bg-[var(--c-DCEFD5)]"] { background: var(--c-F4F5F3) !important; }
+
+/* 1. Pale green fills (cards, chips, circles, icon tiles, badges) -> light neutral grey */
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-DCE7D7)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-DDE5DA)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-E1EDDC)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-E2E8DE)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-E3EFE0)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-E3F1DE)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-E5F2E0)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-E7EAE4)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-E7F1E3)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-E9EEE6)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-EAF3E6)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-EAF4E5)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-EAF4E7)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-EEF5EB)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-EEF6EA)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-EFF6EC)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-F0F6ED)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-F1F7EE)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-E7F1E3)]/55"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-EAF3E6)]/70"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-F1F7EE)]/70"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-AAD39C)]/20"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-AAD39C)]"] { background: var(--c-F4F5F3) !important; }
+/* thin accent lines and dividers -> border grey (they still turn green on hover where the markup says so) */
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-DCEBD7)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-E4EAE0)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-D8E6D2)]"] { background: var(--c-E0E0DA) !important; }
+/* near-white green tints on cards and panels -> near-white neutral */
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-F3F8F0)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-F8FBF0)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-F5F7F3)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-F8FAF5)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-F8FBF5)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-FAFCF8)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="bg-[var(--c-EEF2EB)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="from-[var(--c-F3F8F0)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="from-[var(--c-EDEFE7)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="via-[var(--c-FBFDF9)]"] { background: var(--c-FAFAFA) !important; }
+
+/* 2. Green-tinted borders -> neutral border grey */
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-AAD39C)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-BFD8B7)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-C6E1BD)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-C9DDC3)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-C9DFC1)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-CFE0C9)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-D4E5CF)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-D7E3D2)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-D8E4D4)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-D8E6D2)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-DCE6D7)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-DCE7D7)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-DCE8D8)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-DDE5DA)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-DDE8D8)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-DEE7DA)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-DFE6DC)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-DFE7DB)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-E0E6DD)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-E2E9DE)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-E6ECE2)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-E8EEE5)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="border-[var(--c-BFC7BC)]"] { border-color: var(--c-E0E0DA) !important; }
+
+/* 3. Green text -> grey, except section eyebrows (the label right before an h2), round badges/checkmarks and icon-only wrappers */
+[data-css~="home-neutral"] section:not(#billing-results) [class~="text-[var(--c-3F9A4B)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="text-[var(--c-3F7F46)]"],
+[data-css~="home-neutral"] section:not(#billing-results) [class~="text-[var(--c-315B37)]"] { color: var(--c-505050) !important; }
+[data-css~="home-neutral"] section:not(#billing-results) [class~="text-[var(--c-3F9A4B)]"]:is(:has(+ h2), :has(> svg:only-child), [class~="rounded-full"][class~="justify-center"]),
+[data-css~="home-neutral"] section:not(#billing-results) [class~="text-[var(--c-3F7F46)]"]:is(:has(+ h2), :has(> svg:only-child), [class~="rounded-full"][class~="justify-center"]),
+[data-css~="home-neutral"] section:not(#billing-results) [class~="text-[var(--c-315B37)]"]:is(:has(+ h2), :has(> svg:only-child), [class~="rounded-full"][class~="justify-center"]) { color: var(--c-3F9A4B) !important; }
+
+/* 4. Decorative green glows and blobs */
+[data-css~="home-neutral"] section:not(#billing-results) [class*="radial-gradient(circle_at_top_left,var(--c-AAD39C"],
+[data-css~="home-neutral"] section:not(#billing-results) [class*="radial-gradient(circle_at_left,var(--c-AAD39C"],
+[data-css~="home-neutral"] #pmex-closing-cta [class*="blur-["] { display: none !important; }
+
+/* closing CTA card: white to light grey instead of fading into green */
+[data-css~="home-neutral"] #pmex-closing-cta [class~="to-[var(--c-EAF4E6)]"] { background: linear-gradient(180deg, var(--c-FFFFFF) 0%, var(--c-FAFAFA) 100%) !important; }
+
+/* 5. Keep small data visuals and live dots green (they carry meaning, not decoration) */
+[data-css~="home-neutral"] #pmex-trusted-outcomes [class~="flex-1"][class~="rounded-full"][class~="bg-[var(--c-AAD39C)]"] { background: var(--c-AAD39C) !important; }
+[data-css~="home-neutral"] section:not(#billing-results) [class~="animate-ping"] { background: var(--c-AAD39C) !important; }
+
+/* 7. Secondary pills become neutral outline buttons (primary CTAs keep the green pill) */
+html[data-css~="home-neutral"] body section:is(#pmex-claims-lifecycle, #pmex-specialties, #pmex-nationwide) :is(a, button).cta-primary-btn,
+html[data-css~="home-neutral"] body section:is(#pmex-claims-lifecycle, #pmex-specialties, #pmex-nationwide) :is(a, button).cta-primary-btn:is(:hover, :focus-visible) {
+  background: var(--c-FFFFFF) !important; color: var(--c-505050) !important; box-shadow: inset 0 0 0 1px var(--c-E0E0DA) !important;
+}
+html[data-css~="home-neutral"] body section:is(#pmex-claims-lifecycle, #pmex-specialties, #pmex-nationwide) :is(a, button).cta-primary-btn:is(:hover, :focus-visible) {
+  background: var(--c-FAFAFA) !important; box-shadow: inset 0 0 0 1px var(--c-AAD39C) !important;
+}
+
+/* 8. Home page components defined in the home-responsive block */
+[data-css~="home-neutral"] .pmex-stack-num { background: var(--c-F4F5F3); border-color: var(--c-E0E0DA); color: var(--c-505050); }
+[data-css~="home-neutral"] :is(.pmex-stack-title, .pmex-stack-feature h4) { color: var(--c-505050); }
+[data-css~="home-neutral"] .pmex-stack-metric { background: var(--c-FAFAFA); }
+[data-css~="home-neutral"] .pmex-stack-metric strong { color: var(--c-505050); }
+[data-css~="home-neutral"] .pmex-plat-tabs { background: var(--c-F4F5F3); }
+[data-css~="home-neutral"] :is(.pmex-plat-tab:hover, .pmex-plat-tab[aria-selected="true"]) { color: var(--c-505050); }
+[data-css~="home-neutral"] :is(.pmex-plat-title, .pmex-plat-points li, .pmex-plat-window-head, .pmex-plat-kpi strong, .pmex-plat-id, .pmex-plat-amt, .pmex-plat-systems li, .pmex-plat-tile h4) { color: var(--c-505050); }
+[data-css~="home-neutral"] .pmex-plat-check { background: var(--c-FFFFFF); border-color: var(--c-E0E0DA); }
+[data-css~="home-neutral"] .pmex-plat-chip { background: var(--c-F4F5F3); border-color: var(--c-E0E0DA); color: var(--c-676767); }
+[data-css~="home-neutral"] .pmex-plat-status.is-paid { background: var(--c-F4F5F3); border-color: var(--c-E0E0DA); color: var(--c-505050); }
+[data-css~="home-neutral"] .pmex-plat-bars span { background: var(--c-E0E0DA); }
+[data-css~="home-neutral"] .pmex-plat-bars span:nth-child(8) { background: var(--c-3F9A4B); }
+[data-css~="home-neutral"] .pmex-plat-tile-icon { background: var(--c-F4F5F3); }
+[data-css~="home-neutral"] .pmex-plat-systems li::before { box-shadow: 0 0 0 4px var(--c-F4F5F3); }
+[data-css~="home-neutral"] section#pmex-billing-services [data-billing-card] > :first-child { background: linear-gradient(180deg, var(--c-FFFFFF) 0%, var(--c-FAFAFA) 100%) !important; }
+[data-css~="home-neutral"] #pmex-billing-services [data-billing-card] > :first-child:hover { border-color: var(--c-E0E0DA); }
+
+/* ===== home page "Every billing service" cards in the specialty page card style  [data-css~="home-responsive"] ===== */
+/* Same look as the cardiology "practice type" cards: white card, grey border with a 2px light green top border,
+   icon tile on the left, title and text on the right. Hover: light green border and a soft shadow (no lift, no wash).
+   The section has no background. The 01-20 numbers are hidden like on the specialty cards. */
+[data-css~="home-responsive"] section#pmex-service-coverage.stat-badge-block { background: var(--c-FFFFFF) !important; }
+[data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card {
+  display: flex !important; min-height: 0 !important; padding: 18px !important; border-radius: 16px !important;
+  background: var(--c-FFFFFF) !important; border: 1px solid var(--c-E0E0DA) !important; border-top: 2px solid var(--c-AAD39C) !important;
+  box-shadow: none !important; transition: border-color .2s ease, box-shadow .2s ease, opacity .5s ease !important;
+}
+[data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card:hover {
+  border-color: var(--c-AAD39C) !important; translate: none !important; transform: none !important;
+  box-shadow: 0 4px 6px -1px var(--c-000000-a10), 0 2px 4px -2px var(--c-000000-a10) !important;
+}
+[data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card > :is(.feature-card-gradient, .absolute) { display: none !important; }
+[data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card > .relative {
+  display: block; position: relative; width: 100%; height: auto; min-height: 40px; padding-left: 54px;
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  [data-css~="home-responsive"] section#pmex-service-coverage .pmex-card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+[data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card > .relative > div:first-child { display: contents; }
+[data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card > .relative > div:first-child > span { display: none; }
+[data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card > .relative > div:first-child > div {
+  position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 12px; background: var(--c-EEF0E8) !important; color: var(--c-3F9A4B) !important;
+}
+[data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card > .relative > div:first-child > div svg { width: 20px; height: 20px; }
+[data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card > .relative > h3 { margin: 0 !important; }
+[data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card > .relative > p { margin: 4px 0 0 !important; }
