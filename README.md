@@ -47,6 +47,7 @@ Every page uses the same container, section spacing and gaps. The values live on
 - Sticky scroll scenes (the claims lifecycle and the platform tabs on the home page) keep a smaller top padding on tablet and up so the scene fits the screen: 24px top / 20px bottom for the platform scene.
 - The hero uses `pmex-section` like every other section; there is no separate hero padding. On the home page the floating hero cards (1024px and up) always stay at least 24px to the right of the hero text.
 - Cards with an offset backing plate (the home page "Medical billing results" cards): the plate points outwards, and the card is pulled in by the same amount (12px from 768px, 8px on mobile) so the outer edge of the plate sits on the content line.
+- Stacking cards (home page "Claims lifecycle", classes `pmex-stack-*`): from 1024px each card is `position: sticky`, 52px lower than the previous one (92, 144, 196, 248, 300px), so the number and title of every earlier card stay readable while the next card slides over it. The list has 80px of room after the last card so it can stick too. Inside a card the copy column and the 300px showcase box (260px on tablet) share the same top and bottom. Below 1024px the cards simply follow each other.
 - Page-specific fixes go in their own block (for example `home-responsive` for `index.html`), not in `layout`.
 
 ### Not part of this system

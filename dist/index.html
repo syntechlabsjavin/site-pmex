@@ -12,7 +12,6 @@
     <script src="/js/nav-dropdown.js" defer></script>
     <script src="/js/medical-billing.js" defer></script>
     <script src="/js/billing-results.js" defer></script>
-    <script src="/js/claims-lifecycle.js" defer></script>
     <script src="/js/platform-tab.js" defer></script>
     <script src="/js/small-reveal.js" defer></script>
     <script src="/js/trusted-nationwide.js" defer></script>
@@ -526,735 +525,232 @@
       <!-- HOW BILLING MOVES THROUGH PMEX -->
       
       <section
-        data-pmex-lifecycle
-        class="relative font-sans border-b border-[var(--c-E0E0DA)]"
+        id="pmex-claims-lifecycle"
+        class="relative font-sans border-b border-[var(--c-E0E0DA)] bg-[var(--c-FFFFFF)] pmex-section"
       >
-        <div data-lifecycle-spacer class="relative md:h-[400vh] lg:h-[450vh]">
-          <div
-            data-lifecycle-sticky
-            class="relative z-20 bg-[var(--c-FFFFFF)] pmex-section md:sticky md:top-[70px] lg:top-[80px]"
-          >
-            <div class="pmex-container">
-              <!-- Section Label + Title -->
-              <div
-                class="pmex-section-head text-center mx-auto max-w-[640px]"
-              >
-                <p
-                  class="text-[11px] sm:text-[13px] font-medium text-[var(--c-3F9A4B)] uppercase tracking-[1.2px]"
-                >
-                  Claims Lifecycle
-                </p>
-
-                <h2
-                  class="mt-1.5 text-[22px] sm:text-[30px] lg:text-[36px] font-normal text-[var(--c-505050)] leading-[1.2]"
-                >
-                  How a claim moves through <span class="logo-font" role="img" aria-label="pmex"></span>
-                </h2>
-              </div>
-
-              <!-- MOBILE: step controls -->
-              <div class="mb-4 md:hidden">
-                <div class="flex items-center justify-between gap-3 mb-3">
-                  <button
-                    id="step-prev"
-                    type="button"
-                    aria-label="Previous step"
-                    class="w-10 h-10 flex items-center justify-center rounded-full border border-[var(--c-E0E0DA)] bg-[var(--c-FFFFFF)] text-[var(--c-676767)] shadow-sm active:scale-95 transition"
-                  >
-                    <svg
-                      class="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    ><use href="/icons/site-icons.svg#index-how-a-claim-moves-through-pmex"></use></svg>
-                  </button>
-
-                  <div class="min-w-0 flex-1 text-center px-1">
-                    <p
-                      id="step-mobile-title"
-                      class="text-[13px] font-semibold leading-snug text-[var(--c-505050)]"
-                    >
-                      Charge Capture & Claim Scrubbing
-                    </p>
-                    <p
-                      id="step-mobile-counter"
-                      class="mt-0.5 text-[11px] font-medium text-[var(--c-959085)]"
-                    >
-                      1/5
-                    </p>
-                  </div>
-
-                  <button
-                    id="step-next"
-                    type="button"
-                    aria-label="Next step"
-                    class="w-10 h-10 flex items-center justify-center rounded-full border border-[var(--c-E0E0DA)] bg-[var(--c-FFFFFF)] text-[var(--c-676767)] shadow-sm active:scale-95 transition"
-                  >
-                    <svg
-                      class="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    ><use href="/icons/site-icons.svg#chevron-right-tall"></use></svg>
-                  </button>
-                </div>
-
-                <div class="pmex-color-background h-1.5 rounded-full bg-[var(--c-EEF0E8)] overflow-hidden">
-                  <div
-                    id="step-progress"
-                    class="pmex-color-background h-full rounded-full bg-[var(--c-AAD39C)] transition-all duration-300 ease-out pmex-st-d3f64f"
-                   
-                  ></div>
-                </div>
-              </div>
-
-              <!-- MAIN LAYOUT: sidebar + content -->
-              <div
-                class="relative flex flex-col md:flex-row overflow-hidden rounded-3xl border border-[var(--c-E0E0DA)] bg-[var(--c-FFFFFF)] shadow-[0_18px_40px_var(--c-283C26-a8)]"
-              >
-                <!-- LEFT SIDEBAR (desktop) -->
-                <nav
-                  id="lifecycle-sidebar"
-                  aria-label="Claims lifecycle steps"
-                  class="hidden md:block shrink-0 bg-[var(--c-FFFFFF)] md:border-r border-[var(--c-E0E0DA)] md:w-[320px] lg:w-[350px] p-5 lg:p-6"
-                >
-                  <button
-                    id="sidebar-0"
-                    type="button"
-                    onclick="switchBillingStep(0)"
-                    aria-current="true"
-                    class="w-full text-left p-3 flex items-start gap-3.5 cursor-pointer"
-                  >
-                    <span
-                      id="dot-0"
-                      class="w-2.5 h-2.5 rounded-full bg-[var(--c-3F9A4B)] shrink-0 mt-1 ml-1"
-                    ></span>
-                    <div class="min-w-0 flex-1">
-                      <p
-                        id="stitle-0"
-                        class="block text-xs font-extrabold uppercase tracking-wider text-[var(--c-2E4A25)]"
-                      >
-                        Charge Capture &amp; Claim Scrubbing
-                      </p>
-                      <p
-                        id="sdesc-0"
-                        class="mt-0.5 text-xs text-[var(--c-2E4A25)]/80 font-medium leading-relaxed"
-                      >
-                        Our certified coders validate every claim before
-                        submission.
-                      </p>
-                    </div>
-                  </button>
-
-                  <button
-                    id="sidebar-1"
-                    type="button"
-                    onclick="switchBillingStep(1)"
-                    aria-current="false"
-                    class="w-full text-left p-3 flex items-start gap-3.5 cursor-pointer"
-                  >
-                    <span
-                      id="dot-1"
-                      class="w-2.5 h-2.5 rounded-full bg-[var(--c-959085)] shrink-0 mt-1"
-                    ></span>
-                    <div class="min-w-0 flex-1">
-                      <p
-                        id="stitle-1"
-                        class="block text-xs font-bold uppercase tracking-wider text-[var(--c-505050)]"
-                      >
-                        Denial Management &amp; Prevention
-                      </p>
-                      <p
-                        id="sdesc-1"
-                        class="mt-0.5 text-xs text-[var(--c-676767)] font-normal leading-relaxed"
-                      >
-                        Specialty billers stop denials before they repeat.
-                      </p>
-                    </div>
-                  </button>
-
-                  <button
-                    id="sidebar-2"
-                    type="button"
-                    onclick="switchBillingStep(2)"
-                    aria-current="false"
-                    class="w-full text-left p-3 flex items-start gap-3.5 cursor-pointer"
-                  >
-                    <span
-                      id="dot-2"
-                      class="w-2.5 h-2.5 rounded-full bg-[var(--c-959085)] shrink-0 mt-1"
-                    ></span>
-                    <div class="min-w-0 flex-1">
-                      <p
-                        id="stitle-2"
-                        class="block text-xs font-bold uppercase tracking-wider text-[var(--c-505050)]"
-                      >
-                        Expert Follow-Up &amp; Resolution
-                      </p>
-                      <p
-                        id="sdesc-2"
-                        class="mt-0.5 text-xs text-[var(--c-676767)] font-normal leading-relaxed"
-                      >
-                        Senior specialists work every outstanding claim.
-                      </p>
-                    </div>
-                  </button>
-
-                  <button
-                    id="sidebar-3"
-                    type="button"
-                    onclick="switchBillingStep(3)"
-                    aria-current="false"
-                    class="w-full text-left p-3 flex items-start gap-3.5 cursor-pointer"
-                  >
-                    <span
-                      id="dot-3"
-                      class="w-2.5 h-2.5 rounded-full bg-[var(--c-959085)] shrink-0 mt-1"
-                    ></span>
-                    <div class="min-w-0 flex-1">
-                      <p
-                        id="stitle-3"
-                        class="block text-xs font-bold uppercase tracking-wider text-[var(--c-505050)]"
-                      >
-                        Payment Posting &amp; Reconciliation
-                      </p>
-                      <p
-                        id="sdesc-3"
-                        class="mt-0.5 text-xs text-[var(--c-676767)] font-normal leading-relaxed"
-                      >
-                        ERA and EOB reconciled daily by our posting team.
-                      </p>
-                    </div>
-                  </button>
-
-                  <button
-                    id="sidebar-4"
-                    type="button"
-                    onclick="switchBillingStep(4)"
-                    aria-current="false"
-                    class="w-full text-left p-3 flex items-start gap-3.5 cursor-pointer"
-                  >
-                    <span
-                      id="dot-4"
-                      class="w-2.5 h-2.5 rounded-full bg-[var(--c-959085)] shrink-0 mt-1"
-                    ></span>
-                    <div class="min-w-0 flex-1">
-                      <p
-                        id="stitle-4"
-                        class="block text-xs font-bold uppercase tracking-wider text-[var(--c-505050)]"
-                      >
-                        Real-Time Practice Reporting
-                      </p>
-                      <p
-                        id="sdesc-4"
-                        class="mt-0.5 text-xs text-[var(--c-676767)] font-normal leading-relaxed"
-                      >
-                        The full picture in the <span class="logo-font" role="img" aria-label="pmex"></span> reporting platform.
-                      </p>
-                    </div>
-                  </button>
-                </nav>
-
-                <!-- RIGHT PANEL -->
-                <div
-                  id="lifecycle-panel"
-                  class="flex-1 p-5 sm:p-6 lg:p-8 bg-[var(--c-FFFFFF)]"
-                >
-                  <div id="normal-content">
-                    <!-- Middle editorial -->
-                    <div
-                      id="lifecycle-main"
-                      class="flex flex-col justify-between gap-5 min-w-0"
-                    >
-                      <div class="space-y-4">
-                        <div id="lifecycle-expert" class="mb-1">
-                          <div
-                            class="pmex-color-background inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] text-[var(--c-3F9A4B)] text-xs font-semibold mb-2"
-                          >
-                            <span
-                              class="w-1.5 h-1.5 rounded-full bg-[var(--c-3F9A4B)]"
-                            ></span>
-                            <span class="logo-font" role="img" aria-label="pmex"></span> Certified Billers &amp; Specialty Coders
-                          </div>
-                          <p
-                            class="text-xs text-[var(--c-676767)] font-normal leading-relaxed mb-2"
-                          >
-                            Real-time claim review, specialty-specific coding
-                            expertise, and payer knowledge across all 50 states
-                            and all specialties.
-                          </p>
-                        </div>
-
-                        <div id="lifecycle-copy">
-                          <h3
-                            id="active-title"
-                            class="text-lg sm:text-2xl lg:text-[16px] font-extrabold text-[var(--c-2E4A25)] tracking-tight mb-2 leading-tight"
-                          >
-                            Charge Capture &amp; Claim Scrubbing
-                          </h3>
-                          <p
-                            id="active-desc"
-                            class="text-[var(--c-505050)] text-sm sm:text-[15px] leading-relaxed"
-                          >
-                            Missing modifiers, invalid codes, and credentialing
-                            mismatches cause most denials before a claim ever
-                            reaches a payer. Our AAPC-certified coders review
-                            every claim against payer-specific rules, specialty
-                            billing guidelines, and documentation requirements
-                            before submission, so your first-pass paid rate goes
-                            up and your team stops chasing avoidable rejections.
-                          </p>
-                        </div>
-
-                        <div id="lifecycle-features" class="space-y-1.5 pt-1">
-                          <div
-                            class="lifecycle-feature-row flex items-start gap-2.5 p-2.5 rounded-xl bg-[var(--c-FFFFFF)] border border-[var(--c-EDEAE0)]"
-                          >
-                            <div
-                              class="pmex-color-background p-1.5 rounded-lg bg-[var(--c-EEF0E8)] text-[var(--c-3F9A4B)] mt-0.5 shrink-0 flex items-center justify-center"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="w-4 h-4"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              ><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg>
-                            </div>
-                            <div>
-                              <h5
-                                id="feature-title-0"
-                                class="text-sm font-[800] text-[var(--c-2E4A25)] uppercase tracking-wide"
-                              >
-                                Rules-Based Pre-Scrubbing
-                              </h5>
-                              <p
-                                id="feature-desc-0"
-                                class="text-xs text-[var(--c-676767)] mt-0.5"
-                              >
-                                Our certified coders review every claim against
-                                payer rules before submission.
-                              </p>
-                            </div>
-                          </div>
-                          <div
-                            class="lifecycle-feature-row flex items-start gap-2.5 p-2.5 rounded-xl bg-[var(--c-FFFFFF)] border border-[var(--c-EDEAE0)]"
-                          >
-                            <div
-                              class="pmex-color-background p-1.5 rounded-lg bg-[var(--c-EEF0E8)] text-[var(--c-3F9A4B)] mt-0.5 shrink-0 flex items-center justify-center"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="w-4 h-4"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              ><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg>
-                            </div>
-                            <div>
-                              <h5
-                                id="feature-title-1"
-                                class="text-xs font-bold text-[var(--c-2E4A25)] uppercase tracking-wide"
-                              >
-                                Specialty Coding Audit
-                              </h5>
-                              <p
-                                id="feature-desc-1"
-                                class="text-xs text-[var(--c-676767)] mt-0.5"
-                              >
-                                AAPC-certified review against specialty billing
-                                guidelines and documentation requirements.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Right showcase card (keeps card ids for JS compatibility) -->
-                    <div id="lifecycle-cards" class="mt-5 md:mt-0">
-                      <div
-                        id="card-0"
-                        class="flex flex-col bg-[var(--c-FFFFFF)] rounded-2xl border border-[var(--c-EDEAE0)] shadow-[0_10px_28px_var(--c-2E4A25-a8)] p-3 h-full justify-between"
-                      >
-                        <div
-                          class="flex flex-col items-center flex-1 justify-between text-center space-y-2.5 "
-                        >
-                          <img
-                            id="showcase-image"
-                            src="/img/1icon.webp"
-                            alt="Charge Capture"
-                            class="w-25 h-25 sm:w-11 sm:h-11 object-contain pmex-st-041fa9"
-                          />
-                          
-                          <div>
-                            <h3
-                              id="ctitle-0"
-                              class="text-lg sm:text-xl font-extrabold text-[var(--c-2E4A25)] tracking-tight leading-snug"
-                            >
-                              Charge Capture &amp; Claim Scrubbing
-                            </h3>
-                            <p
-                              id="csub-0"
-                              class="mt-1.5 text-[var(--c-676767)] font-normal leading-relaxed max-w-xs mx-auto text-sm sm:text-[15px]"
-                            >
-                              Our certified coders review every claim against
-                              payer rules before submission.
-                            </p>
-                          </div>
-                          <div
-                            class="pmex-color-background w-full bg-[var(--c-F8FBF0)] rounded-xl border border-[var(--c-EDEAE0)] flex items-center justify-around p-1.5 mb-5 mt-2.5"
-                          >
-                            <div class="text-center w-full py-2 px-3">
-                              <span
-                                id="showcase-metric"
-                                class="block text-3xl sm:text-4xl font-extrabold text-[var(--c-3F9A4B)] leading-none tracking-tight"
-                                >99%</span
-                              >
-                              <span
-                                id="showcase-metric-label"
-                                class="text-xs font-semibold text-[var(--c-676767)] uppercase tracking-wide mt-2 block"
-                                >Clean Claim Rate</span
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="mt-2 border-[var(--c-E0E0DA)] pt-2 shrink-0 pmex-st-649d47"
-                         
-                        >
-                          <a
-                            id="lifecycle-showcase-cta"
-                            href="/company/demo.html"
-                            class="cta-primary-btn w-full mb-2.5"
-                          >
-                            <span id="showcase-cta-label"
-                              >Explore Scrubbing Engine</span
-                            >
-                            <svg
-                              class="w-4 h-4"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            ><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
-                          </a>
-                        </div>
-                      </div>
-
-                      <!-- Hidden legacy cards for step ids used by older markup/scripts -->
-                      <div id="card-1" class="hidden " aria-hidden="true">
-                        <p id="ctitle-1">Denial Management &amp; Prevention</p>
-                        <p id="csub-1">
-                          Specialty billers identify and prevent denial patterns
-                          before they repeat.
-                        </p>
-                      </div>
-                      <div id="card-2" class="hidden" aria-hidden="true">
-                        <p id="ctitle-2">Expert Follow-Up &amp; Resolution</p>
-                        <p id="csub-2">
-                          Senior billing specialists work every outstanding
-                          claim to resolution.
-                        </p>
-                      </div>
-                      <div id="card-3" class="hidden" aria-hidden="true">
-                        <p id="ctitle-3">
-                          Payment Posting &amp; Reconciliation
-                        </p>
-                        <p id="csub-3">
-                          ERA and EOB reconciled daily. Variances flagged same
-                          day.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /normal-content -->
-
-                  <!-- BIG PICTURE CONTENT (step 4 only) , hidden by default -->
-
-                  <div id="bigpicture-content" class="pmex-st-5790ff">
-                    <!-- Billing ops layer -->
-
-                    <div class="mb-5">
-                      <p
-                        class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] mb-2 pmex-idx-label-c"
-                       
-                      >
-                        Billing Operations Layer
-                      </p>
-
-                      <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
-                        <div
-                          class="rounded-lg px-2 py-3 text-center border pmex-st-5e61e7 pmex-hook-1"
-                         
-                        >
-                          <img
-                            src="/img/1icon.webp"
-                            alt=""
-                            class="w-7 h-7 mx-auto mb-1.5 object-contain pmex-idx-img-reset"
-                           
-                          />
-
-                          <p
-                            class="text-[10px] font-medium leading-snug pmex-idx-label-b"
-                           
-                          >
-                            Charge Capture &amp; Scrubbing
-                          </p>
-                        </div>
-
-                        <div
-                          class="rounded-lg px-2 py-3 text-center border pmex-st-5e61e7 pmex-hook-1"
-                         
-                        >
-                          <img
-                            src="/img/2icon.webp"
-                            alt=""
-                            class="w-7 h-7 mx-auto mb-1.5 object-contain pmex-idx-img-reset"
-                           
-                          />
-
-                          <p
-                            class="text-[10px] font-medium leading-snug pmex-idx-label-b"
-                           
-                          >
-                            Denial Management
-                          </p>
-                        </div>
-
-                        <div
-                          class="rounded-lg px-2 py-3 text-center border pmex-st-5e61e7 pmex-hook-1"
-                         
-                        >
-                          <img
-                            src="/img/3icon.webp"
-                            alt=""
-                            class="w-7 h-7 mx-auto mb-1.5 object-contain pmex-idx-img-reset"
-                           
-                          />
-
-                          <p
-                            class="text-[10px] font-medium leading-snug pmex-idx-label-b"
-                           
-                          >
-                            Expert Follow-Up
-                          </p>
-                        </div>
-
-                        <div
-                          class="rounded-lg px-2 py-3 text-center border pmex-st-5e61e7 pmex-hook-1"
-                         
-                        >
-                          <img
-                            src="/img/4icon.webp"
-                            alt=""
-                            class="w-7 h-7 mx-auto mb-1.5 object-contain pmex-idx-img-reset"
-                           
-                          />
-
-                          <p
-                            class="text-[10px] font-medium leading-snug pmex-idx-label-b"
-                           
-                          >
-                            Payment Posting
-                          </p>
-                        </div>
-
-                        <div
-                          class="rounded-lg px-2 py-3 text-center border pmex-st-6681df pmex-hook-1"
-                         
-                        >
-                          <div
-                            class="w-7 h-7 mx-auto mb-1.5 flex items-center justify-center rounded-full pmex-st-09a4f3 pmex-hook-1"
-                           
-                          >
-                            <svg
-                              class="w-4 h-4 text-[var(--c-FFFFFF)]"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            ><use href="/icons/site-icons.svg#index-icon"></use></svg>
-                          </div>
-
-                          <p
-                            class="text-[10px] font-medium leading-snug pmex-idx-label-b"
-                           
-                          >
-                            Quality Review
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Practice intelligence layer -->
-
-                    <div class="mb-5">
-                      <p
-                        class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] mb-2 pmex-idx-label-c"
-                       
-                      >
-                        Practice Intelligence Layer
-                      </p>
-
-                      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                        <div
-                          class="rounded-lg px-3 py-3 flex items-center gap-2 border pmex-st-5e61e7 pmex-hook-1"
-                         
-                        >
-                          <div
-                            class="w-2 h-2 rounded-full shrink-0 pmex-st-09a4f3 pmex-hook-1"
-                           
-                          ></div>
-
-                          <p
-                            class="text-[11px] font-medium pmex-idx-label-d"
-                           
-                          >
-                            Dedicated Account Manager
-                          </p>
-                        </div>
-
-                        <div
-                          class="rounded-lg px-3 py-3 flex items-center gap-2 border pmex-st-5e61e7 pmex-hook-1"
-                         
-                        >
-                          <div
-                            class="w-2 h-2 rounded-full shrink-0 pmex-st-09a4f3 pmex-hook-1"
-                           
-                          ></div>
-
-                          <p
-                            class="text-[11px] font-medium pmex-idx-label-d"
-                           
-                          >
-                            Real-Time Reporting Platform
-                          </p>
-                        </div>
-
-                        <div
-                          class="rounded-lg px-3 py-3 flex items-center gap-2 border pmex-st-5e61e7 pmex-hook-1"
-                         
-                        >
-                          <div
-                            class="w-2 h-2 rounded-full shrink-0 pmex-st-09a4f3 pmex-hook-1"
-                           
-                          ></div>
-
-                          <p
-                            class="text-[11px] font-medium pmex-idx-label-d"
-                           
-                          >
-                            Performance Optimization
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Foundation layer -->
-
-                    <div class="mb-6">
-                      <p
-                        class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] mb-2 pmex-idx-label-c"
-                       
-                      >
-                        Foundation Layer
-                      </p>
-
-                      <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
-                        <div
-                          class="rounded-lg px-2 py-2.5 text-center border pmex-st-a02d19 pmex-hook-1"
-                         
-                        >
-                          <p
-                            class="text-[10px] font-medium leading-snug pmex-idx-label-a"
-                           
-                          >
-                            Specialty Knowledge Base
-                          </p>
-                        </div>
-
-                        <div
-                          class="rounded-lg px-2 py-2.5 text-center border pmex-st-a02d19 pmex-hook-1"
-                         
-                        >
-                          <p
-                            class="text-[10px] font-medium leading-snug pmex-idx-label-a"
-                           
-                          >
-                            Payer Rules &amp; Contracts
-                          </p>
-                        </div>
-
-                        <div
-                          class="rounded-lg px-2 py-2.5 text-center border pmex-st-a02d19 pmex-hook-1"
-                         
-                        >
-                          <p
-                            class="text-[10px] font-medium leading-snug pmex-idx-label-a"
-                           
-                          >
-                            Claims Workflow Engine
-                          </p>
-                        </div>
-
-                        <div
-                          class="rounded-lg px-2 py-2.5 text-center border pmex-st-a02d19 pmex-hook-1"
-                         
-                        >
-                          <p
-                            class="text-[10px] font-medium leading-snug pmex-idx-label-a"
-                           
-                          >
-                            Compliance &amp; Auditing
-                          </p>
-                        </div>
-
-                        <div
-                          class="rounded-lg px-2 py-2.5 text-center border pmex-st-a02d19 pmex-hook-1"
-                         
-                        >
-                          <p
-                            class="text-[10px] font-medium leading-snug pmex-idx-label-a"
-                           
-                          >
-                            Reconciliation &amp; Reporting
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Reporting text -->
-
-                    <div>
-                      <h3
-                        class="text-[18px] sm:text-[28px] font-normal mb-2 sm:mb-3 leading-tight pmex-st-97023b"
-                       
-                      >
-                        Real-Time Practice Reporting
-                      </h3>
-
-                      <p
-                        class="text-[13px] sm:text-[14px] leading-[1.7] pmex-idx-label-a"
-                       
-                      >
-                        A connected view of your entire revenue cycle end to
-                        end. Every step feeds the next, and every dollar is
-                        tracked from the moment a claim is created to the moment
-                        it is paid and reconciled. The <span class="logo-font" role="img" aria-label="pmex"></span> reporting platform
-                        gives you live visibility at every stage so you always
-                        know exactly where your revenue stands.
-                      </p>
-                    </div>
-                  </div>
-                  <!-- /bigpicture-content -->
-                </div>
-                <!-- /right panel -->
-              </div>
-              <!-- /main layout -->
+        <div class="pmex-container">
+          <!-- Section Label + Title -->
+          <div class="pmex-section-head text-center mx-auto max-w-[640px]">
+            <p class="text-[11px] sm:text-[13px] font-medium text-[var(--c-3F9A4B)] uppercase tracking-[1.2px]">
+              Claims Lifecycle
+            </p>
+            <h2 class="mt-1.5 text-[22px] sm:text-[30px] lg:text-[36px] font-normal text-[var(--c-505050)] leading-[1.2]">
+              How a claim moves through <span class="logo-font" role="img" aria-label="pmex"></span>
+            </h2>
+            <div class="pmex-stack-intro">
+              <p>Real-time claim review, specialty-specific coding expertise, and payer knowledge across all 50 states and all specialties.</p>
             </div>
           </div>
-          <!-- /lifecycle sticky -->
+
+          <!-- Stacking cards: on 1024px+ each card sticks 28px lower than the previous one and slides over it while scrolling -->
+          <ol class="pmex-stack-list">
+                <li class="pmex-stack-item">
+                  <article class="pmex-stack-panel" aria-labelledby="pmex-stack-title-1">
+                    <div class="pmex-stack-head">
+                      <span class="pmex-stack-num">01</span>
+                      <h3 id="pmex-stack-title-1" class="pmex-stack-title">Charge Capture &amp; Claim Scrubbing</h3>
+                    </div>
+                    <div class="pmex-stack-body">
+                      <div class="pmex-stack-copy">
+                        <p class="pmex-stack-desc">Missing modifiers, invalid codes, and credentialing mismatches cause most denials before a claim ever reaches a payer. Our AAPC-certified coders review every claim against payer-specific rules, specialty billing guidelines, and documentation requirements before submission, so your first-pass paid rate goes up and your team stops chasing avoidable rejections.</p>
+                        <ul class="pmex-stack-features">
+                          <li class="pmex-stack-feature">
+                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
+                            <span>
+                              <h4>Rules-Based Pre-Scrubbing</h4>
+                              <p>Our certified coders review every claim against payer rules before submission.</p>
+                            </span>
+                          </li>
+                          <li class="pmex-stack-feature">
+                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
+                            <span>
+                              <h4>Specialty Coding Audit</h4>
+                              <p>AAPC-certified review against specialty billing guidelines and documentation requirements.</p>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="pmex-stack-showcase">
+                        <img src="/img/1icon.webp" alt="" width="56" height="56" loading="lazy" />
+                        <p class="pmex-stack-sub">Our certified coders review every claim against payer rules before submission.</p>
+                        <div class="pmex-stack-metric">
+                          <strong>99%</strong>
+                          <span>Clean Claim Rate</span>
+                        </div>
+                        <a href="/company/demo.html" class="cta-primary-btn w-full">
+                          <span>Explore Scrubbing Engine</span>
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="pmex-stack-item">
+                  <article class="pmex-stack-panel" aria-labelledby="pmex-stack-title-2">
+                    <div class="pmex-stack-head">
+                      <span class="pmex-stack-num">02</span>
+                      <h3 id="pmex-stack-title-2" class="pmex-stack-title">Denial Management &amp; Prevention</h3>
+                    </div>
+                    <div class="pmex-stack-body">
+                      <div class="pmex-stack-copy">
+                        <p class="pmex-stack-desc">Our specialty billing teams analyze denials by payer, code, and provider to identify root causes before they become recurring patterns. Our certified billers review documentation, correction requirements, and payer-specific processes so preventable revenue loss can be reduced going forward.</p>
+                        <ul class="pmex-stack-features">
+                          <li class="pmex-stack-feature">
+                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
+                            <span>
+                              <h4>Root Cause Review</h4>
+                              <p>Specialty billing teams analyze denials by payer, code, and provider.</p>
+                            </span>
+                          </li>
+                          <li class="pmex-stack-feature">
+                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
+                            <span>
+                              <h4>Prevention Focus</h4>
+                              <p>Certified billers review documentation and payer-specific processes to reduce repeat denials.</p>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="pmex-stack-showcase">
+                        <img src="/img/2icon.webp" alt="" width="56" height="56" loading="lazy" />
+                        <p class="pmex-stack-sub">Specialty billers identify and prevent denial patterns before they repeat.</p>
+                        <div class="pmex-stack-metric">
+                          <strong>97%</strong>
+                          <span>First-Pass Acceptance</span>
+                        </div>
+                        <a href="/services/denial-management.html" class="cta-primary-btn w-full">
+                          <span>Explore Denial Workflow</span>
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="pmex-stack-item">
+                  <article class="pmex-stack-panel" aria-labelledby="pmex-stack-title-3">
+                    <div class="pmex-stack-head">
+                      <span class="pmex-stack-num">03</span>
+                      <h3 id="pmex-stack-title-3" class="pmex-stack-title">Expert Follow-Up &amp; Resolution</h3>
+                    </div>
+                    <div class="pmex-stack-body">
+                      <div class="pmex-stack-copy">
+                        <p class="pmex-stack-desc">Every outstanding claim is worked by a dedicated billing specialist with specialty-specific payer knowledge. Routine follow-up is handled systematically. Complex cases including secondary payers, payer disputes, underpayments, and coordination of benefits issues are escalated to senior specialists.</p>
+                        <ul class="pmex-stack-features">
+                          <li class="pmex-stack-feature">
+                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
+                            <span>
+                              <h4>Dedicated Follow-Up</h4>
+                              <p>Every outstanding claim is worked by a dedicated billing specialist.</p>
+                            </span>
+                          </li>
+                          <li class="pmex-stack-feature">
+                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
+                            <span>
+                              <h4>Complex Case Escalation</h4>
+                              <p>Secondary payers, disputes, underpayments, and COB issues go to senior specialists.</p>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="pmex-stack-showcase">
+                        <img src="/img/3icon.webp" alt="" width="56" height="56" loading="lazy" />
+                        <p class="pmex-stack-sub">Senior billing specialists work every outstanding claim to resolution.</p>
+                        <div class="pmex-stack-metric">
+                          <strong>2.7M+</strong>
+                          <span>Claims Processed</span>
+                        </div>
+                        <a href="/company/demo.html" class="cta-primary-btn w-full">
+                          <span>Explore Follow-Up</span>
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="pmex-stack-item">
+                  <article class="pmex-stack-panel" aria-labelledby="pmex-stack-title-4">
+                    <div class="pmex-stack-head">
+                      <span class="pmex-stack-num">04</span>
+                      <h3 id="pmex-stack-title-4" class="pmex-stack-title">Payment Posting &amp; Reconciliation</h3>
+                    </div>
+                    <div class="pmex-stack-body">
+                      <div class="pmex-stack-copy">
+                        <p class="pmex-stack-desc">ERA and EOB payments are reconciled daily by our payment posting team. Variances between billed amounts, contracted rates, and received payments are reviewed and addressed. Payments are posted, verified, and reconciled so financial records stay accurate and discrepancies can be identified quickly.</p>
+                        <ul class="pmex-stack-features">
+                          <li class="pmex-stack-feature">
+                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
+                            <span>
+                              <h4>Daily Reconciliation</h4>
+                              <p>ERA and EOB payments are reconciled daily by our payment posting team.</p>
+                            </span>
+                          </li>
+                          <li class="pmex-stack-feature">
+                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
+                            <span>
+                              <h4>Variance Review</h4>
+                              <p>Variances between billed amounts, contracted rates, and received payments are reviewed.</p>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="pmex-stack-showcase">
+                        <img src="/img/4icon.webp" alt="" width="56" height="56" loading="lazy" />
+                        <p class="pmex-stack-sub">ERA and EOB reconciled daily. Variances flagged same day.</p>
+                        <div class="pmex-stack-metric">
+                          <strong>+30%</strong>
+                          <span>Revenue Increase Avg</span>
+                        </div>
+                        <a href="/company/demo.html" class="cta-primary-btn w-full">
+                          <span>Explore Payment Posting</span>
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="pmex-stack-item">
+                  <article class="pmex-stack-panel" aria-labelledby="pmex-stack-title-5">
+                    <div class="pmex-stack-head">
+                      <span class="pmex-stack-num">05</span>
+                      <h3 id="pmex-stack-title-5" class="pmex-stack-title">Real-Time Practice Reporting</h3>
+                    </div>
+                    <div class="pmex-stack-body">
+                      <div class="pmex-stack-copy">
+                        <p class="pmex-stack-desc">A connected view of your entire revenue cycle end to end. Every step feeds the next, and every dollar is tracked from the moment a claim is created to the moment it is paid and reconciled. The PMEX reporting platform gives you visibility at every stage so you can understand where your revenue stands.</p>
+                        <ul class="pmex-stack-features">
+                          <li class="pmex-stack-feature">
+                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
+                            <span>
+                              <h4>End-to-End Visibility</h4>
+                              <p>Every dollar is tracked from claim creation through payment and reconciliation.</p>
+                            </span>
+                          </li>
+                          <li class="pmex-stack-feature">
+                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
+                            <span>
+                              <h4>PMEX Reporting Platform</h4>
+                              <p>Real-time reporting updated by the PMEX billing team at every stage.</p>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="pmex-stack-showcase">
+                        <img src="/img/5icon.webp" alt="" width="56" height="56" loading="lazy" />
+                        <p class="pmex-stack-sub">The full picture in the PMEX reporting platform.</p>
+                        <div class="pmex-stack-metric">
+                          <strong>50</strong>
+                          <span>States Covered</span>
+                        </div>
+                        <a href="/company/demo.html" class="cta-primary-btn w-full">
+                          <span>Explore Reporting</span>
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+          </ol>
         </div>
-        <!-- /lifecycle spacer -->
       </section>
       
 

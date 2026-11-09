@@ -25090,3 +25090,58 @@ html[data-css~="pmex-common"] body h1 span.usa-flag { font-family: 'PMEX Inter B
   [data-css~="home-responsive"] #billing-results [data-result-card]:is([data-result-direction="down"],[data-result-direction="right"]) { margin-right: 12px; }
   [data-css~="home-responsive"] #billing-results .pmex-card-grid { padding-block: 12px; }
 }
+/* Claims lifecycle: stacking cards (replaces the sticky side tabs). From 1024px each card is sticky, 52px lower than the
+   previous one, so while scrolling every card slides over the one before and the number + title of every earlier card
+   stays readable on top (the 52px strip holds the whole head row). Below 1024px the cards simply follow each other. */
+[data-css~="home-responsive"] .pmex-stack-intro { margin-top: 16px; }
+[data-css~="home-responsive"] .pmex-stack-intro p { margin: 0 auto; max-width: 520px; font-size: 14px; line-height: 1.6; color: var(--c-676767); }
+[data-css~="home-responsive"] .pmex-stack-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 24px; }
+[data-css~="home-responsive"] .pmex-stack-panel { background: var(--c-FFFFFF); border: 1px solid var(--c-E0E0DA); border-radius: 24px; box-shadow: 0 18px 40px var(--c-283C26-a8); padding: 20px; }
+[data-css~="home-responsive"] .pmex-stack-head { display: flex; align-items: center; gap: 12px; padding-bottom: 16px; margin-bottom: 20px; border-bottom: 1px solid var(--c-EDEAE0); }
+[data-css~="home-responsive"] .pmex-stack-num { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; min-width: 44px; height: 28px; padding: 0 10px; border-radius: 9999px; background: var(--c-F8FBF0); border: 1px solid var(--c-AAD39C); color: var(--c-3F9A4B); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+[data-css~="home-responsive"] .pmex-stack-title { margin: 0; font-size: 18px; font-weight: 700; line-height: 1.25; color: var(--c-2E4A25); }
+[data-css~="home-responsive"] .pmex-stack-body { display: grid; gap: 20px; }
+[data-css~="home-responsive"] .pmex-stack-desc { margin: 0 0 16px; font-size: 15px; line-height: 1.65; color: var(--c-505050); }
+[data-css~="home-responsive"] .pmex-stack-features { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+/* The copy column fills the row; the feature boxes take the remaining height, so the copy and the showcase box share top and bottom. */
+[data-css~="home-responsive"] .pmex-stack-copy { display: flex; flex-direction: column; }
+[data-css~="home-responsive"] .pmex-stack-copy .pmex-stack-features { flex: 1 1 auto; }
+[data-css~="home-responsive"] .pmex-stack-feature { display: flex; align-items: center; gap: 10px; padding: 12px; border: 1px solid var(--c-EDEAE0); border-radius: 12px; background: var(--c-FFFFFF); }
+[data-css~="home-responsive"] .pmex-stack-feature-icon { display: flex; align-items: center; justify-content: center; flex: 0 0 28px; height: 28px; border-radius: 8px; background: var(--c-EEF0E8); color: var(--c-3F9A4B); }
+[data-css~="home-responsive"] .pmex-stack-feature-icon svg { width: 16px; height: 16px; }
+[data-css~="home-responsive"] .pmex-stack-feature h4 { margin: 0 0 2px; font-size: 12px; font-weight: 800; line-height: 1.4; letter-spacing: .04em; text-transform: uppercase; color: var(--c-2E4A25); }
+[data-css~="home-responsive"] .pmex-stack-feature p { margin: 0; font-size: 12px; line-height: 1.5; color: var(--c-676767); }
+[data-css~="home-responsive"] .pmex-stack-showcase { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; padding: 16px; text-align: center; border: 1px solid var(--c-EDEAE0); border-radius: 16px; box-shadow: 0 10px 28px var(--c-2E4A25-a8); }
+[data-css~="home-responsive"] .pmex-stack-showcase img { width: 56px; height: 56px; object-fit: contain; }
+[data-css~="home-responsive"] .pmex-stack-sub { margin: 0; max-width: 300px; font-size: 14px; line-height: 1.55; color: var(--c-676767); }
+[data-css~="home-responsive"] .pmex-stack-metric { width: 100%; padding: 12px; border: 1px solid var(--c-EDEAE0); border-radius: 12px; background: var(--c-F8FBF0); }
+[data-css~="home-responsive"] .pmex-stack-metric strong { display: block; font-size: 32px; font-weight: 800; line-height: 1; letter-spacing: -.01em; color: var(--c-3F9A4B); }
+[data-css~="home-responsive"] .pmex-stack-metric span { display: block; margin-top: 6px; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--c-676767); }
+[data-css~="home-responsive"] .pmex-stack-showcase .cta-primary-btn { justify-content: center; gap: 8px; }
+@media (min-width: 768px) {
+  [data-css~="home-responsive"] .pmex-stack-panel { padding: 24px 28px 28px; }
+  [data-css~="home-responsive"] .pmex-stack-body { grid-template-columns: minmax(0, 1fr) 260px; gap: 28px; }
+  [data-css~="home-responsive"] .pmex-stack-features { grid-template-columns: 1fr 1fr; }
+  [data-css~="home-responsive"] .pmex-stack-title { font-size: 20px; }
+}
+@media (min-width: 1024px) {
+  /* Step between the stacked cards follows the screen height: 52px on tall screens, smaller on short ones, so the last
+     card (about 400px tall, stuck at 92px + 4 steps) always ends inside the screen: (100vh - 92px top - 400px card - 16px) / 4. */
+  [data-css~="home-responsive"] .pmex-stack-list { --pmex-stack-step: clamp(0px, calc((100vh - 508px) / 4), 52px); }
+  [data-css~="home-responsive"] .pmex-stack-item { position: sticky; top: 92px; }
+  [data-css~="home-responsive"] .pmex-stack-item:nth-child(2) { top: calc(92px + var(--pmex-stack-step)); }
+  [data-css~="home-responsive"] .pmex-stack-item:nth-child(3) { top: calc(92px + var(--pmex-stack-step) * 2); }
+  [data-css~="home-responsive"] .pmex-stack-item:nth-child(4) { top: calc(92px + var(--pmex-stack-step) * 3); }
+  [data-css~="home-responsive"] .pmex-stack-item:nth-child(5) { top: calc(92px + var(--pmex-stack-step) * 4); }
+  /* Room after the last card so it can stick too and the full stack (all five heads) stays on screen for a moment. */
+  [data-css~="home-responsive"] .pmex-stack-list::after { content: ""; display: block; height: 80px; }
+  [data-css~="home-responsive"] .pmex-stack-title { font-size: 22px; }
+  [data-css~="home-responsive"] .pmex-stack-panel { padding-top: 12px; }
+  [data-css~="home-responsive"] .pmex-stack-body { grid-template-columns: minmax(0, 1fr) 300px; }
+  [data-css~="home-responsive"] .pmex-stack-head { padding-bottom: 12px; }
+}
+/* Very short screens (a card does not fit): no sticking, the cards just scroll. */
+@media (min-width: 1024px) and (max-height: 519px) {
+  [data-css~="home-responsive"] .pmex-stack-item { position: static; }
+  [data-css~="home-responsive"] .pmex-stack-list::after { display: none; }
+}

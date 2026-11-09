@@ -160,11 +160,25 @@ document.addEventListener("DOMContentLoaded", function () {
     activateTab(index);
   }
 
+  // When the sticky block (heading + tabs + cards) is taller than the screen, stick it so its bottom meets the bottom
+  // of the screen instead of its top meeting the navbar. Otherwise the lower half of the cards stays below the screen
+  // and the stacking animation runs while only half of the card is visible. getScrollRange() reads this top value.
+  function fitSticky() {
+    if (!sticky) return;
+    sticky.style.top = "";
+    if (!isDesktop()) return;
+    const cssTop = parseFloat(getComputedStyle(sticky).top) || 0;
+    const fitTop = window.innerHeight - sticky.offsetHeight;
+    if (fitTop < cssTop) sticky.style.top = Math.round(fitTop) + "px";
+  }
+
   function layout() {
     if (isDesktop()) {
       equalizeAndStage();
+      fitSticky();
       renderStack(getScrollProgress());
     } else {
+      fitSticky();
       renderMobile(Math.max(0, activeIndex));
     }
   }
