@@ -23486,7 +23486,7 @@ html[data-css~="site-faq-accordion-5"] body [data-faq-answer] [class*="bg-[var(-
 html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn{display:inline-flex!important;align-items:center!important;box-sizing:border-box!important;font-family:Inter,sans-serif!important;font-size:14px!important;font-weight:400!important;line-height:20px!important;letter-spacing:normal!important;text-transform:none!important;text-decoration:none!important;color:var(--c-2E4A25)!important;padding:10px 24px!important;min-height:40px!important;height:auto!important;border:none!important;border-radius:9999px!important;box-shadow:none!important;background:var(--grad-pill)!important;justify-content:center!important;gap:8px!important;white-space:normal!important;max-width:100%;cursor:pointer;transition:background-color .2s ease,box-shadow .2s ease!important}
 html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(:hover,:focus-visible){color:var(--c-2E4A25)!important;background:var(--grad-a)!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav :is(a,button):focus-visible{outline:2px solid var(--c-3F9A4B);outline-offset:4px}
-@media(max-width:1200px){
+@media(max-width:1100px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a.homepage-nav-demo, [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a[href="https://portal.pmexinc.com/?_gl=1*15wbhuk*_ga*MTYyNTM1MjEwNy4xNzkzNjMwNzAw*_ga_3YSTQXMPQH*czE3OTM2MzA3MDAkbzEkZzAkdDE3OTM2MzA3MDAkajYwJGwwJGgwl"]{display:block!important;box-sizing:border-box!important;font-family:Inter,sans-serif!important;font-size:11px!important;font-weight:400!important;line-height:10px!important;letter-spacing:normal!important;text-transform:none!important;text-decoration:none!important;color:var(--c-2E4A25)!important;padding:10px 16px!important;height:30px!important;border:none!important;border-radius:9999px!important;box-shadow:none!important;cursor:pointer;white-space:normal!important;background:var(--grad-pill)!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav>div{gap:12px!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-menu-toggle{display:block;order:3}
@@ -23508,7 +23508,7 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
 [data-css~="navbar-d90c332f"] #homepage-reference-nav :is(#homepage-specialties-panel,#homepage-services-panel) a:hover{color:var(--c-3F9A4B)}
 [data-css~="navbar-d90c332f"] body:has(> #homepage-reference-nav){display:flex;flex-direction:column;padding-top:0;align-items:stretch}
 [data-css~="navbar-d90c332f"] body:has(> #homepage-reference-nav)>#homepage-reference-nav{width:100%;flex-shrink:0}
-@media(max-width:1200px){
+@media(max-width:1100px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav :is(#homepage-specialties-panel,#homepage-services-panel){position:static;width:100%;max-height:55vh;padding:16px}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav :is(#homepage-specialties-panel,#homepage-services-panel) .spec-cat-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav :is(#homepage-specialties-panel,#homepage-services-panel) a{font-size:14px}
@@ -23520,13 +23520,13 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions{display:flex;align-items:center;gap:16px;flex-shrink:0;white-space:nowrap}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions .homepage-nav-phone{margin-left:0!important}
 [data-css~="navbar-d90c332f"] #homepage-menu{flex-wrap:nowrap!important}
-@media(max-width:1200px){
+@media(max-width:1100px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav>div{height:auto!important;min-height:68px;flex-wrap:wrap;padding-top:12px!important;padding-bottom:12px!important;gap:12px!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-menu-toggle{margin-left:auto;display:block;order:3}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions{order:4;width:100%;justify-content:flex-end}
 [data-css~="navbar-d90c332f"] #homepage-menu{flex-wrap:wrap!important}
 }
-@media(min-width:1201px){
+@media(min-width:1101px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-services-panel{left:-180px;width:min(1045px,calc(100vw - 115px))}
 }
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-specialties-panel, [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-services-panel{box-sizing:border-box;max-height:min(1515px,calc(100dvh - 110px))}
@@ -23537,14 +23537,14 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
 [data-css~="navbar-d90c332f"] #homepage-reference-nav :is(.popular-specialties-links,#homepage-services-panel .spec-cat-links) a:is(:hover,:focus-visible){background:var(--c-F8FBF0);color:var(--c-3F9A4B)}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .popular-specialties-footer{margin-top:18px;padding-top:16px;border-top:1px solid var(--c-E0E0DA);text-align:left}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .popular-specialties-footer a{margin-left:43px}
-@media(max-width:1200px){
+@media(max-width:1100px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-specialties-panel{max-height:none}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .popular-specialties-links{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:600px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .popular-specialties-links{grid-template-columns:1fr}
 }
-@media(max-width:1200px){
+@media(max-width:1100px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu.is-open{flex-wrap:nowrap!important;max-height:calc(100dvh - 120px);display:flex!important;flex-direction:column}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-specialties{flex-shrink:0;min-width:0}
 }
@@ -23577,11 +23577,11 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-dropdown-panel a{font-family:Inter,sans-serif!important;font-size:14px!important;font-weight:400!important;line-height:1.5!important;color:var(--c-676767)!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-dropdown-panel a :is(.navigation-link-label,p){font-family:inherit!important;font-size:14px!important;font-weight:400!important;line-height:1.5!important;color:inherit!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-dropdown-panel a:is(:hover,:focus-visible){color:var(--c-3F9A4B)!important}
-@media(max-width:1200px){
+@media(max-width:1100px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-services-panel .spec-cat-links a,[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-services-panel .navigation-link-label{white-space:normal}
 }
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-services-panel .spec-cat-title{padding-left:40px;font-size:14px!important}
-@media(min-width:1201px){
+@media(min-width:1101px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2, [data-css~="navbar-d361fb32"] #homepage-reference-nav #homepage-dropdown-2{position:fixed!important;top:64px!important;left:50%!important;transform:translateX(-50%)!important;width:min(880px,calc(100vw - 24px))!important;padding:24px!important;border-radius:18px!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div, [data-css~="navbar-d361fb32"] #homepage-reference-nav #homepage-dropdown-2>div{display:block!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div>div, [data-css~="navbar-d361fb32"] #homepage-reference-nav #homepage-dropdown-2>div>div{display:grid!important;grid-template-columns:190px repeat(2,minmax(0,1fr));grid-template-rows:repeat(7,minmax(38px,auto));gap:0 18px;align-items:stretch}
@@ -23639,7 +23639,7 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-phone{font-size:14px;color:var(--c-3F9A4B);text-decoration:none;font-weight:500}
 
 /* Hamburger menu (up to 1200px): the PMEX Portal button and the phone number are moved into the menu by js/site-shell.js */
-@media(max-width:1200px){
+@media(max-width:1100px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu .homepage-nav-actions{width:100%;justify-content:flex-start;flex-wrap:wrap;border-top:1px solid var(--c-E0E0DA);padding-top:18px}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu .homepage-nav-actions .homepage-nav-phone{font-size:14px!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu .homepage-nav-actions a.homepage-nav-demo{font-size:14px!important;line-height:20px!important;padding:10px 24px!important;height:40px!important}
@@ -23648,15 +23648,15 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
 /* Header edges line up with the page content: same side padding as .pmex-container (20px, 24px from 640px, 40px from 1024px). */
 @media(min-width:640px){[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-bar{padding-inline:24px}}
 @media(min-width:1024px){[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-bar{padding-inline:40px}}
-@media(max-width:1200px){
+@media(max-width:1100px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu{padding:20px 20px 24px}
 }
-@media(min-width:640px) and (max-width:1200px){[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu{padding-inline:24px}}
-@media(min-width:1024px) and (max-width:1200px){[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu{padding-inline:40px}}
+@media(min-width:640px) and (max-width:1100px){[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu{padding-inline:24px}}
+@media(min-width:1024px) and (max-width:1100px){[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu{padding-inline:40px}}
 /* Dropdown hover boxes (colour unchanged): the hover background gets room around the icon and the text, and the divider
    lines sit outside the box. Negative margins keep the text where it was. */
 [data-css~="navbar-d90c332f"] #homepage-reference-nav :is(#homepage-dropdown-1,#homepage-dropdown-3) a[data-navigation-icon-link]{padding-inline:10px!important;margin-inline:-10px!important}
-@media(min-width:1201px){
+@media(min-width:1101px){
 html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div>div>a:not([data-resources-card]){padding-inline:10px!important;margin-inline:-6px!important}
 html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div>div>a:not([data-resources-card]):nth-of-type(2){border-top:0!important;padding-top:6px!important;margin-top:12px!important;position:relative}
 html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div>div>a:not([data-resources-card]):nth-of-type(2)::after{content:"";position:absolute;left:6px;right:6px;top:-7px;border-top:1px solid var(--c-E0E0DA)}
@@ -23666,14 +23666,64 @@ html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>d
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-specialties-panel .popular-specialties-footer{padding-top:8px}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-specialties-panel .popular-specialties-footer a{display:inline-flex;align-items:center;padding:8px 10px;margin-left:36px;border-radius:10px}
 /* Logo: the same file as the footer logo (grey-logo.svg). The file has empty space around the mark, so the image is pulled
-   left by that space (158 of 1327 units = 16px at 48px, 14.5px at 44px) and the mark lines up with the page content. */
+   left by that space (158 of 1327 units = 13.3px at 40px, 12.6px at 38px) and the mark lines up with the page content. */
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-logo-link{display:block;flex-shrink:0}
-[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-logo-img{display:block;height:48px;width:auto;max-width:none;margin-left:-16px}
-@media(max-width:1200px){[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-logo-img{height:44px;margin-left:-14.5px}}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-logo-img{display:block;height:40px;width:auto;max-width:none;margin-left:-13.3px}
+@media(max-width:1100px){[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-logo-img{height:38px;margin-left:-12.6px}}
 /* PMEX Portal button: plain label with a user icon on the site pill gradient (--grad-pill, --grad-a on hover), dark green text, no logo glyph inside. */
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a.homepage-nav-demo{display:inline-flex!important;align-items:center;justify-content:center;gap:8px;padding:10px 20px!important;font-weight:500!important;white-space:nowrap!important;background:var(--grad-pill)!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a.homepage-nav-demo:is(:hover,:focus-visible){background:var(--grad-a)!important;color:var(--c-2E4A25)!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a.homepage-nav-demo .pmex-nav-portal-icon{width:16px;height:16px;flex:0 0 16px}
+
+/* ---- Header polish ----
+   Desktop (1101px+): PMEX Portal pill on the site button gradient (36px), phone link with icon, and the current page marked in green.
+   Hamburger (up to 1100px): 44px toggle that turns into an X, a shaded backdrop under the open menu, 16px rows
+   with dividers, and full-width Portal / phone buttons. */
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav .homepage-nav-actions a.homepage-nav-demo{background:var(--grad-pill)!important;height:36px!important;padding:0 16px!important;gap:6px}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav .homepage-nav-actions a.homepage-nav-demo:is(:hover,:focus-visible){background:var(--grad-a)!important}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav a.homepage-nav-phone{display:inline-flex;align-items:center;gap:6px}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav .pmex-nav-phone-icon{width:16px;height:16px;flex:0 0 16px}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav :is(.homepage-dropdown-toggle,.pmex-nav-link-plain).is-current{color:var(--c-3F9A4B)!important}
+/* hamburger icon: three bars, an X while the menu is open */
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:22px;height:22px}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-burger>span{display:block;height:2px;border-radius:2px;background:currentColor;transition:transform .25s ease,opacity .2s ease}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-menu-toggle[aria-expanded="true"] .pmex-burger>span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-menu-toggle[aria-expanded="true"] .pmex-burger>span:nth-child(2){opacity:0}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-menu-toggle[aria-expanded="true"] .pmex-burger>span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:1100px){
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav .homepage-menu-toggle{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-right:-11px;padding:0;color:var(--c-505050)}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu{gap:0!important;padding-top:8px;box-shadow:0 24px 40px var(--c-000000-a12),0 0 0 100vmax var(--c-000000-a35);clip-path:inset(0 -100vmax -100vmax -100vmax)}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu>:is(.homepage-specialties,.pmex-nav-item,.pmex-nav-link-plain){border-bottom:1px solid var(--c-E0E0DA)}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu :is(.homepage-dropdown-toggle,.pmex-nav-link-plain){display:flex;align-items:center;justify-content:space-between;width:100%;min-height:52px;font-size:16px!important;line-height:1.4}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-dropdown-toggle svg{width:14px;height:14px;transition:transform .25s ease}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-dropdown-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-dropdown-panel.is-open{margin:0 0 16px}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-nav-actions{border-top:0;padding-top:20px;gap:12px}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-nav-actions>a{flex:1 1 220px;justify-content:center;height:48px!important;box-sizing:border-box}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-nav-actions>a.homepage-nav-demo{display:inline-flex!important;align-items:center;font-size:15px!important;padding:0 24px!important}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-nav-actions>a.homepage-nav-phone{border:1px solid var(--c-AAD39C);border-radius:999px;font-size:15px!important;margin:0!important}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-nav-actions>a.homepage-nav-phone:is(:hover,:focus-visible){background:var(--c-F8FBF0)}
+}
+/* Hamburger menu, phone and tablet: full-height sheet under the header, submenus open inline as a plain list (no card,
+   no inner scroll), chevrons in a round chip that turns green when open, Portal / phone buttons stay at the bottom. */
+@media(max-width:1100px){
+html[data-css~="navbar-d90c332f"]:has(#homepage-menu.is-open){overflow:hidden}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu.is-open{height:calc(100dvh - 68px);max-height:none;padding-bottom:0;box-shadow:none;clip-path:none}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu :is(.homepage-dropdown-toggle,.pmex-nav-link-plain){min-height:56px}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-dropdown-toggle svg{width:28px;height:28px;flex:0 0 28px;padding:8px;box-sizing:border-box;border-radius:50%;background:var(--c-AAD39C-a25);color:var(--c-2E4A25);transition:transform .25s ease,background-color .2s ease,color .2s ease}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-dropdown-toggle[aria-expanded="true"]{color:var(--c-3F9A4B)!important}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-dropdown-toggle[aria-expanded="true"] svg{background:var(--c-3F9A4B);color:var(--c-FFFFFF)}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-dropdown-panel{border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;padding:0 0 12px!important;max-height:none!important;overflow:visible!important;margin:0!important;width:100%!important}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu #homepage-specialties-panel .popular-specialties-title{padding-left:0}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu #homepage-specialties-panel .popular-specialties-footer a{margin-left:0}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-dropdown-panel :is(.pmex-nav-cta-rule,a[data-resources-sidebar="tool"]){border-bottom:0!important}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu #homepage-services-panel a.svc-mega-all{align-items:center;min-height:48px;padding:0!important;margin:0!important;border-top:1px solid var(--c-E0E0DA)!important;border-radius:0}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu #homepage-services-panel a.svc-mega-all::after{display:none}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav #homepage-menu .homepage-nav-actions{position:sticky;bottom:0;z-index:1;margin-top:auto;padding:16px 0 20px;background:var(--c-FFFFFF);border-top:1px solid var(--c-E0E0DA)}
+}
+@media(prefers-reduced-motion:reduce){
+[data-css~="navbar-d90c332f"] #homepage-reference-nav :is(.pmex-burger>span,#homepage-menu .homepage-dropdown-toggle svg){transition:none}
+}
 
 /* ===== inline <style> block  [data-css~="inline-19682d52"] ===== */
 
@@ -24079,7 +24129,7 @@ html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>d
 }
 
 /* Shared Resources dropdown: category links with story and tool cards. */
-@media(min-width:1201px){
+@media(min-width:1101px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div>div,
 [data-css~="navbar-d361fb32"] #homepage-reference-nav #homepage-dropdown-2>div>div{display:grid!important;grid-template-columns:190px repeat(2,minmax(0,1fr))!important;grid-template-rows:repeat(7,minmax(38px,auto))!important;gap:0 18px!important;align-items:stretch!important;}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div>div>p,
@@ -24126,19 +24176,19 @@ html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>d
 [data-css~="navbar-d361fb32"] #homepage-reference-nav #homepage-dropdown-2>div>div>a:not([data-resources-card]):is(:hover,:focus-visible)>.navigation-link-label{color:var(--c-3F9A4B)!important;}
 }
 /* Small-screen Resources menus show sidebar links without duplicate card links. */
-@media(max-width:1200px){
+@media(max-width:1100px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div>div>a[data-resources-card],
 [data-css~="navbar-d361fb32"] #homepage-reference-nav #homepage-dropdown-2>div>div>a[data-resources-card]{display:none!important;}
 }
 
 /* Small-screen Resources sidebar divider after Tools. */
-@media(max-width:1200px){
+@media(max-width:1100px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div>div>a[data-resources-sidebar="tool"],
 [data-css~="navbar-d361fb32"] #homepage-reference-nav #homepage-dropdown-2>div>div>a[data-resources-sidebar="tool"]{border-bottom:1px solid var(--c-E0E0DA)!important;padding-bottom:12px!important;margin-bottom:4px!important;}
 }
 
 /* Add a 1px gap below the small-screen Resources divider. */
-@media(max-width:1200px){
+@media(max-width:1100px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div>div>a:nth-of-type(7),
 [data-css~="navbar-d361fb32"] #homepage-reference-nav #homepage-dropdown-2>div>div>a:nth-of-type(7){margin-top:1px!important;}
 }
@@ -24190,26 +24240,31 @@ html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>d
 [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links a:hover .navigation-link-icon { background:var(--c-AAD39C-a25); color:var(--c-3F9A4B); }
 [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links a:focus-visible { outline:2px solid var(--c-3F9A4B); outline-offset:1px; }
 
-@media (max-width: 1200px) {
-  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel.svc-mega { position:static; transform:none; width:100%; max-height:55vh; overflow-y:auto; padding:16px; border:1px solid var(--c-AAD39C); border-radius:16px; grid-template-columns:minmax(0,1fr); box-shadow:none; }
-  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-side { padding:0; border-right:0; display:block; order:2; }
-  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-side .svc-mega-eyebrow,
-  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-tabs { display:none; }
+@media (max-width: 1100px) {
+  /* Hamburger menu: the categories are an accordion (js/services-mega.js moves each pane under its category button);
+     items use the same size as the other menu tabs (22px icon, 14px label, 40px row). */
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel.svc-mega { position:static; transform:none; width:100%; overflow:visible; padding:0; border:0; border-radius:0; grid-template-columns:minmax(0,1fr); box-shadow:none; }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-side { padding:0; border-right:0; display:block; order:1; }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-side .svc-mega-eyebrow { display:none; }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-tabs { display:flex; flex-direction:column; gap:0; }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-tab { min-height:48px; padding:0; border-radius:0; background:transparent; box-shadow:none; }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-tab:hover { background:transparent; }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-tab .svc-mega-chev,
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-tab:hover .svc-mega-chev { color:var(--c-959085); transform:none; transition:transform .25s ease,color .2s ease; }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-tab[aria-expanded="true"] .svc-mega-chev { color:var(--c-3F9A4B); transform:rotate(90deg); }
   [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-all { display:inline-flex; margin:0; padding-top:12px; border-top:1px solid var(--c-E0E0DA); width:100%; }
-  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-main { padding:0; min-height:0; background:transparent; border-radius:0; order:1; }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-main { padding:0; min-height:0; background:transparent; border-radius:0; order:2; }
   [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-pane[hidden] { display:block; }
-  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-pane { padding:0; margin-bottom:24px; border-top:0; }
-  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-title { margin:0 0 12px; padding-bottom:8px; border-bottom:1px solid var(--c-E0E0DA); }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-pane { display:flex; flex-direction:column; padding:0 0 8px 12px; margin:0 0 8px 10px; border-left:1px solid var(--c-E0E0DA); }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel.is-accordion .svc-mega-pane:not(.is-open) { display:none; }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-title,
   [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-desc,
-  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-explore,
   [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-pane .svc-mega-eyebrow { display:none; }
-  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
-  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links a { gap:10px; padding:0; margin-left:0; border-radius:8px; min-height:40px; }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-explore { order:2; display:flex; align-items:center; min-height:40px; margin:0; }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links { order:1; display:flex; flex-direction:column; gap:0; }
+  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links a { gap:10px; padding:0 10px; margin:0 -10px; border-radius:8px; min-height:40px; }
   [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links a .navigation-link-icon { flex:0 0 22px; width:22px; height:22px; padding:0; border-radius:0; background:transparent; color:var(--c-3F9A4B); }
   [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links a:hover .navigation-link-icon { background:transparent; color:var(--c-3F9A4B); }
-}
-@media (max-width: 640px) {
-  [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links { grid-template-columns:minmax(0,1fr); gap:8px; }
 }
 
 /* services-mega: text styles pinned in the first cascade layer so page typography layers cannot restyle the dropdown */
@@ -24227,13 +24282,17 @@ html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>d
   [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links a:hover { color:var(--c-3F9A4B)!important; }
   [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links a .navigation-link-label { font-family:inherit!important; font-size:14px!important; font-weight:400!important; line-height:1.5!important; color:inherit!important; }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   @layer pmex-green-cta {
     [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-pane[hidden] { display:block!important; }
     [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-title { font-size:14px!important; font-weight:600!important; line-height:1.4!important; letter-spacing:.6px!important; text-transform:uppercase!important; color:var(--c-3F9A4B)!important; }
     [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links a { color:var(--c-676767)!important; }
     [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links a:hover { color:var(--c-3F9A4B)!important; }
     [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-links a .navigation-link-label { font-size:14px!important; font-weight:400!important; line-height:1.5!important; }
+    [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-tab { font-size:15px!important; font-weight:500!important; }
+    [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-tab:hover { color:var(--c-505050)!important; }
+    [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-tab[aria-expanded="true"] { color:var(--c-3F9A4B)!important; }
+    [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-explore { font-size:14px!important; font-weight:500!important; }
   }
 }
 
@@ -24881,11 +24940,11 @@ html body h1 .usa-text,
   [data-css~="style"] .pmex-footer-resources>p{flex:0 0 100%}
   [data-css~="style"] .pmex-footer-resources>a{flex:0 0 33.333%;padding-right:8px;box-sizing:border-box}
 }
-@media(min-width:1201px){
+@media(min-width:1101px){
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-specialties-panel{position:fixed;top:67px;left:50%;transform:translateX(-50%);width:min(1080px,calc(100vw - 48px));border-color:var(--c-E0E0DA);border-radius:0 0 20px 20px;padding:32px 40px}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .popular-specialties-links{grid-template-columns:repeat(4,minmax(0,1fr))}
 }
-@media(min-width:1201px){
+@media(min-width:1101px){
 [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-side{padding-top:36px}
 [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-main{padding-top:44px;min-height:540px}
 }
@@ -24905,15 +24964,53 @@ html[data-css~="navbar-d90c332f"] body section button.cta-primary-btn{background
 html[data-css~="navbar-d90c332f"] body section button.cta-primary-btn:is(:hover,:focus-visible){background:var(--grad-a)!important}
 }
 
-/* 404 page */
-[data-css~="not-found"] body.pmex-404-page{min-height:100vh;display:flex;flex-direction:column;background:var(--c-FFFFFF);font-family:Inter,sans-serif;}
-[data-css~="not-found"] .pmex-404{flex:1;display:grid;place-items:center;box-sizing:border-box;padding:clamp(56px,8vw,104px) 24px;background:var(--c-F8FBF0);border-bottom:1px solid var(--c-E0E0DA);}
-[data-css~="not-found"] .pmex-404-content{width:100%;max-width:720px;text-align:center;}
-[data-css~="not-found"] .pmex-404-code{margin:0 0 20px;color:var(--c-3F9A4B);font-size:clamp(88px,16vw,176px);font-weight:700;line-height:.82;letter-spacing:-.07em;}
-[data-css~="not-found"] .pmex-404-title{margin:0;color:var(--c-505050);font-size:clamp(22px,3vw,36px);font-weight:400;line-height:1.25;}
-[data-css~="not-found"] .pmex-404-copy{max-width:520px;margin:16px auto 0;color:var(--c-676767);font-size:clamp(14px,1.2vw,16px);line-height:1.625;}
-[data-css~="not-found"] .pmex-404-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:18px 24px;margin-top:28px;}
+/* 404 page: header and footer from the shared partials, a hero with the "404" mark (the zero is a search icon in a ring),
+   and four cards to the most used pages. */
+[data-css~="not-found"] body.pmex-404-page{min-height:100vh;background:var(--c-FFFFFF);font-family:Inter,sans-serif;}
+[data-css~="not-found"] .pmex-404{flex:1;display:block;}
+[data-css~="not-found"] .pmex-404-hero{background:radial-gradient(ellipse 60% 70% at 50% 0%,var(--c-FFFFFF) 0%,transparent 70%),var(--c-F8FBF0);border-bottom:1px solid var(--c-E0E0DA);text-align:center;}
+[data-css~="not-found"] .pmex-404-hero.pmex-section{padding-block:clamp(48px,7vw,88px);}
+[data-css~="not-found"] .pmex-404-content{display:flex;flex-direction:column;align-items:center;}
+[data-css~="not-found"] .pmex-404-eyebrow{margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--c-3F9A4B);}
+[data-css~="not-found"] .pmex-404-code{display:flex;align-items:center;justify-content:center;gap:.06em;margin:0 0 24px;font-size:clamp(88px,15vw,160px);font-weight:800;line-height:1;letter-spacing:-.04em;color:var(--c-2E4A25);}
+[data-css~="not-found"] .pmex-404-zero{display:inline-grid;place-items:center;width:.78em;height:.78em;margin:0 .04em;border-radius:50%;background:var(--c-FFFFFF);border:.07em solid var(--c-AAD39C);box-shadow:0 18px 40px var(--c-2E4A25-a12);color:var(--c-3F9A4B);}
+[data-css~="not-found"] .pmex-404-zero svg{width:.36em;height:.36em;}
+[data-css~="not-found"] .pmex-404-title{margin:0;max-width:720px;font-size:22px;font-weight:400;line-height:1.25;color:var(--c-505050);}
+[data-css~="not-found"] .pmex-404-title em{font-style:normal;color:var(--c-3F9A4B);}
+[data-css~="not-found"] .pmex-404-copy{max-width:560px;margin:16px auto 0;font-size:14px;line-height:1.625;color:var(--c-676767);}
+[data-css~="not-found"] .pmex-404-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px 28px;margin-top:28px;}
+[data-css~="not-found"] .pmex-404-links-title{margin:0 0 var(--pmex-head-gap,32px);text-align:center;font-size:22px;font-weight:400;line-height:1.3;color:var(--c-505050);}
+[data-css~="not-found"] .pmex-404-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:0;padding:0;list-style:none;}
+[data-css~="not-found"] .pmex-404-card{position:relative;display:flex;flex-direction:column;gap:6px;height:100%;box-sizing:border-box;padding:24px 48px 24px 24px;border:1px solid var(--c-E0E0DA);border-radius:16px;background:var(--c-FFFFFF);text-decoration:none;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease;}
+[data-css~="not-found"] .pmex-404-card:is(:hover,:focus-visible){border-color:var(--c-AAD39C);box-shadow:0 14px 32px var(--c-2E4A25-a12);transform:translateY(-3px);outline:none;}
+[data-css~="not-found"] .pmex-404-card:focus-visible{box-shadow:0 0 0 3px var(--c-AAD39C);}
+[data-css~="not-found"] .pmex-404-card-icon{display:grid;place-items:center;width:44px;height:44px;margin-bottom:10px;border-radius:12px;background:var(--c-AAD39C-a25);color:var(--c-3F9A4B);}
+[data-css~="not-found"] .pmex-404-card-icon svg{width:22px;height:22px;}
+[data-css~="not-found"] .pmex-404-card strong{font-size:18px;font-weight:700;line-height:1.3;color:var(--c-505050);transition:color .25s ease;}
+[data-css~="not-found"] .pmex-404-card-text{font-size:14px;line-height:1.55;color:var(--c-676767);}
+[data-css~="not-found"] .pmex-404-card-arrow{position:absolute;top:24px;right:20px;width:18px;height:18px;color:var(--c-959085);transition:transform .25s ease,color .25s ease;}
+[data-css~="not-found"] .pmex-404-card:is(:hover,:focus-visible) strong{color:var(--c-3F9A4B);}
+[data-css~="not-found"] .pmex-404-card:is(:hover,:focus-visible) .pmex-404-card-arrow{color:var(--c-3F9A4B);transform:translateX(3px);}
+[data-css~="not-found"] .pmex-404-call{margin:32px 0 0;text-align:center;font-size:14px;color:var(--c-676767);}
+[data-css~="not-found"] .pmex-404-call a{font-weight:600;color:var(--c-3F9A4B);text-decoration:none;}
+[data-css~="not-found"] .pmex-404-call a:is(:hover,:focus-visible){text-decoration:underline;}
+@media(min-width:640px){
+[data-css~="not-found"] .pmex-404-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+[data-css~="not-found"] .pmex-404-title,[data-css~="not-found"] .pmex-404-links-title{font-size:30px;}
+[data-css~="not-found"] .pmex-404-copy{font-size:16px;}
+}
+@media(min-width:1024px){
+[data-css~="not-found"] .pmex-404-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;}
+[data-css~="not-found"] .pmex-404-title{font-size:36px;}
+}
 @media(max-width:480px){[data-css~="not-found"] .pmex-404-actions{flex-direction:column;gap:14px;}}
+@media(max-width:639px){
+[data-css~="not-found"] .pmex-404-card{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;row-gap:2px;align-content:center;padding:16px 44px 16px 16px;}
+[data-css~="not-found"] .pmex-404-card-icon{grid-row:1/3;margin:0;}
+[data-css~="not-found"] .pmex-404-card strong{font-size:16px;}
+[data-css~="not-found"] .pmex-404-card-arrow{top:50%;right:16px;margin-top:-9px;}
+}
+@media(prefers-reduced-motion:reduce){[data-css~="not-found"] .pmex-404-card,[data-css~="not-found"] .pmex-404-card-arrow{transition:none;}[data-css~="not-found"] .pmex-404-card:is(:hover,:focus-visible){transform:none;}}
 
 
 

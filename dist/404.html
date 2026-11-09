@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-css="site-buttons reference-typography not-found">
+<html lang="en" data-css="site-buttons reference-typography style specialty-site-palette layout navbar-d90c332f services-mega pmex-common not-found">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +7,69 @@
   <meta name="description" content="The page you're looking for could not be found.">
   <title>Page Not Found | PMEX</title>
   <link rel="stylesheet" href="/css/root.css">
+  <script src="/js/services-mega.js" defer></script>
 </head>
 <body class="pmex-404-page">
+<script src="/js/site-shell.js" data-include="header"></script>
   <main id="main-content" class="pmex-404">
-    <section class="pmex-404-content" aria-labelledby="pmex-404-title">
-      <p class="pmex-404-code" aria-hidden="true">404</p>
-      <h1 id="pmex-404-title" class="pmex-404-title">Page not found</h1>
-      <p class="pmex-404-copy">We couldn't find the page you were looking for. The link may be outdated, or the address may be incorrect.</p>
-      <nav class="pmex-404-actions" aria-label="Helpful links">
-        <a href="/" data-site-button="primary">Go to homepage</a>
-        <a href="/specialties/" data-site-button="link" data-cta-arrow>Go to specialties Page</a>
-      </nav>
+    <section class="pmex-404-hero pmex-section" aria-labelledby="pmex-404-title" data-typography-own>
+      <div class="pmex-container pmex-404-content">
+        <p class="pmex-404-eyebrow">Error 404</p>
+        <div class="pmex-404-code" aria-hidden="true">
+          <span>4</span>
+          <span class="pmex-404-zero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><use href="/icons/site-icons.svg#search-plus"></use></svg></span>
+          <span>4</span>
+        </div>
+        <h1 id="pmex-404-title" class="pmex-404-title">This page could <em>not be found</em></h1>
+        <p class="pmex-404-copy">The link may be outdated, or the address may have a typo. Use the links below to get back on track, or talk to our billing team.</p>
+        <nav class="pmex-404-actions" aria-label="Next steps">
+          <a href="/" data-site-button="primary">Go to homepage</a>
+          <a href="/company/contact.html" data-site-button="link" data-cta-arrow>Contact our team</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="pmex-404-links pmex-section" aria-labelledby="pmex-404-links-title" data-typography-own>
+      <div class="pmex-container">
+        <h2 id="pmex-404-links-title" class="pmex-404-links-title">Popular pages</h2>
+        <ul class="pmex-404-grid">
+          <li>
+            <a class="pmex-404-card" href="/specialties/">
+              <span class="pmex-404-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#heart-pulse"></use></svg></span>
+              <strong>Specialties</strong>
+              <span class="pmex-404-card-text">Billing services by medical specialty.</span>
+              <svg class="pmex-404-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#chevron-right"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a class="pmex-404-card" href="/services/">
+              <span class="pmex-404-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#clipboard-check"></use></svg></span>
+              <strong>Services</strong>
+              <span class="pmex-404-card-text">Billing, coding, credentialing and revenue cycle management.</span>
+              <svg class="pmex-404-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#chevron-right"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a class="pmex-404-card" href="/company/pricing.html">
+              <span class="pmex-404-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#wallet"></use></svg></span>
+              <strong>Pricing</strong>
+              <span class="pmex-404-card-text">From 2.49% of collections. Fixed plans from $450/month.</span>
+              <svg class="pmex-404-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#chevron-right"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a class="pmex-404-card" href="/company/contact.html">
+              <span class="pmex-404-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#headset"></use></svg></span>
+              <strong>Contact</strong>
+              <span class="pmex-404-card-text">Questions about your practice? Our team will help.</span>
+              <svg class="pmex-404-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#chevron-right"></use></svg>
+            </a>
+          </li>
+        </ul>
+        <p class="pmex-404-call">Prefer to talk? Call <a href="tel:5162084446">(516) 208-4446</a></p>
+      </div>
     </section>
   </main>
-
-
-
+<script src="/js/site-shell.js" data-include="footer"></script>
 </body>
 </html>

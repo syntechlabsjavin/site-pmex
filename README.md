@@ -59,9 +59,9 @@ Every page uses the same container, section spacing and gaps. The values live on
 
 ### Header
 
-The header (`dist/partials/header.html`, styles in the `navbar-d90c332f` block) uses the same max width (1260px) and side padding (20px / 24px / 40px) as `pmex-container`, so the logo and the phone number line up with the page content on every screen. The open hamburger menu (up to 1200px) uses the same side padding.
+The header (`dist/partials/header.html`, styles in the `navbar-d90c332f` block) uses the same max width (1260px) and side padding (20px / 24px / 40px) as `pmex-container`, so the logo and the phone number line up with the page content on every screen. The hamburger menu shows up to 1100px (the full menu fits from 1101px). It opens as a full-height sheet: rows with dividers, chevrons in a round chip that turns green when open, submenus inline as plain lists (no card, no inner scroll; Services first lists its categories, and a tap on a category opens its items, see `js/services-mega.js`), and the PMEX Portal and phone buttons pinned at the bottom. The toggle (44px) turns into an X. The current page is marked green by `js/site-shell.js`.
 
-- Logo: the same file as the footer logo, `img/logo/grey-logo.svg`, 48px tall (44px up to 1200px). The file has empty space on the left, so the image is pulled left (`margin-left`) and the mark itself starts on the content line.
+- Logo: the same file as the footer logo, `img/logo/grey-logo.svg`, 40px tall (38px up to 1100px). The file has empty space on the left, so the image is pulled left (`margin-left`) and the mark itself starts on the content line.
 - PMEX Portal button: a user icon and the label "PMEX Portal" on the site pill gradient (`--grad-pill`, `--grad-a` on hover), dark green text.
 
 ### Checking a page
