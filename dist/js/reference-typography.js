@@ -9,7 +9,7 @@
   }
  });
  root.querySelectorAll('h3').forEach(h=>{
-  if(/^[+\d$%.,\s/-]+(?:Days|hrs|Hours|Years|M|K)?$/i.test(h.textContent.trim()))h.dataset.referenceStat='';
+  if(/^[+\d$%.,\s/-]+(?:Days|hrs|Hours|Years|M|K)?\+?$/i.test(h.textContent.trim()))h.dataset.referenceStat='';
  });
  const h1=root.querySelector('h1');
  if(h1){
@@ -72,7 +72,7 @@
    if(!t.matches('[data-reference-stat],[data-general-metric]'))t.dataset.consistentCardTitle='';
   });
   el.querySelectorAll('p').forEach(p=>{
-   if(p.matches('[data-reference-stat],[data-general-metric],[data-reference-label]')||/^[+\d$%.,\s/()-]+(?:Days|hrs|Hours|Years|M|K)?$/i.test(p.textContent.trim()))return;
+   if(p.matches('[data-reference-stat],[data-general-metric],[data-reference-label]')||/^[+\d$%.,\s/()-]+(?:Days|hrs|Hours|Years|M|K)?\+?$/i.test(p.textContent.trim()))return;
    if(p.hasAttribute('data-reference-card-title'))p.dataset.consistentCardTitle='';
    else if(p.hasAttribute('data-reference-small'))p.dataset.consistentCardMeta='';
    else p.dataset.consistentCardBody='';

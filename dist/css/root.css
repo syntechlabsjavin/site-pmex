@@ -23664,9 +23664,15 @@ html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>d
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-services-panel a.svc-mega-all::after{content:"";position:absolute;left:12px;right:12px;top:-12px;border-top:1px solid var(--c-E0E0DA)}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-specialties-panel .popular-specialties-footer{padding-top:8px}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-specialties-panel .popular-specialties-footer a{display:inline-flex;align-items:center;padding:8px 10px;margin-left:36px;border-radius:10px}
-/* PMEX Portal button: the PMEX mark takes the button text colour (dark green) instead of the grey logo file, and sits on the text baseline. */
-[data-css~="navbar-d90c332f"] #homepage-reference-nav a.homepage-nav-demo{display:inline-flex!important;align-items:center;justify-content:center;gap:6px;font-weight:500!important;white-space:nowrap!important}
-[data-css~="navbar-d90c332f"] #homepage-reference-nav a.homepage-nav-demo .pmex-simple{width:2.9em;height:1em;vertical-align:middle;background:currentColor;-webkit-mask:url('../img/logo/pmex-simple.svg') no-repeat center/contain;mask:url('../img/logo/pmex-simple.svg') no-repeat center/contain}
+/* Logo: the same file as the footer logo (grey-logo.svg). The file has empty space around the mark, so the image is pulled
+   left by that space (158 of 1327 units = 16px at 48px, 14.5px at 44px) and the mark lines up with the page content. */
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-logo-link{display:block;flex-shrink:0}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-logo-img{display:block;height:48px;width:auto;max-width:none;margin-left:-16px}
+@media(max-width:1200px){[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-logo-img{height:44px;margin-left:-14.5px}}
+/* PMEX Portal button: plain label with a user icon on the shared button fill (#AAD39C, dark green text), no logo glyph inside. */
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a.homepage-nav-demo{display:inline-flex!important;align-items:center;justify-content:center;gap:8px;padding:10px 20px!important;font-weight:500!important;white-space:nowrap!important;background:var(--c-AAD39C)!important}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a.homepage-nav-demo:is(:hover,:focus-visible){background:var(--c-9FCB91)!important;color:var(--c-2E4A25)!important}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-nav-actions a.homepage-nav-demo .pmex-nav-portal-icon{width:16px;height:16px;flex:0 0 16px}
 
 /* ===== inline <style> block  [data-css~="inline-19682d52"] ===== */
 
@@ -25001,19 +25007,18 @@ html[data-css~="pmex-common"] body h1 span.usa-flag { font-family: 'PMEX Inter B
   --pmex-container-max: 1260px;
   --pmex-gutter: 20px;
   --pmex-section-y: 32px;
-  --pmex-hero-y: 40px;
   --pmex-head-gap: 32px;
   --pmex-card-gap: 16px;
   --pmex-split-gap: 32px;
 }
 @media (min-width: 640px) {
-  :root[data-css~="layout"] { --pmex-gutter: 24px; --pmex-hero-y: 48px; }
+  :root[data-css~="layout"] { --pmex-gutter: 24px; }
 }
 @media (min-width: 768px) {
   :root[data-css~="layout"] { --pmex-split-gap: 40px; }
 }
 @media (min-width: 1024px) {
-  :root[data-css~="layout"] { --pmex-gutter: 40px; --pmex-section-y: 40px; --pmex-hero-y: 56px; --pmex-head-gap: 40px; --pmex-split-gap: 48px; }
+  :root[data-css~="layout"] { --pmex-gutter: 40px; --pmex-section-y: 40px; --pmex-head-gap: 40px; --pmex-split-gap: 48px; }
 }
 [data-css~="layout"] .pmex-container {
   width: 100%;
@@ -25022,7 +25027,6 @@ html[data-css~="pmex-common"] body h1 span.usa-flag { font-family: 'PMEX Inter B
   padding-inline: var(--pmex-gutter);
 }
 [data-css~="layout"] .pmex-section { padding-block: var(--pmex-section-y); }
-[data-css~="layout"] .pmex-hero { padding-block: var(--pmex-hero-y); }
 [data-css~="layout"] .pmex-section-head { margin-bottom: var(--pmex-head-gap); }
 [data-css~="layout"] .pmex-section-head + * { margin-top: 0; }
 [data-css~="layout"] .pmex-card-grid { gap: var(--pmex-card-gap); }
@@ -25050,7 +25054,7 @@ html[data-css~="pmex-common"] body h1 span.usa-flag { font-family: 'PMEX Inter B
 }
 /* Hero background from 640px: plain white fade over the photo (no green glow), a little wider so the copy never sits on the image. */
 @media (min-width: 640px) {
-  [data-css~="home-responsive"] .pmex-hero.hero-bg-gradient {
+  [data-css~="home-responsive"] .pmex-hero-index.hero-bg-gradient {
     background-image: linear-gradient(to right, var(--c-FFFFFF) 44%, var(--c-FFFFFF-a78) 56%, transparent 66%), var(--hero-bg-desktop, var(--hero-bg-img, none));
   }
 }
@@ -25059,3 +25063,30 @@ html[data-css~="pmex-common"] body h1 span.usa-flag { font-family: 'PMEX Inter B
 [data-css~="home-responsive"] .pmex-hero-meta span { margin-inline: 4px; }
 [data-css~="home-responsive"] .pmex-hero-meta a { color: var(--c-505050); font-weight: 500; text-decoration: none; white-space: nowrap; }
 [data-css~="home-responsive"] .pmex-hero-meta a:hover { text-decoration: underline; text-underline-offset: 3px; }
+/* Hero floating cards (1024px+): never closer than 24px to the end of the copy. The copy column starts at the 1260px
+   container edge + 40px and is at most 500px (heading) / 480px (paragraph, 1024-1279px) or 530px (paragraph, 1280px+). */
+@media (min-width: 1024px) {
+  [data-css~="home-responsive"] .pmex-hero-index .pmex-hero-card--expertise { left: max(calc(49.3% - 10px), calc(max(0px, (100% - 1260px) / 2) + 564px)); }
+  [data-css~="home-responsive"] .pmex-hero-index .pmex-hero-card--receivables { left: max(calc(38.5% + 96px), calc(max(0px, (100% - 1260px) / 2) + 544px)); }
+}
+@media (min-width: 1280px) {
+  [data-css~="home-responsive"] .pmex-hero-index .pmex-hero-card--receivables { left: max(calc(38.5% + 96px), calc(max(0px, (100% - 1260px) / 2) + 594px)); }
+}
+/* Billing services (1024px+): both columns share the same top and bottom. The form card grows to the height of the copy
+   (form centred inside it) and the "Prefer to call?" line sits on the bottom edge. */
+@media (min-width: 1024px) {
+  [data-css~="home-responsive"] #pmex-billing-services .pmex-split { align-items: stretch; }
+  [data-css~="home-responsive"] #pmex-billing-services [data-billing-card] { display: flex; flex-direction: column; }
+  [data-css~="home-responsive"] #pmex-billing-services [data-billing-card] > :first-child { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; }
+}
+/* Billing results cards: the green plate behind each card is offset (8px right/down on mobile; 12px outwards from 768px).
+   The cards are pulled in by that offset so the outer edge of the plate sits on the content line, and the grid gets the
+   same space above/below so the plates do not eat into the section spacing. */
+[data-css~="home-responsive"] #billing-results [data-result-card] { margin-right: 8px; }
+[data-css~="home-responsive"] #billing-results .pmex-card-grid { padding-bottom: 8px; }
+@media (min-width: 768px) {
+  [data-css~="home-responsive"] #billing-results [data-result-card] { margin-right: 0; }
+  [data-css~="home-responsive"] #billing-results [data-result-card]:is([data-result-direction="left"],[data-result-direction="up"]) { margin-left: 12px; }
+  [data-css~="home-responsive"] #billing-results [data-result-card]:is([data-result-direction="down"],[data-result-direction="right"]) { margin-right: 12px; }
+  [data-css~="home-responsive"] #billing-results .pmex-card-grid { padding-block: 12px; }
+}

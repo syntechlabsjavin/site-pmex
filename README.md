@@ -18,8 +18,7 @@ Every page uses the same container, section spacing and gaps. The values live on
 |---|---|---|---|---|
 | Container max width | `pmex-container` | 1260px | 1260px | 1260px |
 | Container side padding | `pmex-container` | 20px | 24px | 40px |
-| Section top and bottom padding | `pmex-section` | 32px | 32px | 40px |
-| Hero top and bottom padding | `pmex-hero` | 40px | 48px | 56px |
+| Section top and bottom padding (the hero too) | `pmex-section` | 32px | 32px | 40px |
 | Section heading to content | `pmex-section-head` | 32px | 32px | 40px |
 | Gap between cards in a grid | `pmex-card-grid` | 16px | 16px | 16px |
 | Gap between the two columns of a split layout | `pmex-split` | 32px | 40px (from 768px) | 48px |
@@ -46,6 +45,8 @@ Every page uses the same container, section spacing and gaps. The values live on
 - `pmex-card-grid` and `pmex-split` set only the gap. Keep the grid columns (`grid-cols-*`) on the element.
 - Sections touch each other directly; spacing comes from the section padding, never from margins between sections.
 - Sticky scroll scenes (the claims lifecycle and the platform tabs on the home page) keep a smaller top padding on tablet and up so the scene fits the screen: 24px top / 20px bottom for the platform scene.
+- The hero uses `pmex-section` like every other section; there is no separate hero padding. On the home page the floating hero cards (1024px and up) always stay at least 24px to the right of the hero text.
+- Cards with an offset backing plate (the home page "Medical billing results" cards): the plate points outwards, and the card is pulled in by the same amount (12px from 768px, 8px on mobile) so the outer edge of the plate sits on the content line.
 - Page-specific fixes go in their own block (for example `home-responsive` for `index.html`), not in `layout`.
 
 ### Not part of this system
@@ -55,7 +56,10 @@ Every page uses the same container, section spacing and gaps. The values live on
 
 ### Header
 
-The header (`dist/partials/header.html`, styles in the `navbar-d90c332f` block) uses the same max width (1260px) and side padding (20px / 24px / 40px) as `pmex-container`, so the logo and the phone number line up with the page content on every screen. The open hamburger menu (up to 1200px) uses the same side padding. The PMEX mark in the Portal button takes the button's dark green text colour.
+The header (`dist/partials/header.html`, styles in the `navbar-d90c332f` block) uses the same max width (1260px) and side padding (20px / 24px / 40px) as `pmex-container`, so the logo and the phone number line up with the page content on every screen. The open hamburger menu (up to 1200px) uses the same side padding.
+
+- Logo: the same file as the footer logo, `img/logo/grey-logo.svg`, 48px tall (44px up to 1200px). The file has empty space on the left, so the image is pulled left (`margin-left`) and the mark itself starts on the content line.
+- PMEX Portal button: a user icon and the label "PMEX Portal" on the shared button fill (#AAD39C, dark green text, #9FCB91 on hover).
 
 ### Checking a page
 
