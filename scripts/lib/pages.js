@@ -1,5 +1,5 @@
 // Shared page lookup for the site scripts. Run scripts from the repo root.
-// Pages live in category folders under dist/ (see docs/PROJECT-STRUCTURE.md); a page "name"
+// Pages live in category folders under dist/ (see README.md); a page "name"
 // is its file name (cardiology.html), which is unique across the site.
 const fs = require('fs');
 const path = require('path');

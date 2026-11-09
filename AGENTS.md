@@ -41,4 +41,4 @@ Run npm run content:apply after importing copy or rebuilding styles. Run npm run
 
 ## Folder structure
 
-Pages live in category folders under `dist/` and every link uses root-absolute paths (`/css/root.css`, `/specialties/cardiology.html`). Scripts are split into `scripts/build`, `scripts/checks` and `scripts/archive`. See docs/PROJECT-STRUCTURE.md.
+Pages live in category folders under `dist/` and every link uses root-absolute paths (`/css/root.css`, `/specialties/cardiology.html`). Scripts are split into `scripts/build`, `scripts/checks` and `scripts/archive`. See README.md.

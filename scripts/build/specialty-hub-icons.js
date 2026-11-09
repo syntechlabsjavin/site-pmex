@@ -1,4 +1,4 @@
-/** Medical pictograms: Health Icons (CC0) and original PMEX SVGs. See docs/specialty-icons-source.md. */
+/** Medical pictograms: Health Icons (CC0) and original PMEX SVGs. */
 const ICONS = {
   "body/heart-organ": "<svg aria-hidden=\"true\" focusable=\"false\" width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><use href=\"/icons/site-icons.svg#specialty-body-heart-organ\"></use></svg>",
   "specialties/psychology": "<svg aria-hidden=\"true\" focusable=\"false\" width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><use href=\"/icons/site-icons.svg#specialty-specialties-psychology\"></use></svg>",
