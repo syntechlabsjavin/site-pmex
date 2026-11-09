@@ -12,7 +12,8 @@
     <script src="/js/nav-dropdown.js" defer></script>
     <script src="/js/medical-billing.js" defer></script>
     <script src="/js/billing-results.js" defer></script>
-    <script src="/js/platform-tab.js" defer></script>
+    <script src="/js/platform-stack.js" defer></script>
+    <script src="/js/claims-flow.js" defer></script>
     <script src="/js/small-reveal.js" defer></script>
     <script src="/js/trusted-nationwide.js" defer></script>
     <script src="/js/compairing-approaches.js" defer></script>
@@ -537,219 +538,180 @@
             <h2 class="mt-1.5 text-[22px] sm:text-[30px] lg:text-[36px] font-normal text-[var(--c-505050)] leading-[1.2]">
               How a claim moves through <span class="logo-font" role="img" aria-label="pmex"></span>
             </h2>
-            <div class="pmex-stack-intro">
+            <div class="pmex-flow-intro">
               <p>Real-time claim review, specialty-specific coding expertise, and payer knowledge across all 50 states and all specialties.</p>
             </div>
           </div>
-
-          <!-- Stacking cards: on 1024px+ each card sticks 28px lower than the previous one and slides over it while scrolling -->
-          <ol class="pmex-stack-list">
-                <li class="pmex-stack-item">
-                  <article class="pmex-stack-panel" aria-labelledby="pmex-stack-title-1">
-                    <div class="pmex-stack-head">
-                      <span class="pmex-stack-num">01</span>
-                      <h3 id="pmex-stack-title-1" class="pmex-stack-title">Charge Capture &amp; Claim Scrubbing</h3>
+          <!-- Claims flow: a step track (tabs) above one detail panel (js/claims-flow.js). On large screens the stage sticks
+               under the header and scrolling moves through the steps one by one; elsewhere a click or the arrow keys switch steps. -->
+          <div class="pmex-flow" data-claims-flow>
+            <div class="pmex-flow-stage">
+              <div class="pmex-flow-track" role="tablist" aria-label="Claim lifecycle steps">
+                <button type="button" role="tab" id="pmex-flow-tab-1" class="pmex-flow-step is-active" aria-controls="pmex-flow-panel-1" aria-selected="true">
+                  <span class="pmex-flow-dot">01</span>
+                  <span class="pmex-flow-label">Charge Capture &amp; Claim Scrubbing</span>
+                </button>
+                <button type="button" role="tab" id="pmex-flow-tab-2" class="pmex-flow-step" aria-controls="pmex-flow-panel-2" aria-selected="false" tabindex="-1">
+                  <span class="pmex-flow-dot">02</span>
+                  <span class="pmex-flow-label">Denial Management &amp; Prevention</span>
+                </button>
+                <button type="button" role="tab" id="pmex-flow-tab-3" class="pmex-flow-step" aria-controls="pmex-flow-panel-3" aria-selected="false" tabindex="-1">
+                  <span class="pmex-flow-dot">03</span>
+                  <span class="pmex-flow-label">Expert Follow-Up &amp; Resolution</span>
+                </button>
+                <button type="button" role="tab" id="pmex-flow-tab-4" class="pmex-flow-step" aria-controls="pmex-flow-panel-4" aria-selected="false" tabindex="-1">
+                  <span class="pmex-flow-dot">04</span>
+                  <span class="pmex-flow-label">Payment Posting &amp; Reconciliation</span>
+                </button>
+                <button type="button" role="tab" id="pmex-flow-tab-5" class="pmex-flow-step" aria-controls="pmex-flow-panel-5" aria-selected="false" tabindex="-1">
+                  <span class="pmex-flow-dot">05</span>
+                  <span class="pmex-flow-label">Real-Time Practice Reporting</span>
+                </button>
+              </div>
+              <div class="pmex-flow-panels" data-typography-own>
+                <article role="tabpanel" id="pmex-flow-panel-1" class="pmex-flow-panel is-active" aria-labelledby="pmex-flow-tab-1">
+                  <div class="pmex-flow-main">
+                    <p class="pmex-flow-kicker">Step 01 of 05</p>
+                    <h3 class="pmex-flow-title">Charge Capture &amp; Claim Scrubbing</h3>
+                    <p class="pmex-flow-desc">Missing modifiers, invalid codes, and credentialing mismatches cause most denials before a claim ever reaches a payer. Our AAPC-certified coders review every claim against payer-specific rules, specialty billing guidelines, and documentation requirements before submission, so your first-pass paid rate goes up and your team stops chasing avoidable rejections.</p>
+                    <ul class="pmex-flow-points">
+                      <li>
+                        <span class="pmex-flow-point-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
+                        <span><strong>Rules-Based Pre-Scrubbing</strong>Our certified coders review every claim against payer rules before submission.</span>
+                      </li>
+                      <li>
+                        <span class="pmex-flow-point-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
+                        <span><strong>Specialty Coding Audit</strong>AAPC-certified review against specialty billing guidelines and documentation requirements.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <aside class="pmex-flow-side">
+                    <img src="/img/1icon.webp" alt="" width="56" height="56" loading="lazy" />
+                    <div class="pmex-flow-metric">
+                      <strong>99%</strong>
+                      <span>Clean Claim Rate</span>
                     </div>
-                    <div class="pmex-stack-body">
-                      <div class="pmex-stack-copy">
-                        <p class="pmex-stack-desc">Missing modifiers, invalid codes, and credentialing mismatches cause most denials before a claim ever reaches a payer. Our AAPC-certified coders review every claim against payer-specific rules, specialty billing guidelines, and documentation requirements before submission, so your first-pass paid rate goes up and your team stops chasing avoidable rejections.</p>
-                        <ul class="pmex-stack-features">
-                          <li class="pmex-stack-feature">
-                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
-                            <span>
-                              <h4>Rules-Based Pre-Scrubbing</h4>
-                              <p>Our certified coders review every claim against payer rules before submission.</p>
-                            </span>
-                          </li>
-                          <li class="pmex-stack-feature">
-                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
-                            <span>
-                              <h4>Specialty Coding Audit</h4>
-                              <p>AAPC-certified review against specialty billing guidelines and documentation requirements.</p>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="pmex-stack-showcase">
-                        <img src="/img/1icon.webp" alt="" width="56" height="56" loading="lazy" />
-                        <p class="pmex-stack-sub">Our certified coders review every claim against payer rules before submission.</p>
-                        <div class="pmex-stack-metric">
-                          <strong>99%</strong>
-                          <span>Clean Claim Rate</span>
-                        </div>
-                        <a href="/company/demo.html" class="cta-primary-btn w-full">
-                          <span>Explore Scrubbing Engine</span>
-                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
-                        </a>
-                      </div>
+                    <a href="/company/demo.html" class="cta-primary-btn">
+                      <span>Explore Scrubbing Engine</span>
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
+                    </a>
+                  </aside>
+                </article>
+                <article role="tabpanel" id="pmex-flow-panel-2" class="pmex-flow-panel" aria-labelledby="pmex-flow-tab-2" aria-hidden="true" inert>
+                  <div class="pmex-flow-main">
+                    <p class="pmex-flow-kicker">Step 02 of 05</p>
+                    <h3 class="pmex-flow-title">Denial Management &amp; Prevention</h3>
+                    <p class="pmex-flow-desc">Our specialty billing teams analyze denials by payer, code, and provider to identify root causes before they become recurring patterns. Our certified billers review documentation, correction requirements, and payer-specific processes so preventable revenue loss can be reduced going forward.</p>
+                    <ul class="pmex-flow-points">
+                      <li>
+                        <span class="pmex-flow-point-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
+                        <span><strong>Root Cause Review</strong>Specialty billing teams analyze denials by payer, code, and provider.</span>
+                      </li>
+                      <li>
+                        <span class="pmex-flow-point-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
+                        <span><strong>Prevention Focus</strong>Certified billers review documentation and payer-specific processes to reduce repeat denials.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <aside class="pmex-flow-side">
+                    <img src="/img/2icon.webp" alt="" width="56" height="56" loading="lazy" />
+                    <div class="pmex-flow-metric">
+                      <strong>97%</strong>
+                      <span>First-Pass Acceptance</span>
                     </div>
-                  </article>
-                </li>
-                <li class="pmex-stack-item">
-                  <article class="pmex-stack-panel" aria-labelledby="pmex-stack-title-2">
-                    <div class="pmex-stack-head">
-                      <span class="pmex-stack-num">02</span>
-                      <h3 id="pmex-stack-title-2" class="pmex-stack-title">Denial Management &amp; Prevention</h3>
+                    <a href="/services/denial-management.html" class="cta-primary-btn">
+                      <span>Explore Denial Workflow</span>
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
+                    </a>
+                  </aside>
+                </article>
+                <article role="tabpanel" id="pmex-flow-panel-3" class="pmex-flow-panel" aria-labelledby="pmex-flow-tab-3" aria-hidden="true" inert>
+                  <div class="pmex-flow-main">
+                    <p class="pmex-flow-kicker">Step 03 of 05</p>
+                    <h3 class="pmex-flow-title">Expert Follow-Up &amp; Resolution</h3>
+                    <p class="pmex-flow-desc">Every outstanding claim is worked by a dedicated billing specialist with specialty-specific payer knowledge. Routine follow-up is handled systematically. Complex cases including secondary payers, payer disputes, underpayments, and coordination of benefits issues are escalated to senior specialists.</p>
+                    <ul class="pmex-flow-points">
+                      <li>
+                        <span class="pmex-flow-point-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
+                        <span><strong>Dedicated Follow-Up</strong>Every outstanding claim is worked by a dedicated billing specialist.</span>
+                      </li>
+                      <li>
+                        <span class="pmex-flow-point-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
+                        <span><strong>Complex Case Escalation</strong>Secondary payers, disputes, underpayments, and COB issues go to senior specialists.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <aside class="pmex-flow-side">
+                    <img src="/img/3icon.webp" alt="" width="56" height="56" loading="lazy" />
+                    <div class="pmex-flow-metric">
+                      <strong>2.7M+</strong>
+                      <span>Claims Processed</span>
                     </div>
-                    <div class="pmex-stack-body">
-                      <div class="pmex-stack-copy">
-                        <p class="pmex-stack-desc">Our specialty billing teams analyze denials by payer, code, and provider to identify root causes before they become recurring patterns. Our certified billers review documentation, correction requirements, and payer-specific processes so preventable revenue loss can be reduced going forward.</p>
-                        <ul class="pmex-stack-features">
-                          <li class="pmex-stack-feature">
-                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
-                            <span>
-                              <h4>Root Cause Review</h4>
-                              <p>Specialty billing teams analyze denials by payer, code, and provider.</p>
-                            </span>
-                          </li>
-                          <li class="pmex-stack-feature">
-                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
-                            <span>
-                              <h4>Prevention Focus</h4>
-                              <p>Certified billers review documentation and payer-specific processes to reduce repeat denials.</p>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="pmex-stack-showcase">
-                        <img src="/img/2icon.webp" alt="" width="56" height="56" loading="lazy" />
-                        <p class="pmex-stack-sub">Specialty billers identify and prevent denial patterns before they repeat.</p>
-                        <div class="pmex-stack-metric">
-                          <strong>97%</strong>
-                          <span>First-Pass Acceptance</span>
-                        </div>
-                        <a href="/services/denial-management.html" class="cta-primary-btn w-full">
-                          <span>Explore Denial Workflow</span>
-                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
-                        </a>
-                      </div>
+                    <a href="/company/demo.html" class="cta-primary-btn">
+                      <span>Explore Follow-Up</span>
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
+                    </a>
+                  </aside>
+                </article>
+                <article role="tabpanel" id="pmex-flow-panel-4" class="pmex-flow-panel" aria-labelledby="pmex-flow-tab-4" aria-hidden="true" inert>
+                  <div class="pmex-flow-main">
+                    <p class="pmex-flow-kicker">Step 04 of 05</p>
+                    <h3 class="pmex-flow-title">Payment Posting &amp; Reconciliation</h3>
+                    <p class="pmex-flow-desc">ERA and EOB payments are reconciled daily by our payment posting team. Variances between billed amounts, contracted rates, and received payments are reviewed and addressed. Payments are posted, verified, and reconciled so financial records stay accurate and discrepancies can be identified quickly.</p>
+                    <ul class="pmex-flow-points">
+                      <li>
+                        <span class="pmex-flow-point-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
+                        <span><strong>Daily Reconciliation</strong>ERA and EOB payments are reconciled daily by our payment posting team.</span>
+                      </li>
+                      <li>
+                        <span class="pmex-flow-point-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
+                        <span><strong>Variance Review</strong>Variances between billed amounts, contracted rates, and received payments are reviewed.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <aside class="pmex-flow-side">
+                    <img src="/img/4icon.webp" alt="" width="56" height="56" loading="lazy" />
+                    <div class="pmex-flow-metric">
+                      <strong>+30%</strong>
+                      <span>Revenue Increase Avg</span>
                     </div>
-                  </article>
-                </li>
-                <li class="pmex-stack-item">
-                  <article class="pmex-stack-panel" aria-labelledby="pmex-stack-title-3">
-                    <div class="pmex-stack-head">
-                      <span class="pmex-stack-num">03</span>
-                      <h3 id="pmex-stack-title-3" class="pmex-stack-title">Expert Follow-Up &amp; Resolution</h3>
+                    <a href="/company/demo.html" class="cta-primary-btn">
+                      <span>Explore Payment Posting</span>
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
+                    </a>
+                  </aside>
+                </article>
+                <article role="tabpanel" id="pmex-flow-panel-5" class="pmex-flow-panel" aria-labelledby="pmex-flow-tab-5" aria-hidden="true" inert>
+                  <div class="pmex-flow-main">
+                    <p class="pmex-flow-kicker">Step 05 of 05</p>
+                    <h3 class="pmex-flow-title">Real-Time Practice Reporting</h3>
+                    <p class="pmex-flow-desc">A connected view of your entire revenue cycle end to end. Every step feeds the next, and every dollar is tracked from the moment a claim is created to the moment it is paid and reconciled. The PMEX reporting platform gives you visibility at every stage so you can understand where your revenue stands.</p>
+                    <ul class="pmex-flow-points">
+                      <li>
+                        <span class="pmex-flow-point-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
+                        <span><strong>End-to-End Visibility</strong>Every dollar is tracked from claim creation through payment and reconciliation.</span>
+                      </li>
+                      <li>
+                        <span class="pmex-flow-point-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
+                        <span><strong>PMEX Reporting Platform</strong>Real-time reporting updated by the PMEX billing team at every stage.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <aside class="pmex-flow-side">
+                    <img src="/img/5icon.webp" alt="" width="56" height="56" loading="lazy" />
+                    <div class="pmex-flow-metric">
+                      <strong>50</strong>
+                      <span>States Covered</span>
                     </div>
-                    <div class="pmex-stack-body">
-                      <div class="pmex-stack-copy">
-                        <p class="pmex-stack-desc">Every outstanding claim is worked by a dedicated billing specialist with specialty-specific payer knowledge. Routine follow-up is handled systematically. Complex cases including secondary payers, payer disputes, underpayments, and coordination of benefits issues are escalated to senior specialists.</p>
-                        <ul class="pmex-stack-features">
-                          <li class="pmex-stack-feature">
-                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
-                            <span>
-                              <h4>Dedicated Follow-Up</h4>
-                              <p>Every outstanding claim is worked by a dedicated billing specialist.</p>
-                            </span>
-                          </li>
-                          <li class="pmex-stack-feature">
-                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
-                            <span>
-                              <h4>Complex Case Escalation</h4>
-                              <p>Secondary payers, disputes, underpayments, and COB issues go to senior specialists.</p>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="pmex-stack-showcase">
-                        <img src="/img/3icon.webp" alt="" width="56" height="56" loading="lazy" />
-                        <p class="pmex-stack-sub">Senior billing specialists work every outstanding claim to resolution.</p>
-                        <div class="pmex-stack-metric">
-                          <strong>2.7M+</strong>
-                          <span>Claims Processed</span>
-                        </div>
-                        <a href="/company/demo.html" class="cta-primary-btn w-full">
-                          <span>Explore Follow-Up</span>
-                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
-                        </a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li class="pmex-stack-item">
-                  <article class="pmex-stack-panel" aria-labelledby="pmex-stack-title-4">
-                    <div class="pmex-stack-head">
-                      <span class="pmex-stack-num">04</span>
-                      <h3 id="pmex-stack-title-4" class="pmex-stack-title">Payment Posting &amp; Reconciliation</h3>
-                    </div>
-                    <div class="pmex-stack-body">
-                      <div class="pmex-stack-copy">
-                        <p class="pmex-stack-desc">ERA and EOB payments are reconciled daily by our payment posting team. Variances between billed amounts, contracted rates, and received payments are reviewed and addressed. Payments are posted, verified, and reconciled so financial records stay accurate and discrepancies can be identified quickly.</p>
-                        <ul class="pmex-stack-features">
-                          <li class="pmex-stack-feature">
-                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
-                            <span>
-                              <h4>Daily Reconciliation</h4>
-                              <p>ERA and EOB payments are reconciled daily by our payment posting team.</p>
-                            </span>
-                          </li>
-                          <li class="pmex-stack-feature">
-                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
-                            <span>
-                              <h4>Variance Review</h4>
-                              <p>Variances between billed amounts, contracted rates, and received payments are reviewed.</p>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="pmex-stack-showcase">
-                        <img src="/img/4icon.webp" alt="" width="56" height="56" loading="lazy" />
-                        <p class="pmex-stack-sub">ERA and EOB reconciled daily. Variances flagged same day.</p>
-                        <div class="pmex-stack-metric">
-                          <strong>+30%</strong>
-                          <span>Revenue Increase Avg</span>
-                        </div>
-                        <a href="/company/demo.html" class="cta-primary-btn w-full">
-                          <span>Explore Payment Posting</span>
-                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
-                        </a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li class="pmex-stack-item">
-                  <article class="pmex-stack-panel" aria-labelledby="pmex-stack-title-5">
-                    <div class="pmex-stack-head">
-                      <span class="pmex-stack-num">05</span>
-                      <h3 id="pmex-stack-title-5" class="pmex-stack-title">Real-Time Practice Reporting</h3>
-                    </div>
-                    <div class="pmex-stack-body">
-                      <div class="pmex-stack-copy">
-                        <p class="pmex-stack-desc">A connected view of your entire revenue cycle end to end. Every step feeds the next, and every dollar is tracked from the moment a claim is created to the moment it is paid and reconciled. The PMEX reporting platform gives you visibility at every stage so you can understand where your revenue stands.</p>
-                        <ul class="pmex-stack-features">
-                          <li class="pmex-stack-feature">
-                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-icon-variant-4"></use></svg></span>
-                            <span>
-                              <h4>End-to-End Visibility</h4>
-                              <p>Every dollar is tracked from claim creation through payment and reconciliation.</p>
-                            </span>
-                          </li>
-                          <li class="pmex-stack-feature">
-                            <span class="pmex-stack-feature-icon"><svg aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#index-rules-based-pre-scrubbing"></use></svg></span>
-                            <span>
-                              <h4>PMEX Reporting Platform</h4>
-                              <p>Real-time reporting updated by the PMEX billing team at every stage.</p>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="pmex-stack-showcase">
-                        <img src="/img/5icon.webp" alt="" width="56" height="56" loading="lazy" />
-                        <p class="pmex-stack-sub">The full picture in the PMEX reporting platform.</p>
-                        <div class="pmex-stack-metric">
-                          <strong>50</strong>
-                          <span>States Covered</span>
-                        </div>
-                        <a href="/company/demo.html" class="cta-primary-btn w-full">
-                          <span>Explore Reporting</span>
-                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
-                        </a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-          </ol>
+                    <a href="/company/demo.html" class="cta-primary-btn">
+                      <span>Explore Reporting</span>
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#index-icon-variant-5"></use></svg>
+                    </a>
+                  </aside>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       
@@ -1193,15 +1155,9 @@
             <h2 class="text-[22px] font-normal leading-[1.2] text-[var(--c-505050)] sm:text-[30px] lg:text-[36px]">One platform. Every dollar in view.</h2>
             <p class="pmex-plat-sub">Explore how <span class="logo-font" role="img" aria-label="pmex"></span> connects claims, analytics, integrations, and compliance in one live revenue workspace.</p>
           </div>
-          <div class="pmex-plat">
-            <div class="pmex-plat-tabs" role="tablist" aria-label="PMEX platform">
-            <button type="button" class="pmex-plat-tab" role="tab" id="pmex-plat-tab-1" aria-controls="pmex-plat-panel-1" aria-selected="true" tabindex="0"><svg class="pmex-plat-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#receipt"></use></svg><span>Claims &amp; Billing</span></button>
-            <button type="button" class="pmex-plat-tab" role="tab" id="pmex-plat-tab-2" aria-controls="pmex-plat-panel-2" aria-selected="false" tabindex="-1"><svg class="pmex-plat-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#chart-bars"></use></svg><span>Analytics &amp; Reporting</span></button>
-            <button type="button" class="pmex-plat-tab" role="tab" id="pmex-plat-tab-3" aria-controls="pmex-plat-panel-3" aria-selected="false" tabindex="-1"><svg class="pmex-plat-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#grid"></use></svg><span>Integrations &amp; Partners</span></button>
-            <button type="button" class="pmex-plat-tab" role="tab" id="pmex-plat-tab-4" aria-controls="pmex-plat-panel-4" aria-selected="false" tabindex="-1"><svg class="pmex-plat-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#shield-check"></use></svg><span>Security &amp; Compliance</span></button>
-            </div>
-            <div class="pmex-plat-panels" data-typography-own>
-            <div class="pmex-plat-panel is-active" role="tabpanel" id="pmex-plat-panel-1" aria-labelledby="pmex-plat-tab-1">
+          <div class="pmex-plat" data-plat-stack>
+                        <div class="pmex-plat-panels" data-typography-own>
+            <div class="pmex-plat-panel" id="pmex-plat-panel-1">
               <div class="pmex-plat-copy">
                 <p class="pmex-plat-eyebrow">Live Claim Command Center</p>
                 <h3 class="pmex-plat-title">Claims &amp; Billing</h3>
@@ -1228,7 +1184,7 @@
                   </div>
               </div>
             </div>
-            <div class="pmex-plat-panel" role="tabpanel" id="pmex-plat-panel-2" aria-labelledby="pmex-plat-tab-2" aria-hidden="true" inert>
+            <div class="pmex-plat-panel" id="pmex-plat-panel-2">
               <div class="pmex-plat-copy">
                 <p class="pmex-plat-eyebrow">Clarity at Every Level</p>
                 <h3 class="pmex-plat-title">Analytics &amp; Reporting</h3>
@@ -1250,7 +1206,7 @@
                   </div>
               </div>
             </div>
-            <div class="pmex-plat-panel" role="tabpanel" id="pmex-plat-panel-3" aria-labelledby="pmex-plat-tab-3" aria-hidden="true" inert>
+            <div class="pmex-plat-panel" id="pmex-plat-panel-3">
               <div class="pmex-plat-copy">
                 <p class="pmex-plat-eyebrow">Works With Your Existing Tools</p>
                 <h3 class="pmex-plat-title">Integrations &amp; Partners</h3>
@@ -1273,7 +1229,7 @@
                   </div>
               </div>
             </div>
-            <div class="pmex-plat-panel" role="tabpanel" id="pmex-plat-panel-4" aria-labelledby="pmex-plat-tab-4" aria-hidden="true" inert>
+            <div class="pmex-plat-panel" id="pmex-plat-panel-4">
               <div class="pmex-plat-copy">
                 <p class="pmex-plat-eyebrow">Built for Healthcare Security</p>
                 <h3 class="pmex-plat-title">Security &amp; Compliance</h3>
