@@ -23618,7 +23618,7 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
 
 /* Shared header components (replace the former inline style="" attributes) */
 [data-css~="navbar-d90c332f"] #homepage-reference-nav.pmex-nav{position:sticky;top:0;z-index:100;background:var(--c-FFFFFF);border-bottom:1px solid var(--c-E0E0DA);box-shadow:0 1px 6px var(--c-000000-a5)}
-[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-bar{max-width:1260px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-bar{max-width:1260px;margin:0 auto;padding:0 20px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-logo{display:block;height:26px;width:75.5px}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-menu{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-item{position:relative}
@@ -23643,6 +23643,30 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu .homepage-nav-actions .homepage-nav-phone{font-size:14px!important}
 [data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu .homepage-nav-actions a.homepage-nav-demo{font-size:14px!important;line-height:20px!important;padding:10px 24px!important;height:40px!important}
 }
+
+/* Header edges line up with the page content: same side padding as .pmex-container (20px, 24px from 640px, 40px from 1024px). */
+@media(min-width:640px){[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-bar{padding-inline:24px}}
+@media(min-width:1024px){[data-css~="navbar-d90c332f"] #homepage-reference-nav .pmex-nav-bar{padding-inline:40px}}
+@media(max-width:1200px){
+[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu{padding:20px 20px 24px}
+}
+@media(min-width:640px) and (max-width:1200px){[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu{padding-inline:24px}}
+@media(min-width:1024px) and (max-width:1200px){[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-menu{padding-inline:40px}}
+/* Dropdown hover boxes (colour unchanged): the hover background gets room around the icon and the text, and the divider
+   lines sit outside the box. Negative margins keep the text where it was. */
+[data-css~="navbar-d90c332f"] #homepage-reference-nav :is(#homepage-dropdown-1,#homepage-dropdown-3) a[data-navigation-icon-link]{padding-inline:10px!important;margin-inline:-10px!important}
+@media(min-width:1201px){
+html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div>div>a:not([data-resources-card]){padding-inline:10px!important;margin-inline:-6px!important}
+html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div>div>a:not([data-resources-card]):nth-of-type(2){border-top:0!important;padding-top:6px!important;margin-top:12px!important;position:relative}
+html[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-dropdown-2>div>div>a:not([data-resources-card]):nth-of-type(2)::after{content:"";position:absolute;left:6px;right:6px;top:-7px;border-top:1px solid var(--c-E0E0DA)}
+}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-services-panel a.svc-mega-all{display:flex!important;border-top:0!important;padding:8px 12px!important;margin:24px 0 0!important;border-radius:12px;position:relative}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-services-panel a.svc-mega-all::after{content:"";position:absolute;left:12px;right:12px;top:-12px;border-top:1px solid var(--c-E0E0DA)}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-specialties-panel .popular-specialties-footer{padding-top:8px}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav #homepage-specialties-panel .popular-specialties-footer a{display:inline-flex;align-items:center;padding:8px 10px;margin-left:36px;border-radius:10px}
+/* PMEX Portal button: the PMEX mark takes the button text colour (dark green) instead of the grey logo file, and sits on the text baseline. */
+[data-css~="navbar-d90c332f"] #homepage-reference-nav a.homepage-nav-demo{display:inline-flex!important;align-items:center;justify-content:center;gap:6px;font-weight:500!important;white-space:nowrap!important}
+[data-css~="navbar-d90c332f"] #homepage-reference-nav a.homepage-nav-demo .pmex-simple{width:2.9em;height:1em;vertical-align:middle;background:currentColor;-webkit-mask:url('../img/logo/pmex-simple.svg') no-repeat center/contain;mask:url('../img/logo/pmex-simple.svg') no-repeat center/contain}
 
 /* ===== inline <style> block  [data-css~="inline-19682d52"] ===== */
 
@@ -24969,3 +24993,69 @@ html[data-css~="pmex-common"] body h1 span.usa-flag { font-family: 'PMEX Inter B
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds contrast against busy images */
   text-align: center;
 }
+/* ===== layout standards: container, section spacing, heading gap, grid gaps  [data-css~="layout"] ===== */
+/* One source for page spacing. Documented in README.md (Layout and spacing standards).
+   Breakpoints: mobile < 640px, tablet 640-1023px, laptop/desktop >= 1024px.
+   The logo marquee (partials/marquee.html) does not use these classes and keeps its own spacing. */
+:root[data-css~="layout"] {
+  --pmex-container-max: 1260px;
+  --pmex-gutter: 20px;
+  --pmex-section-y: 32px;
+  --pmex-hero-y: 40px;
+  --pmex-head-gap: 32px;
+  --pmex-card-gap: 16px;
+  --pmex-split-gap: 32px;
+}
+@media (min-width: 640px) {
+  :root[data-css~="layout"] { --pmex-gutter: 24px; --pmex-hero-y: 48px; }
+}
+@media (min-width: 768px) {
+  :root[data-css~="layout"] { --pmex-split-gap: 40px; }
+}
+@media (min-width: 1024px) {
+  :root[data-css~="layout"] { --pmex-gutter: 40px; --pmex-section-y: 40px; --pmex-hero-y: 56px; --pmex-head-gap: 40px; --pmex-split-gap: 48px; }
+}
+[data-css~="layout"] .pmex-container {
+  width: 100%;
+  max-width: var(--pmex-container-max);
+  margin-inline: auto;
+  padding-inline: var(--pmex-gutter);
+}
+[data-css~="layout"] .pmex-section { padding-block: var(--pmex-section-y); }
+[data-css~="layout"] .pmex-hero { padding-block: var(--pmex-hero-y); }
+[data-css~="layout"] .pmex-section-head { margin-bottom: var(--pmex-head-gap); }
+[data-css~="layout"] .pmex-section-head + * { margin-top: 0; }
+[data-css~="layout"] .pmex-card-grid { gap: var(--pmex-card-gap); }
+[data-css~="layout"] .pmex-split { gap: var(--pmex-split-gap); }
+
+/* ===== home page responsive fixes (index.html)  [data-css~="home-responsive"] ===== */
+/* Hero, 640-1023px: the photo's white fade covers about 60% of the width, so keep the copy inside it. */
+@media (min-width: 640px) and (max-width: 1023px) {
+  [data-css~="home-responsive"] .pmex-hero-content { max-width: min(460px, 60vw); }
+}
+/* Platform: sticky scene from 768px; below that it is a normal section. */
+[data-css~="home-responsive"] .pmex-platform-inner { padding-block: var(--pmex-section-y); }
+@media (min-width: 768px) {
+  [data-css~="home-responsive"] .pmex-platform-inner { padding-top: 24px; padding-bottom: 20px; }
+}
+/* Claims lifecycle: below 1280px the step titles wrap inside the sidebar instead of running into the next column. */
+@media (max-width: 1279px) {
+  [data-css~="home-responsive"] [data-pmex-lifecycle] #lifecycle-sidebar [id^="stitle-"] { white-space: normal; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  [data-css~="home-responsive"] [data-pmex-lifecycle] #lifecycle-sidebar { width: 30%; padding: 14px 10px; }
+  [data-css~="home-responsive"] [data-pmex-lifecycle] #lifecycle-sidebar button { gap: 10px; padding: 10px; }
+  [data-css~="home-responsive"] [data-pmex-lifecycle] #lifecycle-panel { padding: 16px; }
+  [data-css~="home-responsive"] [data-pmex-lifecycle] #normal-content { grid-template-columns: minmax(0, 1fr) minmax(180px, 0.75fr); gap: 14px; }
+}
+/* Hero background from 640px: plain white fade over the photo (no green glow), a little wider so the copy never sits on the image. */
+@media (min-width: 640px) {
+  [data-css~="home-responsive"] .pmex-hero.hero-bg-gradient {
+    background-image: linear-gradient(to right, var(--c-FFFFFF) 44%, var(--c-FFFFFF-a78) 56%, transparent 66%), var(--hero-bg-desktop, var(--hero-bg-img, none));
+  }
+}
+/* Hero: grey trust and phone line under the buttons. */
+[data-css~="home-responsive"] .pmex-hero-meta { margin: 16px 0 0; font-size: 13px; line-height: 1.6; color: var(--c-676767); }
+[data-css~="home-responsive"] .pmex-hero-meta span { margin-inline: 4px; }
+[data-css~="home-responsive"] .pmex-hero-meta a { color: var(--c-505050); font-weight: 500; text-decoration: none; white-space: nowrap; }
+[data-css~="home-responsive"] .pmex-hero-meta a:hover { text-decoration: underline; text-underline-offset: 3px; }
