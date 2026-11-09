@@ -25449,3 +25449,67 @@ html[data-css~="home-neutral"] body section:is(#pmex-claims-lifecycle, #pmex-spe
   translate: none !important; transform: none !important; border-color: var(--c-AAD39C) !important;
   box-shadow: 0 4px 6px -1px var(--c-000000-a10), 0 2px 4px -2px var(--c-000000-a10) !important;
 }
+
+/* ===== home page pricing cards: one card structure, no empty half, calm hover  [data-css~="home-responsive"] ===== */
+/* All three cards: header band of the same height, then a body that fills the card. In-house card: cost rows on light grey
+   tiles and a large total, centered in the card like the savings card. Hover: light green border and a soft shadow (no lift, no wash). */
+[data-css~="home-responsive"] section#pmex-pricing .pmex-price-card { display: flex; flex-direction: column; }
+[data-css~="home-responsive"] section#pmex-pricing .pmex-price-head {
+  display: flex; flex-direction: column; justify-content: center; min-height: 82px; background: var(--c-FAFBF9) !important;
+}
+[data-css~="home-responsive"] section#pmex-pricing .pmex-price-body { flex: 1 1 auto; display: flex; flex-direction: column; }
+[data-css~="home-responsive"] section#pmex-pricing .pmex-price-card:first-child .pmex-price-body { justify-content: center; gap: 4px; }
+[data-css~="home-responsive"] section#pmex-pricing .pmex-price-card:first-child .pmex-price-body > .space-y-4 > div { padding: 12px 14px; border-radius: 12px; background: var(--c-FAFAFA); }
+[data-css~="home-responsive"] section#pmex-pricing .pmex-price-card:first-child .pmex-price-body > :last-child strong { font-size: 32px; line-height: 1; }
+[data-css~="home-responsive"] section#pmex-pricing .pmex-price-card-main .pmex-price-body > p:last-child { margin-top: auto; padding-top: 20px; }
+[data-css~="home-responsive"] section#pmex-pricing .pmex-price-card:last-child .pmex-price-body { justify-content: center; }
+[data-css~="home-responsive"] section#pmex-pricing :is(.pmex-price-card, .feature-card) > .feature-card-gradient { display: none !important; }
+[data-css~="home-responsive"] section#pmex-pricing :is(.pmex-price-card, .pmex-price-reveal > .feature-card) {
+  box-shadow: none !important; transition: border-color .2s ease, box-shadow .2s ease, opacity .7s ease, translate .7s ease !important;
+}
+[data-css~="home-responsive"] section#pmex-pricing :is(.pmex-price-card, .pmex-price-reveal > .feature-card):hover {
+  translate: none !important; transform: none !important; border-color: var(--c-AAD39C) !important;
+  box-shadow: 0 4px 6px -1px var(--c-000000-a10), 0 2px 4px -2px var(--c-000000-a10) !important;
+}
+
+/* ===== home page trusted outcomes: featured quote, metrics and review cards  [data-css~="home-responsive"] ===== */
+/* Featured quote: content centered in the card height (no empty lower half). Metric prefixes (> and +) use the
+   number's size and color so they read as part of the value. Review cards: all white, one hover for every card
+   (green 3px left border, light green border, soft shadow, no lift, no wash). */
+[data-css~="home-responsive"] section#pmex-trusted-outcomes .pmex-card-grid > article.feature-card { display: flex; flex-direction: column; justify-content: center; }
+[data-css~="home-responsive"] section#pmex-trusted-outcomes .flex.items-baseline > span:first-child:not([data-outcome-counter]) {
+  margin-right: 2px !important; font-size: 29px !important; line-height: 1; font-weight: 600; color: var(--c-505050) !important;
+}
+@media (min-width: 640px) {
+  [data-css~="home-responsive"] section#pmex-trusted-outcomes .flex.items-baseline > span:first-child:not([data-outcome-counter]) { font-size: 32px !important; }
+}
+[data-css~="home-responsive"] section#pmex-trusted-outcomes :is(.pmex-card-grid > article, .pmex-card-grid > div > [data-outcome-reveal], .pmex-rv > article) > .feature-card-gradient { display: none !important; }
+[data-css~="home-responsive"] section#pmex-trusted-outcomes .pmex-rv > article { background: var(--c-FFFFFF) !important; }
+[data-css~="home-responsive"] section#pmex-trusted-outcomes :is(.pmex-card-grid > article, .pmex-card-grid > div > [data-outcome-reveal], .pmex-rv > article) {
+  box-shadow: none !important; transition: border-color .2s ease, box-shadow .2s ease, opacity .5s ease, translate .5s ease !important;
+}
+[data-css~="home-responsive"] section#pmex-trusted-outcomes :is(.pmex-card-grid > article, .pmex-card-grid > div > [data-outcome-reveal], .pmex-rv > article):hover {
+  translate: none !important; transform: none !important; border-color: var(--c-AAD39C) !important;
+  box-shadow: 0 4px 6px -1px var(--c-000000-a10), 0 2px 4px -2px var(--c-000000-a10) !important;
+}
+[data-css~="home-responsive"] section#pmex-trusted-outcomes .pmex-rv > article:is(:hover, :focus-within) > [class~="w-[3px]"] { background: var(--c-3F9A4B) !important; }
+
+/* ===== home page services overview: the two lower boxes match  [data-css~="home-responsive"] ===== */
+/* Process card (left) and statement card (right): same light grey fill, grey border, no heavy shadow, no glow.
+   Right card: heading and text at the top like the left card, the button at the bottom (no big gap under the heading). Hover: light green
+   border and a soft shadow, no lift, no wash. */
+[data-css~="home-responsive"] :is(.pmex-svc-process, .pmex-svc-statement) {
+  background: var(--c-FAFAFA) !important; border: 1px solid var(--c-E0E0DA) !important; outline: 0 !important;
+  box-shadow: none !important; transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+[data-css~="home-responsive"] :is(.pmex-svc-process, .pmex-svc-statement):hover {
+  translate: none !important; transform: none !important; border-color: var(--c-AAD39C) !important;
+  box-shadow: 0 4px 6px -1px var(--c-000000-a10), 0 2px 4px -2px var(--c-000000-a10) !important;
+}
+[data-css~="home-responsive"] .pmex-svc-process > .feature-card-gradient { display: none !important; }
+[data-css~="home-responsive"] .pmex-svc-statement { justify-content: flex-start !important; gap: 16px !important; }
+[data-css~="home-responsive"] .pmex-svc-statement > div:last-child { margin-top: auto; padding-top: 8px; }
+/* statement card keeps its own type scale (opted out of the card roles with data-typography-own) */
+[data-css~="home-responsive"] .pmex-svc-statement > h3 { font-size: 22px !important; line-height: 1.3 !important; font-weight: 500 !important; }
+[data-css~="home-responsive"] .pmex-svc-statement > div:not(:last-child) { font-size: 16px !important; line-height: 1.75 !important; }
+@media (min-width: 1024px) { [data-css~="home-responsive"] .pmex-svc-statement > h3 { font-size: 26px !important; } }
