@@ -60,7 +60,8 @@
   if(/uppercase|eyebrow|hero-lbl|hero-label/.test(p.className)||getComputedStyle(p).textTransform==='uppercase')p.dataset.referenceLabel='';
  });
  const candidates=[...root.querySelectorAll('div,article,a,li')].filter(el=>{
-  if(el.closest(excluded+', [data-reference-hero],[data-problem-card]')||el.querySelector('form,section,[data-problem-card]'))return false;
+  // [data-typography-own]: a block that sets its own type scale (for example the home page platform panels) gets no card roles.
+  if(el.closest(excluded+', [data-reference-hero],[data-problem-card],[data-typography-own]')||el.querySelector('form,section,[data-problem-card]'))return false;
   const c=String(el.className);
   if(/(?:^|\s)(?:grid|[\w-]*cards|[\w-]*grid)(?:\s|$)/.test(c))return false;
   const computed=getComputedStyle(el);

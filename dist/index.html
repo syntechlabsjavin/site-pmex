@@ -1190,760 +1190,116 @@
       <!-- PMEX Portal — CENTERED STICKY STACK -->
       <section
         id="pmex-platform"
-        class="relative border-b border-[var(--c-E0E0DA)] bg-[var(--c-FFFFFF)]"
+        class="relative border-b border-[var(--c-E0E0DA)] bg-[var(--c-FFFFFF)] pmex-section"
       >
-        <div
-          data-platform-spacer
-          class="relative min-h-[100vh] md:min-h-[300vh]"
-        >
-          <div
-            data-platform-sticky
-            class="pmex-platform-sticky relative z-20 bg-[var(--c-FFFFFF)] md:sticky md:top-[70px] md:flex md:min-h-[calc(100vh-70px)] md:items-start md:pt-1 md:pb-2 lg:top-[70px] lg:min-h-[calc(100vh-80px)] lg:pt-1"
-          >
-            <div
-              class="pmex-container pmex-platform-inner"
-            >
-              <div
-                class="mx-auto max-w-[720px] text-center"
-                data-platform-header
-              >
-                <h2
-                  class="text-[22px] font-normal leading-[1.2] text-[var(--c-505050)] sm:text-[30px] lg:text-[36px]"
-                >
-                  One platform. Every dollar in view.
-                </h2>
-
-                <p
-                  class="text-[14px] sm:text-[16px] mx-auto mt-2 max-w-[520px] leading-[1.7] text-[var(--c-6F746E)]"
-                >
-                  Explore how <span class="logo-font" role="img" aria-label="pmex"></span> connects claims, analytics, integrations, and
-                  compliance in one live revenue workspace.
-                </p>
+        <div class="pmex-container">
+          <div class="pmex-section-head mx-auto max-w-[720px] text-center">
+            <h2 class="text-[22px] font-normal leading-[1.2] text-[var(--c-505050)] sm:text-[30px] lg:text-[36px]">One platform. Every dollar in view.</h2>
+            <p class="pmex-plat-sub">Explore how <span class="logo-font" role="img" aria-label="pmex"></span> connects claims, analytics, integrations, and compliance in one live revenue workspace.</p>
+          </div>
+          <div class="pmex-plat">
+            <div class="pmex-plat-tabs" role="tablist" aria-label="PMEX platform">
+            <button type="button" class="pmex-plat-tab" role="tab" id="pmex-plat-tab-1" aria-controls="pmex-plat-panel-1" aria-selected="true" tabindex="0"><svg class="pmex-plat-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#receipt"></use></svg><span>Claims &amp; Billing</span></button>
+            <button type="button" class="pmex-plat-tab" role="tab" id="pmex-plat-tab-2" aria-controls="pmex-plat-panel-2" aria-selected="false" tabindex="-1"><svg class="pmex-plat-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#chart-bars"></use></svg><span>Analytics &amp; Reporting</span></button>
+            <button type="button" class="pmex-plat-tab" role="tab" id="pmex-plat-tab-3" aria-controls="pmex-plat-panel-3" aria-selected="false" tabindex="-1"><svg class="pmex-plat-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#grid"></use></svg><span>Integrations &amp; Partners</span></button>
+            <button type="button" class="pmex-plat-tab" role="tab" id="pmex-plat-tab-4" aria-controls="pmex-plat-panel-4" aria-selected="false" tabindex="-1"><svg class="pmex-plat-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#shield-check"></use></svg><span>Security &amp; Compliance</span></button>
+            </div>
+            <div class="pmex-plat-panels" data-typography-own>
+            <div class="pmex-plat-panel is-active" role="tabpanel" id="pmex-plat-panel-1" aria-labelledby="pmex-plat-tab-1">
+              <div class="pmex-plat-copy">
+                <p class="pmex-plat-eyebrow">Live Claim Command Center</p>
+                <h3 class="pmex-plat-title">Claims &amp; Billing</h3>
+                <p class="pmex-plat-text">Follow each claim from submission to payment, spot blockers early, and keep your team focused on the revenue that needs action now.</p>
+                <ul class="pmex-plat-points">
+                  <li><svg class="pmex-plat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#check-simple"></use></svg><span>Real-time claim status</span></li>
+                  <li><svg class="pmex-plat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#check-simple"></use></svg><span>Denial pattern alerts</span></li>
+                  <li><svg class="pmex-plat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#check-simple"></use></svg><span>Payer performance tracking</span></li>
+                </ul>
               </div>
-
-              <div
-                data-platform-tabs
-                class="pmex-platform-tabs mt-3 rounded-[18px] border border-[var(--c-E4EBE0)] bg-[var(--c-FFFFFF)] p-2 shadow-[0_8px_24px_-16px_var(--c-2A3828-a25)]"
-                role="tablist"
-              >
-                <div
-                  class="flex gap-2 overflow-x-auto pb-0.5 [scrollbar-width:none] [-ms-overflow-style:none] lg:grid lg:grid-cols-4 lg:overflow-visible [&::-webkit-scrollbar]:hidden"
-                >
-                  <button
-                    type="button"
-                    class="pmex-platform-tab flex shrink-0 items-center justify-center gap-2.5 rounded-full border border-[var(--c-D8E4D4)] px-4 py-2.5 text-center transition-all duration-300 sm:px-4 sm:py-3 lg:w-auto"
-                    data-tab="claims"
-                    data-stack-index="0"
-                  >
-                    <span
-                      class="tab-label whitespace-nowrap text-[12px] font-semibold sm:text-[13px]"
-                    >
-                      Claims &amp; Billing
-                    </span>
-                  </button>
-
-                  <button
-                    type="button"
-                    class="pmex-platform-tab flex shrink-0 items-center justify-center gap-2.5 rounded-full border border-[var(--c-D8E4D4)] bg-[var(--c-FFFFFF)] px-4 py-2.5 text-center text-[var(--c-6F746E)] transition-all duration-300 sm:px-4 sm:py-3 lg:w-auto"
-                    data-tab="analytics"
-                    data-stack-index="1"
-                  >
-                    <span
-                      class="tab-label whitespace-nowrap text-[12px] font-semibold sm:text-[13px]"
-                    >
-                      Analytics &amp; Reporting
-                    </span>
-                  </button>
-
-                  <button
-                    type="button"
-                    class="pmex-platform-tab flex shrink-0 items-center justify-center gap-2.5 rounded-full border border-[var(--c-D8E4D4)] bg-[var(--c-FFFFFF)] px-4 py-2.5 text-center text-[var(--c-6F746E)] transition-all duration-300 sm:px-4 sm:py-3 lg:w-auto"
-                    data-tab="integrations"
-                    data-stack-index="2"
-                  >
-                    <span
-                      class="tab-label whitespace-nowrap text-[12px] font-semibold sm:text-[13px]"
-                    >
-                      Integrations &amp; Partners
-                    </span>
-                  </button>
-
-                  <button
-                    type="button"
-                    class="pmex-platform-tab flex shrink-0 items-center justify-center gap-2.5 rounded-full border border-[var(--c-D8E4D4)] bg-[var(--c-FFFFFF)] px-4 py-2.5 text-center text-[var(--c-6F746E)] transition-all duration-300 sm:px-4 sm:py-3 lg:w-auto"
-                    data-tab="security"
-                    data-stack-index="3"
-                  >
-                    <span
-                      class="tab-label whitespace-nowrap text-[12px] font-semibold sm:text-[13px]"
-                    >
-                      Security &amp; Compliance
-                    </span>
-                  </button>
-                </div>
+              <div class="pmex-plat-visual">
+                  <div class="pmex-plat-window">
+                    <div class="pmex-plat-window-head"><span>Claims activity</span><span class="pmex-plat-chip">Live</span></div>
+                    <div class="pmex-plat-kpis pmex-plat-kpis-3">
+                      <div class="pmex-plat-kpi"><span>Clean claim rate</span><strong>97.2%</strong></div>
+                      <div class="pmex-plat-kpi"><span>Recovered this month</span><strong>$184k</strong></div>
+                      <div class="pmex-plat-kpi"><span>Needs attention</span><strong>18</strong></div>
+                    </div>
+                    <ul class="pmex-plat-rows">
+                      <li><span class="pmex-plat-id">PMX-2849</span><span class="pmex-plat-status is-paid">Paid</span><span class="pmex-plat-amt">$4,820</span></li>
+                      <li><span class="pmex-plat-id">PMX-2850</span><span class="pmex-plat-status">In review</span><span class="pmex-plat-amt">$2,160</span></li>
+                      <li><span class="pmex-plat-id">PMX-2851</span><span class="pmex-plat-status is-ready">Ready to submit</span><span class="pmex-plat-amt">$7,340</span></li>
+                    </ul>
+                  </div>
               </div>
-
-              <div
-                class="pmex-platform-stack relative mt-3"
-                data-platform-stack
-              >
-                <!-- =================================================
-                        TAB 01 — CLAIMS
-                    ================================================== -->
-                <div
-                  class="pmex-platform-panel pmex-platform-stack-card pmex-hero-index-d7f45e"
-                  data-panel="claims"
-                  data-stack-index="0"
-                 
-                >
-                  <div class="grid grid-cols-1 lg:grid-cols-[0.72fr_1.28fr]">
-                    <!-- LEFT -->
-                    <div
-                      class="pmex-color-background border-b border-[var(--c-E0E0DA)] bg-[var(--c-F8FBF5)] p-5 sm:p-7 lg:border-b-0 lg:border-r lg:p-8"
-                    >
-                      <p
-                        class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--c-3F9A4B)]"
-                      >
-                        Live Claim Command Center
-                      </p>
-
-                      <h3
-                        class="mt-3 text-[24px] sm:text-[28px] font-normal leading-[1.2] tracking-[-0.02em] text-[var(--c-505050)]"
-                      >
-                        Claims &amp; Billing
-                      </h3>
-
-                      <p
-                        class="text-[14px] mt-4 max-w-[430px] leading-[1.75] text-[var(--c-6F746E)]"
-                      >
-                        Follow each claim from submission to payment, spot
-                        blockers early, and keep your team focused on the
-                        revenue that needs action now.
-                      </p>
-
-                      <ul class="mt-6 space-y-2.5">
-                        <li class="flex items-center gap-3">
-                          <span
-                            class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                          ></span>
-                          <span class="text-[13px] text-[var(--c-6F746E)]">
-                            Real-time claim status
-                          </span>
-                        </li>
-
-                        <li class="flex items-center gap-3">
-                          <span
-                            class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                          ></span>
-                          <span class="text-[13px] text-[var(--c-6F746E)]">
-                            Denial pattern alerts
-                          </span>
-                        </li>
-
-                        <li class="flex items-center gap-3">
-                          <span
-                            class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                          ></span>
-                          <span class="text-[13px] text-[var(--c-6F746E)]">
-                            Payer performance tracking
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- RIGHT -->
-                    <div class="bg-[var(--c-FFFFFF)] p-2 sm:p-6">
-                      <div
-                        class="pmex-color-background rounded-[16px] border border-[var(--c-DDE5DA)] bg-[var(--c-F8FBF5)] p-5"
-                      >
-                        <div class="flex items-center justify-between">
-                          <h4 class="text-[14px] font-semibold text-[var(--c-505050)]">
-                            Claims activity
-                          </h4>
-
-                          <span
-                            class="rounded-full bg-[var(--c-EAF4E7)] px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.08em] text-[var(--c-3F9A4B)]"
-                          >
-                            Live
-                          </span>
-                        </div>
-
-                        <!-- METRICS -->
-                        <div class="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
-                          <div
-                            class="rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] p-4"
-                          >
-                            <p class="text-[10px] text-[var(--c-8A8F88)]">
-                              Clean claim rate
-                            </p>
-
-                            <p
-                              class="mt-2 text-[24px] font-semibold text-[var(--c-315B37)]"
-                            >
-                              97.2%
-                            </p>
-                          </div>
-
-                          <div
-                            class="rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] p-4"
-                          >
-                            <p class="text-[10px] text-[var(--c-8A8F88)]">
-                              Recovered this month
-                            </p>
-
-                            <p
-                              class="mt-2 text-[24px] font-semibold text-[var(--c-315B37)]"
-                            >
-                              $184k
-                            </p>
-                          </div>
-
-                          <div
-                            class="rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] p-4"
-                          >
-                            <p class="text-[10px] text-[var(--c-8A8F88)]">
-                              Needs attention
-                            </p>
-
-                            <p
-                              class="mt-2 text-[24px] font-semibold text-[var(--c-315B37)]"
-                            >
-                              18
-                            </p>
-                          </div>
-                        </div>
-
-                        <!-- CLAIM TABLE -->
-                        <div
-                          class="mt-4 flex-1 overflow-hidden rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)]"
-                        >
-                          <div
-                            class="grid grid-cols-[1.2fr_1fr_auto] items-center gap-3 border-b border-[var(--c-ECEFEA)] px-4 py-3"
-                          >
-                            <div class="flex items-center gap-3">
-                              <span
-                                class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                              ></span>
-
-                              <span
-                                class="text-[12px] font-semibold text-[var(--c-60645F)]"
-                              >
-                                PMX-2849
-                              </span>
-                            </div>
-
-                            <span class="text-[11px] text-[var(--c-858983)]">
-                              Paid
-                            </span>
-
-                            <span
-                              class="text-[12px] font-semibold text-[var(--c-60645F)]"
-                            >
-                              $4,820
-                            </span>
-                          </div>
-
-                          <div
-                            class="grid grid-cols-[1.2fr_1fr_auto] items-center gap-3 border-b border-[var(--c-ECEFEA)] px-4 py-3"
-                          >
-                            <div class="flex items-center gap-3">
-                              <span
-                                class="h-2 w-2 rounded-full bg-[var(--c-AAD39C)]"
-                              ></span>
-
-                              <span
-                                class="text-[12px] font-semibold text-[var(--c-60645F)]"
-                              >
-                                PMX-2850
-                              </span>
-                            </div>
-
-                            <span class="text-[11px] text-[var(--c-858983)]">
-                              In review
-                            </span>
-
-                            <span
-                              class="text-[12px] font-semibold text-[var(--c-60645F)]"
-                            >
-                              $2,160
-                            </span>
-                          </div>
-
-                          <div
-                            class="grid grid-cols-[1.2fr_1fr_auto] items-center gap-3 px-4 py-3"
-                          >
-                            <div class="flex items-center gap-3">
-                              <span
-                                class="h-2 w-2 rounded-full bg-[var(--c-8FC382)]"
-                              ></span>
-
-                              <span
-                                class="text-[12px] font-semibold text-[var(--c-60645F)]"
-                              >
-                                PMX-2851
-                              </span>
-                            </div>
-
-                            <span class="text-[11px] text-[var(--c-858983)]">
-                              Ready to submit
-                            </span>
-
-                            <span
-                              class="text-[12px] font-semibold text-[var(--c-60645F)]"
-                            >
-                              $7,340
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- =================================================
-                        TAB 02 — ANALYTICS
-                    ================================================== -->
-                <div
-                  class="pmex-platform-panel pmex-platform-stack-card pmex-hero-index-d4dd46"
-                  data-panel="analytics"
-                  data-stack-index="1"
-                 
-                >
-                  <div class="grid grid-cols-1 lg:grid-cols-[0.72fr_1.28fr]">
-                    <!-- LEFT -->
-                    <div
-                      class="pmex-color-background border-b border-[var(--c-E0E0DA)] bg-[var(--c-F8FBF5)] p-6 sm:p-7 lg:border-b-0 lg:border-r lg:p-8"
-                    >
-                      <p
-                        class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--c-3F9A4B)]"
-                      >
-                        Clarity at Every Level
-                      </p>
-
-                      <h3
-                        class="mt-3 text-[24px] sm:text-[28px] font-normal leading-[1.2] tracking-[-0.02em] text-[var(--c-505050)]"
-                      >
-                        Analytics &amp; Reporting
-                      </h3>
-
-                      <p
-                        class="mt-4 max-w-[430px] text-[13px] sm:text-[14px] leading-[1.75] text-[var(--c-6F746E)]"
-                      >
-                        See the health of your revenue cycle without waiting for
-                        month-end. Every KPI is current, comparable, and ready
-                        for action.
-                      </p>
-
-                      <ul class="mt-6 space-y-2.5">
-                        <li class="flex items-center gap-3">
-                          <span
-                            class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                          ></span>
-                          <span class="text-[13px] text-[var(--c-6F746E)]">
-                            A/R aging dashboards
-                          </span>
-                        </li>
-
-                        <li class="flex items-center gap-3">
-                          <span
-                            class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                          ></span>
-                          <span class="text-[13px] text-[var(--c-6F746E)]">
-                            Payer scorecards
-                          </span>
-                        </li>
-
-                        <li class="flex items-center gap-3">
-                          <span
-                            class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                          ></span>
-                          <span class="text-[13px] text-[var(--c-6F746E)]">
-                            Site-level trend analysis
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- RIGHT -->
-                    <div class="bg-[var(--c-FFFFFF)] p-5 sm:p-6">
-                      <div
-                        class="pmex-color-background rounded-[16px] border border-[var(--c-DDE5DA)] bg-[var(--c-F8FBF5)] p-5"
-                      >
-                        <div class="flex items-center justify-between">
-                          <h4 class="text-[14px] font-semibold text-[var(--c-505050)]">
-                            Revenue performance
-                          </h4>
-
-                          <span
-                            class="rounded-full bg-[var(--c-EAF4E7)] px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.08em] text-[var(--c-3F9A4B)]"
-                          >
-                            Updated now
-                          </span>
-                        </div>
-
-                        <div class="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                          <div
-                            class="rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] p-4"
-                          >
-                            <p class="text-[10px] text-[var(--c-8A8F88)]">
-                              Collections
-                            </p>
-
-                            <p
-                              class="mt-2 text-[26px] font-semibold text-[var(--c-315B37)]"
-                            >
-                              $1.24M
-                            </p>
-
-                            <p
-                              class="mt-1.5 text-[11px] font-medium text-[var(--c-3F9A4B)]"
-                            >
-                              +18.4%
-                            </p>
-                          </div>
-
-                          <div
-                            class="rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] p-4"
-                          >
-                            <p class="text-[10px] text-[var(--c-8A8F88)]">
-                              Days in A/R
-                            </p>
-
-                            <p
-                              class="mt-2 text-[26px] font-semibold text-[var(--c-315B37)]"
-                            >
-                              29
-                            </p>
-
-                            <p
-                              class="mt-1.5 text-[11px] font-medium text-[var(--c-3F9A4B)]"
-                            >
-                              6 days faster
-                            </p>
-                          </div>
-                        </div>
-
-                        <!-- CHART -->
-                        <div
-                          class="mt-4 flex min-h-[155px] flex-1 items-end gap-2.5 rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] p-5"
-                        >
-                          <div
-                            class="pmex-color-background flex-1 rounded-t-[6px] bg-[var(--c-D6E9D0)] h-[30%]"
-                          ></div>
-                          <div
-                            class="pmex-color-background flex-1 rounded-t-[6px] bg-[var(--c-C9E2C0)] h-[44%]"
-                          ></div>
-                          <div
-                            class="pmex-color-background flex-1 rounded-t-[6px] bg-[var(--c-CFE5C8)] h-[38%]"
-                          ></div>
-                          <div
-                            class="pmex-color-background flex-1 rounded-t-[6px] bg-[var(--c-BBDCAF)] h-[55%]"
-                          ></div>
-                          <div
-                            class="pmex-color-background flex-1 rounded-t-[6px] bg-[var(--c-AAD39C)] h-[66%]"
-                          ></div>
-                          <div
-                            class="pmex-color-background flex-1 rounded-t-[6px] bg-[var(--c-9AC98D)] h-[78%]"
-                          ></div>
-                          <div
-                            class="pmex-color-background flex-1 rounded-t-[6px] bg-[var(--c-8ABD7E)] h-[90%]"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- =================================================
-                        TAB 03 — INTEGRATIONS
-                    ================================================== -->
-                <div
-                  class="pmex-platform-panel pmex-platform-stack-card pmex-hero-index-6d8f9a"
-                  data-panel="integrations"
-                  data-stack-index="2"
-                 
-                >
-                  <div class="grid grid-cols-1 lg:grid-cols-[0.72fr_1.28fr]">
-                    <!-- LEFT -->
-                    <div
-                      class="pmex-color-background border-b border-[var(--c-E0E0DA)] bg-[var(--c-F8FBF5)] p-6 sm:p-7 lg:border-b-0 lg:border-r lg:p-8"
-                    >
-                      <p
-                        class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--c-3F9A4B)]"
-                      >
-                        Works With Your Existing Tools
-                      </p>
-
-                      <h3
-                        class="mt-3 text-[24px] sm:text-[28px] font-normal leading-[1.2] tracking-[-0.02em] text-[var(--c-505050)]"
-                      >
-                        Integrations &amp; Partners
-                      </h3>
-
-                      <p
-                        class="mt-4 max-w-[430px] text-[13px] sm:text-[14px] leading-[1.75] text-[var(--c-6F746E)]"
-                      >
-                        <span class="logo-font" role="img" aria-label="pmex"></span> works inside the systems your practice already
-                        uses. No disruptive migration, no new technical burden,
-                        and no visibility gaps.
-                      </p>
-
-                      <ul class="mt-6 space-y-2.5">
-                        <li class="flex items-center gap-3">
-                          <span
-                            class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                          ></span>
-                          <span class="text-[13px] text-[var(--c-6F746E)]">
-                            No setup on your end
-                          </span>
-                        </li>
-
-                        <li class="flex items-center gap-3">
-                          <span
-                            class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                          ></span>
-                          <span class="text-[13px] text-[var(--c-6F746E)]">
-                            Current reports at every login
-                          </span>
-                        </li>
-
-                        <li class="flex items-center gap-3">
-                          <span
-                            class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                          ></span>
-                          <span class="text-[13px] text-[var(--c-6F746E)]">
-                            Compatible with leading EHRs
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- RIGHT -->
-                    <div class="bg-[var(--c-FFFFFF)] p-5 sm:p-6">
-                      <div
-                        class="pmex-color-background pmex-platform-integrations-visual flex h-full flex-col items-center justify-center gap-6 rounded-[16px] border border-[var(--c-DDE5DA)] bg-[var(--c-F8FBF5)] p-5 sm:p-6"
-                      >
-                        <!-- PMEX HUB -->
-                        <div
-                          class="flex h-[140px] w-[140px] shrink-0 flex-col items-center justify-center rounded-full border border-[var(--c-AAD39C)] bg-[var(--c-FFFFFF)] sm:h-[160px] sm:w-[160px]"
-                        >
-                          <p
-                            class="text-[28px] font-semibold tracking-[-0.04em] text-[var(--c-505050)]"
-                          >
-                            <span class="logo-font" role="img" aria-label="pmex"></span>
-                          </p>
-
-                          <span
-                            class="mt-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-[var(--c-3F9A4B)]"
-                          >
-                            Connected
-                          </span>
-                        </div>
-
-                        <!-- PARTNERS — centered equal 2x2 -->
-                        <div
-                          class="pmex-platform-partner-grid mx-auto w-full max-w-[420px]"
-                        >
-                          <div
-                            class="flex items-center justify-center rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] px-3 py-5"
-                          >
-                            <span
-                              class="text-center text-[15px] font-semibold text-[var(--c-8A8E87)] sm:text-[16px]"
-                            >
-                              athenahealth
-                            </span>
-                          </div>
-
-                          <div
-                            class="flex items-center justify-center rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] px-3 py-5"
-                          >
-                            <span
-                              class="text-center text-[15px] font-semibold text-[var(--c-8A8E87)] sm:text-[16px]"
-                            >
-                              AdvancedMD
-                            </span>
-                          </div>
-
-                          <div
-                            class="flex items-center justify-center rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] px-3 py-5"
-                          >
-                            <span
-                              class="text-center text-[18px] font-bold italic text-[var(--c-8A8E87)] sm:text-[20px]"
-                            >
-                              Epic
-                            </span>
-                          </div>
-
-                          <div
-                            class="flex items-center justify-center rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] px-3 py-5"
-                          >
-                            <span
-                              class="text-center text-[15px] font-semibold text-[var(--c-8A8E87)] sm:text-[16px]"
-                            >
-                              drchrono
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- =================================================
-                        TAB 04 — SECURITY
-                    ================================================== -->
-                <div
-                  class="pmex-platform-panel pmex-platform-stack-card pmex-hero-index-ac7fb9"
-                  data-panel="security"
-                  data-stack-index="3"
-                 
-                >
-                  <div class="grid grid-cols-1 lg:grid-cols-[0.72fr_1.28fr]">
-                    <!-- LEFT -->
-                    <div
-                      class="pmex-color-background border-b border-[var(--c-E0E0DA)] bg-[var(--c-F8FBF5)] p-6 sm:p-7 lg:border-b-0 lg:border-r lg:p-8"
-                    >
-                      <p
-                        class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--c-3F9A4B)]"
-                      >
-                        Built for Healthcare Security
-                      </p>
-
-                      <h3
-                        class="mt-3 text-[24px] sm:text-[28px] font-normal leading-[1.2] tracking-[-0.02em] text-[var(--c-505050)]"
-                      >
-                        Security &amp; Compliance
-                      </h3>
-
-                      <p
-                        class="mt-4 max-w-[430px] text-[13px] sm:text-[14px] leading-[1.75] text-[var(--c-6F746E)]"
-                      >
-                        Protect sensitive financial and patient data with
-                        controlled access, secure workflows, and
-                        healthcare-focused operating standards.
-                      </p>
-
-                      <ul class="mt-6 space-y-2.5">
-                        <li class="flex items-center gap-3">
-                          <span
-                            class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                          ></span>
-                          <span class="text-[13px] text-[var(--c-6F746E)]">
-                            Role-based access
-                          </span>
-                        </li>
-
-                        <li class="flex items-center gap-3">
-                          <span
-                            class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                          ></span>
-                          <span class="text-[13px] text-[var(--c-6F746E)]">
-                            Secure data handling
-                          </span>
-                        </li>
-
-                        <li class="flex items-center gap-3">
-                          <span
-                            class="h-2 w-2 rounded-full bg-[var(--c-3F9A4B)]"
-                          ></span>
-                          <span class="text-[13px] text-[var(--c-6F746E)]">
-                            Continuous workflow oversight
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- RIGHT -->
-                    <div class="bg-[var(--c-FFFFFF)] p-5 sm:p-6">
-                      <div
-                        class="pmex-color-background rounded-[16px] border border-[var(--c-DDE5DA)] bg-[var(--c-F8FBF5)] p-5"
-                      >
-                        <div class="flex items-center justify-between">
-                          <h4 class="text-[14px] font-semibold text-[var(--c-505050)]">
-                            Security controls
-                          </h4>
-
-                          <span
-                            class="rounded-full bg-[var(--c-EAF4E7)] px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.08em] text-[var(--c-3F9A4B)]"
-                          >
-                            Protected
-                          </span>
-                        </div>
-
-                        <div class="pmex-platform-security-grid">
-                          <div
-                            class="rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] p-4"
-                          >
-                            <h5
-                              class="text-[13px] font-semibold text-[var(--c-505050)]"
-                            >
-                              Access Controls
-                            </h5>
-
-                            <p
-                              class="mt-2 text-[11px] leading-[1.6] text-[var(--c-777C76)]"
-                            >
-                              Permission-based access helps limit information to
-                              authorized users.
-                            </p>
-                          </div>
-
-                          <div
-                            class="rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] p-4"
-                          >
-                            <h5
-                              class="text-[13px] font-semibold text-[var(--c-505050)]"
-                            >
-                              Data Protection
-                            </h5>
-
-                            <p
-                              class="mt-2 text-[11px] leading-[1.6] text-[var(--c-777C76)]"
-                            >
-                              Sensitive information is handled through secure
-                              operational workflows.
-                            </p>
-                          </div>
-
-                          <div
-                            class="rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] p-4"
-                          >
-                            <h5
-                              class="text-[13px] font-semibold text-[var(--c-505050)]"
-                            >
-                              Audit Visibility
-                            </h5>
-
-                            <p
-                              class="mt-2 text-[11px] leading-[1.6] text-[var(--c-777C76)]"
-                            >
-                              Operational activity can be reviewed for greater
-                              accountability.
-                            </p>
-                          </div>
-
-                          <div
-                            class="rounded-[12px] border border-[var(--c-DDE5DA)] bg-[var(--c-FFFFFF)] p-4"
-                          >
-                            <h5
-                              class="text-[13px] font-semibold text-[var(--c-505050)]"
-                            >
-                              Healthcare Workflows
-                            </h5>
-
-                            <p
-                              class="mt-2 text-[11px] leading-[1.6] text-[var(--c-777C76)]"
-                            >
-                              Processes are designed around healthcare billing
-                              environments.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </div>
+            <div class="pmex-plat-panel" role="tabpanel" id="pmex-plat-panel-2" aria-labelledby="pmex-plat-tab-2" aria-hidden="true" inert>
+              <div class="pmex-plat-copy">
+                <p class="pmex-plat-eyebrow">Clarity at Every Level</p>
+                <h3 class="pmex-plat-title">Analytics &amp; Reporting</h3>
+                <p class="pmex-plat-text">See the health of your revenue cycle without waiting for month-end. Every KPI is current, comparable, and ready for action.</p>
+                <ul class="pmex-plat-points">
+                  <li><svg class="pmex-plat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#check-simple"></use></svg><span>A/R aging dashboards</span></li>
+                  <li><svg class="pmex-plat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#check-simple"></use></svg><span>Payer scorecards</span></li>
+                  <li><svg class="pmex-plat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#check-simple"></use></svg><span>Site-level trend analysis</span></li>
+                </ul>
               </div>
+              <div class="pmex-plat-visual">
+                  <div class="pmex-plat-window">
+                    <div class="pmex-plat-window-head"><span>Revenue performance</span><span class="pmex-plat-chip">Updated now</span></div>
+                    <div class="pmex-plat-kpis pmex-plat-kpis-2">
+                      <div class="pmex-plat-kpi"><span>Collections</span><strong>$1.24M</strong><em>+18.4%</em></div>
+                      <div class="pmex-plat-kpi"><span>Days in A/R</span><strong>29</strong><em>6 days faster</em></div>
+                    </div>
+                    <div class="pmex-plat-bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                  </div>
+              </div>
+            </div>
+            <div class="pmex-plat-panel" role="tabpanel" id="pmex-plat-panel-3" aria-labelledby="pmex-plat-tab-3" aria-hidden="true" inert>
+              <div class="pmex-plat-copy">
+                <p class="pmex-plat-eyebrow">Works With Your Existing Tools</p>
+                <h3 class="pmex-plat-title">Integrations &amp; Partners</h3>
+                <p class="pmex-plat-text"><span class="logo-font" role="img" aria-label="pmex"></span> works inside the systems your practice already uses. No disruptive migration, no new technical burden, and no visibility gaps.</p>
+                <ul class="pmex-plat-points">
+                  <li><svg class="pmex-plat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#check-simple"></use></svg><span>No setup on your end</span></li>
+                  <li><svg class="pmex-plat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#check-simple"></use></svg><span>Current reports at every login</span></li>
+                  <li><svg class="pmex-plat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#check-simple"></use></svg><span>Compatible with leading EHRs</span></li>
+                </ul>
+              </div>
+              <div class="pmex-plat-visual">
+                  <div class="pmex-plat-window">
+                    <div class="pmex-plat-window-head"><span class="pmex-plat-hub"><span class="logo-font" role="img" aria-label="pmex"></span></span><span class="pmex-plat-chip">Connected</span></div>
+                    <ul class="pmex-plat-systems">
+                      <li>athenahealth</li>
+                      <li>AdvancedMD</li>
+                      <li>Epic</li>
+                      <li>drchrono</li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="pmex-plat-panel" role="tabpanel" id="pmex-plat-panel-4" aria-labelledby="pmex-plat-tab-4" aria-hidden="true" inert>
+              <div class="pmex-plat-copy">
+                <p class="pmex-plat-eyebrow">Built for Healthcare Security</p>
+                <h3 class="pmex-plat-title">Security &amp; Compliance</h3>
+                <p class="pmex-plat-text">Protect sensitive financial and patient data with controlled access, secure workflows, and healthcare-focused operating standards.</p>
+                <ul class="pmex-plat-points">
+                  <li><svg class="pmex-plat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#check-simple"></use></svg><span>Role-based access</span></li>
+                  <li><svg class="pmex-plat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#check-simple"></use></svg><span>Secure data handling</span></li>
+                  <li><svg class="pmex-plat-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#check-simple"></use></svg><span>Continuous workflow oversight</span></li>
+                </ul>
+              </div>
+              <div class="pmex-plat-visual">
+                  <div class="pmex-plat-window">
+                    <div class="pmex-plat-window-head"><span>Security controls</span><span class="pmex-plat-chip">Protected</span></div>
+                    <div class="pmex-plat-tiles">
+                      <div class="pmex-plat-tile"><svg class="pmex-plat-tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#lock"></use></svg><h4>Access Controls</h4><p>Access is limited to authorized users only.</p></div>
+                      <div class="pmex-plat-tile"><svg class="pmex-plat-tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#shield-check"></use></svg><h4>Data Protection</h4><p>Sensitive data moves through secure workflows.</p></div>
+                      <div class="pmex-plat-tile"><svg class="pmex-plat-tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#clipboard-check"></use></svg><h4>Audit Visibility</h4><p>Activity can be reviewed for accountability.</p></div>
+                      <div class="pmex-plat-tile"><svg class="pmex-plat-tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#grid"></use></svg><h4>Healthcare Workflows</h4><p>Processes are designed around healthcare billing environments.</p></div>
+                    </div>
+                  </div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
