@@ -25073,17 +25073,6 @@ html[data-css~="pmex-common"] body h1 span.usa-flag { font-family: 'PMEX Inter B
   [data-css~="home-responsive"] #pmex-billing-services [data-billing-card] { display: flex; flex-direction: column; }
   [data-css~="home-responsive"] #pmex-billing-services [data-billing-card] > :first-child { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; }
 }
-/* Billing results cards: the green plate behind each card is offset (8px right/down on mobile; 12px outwards from 768px).
-   The cards are pulled in by that offset so the outer edge of the plate sits on the content line, and the grid gets the
-   same space above/below so the plates do not eat into the section spacing. */
-[data-css~="home-responsive"] #billing-results [data-result-card] { margin-right: 8px; }
-[data-css~="home-responsive"] #billing-results .pmex-card-grid { padding-bottom: 8px; }
-@media (min-width: 768px) {
-  [data-css~="home-responsive"] #billing-results [data-result-card] { margin-right: 0; }
-  [data-css~="home-responsive"] #billing-results [data-result-card]:is([data-result-direction="left"],[data-result-direction="up"]) { margin-left: 12px; }
-  [data-css~="home-responsive"] #billing-results [data-result-card]:is([data-result-direction="down"],[data-result-direction="right"]) { margin-right: 12px; }
-  [data-css~="home-responsive"] #billing-results .pmex-card-grid { padding-block: 12px; }
-}
 /* Claims lifecycle (#pmex-claims-lifecycle): step track + one detail panel (js/claims-flow.js). No scroll effects.
    Track: five numbered dots on a grey line; the line fills green up to the active step (--pmex-flow-progress, 0..1),
    earlier steps get a green ring, the active step a solid green dot. Below 768px only the numbers show; the panel
