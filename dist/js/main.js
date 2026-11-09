@@ -300,6 +300,7 @@ function initFaqAccordion() {
         var icon = item.querySelector('.faq-icon');
         panel.classList.remove('faq-open');
         panel.style.gridTemplateRows = '0fr';
+        item.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
         icon.style.transform = 'rotate(0deg)';
     }
 
@@ -308,6 +309,7 @@ function initFaqAccordion() {
         var icon = item.querySelector('.faq-icon');
         panel.classList.add('faq-open');
         panel.style.gridTemplateRows = '1fr';
+        item.querySelector('.faq-trigger').setAttribute('aria-expanded', 'true');
         icon.style.transform = 'rotate(45deg)';
     }
 

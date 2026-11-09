@@ -12199,18 +12199,6 @@ html body p.bh-hero-para {
   overflow: hidden;
   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
-[data-css~="style"] .spec-hub-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--c-AAD39C);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.35s ease;
-}
 [data-css~="style"] .spec-hub-card::after {
   content: "";
   position: absolute;
@@ -12284,9 +12272,6 @@ html body p.bh-hero-para {
   box-shadow: 0 14px 32px var(--c-2E4A25-a12);
   transform: translateY(-3px);
   outline: none;
-}
-[data-css~="style"] .spec-hub-card:hover::before, [data-css~="style"] .spec-hub-card:focus-visible::before {
-  transform: scaleX(1);
 }
 [data-css~="style"] .spec-hub-card:hover::after, [data-css~="style"] .spec-hub-card:focus-visible::after {
   border-color: var(--c-3F9A4B);
@@ -13185,6 +13170,14 @@ html[data-css~="site-faq-accordion"] body :is(.faq-content, .faq-panel, .dm-acc-
   background: var(--pmex-faq-answer-bg) !important;
   padding: 16px 20px !important;
 }
+/* Grid-row accordion panels (.faq-panel, opened by js/main.js with .faq-open): no padding, border or tint while closed, so a closed question shows no empty band under it. */
+html[data-css~="site-faq-accordion"] body .faq-panel:not(.faq-open) { padding-block: 0 !important; border-top-color: transparent; background: transparent !important; }
+html[data-css~="site-faq-accordion"] body .faq-panel { transition: grid-template-rows .3s ease, padding .3s ease; }
+/* Two-column FAQ grids: each question card keeps its own height (no stretched empty space next to a two-line question). */
+html[data-css~="site-faq-accordion"] body #faq-list.grid { align-items: start; }
+/* Two-column FAQ grids only from 1280px; between 1024 and 1279px the columns are too narrow and every question wraps. */
+@media (min-width: 1024px) and (max-width: 1279px) { html[data-css~="site-faq-accordion"] body #faq-list.grid { grid-template-columns: minmax(0, 1fr); } }
+html[data-css~="site-faq-accordion"] body #faq-list.grid > .faq-item + .faq-item { margin-top: 0 !important; } /* the grid gap spaces the cards; the stacked-list margin would push the second column down */
 
 html[data-css~="site-faq-accordion"] body .fi.open .fi-a {
   border-top: 1px solid var(--pmex-faq-answer-border);
@@ -22796,13 +22789,21 @@ html[data-css~="pmex-platform-family"] body #main-content[data-platform-family] 
 [data-css~="inline-7724f3e2"] .spec-hub-band{width:100%;background:var(--grad-green-v);border-top:1px solid var(--c-E0E0DA);border-bottom:1px solid var(--c-AAD39C)}
 [data-css~="inline-7724f3e2"] .spec-hub-main.spec-hub-main-mid{padding-top:2.5rem;padding-bottom:3rem}
 [data-css~="inline-7724f3e2"] .spec-hub-main.spec-hub-main-bottom{padding-bottom:5rem}
-/* other specialties: plain items, no card box and no hover effect */
+/* other specialties: plain items, no card box (hover tile below) */
 [data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-card{min-height:9rem!important;padding:.5rem!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;transform:none!important;overflow:visible!important;align-items:center!important;justify-content:center!important;transition:none!important}
 [data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-card::before,[data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-card::after{display:none!important}
 [data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-card .spec-hub-hover-text{display:none!important}
 [data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-card .spec-hub-face{align-items:center!important;justify-content:center!important;text-align:center!important;gap:1rem!important;flex:0 1 auto!important}
 [data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-card .spec-hub-icon{width:4rem!important;height:4rem!important;padding:.25rem!important;background:transparent!important;border-color:transparent!important;color:var(--c-3F9A4B)!important;transition:none!important}
 [data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-card h3{opacity:1!important;text-align:center!important;max-width:100%!important;color:var(--c-2E4A25)!important;transition:none!important}
+/* other specialties: calm hover, a soft white tile with a light green ring, the icon lifts, the title turns green */
+[data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-grid > .spec-hub-card{border-radius:1.25rem!important;transition:background-color .3s ease,box-shadow .3s ease!important}
+[data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-grid > .spec-hub-card .spec-hub-icon{transition:transform .3s ease!important}
+[data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-grid > .spec-hub-card h3{transition:color .3s ease!important}
+[data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-grid > .spec-hub-card:is(:hover,:focus-visible){background:var(--c-FFFFFF)!important;box-shadow:0 0 0 1px var(--c-AAD39C),0 12px 28px var(--c-2E4A25-a12)!important;outline:none}
+[data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-grid > .spec-hub-card:is(:hover,:focus-visible) .spec-hub-icon{transform:translateY(-4px) scale(1.06)}
+[data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-grid > .spec-hub-card:is(:hover,:focus-visible) h3{color:var(--c-3F9A4B)!important}
+@media (prefers-reduced-motion:reduce){[data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-grid > .spec-hub-card:is(:hover,:focus-visible) .spec-hub-icon{transform:none}}
 /* section headings centred */
 [data-css~="inline-7724f3e2"] .spec-hub-section > h2{text-align:center}
 /* other specialties: centre the last, shorter row */
@@ -25034,6 +25035,11 @@ html[data-css~="pmex-common"] body h1 span.usa-flag { font-family: 'PMEX Inter B
 [data-css~="layout"] .pmex-section-head + * { margin-top: 0; }
 [data-css~="layout"] .pmex-card-grid { gap: var(--pmex-card-gap); }
 [data-css~="layout"] .pmex-split { gap: var(--pmex-split-gap); }
+/* Long-form specialty heroes (approved-longform-specialty block sets 100px padding and a 520px min-height with !important): on layout pages the hero uses the shared section padding like every other section. */
+[data-css~="layout"] :is(.specialty-content, [data-approved-longform-page]) [data-specialty-hero].hero-bg-gradient.pmex-section { padding-block: var(--pmex-section-y) !important; min-height: 0; }
+/* Specialties hub (specialties/index.html): the green band uses the shared section padding, and each group heading sits the shared heading gap above its cards. */
+[data-css~="layout"] .spec-hub-main.spec-hub-main-mid { padding-block: var(--pmex-section-y); padding-inline: var(--pmex-gutter); }
+[data-css~="layout"] .spec-hub-section > h2 { margin-bottom: var(--pmex-head-gap); }
 
 /* ===== home page responsive fixes (index.html)  [data-css~="home-responsive"] ===== */
 /* Hero, 640-1023px: the photo's white fade covers about 60% of the width, so keep the copy inside it. */
