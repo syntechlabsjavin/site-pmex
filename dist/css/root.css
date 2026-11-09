@@ -24839,7 +24839,10 @@ html body h1 .usa-text,
   background-repeat: no-repeat;
   display: inline-block;
   line-height: 1;
-  -webkit-text-stroke: 1px var(--c-333333);
+  /* outline drawn with drop-shadows, not -webkit-text-stroke: the stroke also traced the overlapping inner
+     contours of the black-weight glyphs (lines across the "A") */
+  -webkit-text-stroke: 0;
+  filter: drop-shadow(0.6px 0 0 var(--c-333333)) drop-shadow(-0.6px 0 0 var(--c-333333)) drop-shadow(0 0.6px 0 var(--c-333333)) drop-shadow(0 -0.6px 0 var(--c-333333));
   -webkit-background-clip: text;
   background-clip: text;
   }
