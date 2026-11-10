@@ -14492,6 +14492,12 @@ html[data-css~="contact"] body #contact-form button.contact-submit[type="submit"
  [data-css~="denial-management"] #main-content[data-bh-page] #dm-engine .dm-box .dm-bullets{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:10px;margin-bottom:0;}
 }
 
+/* Site layout standards (layout block): hero and every section use the shared section padding (32px, 40px from 1024px),
+   heading blocks the shared heading gap. !important and html/body outrank the for-you-reference section and hero rules. */
+html[data-css~="denial-management"][data-css~="layout"] body #main-content[data-bh-page] > section.pmex-section { padding-block:var(--pmex-section-y)!important; }
+html[data-css~="denial-management"][data-css~="layout"] body #main-content[data-bh-page] [data-bh-heading].pmex-section-head { margin-bottom:var(--pmex-head-gap); }
+/* FAQ column: 860px like the other service and specialty pages (for-you-reference forces 1260px with !important). */
+html[data-css~="denial-management"] body #main-content[data-bh-page] > #dm-faq > .dm-narrow { max-width:860px!important; }
 
 /* ===== css/hospital-billing.css  [data-css~="hospital-billing"] ===== */
 /* Hospital Billing page: same palette, hero gradient and spacing as the other new pages. */
@@ -18591,6 +18597,11 @@ html[data-css~="services-bh"] body #main-content.services-content .services-audi
  html[data-css~="services-bh"] body #main-content.services-content .services-audit-section #audit-form form [data-site-button]{height:48px!important;min-height:0!important;padding:14px 32px!important;border-radius:12px!important;font-size:13px!important;font-weight:600!important;line-height:19.5px!important;letter-spacing:.65px!important;text-transform:uppercase!important;white-space:nowrap!important;width:100%!important;}
  @media(min-width:1024px){html[data-css~="services-bh"] body #main-content.services-content .services-audit-section #audit-form form [data-site-button]{width:auto!important;}}
 }
+/* Site layout standards (layout block) on pages that list "layout" in data-css: the hero, audit form, badges and every content
+   section use the shared section padding (32px, 40px from 1024px), heading blocks the shared heading gap. The sticky
+   category bar is not a content section and keeps its own padding. !important outranks the hero rule above. */
+html[data-css~="services-bh"][data-css~="layout"] body #main-content.services-content > section.pmex-section { padding-block:var(--pmex-section-y)!important; }
+html[data-css~="services-bh"][data-css~="layout"] body #main-content.services-content .pmex-section-head { margin-bottom:var(--pmex-head-gap); }
 
 
 /* ===== css/small-practices.css  [data-css~="small-practices"] ===== */
@@ -21447,6 +21458,13 @@ html[data-css~="service-pages-bh"]
 [data-css~="service-pages-bh"] #main-content.mb-content[data-bh-rich][data-mb-page="medical-coding"] #mb-improve .mc-feature{background:var(--grad-callout);border-color:var(--c-AAD39C);}
 [data-css~="service-pages-bh"] #main-content.mb-content[data-bh-rich][data-mb-page="medical-coding"] #mb-improve .mc-feature::before{display:none;}
 [data-css~="service-pages-bh"] #main-content.mb-content[data-bh-rich][data-mb-page="medical-coding"] #mb-improve .mc-feature:hover{border-color:var(--c-3F9A4B);background:var(--grad-green-v);}
+/* Site layout standards (layout block) on pages that list "layout" in data-css: hero and every section (the Medical Billing
+   process cycle too) use the shared section padding (32px, 40px from 1024px), heading blocks the shared heading gap
+   (32px, 40px from 1024px). html/body and the ids outrank the section, hero and #process rules above. */
+html[data-css~="service-pages-bh"][data-css~="layout"] body #main-content.mb-content > section.pmex-section,
+html[data-css~="service-pages-bh"][data-css~="layout"] body #main-content.mb-content > #mb-hero.pmex-section,
+html[data-css~="service-pages-bh"][data-css~="layout"] body #main-content.mb-content > #process.pmex-section { padding-block:var(--pmex-section-y); }
+html[data-css~="service-pages-bh"][data-css~="layout"] body #main-content.mb-content .mb-head.pmex-section-head { margin-bottom:var(--pmex-head-gap); }
 
 
 /* ===== css/site-motion.css  [data-css~="site-motion-3"] ===== */
