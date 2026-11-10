@@ -25662,7 +25662,7 @@ html[data-css~="home-neutral"] body section:is(#pmex-claims-lifecycle, #pmex-spe
 [data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card {
   display: flex !important; min-height: 0 !important; padding: 18px !important; border-radius: 16px !important;
   background: var(--c-FFFFFF) !important; border: 1px solid var(--c-E0E0DA) !important; border-top: 2px solid var(--c-AAD39C) !important;
-  box-shadow: none !important; transition: border-color .2s ease, box-shadow .2s ease, opacity .5s ease !important;
+  box-shadow: none !important; transition: border-color .2s ease, box-shadow .2s ease, opacity .3s ease, translate .3s ease !important;
 }
 [data-css~="home-responsive"] section#pmex-service-coverage .pmex-service-card:hover {
   border-color: var(--c-AAD39C) !important; translate: none !important; transform: none !important;
