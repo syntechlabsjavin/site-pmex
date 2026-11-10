@@ -1166,6 +1166,20 @@
   color:var(--c-2E4A25)!important;
  }
 }
+/* Dropdowns (every form select): the native arrow sits against the right border, so it is replaced by a drawn chevron
+   placed 20-26px inside the edge, with room for the text before it. Only the arrow changes: fill, border and height stay
+   with each form. The :is(#_, ...) wrappers only add id weight, so this outranks the forms' own !important padding and
+   background shorthands (some of them sit under two ids). */
+html[data-css~="site-buttons"]:is(#_,html) :is(#_,body) select:is(#_,select):not([multiple]):not([size]) {
+  -webkit-appearance:none!important;
+  appearance:none!important;
+  padding-right:48px!important;
+  cursor:pointer;
+  background-image:linear-gradient(45deg,transparent 40%,var(--c-505050) 40%,var(--c-505050) 60%,transparent 60%),linear-gradient(135deg,transparent 40%,var(--c-505050) 40%,var(--c-505050) 60%,transparent 60%)!important;
+  background-position:calc(100% - 27px) 50%,calc(100% - 20px) 50%!important;
+  background-size:7px 7px,7px 7px!important;
+  background-repeat:no-repeat!important;
+}
 
 
 /* ===== css/reference-typography.css  [data-css~="reference-typography"] ===== */
@@ -18601,7 +18615,7 @@ html[data-css~="services-bh"] body #main-content.services-content .services-audi
    section use the shared section padding (32px, 40px from 1024px), heading blocks the shared heading gap. The sticky
    category bar is not a content section and keeps its own padding. !important outranks the hero rule above. */
 html[data-css~="services-bh"][data-css~="layout"] body #main-content.services-content > section.pmex-section { padding-block:var(--pmex-section-y)!important; }
-html[data-css~="services-bh"][data-css~="layout"] body #main-content.services-content .pmex-section-head { margin-bottom:var(--pmex-head-gap); }
+html[data-css~="services-bh"][data-css~="layout"] body #main-content.services-content .pmex-section-head { margin-bottom:var(--pmex-head-gap)!important; }
 
 
 /* ===== css/small-practices.css  [data-css~="small-practices"] ===== */
@@ -22231,6 +22245,13 @@ html[data-css~="injury-billing-bh"] body #main-content[data-bh-imported] .grid>d
  html[data-css~="injury-billing-bh"] body #main-content[data-bh-imported] .grid:has(>[class*="col-span-2"])>div[class*="col-span-2"]>div.shrink-0{min-width:0!important;width:auto!important;padding:0!important;margin:0!important;border-right:0!important;flex-direction:row;align-items:baseline;gap:8px;}
  html[data-css~="injury-billing-bh"] body #main-content[data-bh-imported] .grid:has(>[class*="col-span-2"])>div[class*="col-span-2"]>div.shrink-0>p{margin:0!important;}
 }
+/* Site layout standards (layout block) on pages that list "layout" in data-css: the hero, audit form card and every section
+   use the shared section padding (32px, 40px from 1024px), heading blocks the shared heading gap (32px, 40px from 1024px).
+   !important outranks the hero rule (60px/88px) and the heading margins above. */
+html[data-css~="injury-billing-bh"][data-css~="layout"] body #main-content[data-bh-imported] > section.pmex-section { padding-block:var(--pmex-section-y)!important; }
+html[data-css~="injury-billing-bh"][data-css~="layout"] body #main-content[data-bh-imported] .pmex-section-head { margin-bottom:var(--pmex-head-gap)!important; }
+/* FAQ column: the single-column FAQ keeps its 860px container (780px questions), like the specialty pages. */
+[data-css~="injury-billing-bh"] #main-content[data-bh-imported]>section>div[class~="max-w-[860px]"]:not(.text-center){max-width:860px;}
 
 
 /* ===== css/for-you-reference.css  [data-css~="for-you-reference"] ===== */
@@ -22473,9 +22494,13 @@ html[data-css~="pmex-platform"] body [data-platform-reference] [data-hero-copy]{
 [data-css~="pmex-platform"] [data-platform-reference] #audit-form :is(input,select):focus{outline:2px solid var(--c-AAD39C);outline-offset:2px;}
 [data-css~="pmex-platform"] [data-platform-reference] .platform-form-title{font-size:24px;font-weight:400;color:var(--c-505050);margin-bottom:12px;}
 [data-css~="pmex-platform"] [data-platform-reference] .platform-benefits{background:var(--c-EEF0E8);}
-[data-css~="pmex-platform"] [data-platform-reference] .platform-benefits>div>p{color:var(--c-3F9A4B);}
+[data-css~="pmex-platform"] [data-platform-reference] .platform-benefits>div>p,
+[data-css~="pmex-platform"] [data-platform-reference] .platform-benefits>div>.pmex-section-head>p{color:var(--c-3F9A4B);}
 [data-css~="pmex-platform"] [data-platform-reference] .platform-benefits h2{max-width:900px;margin:0 auto 32px;text-align:center;}
-[data-css~="pmex-platform"] [data-platform-reference] .platform-benefits>div>p{text-align:center;}
+/* Inside the heading block the gap below the heading comes from .pmex-section-head (layout block). */
+[data-css~="pmex-platform"] [data-platform-reference] .platform-benefits .pmex-section-head h2{margin-bottom:0;}
+[data-css~="pmex-platform"] [data-platform-reference] .platform-benefits>div>p,
+[data-css~="pmex-platform"] [data-platform-reference] .platform-benefits>div>.pmex-section-head>p{text-align:center;}
 [data-css~="pmex-platform"] [data-platform-reference] :is(#process,.platform-benefits) .grid{gap:24px;}
 [data-css~="pmex-platform"] [data-platform-reference] :is(#process,.platform-benefits) .grid>*{position:relative;isolation:isolate;overflow:hidden;border:1px solid var(--c-E0E0DA);border-top:4px solid var(--c-AAD39C);border-radius:12px;background:var(--c-FFFFFF);padding:24px;box-shadow:var(--shadow-card);transition:var(--transition-j);color:var(--c-505050);}
 [data-css~="pmex-platform"] [data-platform-reference] :is(#process,.platform-benefits) .grid>*::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--grad-hover-up);opacity:0;transition:opacity .35s;}
@@ -22627,6 +22652,13 @@ html[data-css~="pmex-platform"] body #main-content[data-platform-reference] #aud
  @media(min-width:1024px){html[data-css~="pmex-platform"] body #main-content[data-platform-reference] #audit-form [data-site-button]{width:auto!important;}}
 }
 @media(min-width:1024px){html[data-css~="pmex-platform"] body #audit-form select{flex:1.35 1 0!important;}}
+/* FAQ column: the single-column FAQ keeps its 860px container (780px questions), like the specialty pages. */
+[data-css~="pmex-platform"] [data-platform-reference]>section>div[class~="max-w-[860px]"]:not(.text-center){max-width:860px;}
+/* Site layout standards (layout block) on platform pages that list "layout" in data-css: the hero, audit form card and every
+   section use the shared section padding (32px, 40px from 1024px), heading blocks the shared heading gap (32px, 40px from
+   1024px). Covers the overview page and the pmex-platform-family / pmex-platform-bh pages; !important outranks their rules. */
+html[data-css~="pmex-platform"][data-css~="layout"] body #main-content[data-platform-reference] > section.pmex-section { padding-block:var(--pmex-section-y)!important; }
+html[data-css~="pmex-platform"][data-css~="layout"] body #main-content[data-platform-reference] .pmex-section-head { margin-bottom:var(--pmex-head-gap)!important; }
 
 
 /* ===== css/pmex-platform-family.css  [data-css~="pmex-platform-family"] ===== */
