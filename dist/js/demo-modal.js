@@ -235,6 +235,8 @@
         const card = document.getElementById('booking-modal-card');
         overlay.classList.remove('hidden');
         overlay.classList.add('flex');
+        if (card) card.style.height = '';
+        lockCardHeight();
 
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
         if (scrollbarWidth > 0) {
@@ -295,7 +297,36 @@
             if (el) el.classList.toggle('hidden', n !== step);
         });
         renderCalendar();
+        lockCardHeight();
     }
+
+    // Side-by-side layout: the card is as tall as the calendar step needs, and that height is kept for the time and
+    // details steps so the card never jumps between steps. Re-measured when the month (row count) or window changes.
+    function contentHeight(el) {
+        if (!el) return 0;
+        const cs = getComputedStyle(el);
+        const kids = [...el.children].filter(k => k.offsetParent !== null && getComputedStyle(k).position !== 'absolute');
+        const gap = parseFloat(cs.rowGap) || 0;
+        return kids.reduce((sum, k) => sum + k.getBoundingClientRect().height, 0) + gap * Math.max(0, kids.length - 1) +
+            parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+    }
+    function lockCardHeight() {
+        const card = document.getElementById('booking-modal-card');
+        const overlay = document.getElementById('booking-modal-overlay');
+        if (!card || !overlay || overlay.classList.contains('hidden')) return;
+        if (!window.matchMedia('(min-width: 900px)').matches) { card.style.height = ''; return; }
+        // all three steps keep the calendar step height, so the card never jumps
+        if (card.getAttribute('data-step') === '3' && card.style.height) return;
+        const main = card.querySelector('.bk-step:not(.hidden) .bk-step-cal');
+        if (!main) return;
+        card.style.height = '';
+        const h = Math.max(contentHeight(main), contentHeight(card.querySelector('.bk-aside')));
+        card.style.height = Math.ceil(h) + 'px';
+    }
+    window.addEventListener('resize', () => {
+        const overlay = document.getElementById('booking-modal-overlay');
+        if (overlay && !overlay.classList.contains('hidden')) lockCardHeight();
+    });
 
     window.changeMonth = function (delta) {
         currentMonth += delta;
@@ -346,6 +377,7 @@
                 grid.appendChild(btn);
             }
         });
+        lockCardHeight();
     }
 
     function selectDate(date) {
