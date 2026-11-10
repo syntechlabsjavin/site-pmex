@@ -48,7 +48,8 @@
             </aside>
 
             <!-- STEP 1: calendar -->
-            <section id="booking-step-1" class="bk-step bk-step-cal">
+            <section id="booking-step-1" class="bk-step bk-step-slots">
+                <div class="bk-step-cal">
                 <div class="bk-cal">
                     <div class="bk-title" role="heading" aria-level="3">Select a Date &amp; Time</div>
                     <div class="bk-month">
@@ -66,6 +67,10 @@
                         <span class="tz-trigger-text">Pacific Time - US &amp; Canada</span>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tz-arrow" aria-hidden="true"><use href="/icons/site-icons.svg#chevron-down"></use></svg>
                     </button>
+                </div>
+                </div>
+                <div class="bk-slots bk-slots-empty">
+                    <div class="bk-slots-hint"><span class="bk-slots-hint-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><use href="/icons/site-icons.svg#calendar"></use></svg></span><p>Select a date to see available times.</p></div>
                 </div>
             </section>
 
@@ -116,18 +121,27 @@
 
             <!-- STEP 3: details form -->
             <section id="booking-step-3" class="bk-step bk-step-form hidden">
-                <div class="bk-title" role="heading" aria-level="3">Enter Details</div>
+                <div class="bk-form-head">
+                    <div class="bk-title" role="heading" aria-level="3">Enter Details</div>
+                    <p class="bk-form-sub">Share a few details so we can prepare for your call.</p>
+                </div>
                 <form onsubmit="window.submitBookingForm(event)" class="bk-form">
                     <div class="bk-row">
                         <label class="bk-field"><span>First name <b>*</b></span><input required type="text" autocomplete="given-name"></label>
                         <label class="bk-field"><span>Last name <b>*</b></span><input required type="text" autocomplete="family-name"></label>
                     </div>
-                    <label class="bk-field"><span>Email <b>*</b></span><input required type="email" autocomplete="email"></label>
-                    <button type="button" class="bk-guests">Add guests</button>
-                    <label class="bk-field"><span>Company Name <b>*</b></span><input required type="text" autocomplete="organization"></label>
-                    <label class="bk-field"><span>Job Title <b>*</b></span><input required type="text" autocomplete="organization-title"></label>
-                    <label class="bk-field"><span>Phone Number</span><input type="tel" autocomplete="tel"></label>
-                    <button type="submit" class="bk-confirm">Confirm</button>
+                    <div class="bk-row">
+                        <label class="bk-field"><span>Email <b>*</b></span><input required type="email" autocomplete="email"></label>
+                        <label class="bk-field"><span>Phone Number</span><input type="tel" autocomplete="tel"></label>
+                    </div>
+                    <div class="bk-row">
+                        <label class="bk-field"><span>Company Name <b>*</b></span><input required type="text" autocomplete="organization"></label>
+                        <label class="bk-field"><span>Job Title <b>*</b></span><input required type="text" autocomplete="organization-title"></label>
+                    </div>
+                    <div class="bk-form-foot">
+                        <button type="button" class="bk-guests"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="/icons/site-icons.svg#plus"></use></svg>Add guests</button>
+                        <button type="submit" class="bk-confirm">Confirm</button>
+                    </div>
                 </form>
             </section>
         </div>

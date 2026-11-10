@@ -288,6 +288,8 @@
     };
 
     function goToStep(step) {
+        const card = document.getElementById('booking-modal-card');
+        if (card) card.setAttribute('data-step', String(step));
         [1, 2, 3].forEach(n => {
             const el = document.getElementById('booking-step-' + n);
             if (el) el.classList.toggle('hidden', n !== step);

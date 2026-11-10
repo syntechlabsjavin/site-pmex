@@ -26027,10 +26027,53 @@ html[data-css~="home-responsive"] body section#pmex-faq aside[data-faq-reveal] a
 [data-css~="booking-modal"] .bk-slots-list { gap:8px; }
 [data-css~="booking-modal"] :is(.bk-slot, .bk-slot-next) { height:40px; font-size:13px; }
 [data-css~="booking-modal"] .bk-field input { height:42px; }
-@media (min-width:900px) and (max-height:700px) {
+@media (min-width:900px) and (max-height:600px) {
   [data-css~="booking-modal"] .bk-aside, [data-css~="booking-modal"] .bk-step-cal, [data-css~="booking-modal"] .bk-step-form:not(.hidden) { padding-top:20px; padding-bottom:20px; }
   [data-css~="booking-modal"] .bk-slots { padding-top:64px; padding-bottom:20px; }
   [data-css~="booking-modal"] .bk-day { max-width:32px; font-size:12px; }
   [data-css~="booking-modal"] .bk-days { row-gap:4px; }
   [data-css~="booking-modal"] .bk-slots-list { max-height:260px; }
 }
+/* Step behaviour: the Back button only shows from step 2 (its space stays, so the summary does not move); step 1 already
+   has the time column (with a hint), so picking a date does not shift the calendar; on desktop the card keeps one height
+   for all three steps and a step scrolls inside if it ever needs more room; time buttons are pills. */
+[data-css~="booking-modal"] .bk-card[data-step="1"] .bk-back, [data-css~="booking-modal"] .bk-card:not([data-step]) .bk-back { visibility:hidden; pointer-events:none; }
+[data-css~="booking-modal"] .bk-slots-empty { justify-content:flex-start; }
+[data-css~="booking-modal"] .bk-slots-hint { padding:16px; border:1px dashed var(--c-E0E0DA); border-radius:12px; background:var(--c-FAFAFA); font-size:13px; line-height:1.5; color:var(--c-676767); text-align:center; }
+@media (max-width:899px) { [data-css~="booking-modal"] .bk-slots-empty { display:none; } }
+@media (min-width:900px) {
+  [data-css~="booking-modal"] .bk-card { height:540px; max-height:calc(100dvh - 32px); overflow:hidden; }
+  [data-css~="booking-modal"] .bk-step:not(.hidden) { min-height:0; overflow-y:auto; }
+  [data-css~="booking-modal"] .bk-aside { overflow-y:auto; }
+}
+/* never taller than 540px; on short screens it fits the window instead */
+@media (min-width:900px) { [data-css~="booking-modal"] .bk-card { height:min(520px, calc(100dvh - 32px)); grid-template-rows:minmax(0,1fr); } }
+[data-css~="booking-modal"] :is(.bk-slot, .bk-slot-next) { border-radius:999px; }
+[data-css~="booking-modal"] .bk-step-form .bk-form { gap:14px; max-width:none; }
+/* step 1 time column: a centred hint (calendar icon + text) instead of a box pinned to the top */
+[data-css~="booking-modal"] .bk-slots-empty { justify-content:center; align-items:center; }
+[data-css~="booking-modal"] .bk-slots-hint { display:flex; flex-direction:column; align-items:center; gap:12px; max-width:180px; padding:0; border:0; background:none; text-align:center; }
+[data-css~="booking-modal"] .bk-slots-hint p { font-size:13px; line-height:1.5; color:var(--c-676767); }
+[data-css~="booking-modal"] .bk-slots-hint-icon { width:48px; height:48px; display:flex; align-items:center; justify-content:center; border-radius:999px; background:var(--c-EEF5EB); color:var(--c-3F9A4B); }
+@media (min-width:900px) { [data-css~="booking-modal"] .bk-slots-empty { padding-top:28px; } }
+/* time zone row sits right under the calendar instead of at the card bottom */
+[data-css~="booking-modal"] .bk-tz { margin-top:0; }
+/* time column fills the card height; the list scrolls inside it */
+@media (min-width:900px) {
+  [data-css~="booking-modal"] .bk-step-slots:not(.hidden) { height:100%; }
+  [data-css~="booking-modal"] .bk-slots { min-height:0; }
+  [data-css~="booking-modal"] .bk-slots-list { flex:1 1 auto; min-height:0; max-height:none; }
+}
+/* step 3 (details): heading with a short line, two-column fields, and a footer bar on the card bottom with
+   "Add guests" (text link) on the left and Confirm on the right, so the step fills the card instead of leaving a gap */
+[data-css~="booking-modal"] .bk-step-form:not(.hidden) { gap:20px; }
+[data-css~="booking-modal"] .bk-form-head { display:flex; flex-direction:column; gap:6px; padding-right:48px; }
+[data-css~="booking-modal"] .bk-form-sub { font-size:14px; line-height:1.5; color:var(--c-676767); }
+[data-css~="booking-modal"] .bk-step-form .bk-form { flex:1 1 auto; gap:16px; }
+[data-css~="booking-modal"] .bk-form-foot { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:auto; padding-top:20px; border-top:1px solid var(--c-E0E0DA); }
+[data-css~="booking-modal"] .bk-guests { display:inline-flex; align-items:center; gap:6px; padding:8px 4px; border:0; border-radius:8px; background:none; color:var(--c-3F9A4B); font-size:14px; font-weight:600; }
+[data-css~="booking-modal"] .bk-guests:hover { background:none; text-decoration:underline; text-underline-offset:3px; }
+[data-css~="booking-modal"] .bk-confirm { margin-top:0; min-width:180px; }
+/* chosen slot on the left: a highlighted box instead of plain text under a line */
+[data-css~="booking-modal"] .bk-meta-picked:not(.hidden) { padding:14px; border:1px solid var(--c-AAD39C); border-top:1px solid var(--c-AAD39C); border-radius:14px; background:var(--c-FFFFFF); gap:10px; }
+[data-css~="booking-modal"] .bk-meta-picked li { font-size:13px; }
