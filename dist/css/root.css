@@ -1180,6 +1180,14 @@ html[data-css~="site-buttons"]:is(#_,html) :is(#_,body) select:is(#_,select):not
   background-size:7px 7px,7px 7px!important;
   background-repeat:no-repeat!important;
 }
+/* Form fields on focus (click or keyboard), site-wide: the home page form look. No outline, the grey border, and a soft 3px
+   green ring. Replaces the page-specific focus styles (green outlines, green borders, or nothing at all). Checkboxes, radios
+   and buttons keep their own focus style. Same id weighting as the dropdown rule above. */
+html[data-css~="site-buttons"]:is(#_,html) :is(#_,body) :is(input,select,textarea):is(#_,input,select,textarea):not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="range"]):not([type="file"]):is(:focus,:focus-visible) {
+  outline:none!important;
+  border-color:var(--c-E0E0DA)!important;
+  box-shadow:0 0 0 3px var(--c-3F9A4B-a12)!important;
+}
 
 
 /* ===== css/reference-typography.css  [data-css~="reference-typography"] ===== */
