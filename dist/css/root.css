@@ -26198,9 +26198,18 @@ html[data-css~="home-responsive"] body section#pmex-faq aside[data-faq-reveal] a
 [data-css~="site-footer"] .pf-address svg { flex:0 0 auto; color:var(--c-3F9A4B); }
 [data-css~="site-footer"] .pf-talk { display:flex; flex-direction:column; gap:24px; width:100%; order:3; padding-top:28px; border-top:1px solid var(--c-AAD39C); }
 @media (min-width:1024px) { [data-css~="site-footer"] .pf-talk { order:0; padding-top:0; border-top:0; justify-self:end; max-width:620px; justify-content:space-between; container-type:inline-size; } }
-[data-css~="site-footer"] .pf-talk-title { display:block; white-space:nowrap; font-size:clamp(48px, 7vw, 96px); font-weight:800; line-height:.95; letter-spacing:-.03em; text-transform:uppercase; color:var(--c-2E4A25); transition:color .2s ease; }
+[data-css~="site-footer"] .pf-talk-title { display:block; white-space:nowrap; font-size:clamp(48px, 7vw, 96px); font-weight:800; line-height:.95; letter-spacing:-.03em; text-transform:uppercase; color:var(--c-91908D); transition:color .2s ease; }
 [data-css~="site-footer"] .pf-talk-title span { color:inherit; }
-@media (min-width:1024px) { [data-css~="site-footer"] .pf-talk-title { font-size:18.1cqi; margin-left:-.04em; text-box:trim-both cap alphabetic; } }
+[data-css~="site-footer"] .pf-talk-title .pf-ch { display:inline-block; }
+@keyframes pf-talk-reveal {
+  0% { opacity:0; filter:blur(6px); transform:translateY(.12em); }
+  18%, 72% { opacity:1; filter:blur(0); transform:none; }
+  90%, 100% { opacity:0; filter:blur(6px); transform:translateY(.12em); }
+}
+[data-css~="site-footer"] .pmex-footer.pf-anim .pf-ch { animation:pf-talk-reveal 4.5s cubic-bezier(.2,.7,.2,1) infinite both; animation-delay:calc(var(--i) * 90ms); animation-play-state:paused; }
+[data-css~="site-footer"] .pmex-footer.pf-anim.pf-in .pf-ch { animation-play-state:running; }
+@media (prefers-reduced-motion:reduce) { [data-css~="site-footer"] .pmex-footer.pf-anim .pf-ch { animation:none; } }
+@media (min-width:1024px) { [data-css~="site-footer"] .pf-talk-title { font-size:17.85cqi; margin-left:-.04em; text-box:trim-both cap alphabetic; } }
 [data-css~="site-footer"] .pf-talk-title:hover { color:var(--c-3F9A4B); }
 [data-css~="site-footer"] .pf-talk-actions { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px; width:100%; }
 @media (min-width:1024px) { [data-css~="site-footer"] .pf-talk-actions { max-width:620px; gap:16px; } }

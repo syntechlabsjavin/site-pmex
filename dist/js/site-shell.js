@@ -17,6 +17,15 @@
   script.insertAdjacentHTML('beforebegin', xhr.responseText);
   script.parentNode.removeChild(script);
   if (name === 'header') initHeader();
+  if (name === 'footer') initFooter();
+
+  // "Let's Talk" letters keep fading in and out of a blur in a loop; the loop only runs while the title is on screen.
+  function initFooter() {
+    const footer = document.querySelector('.pmex-footer'), title = footer && footer.querySelector('.pf-talk-title');
+    if (!title || !('IntersectionObserver' in window)) return;
+    footer.classList.add('pf-anim');
+    new IntersectionObserver(entries => entries.forEach(e => footer.classList.toggle('pf-in', e.isIntersecting)), { threshold: 0.2 }).observe(title);
+  }
 
   // Header behaviour: dropdown panels, mobile menu, Escape and outside click.
   function initHeader() {
