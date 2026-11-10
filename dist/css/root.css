@@ -24608,6 +24608,7 @@ html[data-css~="hero-gradient-pill"] body section a.hero-pill-gradient:is(:hover
 /* specialties/geriatric-medicine.html */
 [data-css~="pmex-common"] .pmex-hero-geriatric-medicine{--hero-bg-mobile:url('../img/geriatricmedicine.webp');--hero-bg-desktop:url('../img/geriatricmedicine.webp');--specialty-hero-image:url('../img/geriatricmedicine.webp')}
 /* specialties/gynecology.html */
+[data-css~="pmex-common"] .pmex-hero-womens-health{--hero-bg-mobile:url('../img/womens-health.webp');--hero-bg-desktop:url('../img/womens-health.webp');--specialty-hero-image:url('../img/womens-health.webp')}
 [data-css~="pmex-common"] .pmex-hero-gynecology{--hero-bg-mobile:url('../img/gynecology.webp');--hero-bg-desktop:url('../img/gynecology.webp');--specialty-hero-image:url('../img/gynecology.webp')}
 /* services/healthcare-digital-marketing.html */
 [data-css~="pmex-common"] .pmex-hero-healthcare-digital-marketing{--bh-hero-image:url('../img/healthcare-digital-marketing.webp')}
