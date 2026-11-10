@@ -18616,6 +18616,26 @@ html[data-css~="services-bh"] body #main-content.services-content .services-audi
    category bar is not a content section and keeps its own padding. !important outranks the hero rule above. */
 html[data-css~="services-bh"][data-css~="layout"] body #main-content.services-content > section.pmex-section { padding-block:var(--pmex-section-y)!important; }
 html[data-css~="services-bh"][data-css~="layout"] body #main-content.services-content .pmex-section-head { margin-bottom:var(--pmex-head-gap)!important; }
+/* "Book a Free Consultation" card in the closing section: same look as the home page form card (#pmex-billing-services):
+   white to light grey card, grey border, soft green-tinted shadow that lifts a little on hover, white inputs with grey
+   borders and 8px corners, 16px between fields, and an 8px-corner, sentence-case submit button. The top audit form is unchanged. */
+html[data-css~="services-bh"] body #main-content.services-content .svc-final div:has(>form) {
+  background: linear-gradient(180deg, var(--c-FFFFFF) 0%, var(--c-FAFAFA) 100%) !important; border-color: var(--c-E0E0DA) !important;
+  box-shadow: 0 12px 32px var(--c-2E4A25-a8) !important; transition: box-shadow .3s ease, border-color .3s ease !important;
+}
+html[data-css~="services-bh"] body #main-content.services-content .svc-final div:has(>form):hover { box-shadow: 0 16px 40px var(--c-2E4A25-a12) !important; border-color: var(--c-AAD39C) !important; }
+html[data-css~="services-bh"] body #main-content.services-content .svc-final div:has(>form) > h3 + p { margin-bottom: 0 !important; }
+html[data-css~="services-bh"] body #main-content.services-content .svc-final form { gap: 16px !important; }
+html[data-css~="services-bh"] body #main-content.services-content .svc-final form > * { margin-top: 0 !important; }
+html[data-css~="services-bh"] body #main-content.services-content .svc-final form :is(input, select) {
+  background-color: var(--c-FFFFFF) !important; border: 1px solid var(--c-E0E0DA) !important; border-radius: 8px !important; box-shadow: none !important;
+}
+/* Focus (click or keyboard): like the home form, no outline, the grey border stays, a soft 3px green ring shows. */
+html[data-css~="services-bh"] body #main-content.services-content .svc-final form :is(input, select):is(:focus, :focus-visible) { outline: none !important; border-color: var(--c-E0E0DA) !important; box-shadow: 0 0 0 3px var(--c-3F9A4B-a12) !important; }
+/* The button rules live in the pmex-buttons cascade layer (an !important there beats any unlayered one), so this one does too. */
+@layer pmex-buttons {
+  html[data-css~="services-bh"] body #main-content.services-content .svc-final form button[type="submit"] { border-radius: 8px !important; text-transform: none !important; letter-spacing: normal !important; }
+}
 
 
 /* ===== css/small-practices.css  [data-css~="small-practices"] ===== */
@@ -25583,6 +25603,24 @@ html[data-css~="home-neutral"] body section:is(#pmex-claims-lifecycle, #pmex-spe
   translate: none !important; transform: none !important; border-color: var(--c-AAD39C) !important;
   box-shadow: 0 4px 6px -1px var(--c-000000-a10), 0 2px 4px -2px var(--c-000000-a10) !important;
 }
+/* Two CTA cards beside the FAQ (1024px+): tighter inner spacing, and the card column no longer sets the row height
+   (height 0 + min-height 100%), so both cards together end exactly on the bottom of the last FAQ item. The card column
+   is 290px from 1024px (it was 260px up to 1279px), so the second card's text fits without clipping. */
+@media (min-width: 1024px) {
+  [data-css~="home-responsive"] section#pmex-faq .pmex-split:has(> aside[data-faq-reveal]) { grid-template-columns: 290px minmax(0, 1fr); }
+  [data-css~="home-responsive"] section#pmex-faq aside[data-faq-reveal] { height: 0; min-height: 100%; }
+  [data-css~="home-responsive"] section#pmex-faq aside[data-faq-reveal] > .grid > .group { padding: 14px 16px; }
+  [data-css~="home-responsive"] section#pmex-faq aside[data-faq-reveal] > .grid > .group .rounded-full[class~="h-8"] { width: 28px; height: 28px; }
+  [data-css~="home-responsive"] section#pmex-faq aside[data-faq-reveal] > .grid > .group p[class~="mt-3"] { margin-top: 8px; }
+  [data-css~="home-responsive"] section#pmex-faq aside[data-faq-reveal] > .grid > .group :is(h3, p)[class~="mt-1.5"] { margin-top: 4px; }
+  [data-css~="home-responsive"] section#pmex-faq aside[data-faq-reveal] > .grid > .group > div[class~="mt-3"] { margin-top: 8px; }
+}
+/* The two buttons in those cards (Book Free Demo, phone): compact so they suit the small cards. A deliberate exception
+   to the shared 14px / 10px 24px CTA size, for this spot only; both end up the same height (34px). */
+html[data-css~="home-responsive"] body section#pmex-faq aside[data-faq-reveal] :is(a.cta-primary-btn, a.pmex-cta-phone) {
+  font-size: 13px !important; line-height: 18px !important; padding: 8px 18px !important; min-height: 0 !important; gap: 6px;
+}
+html[data-css~="home-responsive"] body section#pmex-faq aside[data-faq-reveal] a.pmex-cta-phone { padding-block: 7px !important; }
 
 /* ===== home page "Which challenges are you facing?" options: calm hover  [data-css~="home-responsive"] ===== */
 /* No lift, no grey wash, no big shadow: a light green border and a soft shadow, the same as the FAQ items. */
