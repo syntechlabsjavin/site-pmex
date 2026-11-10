@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-css="site-buttons reference-typography style site-motion site-faq-accordion specialty-site-palette navbar-d90c332f services-mega">
+<html lang="en" data-css="site-buttons reference-typography style site-motion site-faq-accordion specialty-site-palette navbar-d90c332f services-mega booking-modal">
 
 <head>
 <link rel="stylesheet" href="/css/root.css"/>
@@ -22,235 +22,114 @@
      BOOK A DEMO — Scheduling Modal
 =================================================== -->
 
-    <div id="booking-modal-overlay"
-        class="fixed inset-0 z-[100000] bg-[var(--c-000000)]/60 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300">
-        <div class="bg-[var(--c-FFFFFF)] rounded-2xl shadow-2xl w-full max-w-[780px] max-h-[90vh] overflow-y-auto relative flex flex-col md:flex-row text-left font-sans"
-            id="booking-modal-card">
+    <div id="booking-modal-overlay" class="bk-overlay" role="dialog" aria-modal="true" aria-labelledby="bk-event-title">
+        <div class="bk-card" id="booking-modal-card">
 
-            <button onclick="if(window.closeBookingModal){window.closeBookingModal();}else{history.back();}"
-                aria-label="Close"
-                class="absolute top-3 right-3 z-20 w-8 h-8 rounded-full hover:bg-gray-100 flex items-center justify-center text-gray-500 cursor-pointer transition-colors">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="/icons/site-icons.svg#demo-icon"></use></svg>
+            <button type="button" class="bk-close" aria-label="Close"
+                onclick="if(window.closeBookingModal){window.closeBookingModal();}else{history.back();}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="/icons/site-icons.svg#demo-icon"></use></svg>
             </button>
 
-            <!-- LEFT PANEL -->
-            <div
-                class="w-full md:w-[220px] shrink-0 p-5 md:p-6 border-b md:border-b-0 md:border-r border-gray-100 flex flex-col gap-3">
-                <button onclick="window.bookingBack ? window.bookingBack() : history.back()" aria-label="Back"
-                    class="w-8 h-8 rounded-full border border-[var(--c-AAD39C)] text-[var(--c-AAD39C)] flex items-center justify-center hover:bg-[var(--c-EEF0E8)] transition cursor-pointer">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="/icons/site-icons.svg#chevron-left-rounded"></use></svg>
+            <!-- LEFT PANEL: event summary -->
+            <aside class="bk-aside">
+                <button type="button" class="bk-back" aria-label="Back" onclick="window.bookingBack ? window.bookingBack() : history.back()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="/icons/site-icons.svg#chevron-left-rounded"></use></svg>
                 </button>
+                <img src="/img/logo/grey-logo.svg" alt="PMEX" class="bk-logo" onerror="this.style.display='none'">
+                <div class="bk-event-title" id="bk-event-title" role="heading" aria-level="2">Intro to PMEX</div>
+                <ul class="bk-meta">
+                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><use href="/icons/site-icons.svg#clock-rounded"></use></svg><span>15 min</span></li>
+                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><use href="/icons/site-icons.svg#demo-intro-to-pmex"></use></svg><span>Web conferencing details provided upon confirmation.</span></li>
+                </ul>
+                <ul id="booking-selected-datetime" class="bk-meta bk-meta-picked hidden">
+                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><use href="/icons/site-icons.svg#demo-intro-to-pmex-variant-2"></use></svg><span id="booking-selected-datetime-text"></span></li>
+                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><use href="/icons/site-icons.svg#globe"></use></svg><span id="booking-selected-tz-text">Pacific Time - US &amp; Canada</span></li>
+                </ul>
+            </aside>
 
-                <div>
-                    <img src="/img/logo/grey-logo.svg" alt="PMEX" class="w-40 h-auto -ml-4.5 object-contain"
-                        onerror="this.style.display='none'">
-                </div>
-
-                <h2 class="text-[var(--c-1F2937)] text-lg font-bold leading-tight">Intro to PMEX</h2>
-
-                <div class="flex items-start gap-2 text-gray-700 text-xs">
-                    <svg class="shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.6"><use href="/icons/site-icons.svg#clock-rounded"></use></svg>
-                    <span>15 min</span>
-                </div>
-
-                <div class="flex items-start gap-2 text-gray-700 text-xs">
-                    <svg class="shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.6"><use href="/icons/site-icons.svg#demo-intro-to-pmex"></use></svg>
-                    <span>Web conferencing details provided upon confirmation.</span>
-                </div>
-
-                <div id="booking-selected-datetime" class="hidden flex-col gap-3">
-                    <div class="flex items-start gap-2 text-gray-700 text-xs font-medium">
-                        <svg class="shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.6"><use href="/icons/site-icons.svg#demo-intro-to-pmex-variant-2"></use></svg>
-                        <span id="booking-selected-datetime-text"></span>
+            <!-- STEP 1: calendar -->
+            <section id="booking-step-1" class="bk-step bk-step-cal">
+                <div class="bk-cal">
+                    <div class="bk-title" role="heading" aria-level="3">Select a Date &amp; Time</div>
+                    <div class="bk-month">
+                        <button type="button" class="bk-nav" aria-label="Previous month" onclick="window.changeMonth(-1)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="/icons/site-icons.svg#chevron-left-rounded"></use></svg></button>
+                        <p id="booking-month-label" class="bk-month-label" aria-live="polite"></p>
+                        <button type="button" class="bk-nav" aria-label="Next month" onclick="window.changeMonth(1)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="/icons/site-icons.svg#chevron-right-rounded"></use></svg></button>
                     </div>
-                    <div class="flex items-start gap-2 text-gray-700 text-xs font-medium">
-                        <svg class="shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.6"><use href="/icons/site-icons.svg#globe"></use></svg>
-                        <span id="booking-selected-tz-text">Pacific Time - US &amp; Canada</span>
-                    </div>
+                    <div class="bk-weekdays" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+                    <div id="booking-calendar-grid" class="bk-days"></div>
                 </div>
-            </div>
-
-            <!-- STEP 1: Calendar only -->
-            <div id="booking-step-1" class="flex-1 p-5 md:p-6 relative flex flex-col justify-between">
-                <div>
-                    <h3 class="text-base font-bold text-gray-900 mb-4">Select a Date &amp; Time</h3>
-
-                    <div class="flex items-center justify-between mb-3">
-                        <button onclick="window.changeMonth(-1)"
-                            class="text-gray-400 hover:text-gray-700 px-2 cursor-pointer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2"><use href="/icons/site-icons.svg#chevron-left-rounded"></use></svg>
-                        </button>
-                        <p id="booking-month-label" class="text-sm font-bold text-gray-900"></p>
-                        <button onclick="window.changeMonth(1)"
-                            class="text-[var(--c-AAD39C)] hover:text-[var(--c-7FB35C)] px-2 cursor-pointer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2"><use href="/icons/site-icons.svg#chevron-right-rounded"></use></svg>
-                        </button>
-                    </div>
-
-                    <div class="grid grid-cols-7 text-center text-[10px] text-gray-400 font-medium mb-1">
-                        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
-                    </div>
-
-                    <div id="booking-calendar-grid" class="grid grid-cols-7 gap-y-0.5 text-center"></div>
-                </div>
-
-                <!-- TIMEZONE SELECTOR -->
-                <div class="mt-5 pt-3 border-t border-gray-100 relative">
-                    <p class="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-1">Time zone</p>
-                    <button type="button" onclick="window.toggleTzDropdown(event)"
-                        class="tz-trigger-btn flex items-center gap-1.5 text-gray-700 text-xs hover:text-gray-900 cursor-pointer font-medium py-1 px-1.5 rounded-lg hover:bg-gray-100 transition w-full sm:w-auto">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.6" class="shrink-0"><use href="/icons/site-icons.svg#globe"></use></svg>
-                        <span class="tz-trigger-text truncate">Pacific Time - US &amp; Canada</span>
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" class="tz-arrow shrink-0 transition-transform duration-200 ml-auto"><use href="/icons/site-icons.svg#chevron-down"></use></svg>
+                <div class="bk-tz">
+                    <p class="bk-tz-label">Time zone</p>
+                    <button type="button" class="tz-trigger-btn bk-tz-btn" onclick="window.toggleTzDropdown(event)">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><use href="/icons/site-icons.svg#globe"></use></svg>
+                        <span class="tz-trigger-text">Pacific Time - US &amp; Canada</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tz-arrow" aria-hidden="true"><use href="/icons/site-icons.svg#chevron-down"></use></svg>
                     </button>
                 </div>
-            </div>
+            </section>
 
-            <!-- STEP 2: Calendar + time slots -->
-            <div id="booking-step-2" class="hidden flex-1 flex flex-col md:flex-row relative">
-                <div class="flex-1 p-5 md:p-6 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-base font-bold text-gray-900 mb-4">Select a Date &amp; Time</h3>
-
-                        <div class="flex items-center justify-between mb-3">
-                            <button onclick="window.changeMonth(-1)"
-                                class="text-gray-400 hover:text-gray-700 px-2 cursor-pointer">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2"><use href="/icons/site-icons.svg#chevron-left-rounded"></use></svg>
-                            </button>
-                            <p id="booking-month-label-2" class="text-sm font-bold text-gray-900"></p>
-                            <button onclick="window.changeMonth(1)"
-                                class="text-[var(--c-AAD39C)] hover:text-[var(--c-7FB35C)] px-2 cursor-pointer">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2"><use href="/icons/site-icons.svg#chevron-right-rounded"></use></svg>
-                            </button>
+            <!-- STEP 2: calendar + time slots -->
+            <section id="booking-step-2" class="bk-step bk-step-slots hidden">
+                <div class="bk-step-cal">
+                    <div class="bk-cal">
+                        <div class="bk-title" role="heading" aria-level="3">Select a Date &amp; Time</div>
+                        <div class="bk-month">
+                            <button type="button" class="bk-nav" aria-label="Previous month" onclick="window.changeMonth(-1)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="/icons/site-icons.svg#chevron-left-rounded"></use></svg></button>
+                            <p id="booking-month-label-2" class="bk-month-label" aria-live="polite"></p>
+                            <button type="button" class="bk-nav" aria-label="Next month" onclick="window.changeMonth(1)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="/icons/site-icons.svg#chevron-right-rounded"></use></svg></button>
                         </div>
-
-                        <div class="grid grid-cols-7 text-center text-[10px] text-gray-400 font-medium mb-1">
-                            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
-                        </div>
-
-                        <div id="booking-calendar-grid-2" class="grid grid-cols-7 gap-y-0.5 text-center"></div>
+                        <div class="bk-weekdays" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+                        <div id="booking-calendar-grid-2" class="bk-days"></div>
                     </div>
-
-                    <!-- TIMEZONE SELECTOR -->
-                    <div class="mt-5 pt-3 border-t border-gray-100 relative">
-                        <p class="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-1">Time zone</p>
-                        <button type="button" onclick="window.toggleTzDropdown(event)"
-                            class="tz-trigger-btn flex items-center gap-1.5 text-gray-700 text-xs hover:text-gray-900 cursor-pointer font-medium py-1 px-1.5 rounded-lg hover:bg-gray-100 transition w-full sm:w-auto">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.6" class="shrink-0"><use href="/icons/site-icons.svg#globe"></use></svg>
-                            <span class="tz-trigger-text truncate">Pacific Time - US &amp; Canada</span>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" class="tz-arrow shrink-0 transition-transform duration-200 ml-auto"><use href="/icons/site-icons.svg#chevron-down"></use></svg>
+                    <div class="bk-tz">
+                        <p class="bk-tz-label">Time zone</p>
+                        <button type="button" class="tz-trigger-btn bk-tz-btn" onclick="window.toggleTzDropdown(event)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><use href="/icons/site-icons.svg#globe"></use></svg>
+                            <span class="tz-trigger-text">Pacific Time - US &amp; Canada</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tz-arrow" aria-hidden="true"><use href="/icons/site-icons.svg#chevron-down"></use></svg>
                         </button>
                     </div>
                 </div>
-
-                <div
-                    class="w-full md:w-[200px] shrink-0 border-t md:border-t-0 md:border-l border-gray-100 p-5 md:p-6 md:pt-11">
-                    <p id="booking-slots-date-label" class="text-sm font-semibold text-gray-900 mb-3"></p>
-                    <div id="booking-slots-list" class="flex flex-col gap-2 max-h-[320px] overflow-y-auto pr-1"></div>
+                <div class="bk-slots">
+                    <p id="booking-slots-date-label" class="bk-slots-date"></p>
+                    <div id="booking-slots-list" class="bk-slots-list"></div>
                 </div>
+            </section>
+
+            <!-- TIME ZONE DROPDOWN -->
+            <div id="booking-tz-dropdown" class="bk-tz-menu hidden">
+                <div class="bk-tz-search">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><use href="/icons/site-icons.svg#demo-icon-variant-2"></use></svg>
+                    <input type="text" id="tz-search-input" oninput="window.filterTzList(this.value)" placeholder="Search time zones" aria-label="Search time zones">
+                </div>
+                <div class="bk-tz-head">
+                    <span>Time zone</span>
+                    <div class="bk-tz-format">
+                        <span id="tz-format-am-label" class="is-on">am/pm</span>
+                        <button type="button" id="tz-format-toggle-btn" class="bk-switch" aria-label="Use 24 hour time" onclick="window.toggleTzFormat()"><span id="tz-format-toggle-dot"></span></button>
+                        <span id="tz-format-24-label">24h</span>
+                    </div>
+                </div>
+                <div id="tz-list-container" class="bk-tz-list"></div>
             </div>
 
-            <!-- TIME ZONE DROPDOWN CARD -->
-            <div id="booking-tz-dropdown"
-                class="hidden absolute bottom-12 left-6 md:left-[240px] w-[310px] sm:w-[340px] bg-[var(--c-FFFFFF)] border border-gray-200 rounded-xl shadow-2xl z-50 p-3 text-left font-sans text-xs">
-                <!-- Search Input -->
-                <div class="relative mb-3">
-                    <svg class="absolute left-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24"><use href="/icons/site-icons.svg#demo-icon-variant-2"></use></svg>
-                    <input type="text" id="tz-search-input" oninput="window.filterTzList(this.value)"
-                        placeholder="Search..."
-                        class="w-full pl-9 pr-3 py-2 border-2 border-[var(--c-3B82F6)] rounded-lg text-xs outline-none focus:ring-2 focus:ring-[var(--c-3B82F6)]/30 text-gray-800">
-                </div>
-
-                <!-- Header & Toggle -->
-                <div class="flex items-center justify-between border-b border-gray-100 pb-2 mb-2 px-1">
-                    <span class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">TIME ZONE</span>
-                    <div class="flex items-center gap-1.5 text-[11px] text-gray-600 select-none">
-                        <span id="tz-format-am-label" class="font-bold text-gray-900">am/pm</span>
-                        <button type="button" onclick="window.toggleTzFormat()"
-                            class="w-8 h-4 bg-gray-300 rounded-full relative p-0.5 transition-colors cursor-pointer"
-                            id="tz-format-toggle-btn">
-                            <div class="w-3 h-3 bg-[var(--c-FFFFFF)] rounded-full transition-transform shadow-xs"
-                                id="tz-format-toggle-dot"></div>
-                        </button>
-                        <span id="tz-format-24-label" class="text-gray-400">24h</span>
+            <!-- STEP 3: details form -->
+            <section id="booking-step-3" class="bk-step bk-step-form hidden">
+                <div class="bk-title" role="heading" aria-level="3">Enter Details</div>
+                <form onsubmit="window.submitBookingForm(event)" class="bk-form">
+                    <div class="bk-row">
+                        <label class="bk-field"><span>First name <b>*</b></span><input required type="text" autocomplete="given-name"></label>
+                        <label class="bk-field"><span>Last name <b>*</b></span><input required type="text" autocomplete="family-name"></label>
                     </div>
-                </div>
-
-                <!-- Timezone List -->
-                <div id="tz-list-container" class="max-h-[200px] overflow-y-auto space-y-0.5 pr-1"></div>
-            </div>
-
-            <!-- STEP 3: Details form -->
-            <div id="booking-step-3" class="hidden flex-1 p-5 md:p-6">
-                <h3 class="text-base font-bold text-gray-900 mb-4">Enter Details</h3>
-
-                <form onsubmit="window.submitBookingForm(event)" class="flex flex-col gap-4 max-w-[480px]">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="flex flex-col gap-1">
-                            <label class="text-xs font-medium text-gray-900">First name <span
-                                    class="text-red-500">*</span></label>
-                            <input required type="text"
-                                class="border border-gray-300 focus:border-[var(--c-AAD39C)] focus:ring-1 focus:ring-[var(--c-AAD39C)] outline-none rounded-lg px-3 py-2 text-sm">
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <label class="text-xs font-medium text-gray-900">Last name <span
-                                    class="text-red-500">*</span></label>
-                            <input required type="text"
-                                class="border border-gray-300 focus:border-[var(--c-AAD39C)] focus:ring-1 focus:ring-[var(--c-AAD39C)] outline-none rounded-lg px-3 py-2 text-sm">
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-1">
-                        <label class="text-xs font-medium text-gray-900">Email <span
-                                class="text-red-500">*</span></label>
-                        <input required type="email"
-                            class="border border-gray-300 focus:border-[var(--c-AAD39C)] focus:ring-1 focus:ring-[var(--c-AAD39C)] outline-none rounded-lg px-3 py-2 text-sm">
-                    </div>
-
-                    <button type="button"
-                        class="w-fit text-[var(--c-3F9A4B)] border border-[var(--c-AAD39C)] rounded-full px-3 py-1 text-xs font-medium hover:bg-[var(--c-EEF0E8)] transition cursor-pointer">
-                        Add guests
-                    </button>
-
-                    <div class="flex flex-col gap-1">
-                        <label class="text-xs font-medium text-gray-900">Company Name <span
-                                class="text-red-500">*</span></label>
-                        <input required type="text"
-                            class="border border-gray-300 focus:border-[var(--c-AAD39C)] focus:ring-1 focus:ring-[var(--c-AAD39C)] outline-none rounded-lg px-3 py-2 text-sm">
-                    </div>
-
-                    <div class="flex flex-col gap-1">
-                        <label class="text-xs font-medium text-gray-900">Job Title <span
-                                class="text-red-500">*</span></label>
-                        <input required type="text"
-                            class="border border-gray-300 focus:border-[var(--c-AAD39C)] focus:ring-1 focus:ring-[var(--c-AAD39C)] outline-none rounded-lg px-3 py-2 text-sm">
-                    </div>
-
-                    <div class="flex flex-col gap-1">
-                        <label class="text-xs font-medium text-gray-900">Phone Number</label>
-                        <input type="tel"
-                            class="border border-gray-300 focus:border-[var(--c-AAD39C)] focus:ring-1 focus:ring-[var(--c-AAD39C)] outline-none rounded-lg px-3 py-2 text-sm">
-                    </div>
-
-                    <button type="submit"
-                        class="mt-1 bg-[var(--c-AAD39C)] text-[var(--c-2E4A25)] font-medium px-6 py-2 rounded-full w-fit hover:opacity-90 transition cursor-pointer">
-                        Confirm
-                    </button>
+                    <label class="bk-field"><span>Email <b>*</b></span><input required type="email" autocomplete="email"></label>
+                    <button type="button" class="bk-guests">Add guests</button>
+                    <label class="bk-field"><span>Company Name <b>*</b></span><input required type="text" autocomplete="organization"></label>
+                    <label class="bk-field"><span>Job Title <b>*</b></span><input required type="text" autocomplete="organization-title"></label>
+                    <label class="bk-field"><span>Phone Number</span><input type="tel" autocomplete="tel"></label>
+                    <button type="submit" class="bk-confirm">Confirm</button>
                 </form>
-            </div>
+            </section>
         </div>
     </div>
 

@@ -59,6 +59,7 @@
   --c-000000-a25:rgb(0 0 0 / 25%);
   --c-000000-a30:rgb(0 0 0 / 30%);
   --c-000000-a35:rgb(0 0 0 / 35%);
+  --c-000000-a55:rgb(0 0 0 / 55%);
   --c-000000-a4:rgb(0 0 0 / 4%);
   --c-000000-a5:rgb(0 0 0 / 5%);
   --c-000000-a5_1:rgb(0 0 0 / 5.1%);
@@ -13240,6 +13241,73 @@ html[data-css~="site-faq-accordion"] body [data-faq-answer] [class*="bg-[var(--c
   }
 }
 
+/* Home page FAQ look on every FAQ / accordion item (index.html #pmex-faq is the reference and is left out).
+   Covers all five site-faq-accordion copies. Only the items change: card, hover, open state, chevron chip, answer panel and
+   transitions. Section backgrounds, columns and list spacing stay as each page has them.
+   - card: white, 1px #E0E0DA, 18px corners, no lift, no sage wash; hover: #AAD39C border + soft shadow (0.2s)
+   - open: same as closed (no green border, no shadow); chevron chip #FAFAFA, #F4F5F3 when open, green icon
+   - answer: #FAFAFA panel with a #E0E0DA top line, #676767 14px text
+   The :is(#_, ...) wrappers only add id weight so these win over the five copies and the page blocks. */
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-item, .fi, .dm-acc, .mb-acc, [data-faq-item]) {
+  border: 1px solid var(--c-E0E0DA) !important;
+  border-radius: 18px !important;
+  background: var(--c-FFFFFF) !important;
+  box-shadow: none !important;
+  transform: none !important;
+  translate: none !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-item, .fi, .dm-acc, .mb-acc, [data-faq-item]):hover {
+  border-color: var(--c-AAD39C) !important;
+  box-shadow: 0 4px 6px -1px var(--c-000000-a10), 0 2px 4px -2px var(--c-000000-a10) !important;
+}
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-item, .fi, .dm-acc, .mb-acc, [data-faq-item])::before,
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-item, .fi, .dm-acc, .mb-acc, [data-faq-item]) > .feature-card-gradient {
+  opacity: 0 !important;
+}
+/* question row: no background change on hover, home text */
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-trigger, .fi-q, .dm-acc-t, .mb-acc-t, [data-faq-button]),
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-trigger, .fi-q, .dm-acc-t, .mb-acc-t, [data-faq-button]):hover {
+  background: transparent !important;
+  color: var(--c-505050) !important;
+}
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-trigger, .dm-acc-t, .mb-acc-t, [data-faq-button]) > span:first-child,
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) .fi-qt {
+  color: var(--c-505050) !important;
+  font-weight: 500 !important;
+}
+/* chevron chip */
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-icon, .fi-ch, [data-faq-icon]),
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.dm-acc-t, .mb-acc-t) > svg {
+  background-color: var(--c-FAFAFA) !important;
+  color: var(--c-3F9A4B) !important;
+  stroke: currentColor;
+  transition: transform .3s ease, background-color .3s ease !important;
+}
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-icon, .fi-ch) svg { stroke: currentColor; }
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-item.open, .faq-item:has([aria-expanded="true"])) .faq-icon,
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) .fi.open .fi-ch,
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.dm-acc.is-open, .mb-acc.is-open, .dm-acc:has([aria-expanded="true"]), .mb-acc:has([aria-expanded="true"])) > :is(.dm-acc-t, .mb-acc-t) > svg {
+  background-color: var(--c-F4F5F3) !important;
+}
+/* answer panel (only while open, so a closed panel never shows its top line) */
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-item.open, .faq-item:has([aria-expanded="true"])) :is(.faq-panel, .faq-content),
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) .fi.open .fi-a,
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.dm-acc, .mb-acc) > :is(.dm-acc-b, .mb-acc-b) {
+  background: var(--c-FAFAFA) !important;
+  border-top: 1px solid var(--c-E0E0DA) !important;
+}
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-panel, .faq-content, .fi-a, .dm-acc-b, .mb-acc-b) :is(p, li),
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) .fi-a {
+  color: var(--c-676767) !important;
+}
+/* Some answers carry their own side/bottom padding on the <p> (px-5 / px-6, pb-*); the panel already pads, so the text
+   would sit 20-24px right of the question. Drop the paragraph's own padding so answer and question line up. */
+html:is([data-css~="site-faq-accordion"],[data-css~="site-faq-accordion-2"],[data-css~="site-faq-accordion-3"],[data-css~="site-faq-accordion-4"],[data-css~="site-faq-accordion-5"]):not([data-css~="home-responsive"]):is(#_,html) :is(#_,body) :is(.faq-panel, .faq-content) p[class*="px-"] {
+  padding-inline: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 
 /* ===== css/specialty-site-palette.css  [data-css~="specialty-site-palette"] ===== */
 /* Map imported specialty page skins to Netlify specialty colors.
@@ -14108,6 +14176,27 @@ html[data-css~="contact"] body #contact-form button.contact-submit[type="submit"
  [data-css~="contact"] #contact-body { padding-block:calc(var(--spacing) * 12); }
  [data-css~="contact"] .contact-info,[data-css~="contact"] .contact-row { grid-template-columns:minmax(0,1fr); }
 }
+/* Site layout standards (layout block): hero and body use the shared section padding (32px, 40px from 1024px) and the
+   shared container side padding (20px / 24px / 40px). */
+html[data-css~="contact"][data-css~="layout"] body #main-content > section.pmex-section { padding-block:var(--pmex-section-y)!important; }
+html[data-css~="contact"][data-css~="layout"] body #main-content > section.pmex-section > .pmex-container { padding-inline:var(--pmex-gutter)!important; }
+/* Form card: the home page form card look (white to light grey, grey border, soft green-tinted shadow that only lifts a
+   little on hover, no glow), white inputs with grey borders and 8px corners. Side by side (1001px+), both columns end on
+   the same line: the grid stretches and the last info card takes up the difference. */
+html[data-css~="contact"] body .contact-form-wrap {
+  background:linear-gradient(180deg, var(--c-FFFFFF) 0%, var(--c-FAFAFA) 100%) !important; border:1px solid var(--c-E0E0DA) !important;
+  box-shadow:0 12px 32px var(--c-2E4A25-a8) !important; transition:box-shadow .3s ease, border-color .3s ease !important;
+}
+html[data-css~="contact"] body .contact-form-wrap:hover { box-shadow:0 16px 40px var(--c-2E4A25-a12) !important; border-color:var(--c-AAD39C) !important; }
+html[data-css~="contact"] body #contact-form :is(input,select,textarea) { background-color:var(--c-FFFFFF) !important; border:1px solid var(--c-E0E0DA) !important; border-radius:8px !important; box-shadow:none !important; }
+/* submit: 8px corners like the home form's button (button rules live in the pmex-buttons layer, so this does too) */
+@layer pmex-buttons {
+  html[data-css~="contact"] body #contact-form button.contact-submit[type="submit"] { border-radius:8px !important; }
+}
+@media (min-width:1001px) {
+  html[data-css~="contact"] body .contact-grid { align-items:stretch; }
+  html[data-css~="contact"] body .contact-info > .contact-card:last-child { flex:1 1 auto; }
+}
 
 
 /* ===== css/customers-page.css  [data-css~="customers-page"] ===== */
@@ -14231,6 +14320,12 @@ html[data-css~="contact"] body #contact-form button.contact-submit[type="submit"
  [data-css~="customers-page"] .cu-feature-stats { width:100%; }
 }
 @media(prefers-reduced-motion:reduce) { [data-css~="customers-page"] .cu-story { transition:none; } }
+/* Testimonial carousel: the previous / next arrows sat on the card edges and stuck out past the content line. They now sit
+   in a centred row under the cards from 640px (phones already have their own row below). The viewport pulls in the slides' 12px side padding so the first
+   and last card line up with the content edges. */
+[data-css~="customers-page"] #cu-quotes .relative:has(> #testiViewport) { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+[data-css~="customers-page"] #cu-quotes .relative > #testiViewport { order:0; flex:0 0 calc(100% + 24px); margin-inline:-12px; }
+[data-css~="customers-page"] #cu-quotes .relative > button[aria-label$="testimonial"] { order:1; position:static; inset:auto; transform:none; translate:none; margin-top:4px; }
 
 
 /* ===== css/denial-management.css  [data-css~="denial-management"] ===== */
@@ -14520,6 +14615,8 @@ html[data-css~="denial-management"][data-css~="layout"] body #main-content[data-
 html[data-css~="denial-management"][data-css~="layout"] body #main-content[data-bh-page] [data-bh-heading].pmex-section-head { margin-bottom:var(--pmex-head-gap); }
 /* FAQ column: 860px like the other service and specialty pages (for-you-reference forces 1260px with !important). */
 html[data-css~="denial-management"] body #main-content[data-bh-page] > #dm-faq > .dm-narrow { max-width:860px!important; }
+/* "Six reasons" accordion: the same 780px centred column as the FAQ items below (860px FAQ container minus its padding). */
+html[data-css~="denial-management"] body #main-content[data-bh-page] > #dm-reasons .dm-accs { max-width:780px!important; margin-inline:auto!important; }
 
 /* ===== css/hospital-billing.css  [data-css~="hospital-billing"] ===== */
 /* Hospital Billing page: same palette, hero gradient and spacing as the other new pages. */
@@ -17498,60 +17595,65 @@ html[data-css~="physician-billing"] body #main-content[data-bh-page] section .pb
   [data-css~="pricing"] #pricing-hero > div, [data-css~="pricing"] .pricing-grid { padding-inline:calc(var(--spacing) * 5); }
 }
 
-/* body: info cards + form card, same layout as contact */
-[data-css~="pricing"] #pricing-body { padding:calc(var(--spacing) * 16) 0 calc(var(--spacing) * 20); background:var(--c-FFFFFF); }
-[data-css~="pricing"] .pricing-grid { display:grid; grid-template-columns:300px minmax(0,1fr); gap:calc(var(--spacing) * 12); align-items:start; }
-[data-css~="pricing"] .pricing-info { display:flex; flex-direction:column; gap:calc(var(--spacing) * 5); }
-[data-css~="pricing"] .pricing-card { background:var(--c-FFFFFF); border:1px solid var(--c-E0E0DA); border-radius:16px; padding:20px; transition:border-color .3s,box-shadow .3s; }
-[data-css~="pricing"] .pricing-info .pricing-card:hover { background-image:linear-gradient(to top,var(--c-D8DCE3),color-mix(in srgb,var(--c-EDEFE8) 20%,transparent)); border-color:var(--c-AAD39C); box-shadow:0 4px 6px -1px var(--c-000000-a10),0 2px 4px -2px var(--c-000000-a10); }
-[data-css~="pricing"] .pricing-card-head { display:flex; align-items:center; gap:10px; margin-bottom:4px; }
-[data-css~="pricing"] .pricing-card-icon { flex:0 0 auto; width:22px; height:22px; border-radius:7px; display:flex; align-items:center; justify-content:center; background:var(--c-AAD39C-a25); color:var(--c-2E4A25); }
-[data-css~="pricing"] .pricing-card-icon svg { width:14px; height:14px; }
-[data-css~="pricing"] .pricing-card-title { font-size:16px; font-weight:700; line-height:1.3; letter-spacing:.1px; color:var(--c-505050); margin:0; transition:color .3s; }
-[data-css~="pricing"] .pricing-card:hover .pricing-card-title { color:var(--c-1B3316); }
-[data-css~="pricing"] .pricing-card-note { margin:0; color:var(--c-676767); }
+/* Site layout standards (layout block): hero and body use the shared section padding (32px, 40px from 1024px) and the
+   shared container side padding (20px / 24px / 40px). */
+html[data-css~="pricing"][data-css~="layout"] body #main-content > section.pmex-section { padding-block:var(--pmex-section-y)!important; }
+html[data-css~="pricing"][data-css~="layout"] body #main-content > section.pmex-section > .pmex-container { padding-inline:var(--pmex-gutter)!important; }
 
-[data-css~="pricing"] .pricing-form-wrap { background:linear-gradient(to bottom right,var(--c-EDEFE7),var(--c-E8EAED),var(--c-D8DCE3)); border:1px solid var(--c-000000-a0); border-radius:24px; padding:24px; box-shadow:0 0 35px var(--c-000000-a25); transition:border-color .3s,box-shadow .3s; }
-[data-css~="pricing"] .pricing-form-wrap:hover { border-color:var(--c-AAD39C); box-shadow:0 0 45px var(--c-AAD39C-a75); }
-@media(min-width:640px) { [data-css~="pricing"] .pricing-form-wrap { padding:32px; } }
-@media(min-width:1024px) { [data-css~="pricing"] .pricing-form-wrap { padding:40px; } }
-[data-css~="pricing"] .pricing-form-wrap h2 { font-size:1.25rem; font-weight:600; margin-bottom:6px; color:var(--c-505050); }
-[data-css~="pricing"] .pricing-form-sub { font-size:var(--text-sm); margin-bottom:24px; }
+/* body: one panel. Left, a light brand-tint "what you unlock" side (rate, two points, trust line, phone); right, the form.
+   Stacked below 1024px. Field names, ids and the submit handler are unchanged. */
+[data-css~="pricing"] #pricing-body { background:var(--c-FFFFFF); }
+[data-css~="pricing"] .pricing-panel { display:grid; grid-template-columns:minmax(0,1fr); border:1px solid var(--c-E0E0DA); border-radius:24px; overflow:hidden; background:var(--c-FFFFFF); box-shadow:0 12px 32px var(--c-2E4A25-a8); }
+@media(min-width:1024px) { [data-css~="pricing"] .pricing-panel { grid-template-columns:minmax(0,400px) minmax(0,1fr); } }
 
-/* form: same field styling as contact */
-[data-css~="pricing"] #pricing-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 14px; align-items:end; }
+[data-css~="pricing"] .pricing-panel .pricing-aside { position:relative; isolation:isolate; display:flex; flex-direction:column; gap:20px; padding:32px 24px; color:var(--c-505050); background:linear-gradient(180deg, var(--c-F8FBF0) 0%, var(--c-FFFFFF) 100%); border-bottom:1px solid var(--c-E0E0DA); }
+@media(min-width:640px) { [data-css~="pricing"] .pricing-panel .pricing-aside { padding:40px 32px; } }
+@media(min-width:1024px) { [data-css~="pricing"] .pricing-panel .pricing-aside { padding:40px; border-bottom:0; border-right:1px solid var(--c-E0E0DA); } }
+[data-css~="pricing"] .pricing-panel .pricing-aside :is(div, span, a):not(.pricing-aside-foot) { margin:0; }
+[data-css~="pricing"] .pricing-panel .pricing-aside-eyebrow { font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--c-3F9A4B); }
+[data-css~="pricing"] .pricing-panel .pricing-aside-title { margin-top:-8px !important; font-size:22px; font-weight:600; line-height:1.3; color:var(--c-505050); }
+[data-css~="pricing"] .pricing-panel .pricing-rate { display:flex; align-items:baseline; flex-wrap:wrap; gap:4px 10px; padding:20px; border:1px solid var(--c-E0E0DA); border-radius:16px; background:var(--c-FFFFFF); }
+[data-css~="pricing"] .pricing-panel .pricing-rate-from { width:100%; font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--c-676767); }
+[data-css~="pricing"] .pricing-panel .pricing-rate-num { font-size:44px; font-weight:800; line-height:1; letter-spacing:-.02em; color:var(--c-3F9A4B); }
+[data-css~="pricing"] .pricing-panel .pricing-rate-unit { font-size:14px; color:var(--c-676767); }
+[data-css~="pricing"] .pricing-panel .pricing-rate-alt { margin-top:-8px !important; font-size:14px; color:var(--c-676767); }
+[data-css~="pricing"] .pricing-panel .pricing-points { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:16px; }
+[data-css~="pricing"] .pricing-panel .pricing-points li { display:flex; align-items:flex-start; gap:12px; }
+[data-css~="pricing"] .pricing-panel .pricing-point-icon { flex:0 0 auto; width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; background:var(--c-EEF5EB); color:var(--c-3F9A4B); }
+[data-css~="pricing"] .pricing-panel .pricing-point-icon svg { width:18px; height:18px; }
+[data-css~="pricing"] .pricing-panel .pricing-point-title { font-size:15px; font-weight:600; line-height:1.4; color:var(--c-505050); }
+[data-css~="pricing"] .pricing-panel .pricing-point-note { margin-top:2px !important; font-size:13px; line-height:1.5; color:var(--c-676767); }
+[data-css~="pricing"] .pricing-panel .pricing-aside-foot { margin-top:auto; display:flex; flex-direction:column; gap:10px; padding-top:20px; border-top:1px solid var(--c-E0E0DA); font-size:13px; }
+[data-css~="pricing"] .pricing-panel .pricing-aside-foot svg { width:16px; height:16px; flex:0 0 auto; color:var(--c-3F9A4B); }
+[data-css~="pricing"] .pricing-panel .pricing-aside-trust, [data-css~="pricing"] .pricing-panel .pricing-aside-phone { display:inline-flex; align-items:center; gap:8px; color:var(--c-676767); }
+[data-css~="pricing"] .pricing-panel .pricing-aside-phone { color:var(--c-505050); font-weight:600; text-decoration:none; width:fit-content; }
+[data-css~="pricing"] .pricing-panel .pricing-aside-phone:hover { text-decoration:underline; text-underline-offset:3px; }
+
+[data-css~="pricing"] .pricing-form-wrap { padding:32px 24px; background:var(--c-FFFFFF); }
+@media(min-width:640px) { [data-css~="pricing"] .pricing-form-wrap { padding:40px 32px; } }
+@media(min-width:1024px) { [data-css~="pricing"] .pricing-form-wrap { padding:40px 48px; } }
+[data-css~="pricing"] .pricing-form-wrap h2 { margin:0 0 6px; color:var(--c-505050); }
+[data-css~="pricing"] .pricing-form-sub { margin:0 0 28px; font-size:14px; color:var(--c-676767); }
+
+/* form: two columns from 700px, the same white inputs with grey borders as the home page form */
+[data-css~="pricing"] #pricing-form { display:grid; grid-template-columns:minmax(0,1fr); gap:16px; }
+@media(min-width:700px) { [data-css~="pricing"] #pricing-form { grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 16px; } }
 [data-css~="pricing"] #pricing-form > div { min-width:0; }
-[data-css~="pricing"] #pricing-form > :nth-child(n+5) { grid-column:1 / -1; }
-[data-css~="pricing"] .pricing-row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
-[data-css~="pricing"] #pricing-form label { font-size:12px; font-weight:600; color:var(--c-505050); display:block; margin-bottom:6px; }
-[data-css~="pricing"] #pricing-form label span { color:var(--c-2E4A25); }
+@media(min-width:700px) {
+  [data-css~="pricing"] #pricing-form > :nth-child(n+5) { grid-column:1 / -1; }
+  [data-css~="pricing"] .pricing-row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+}
+[data-css~="pricing"] .pricing-row { display:grid; gap:16px; }
+[data-css~="pricing"] #pricing-form label { display:block; margin-bottom:6px; font-size:13px; font-weight:600; color:var(--c-505050); }
+[data-css~="pricing"] #pricing-form label span { color:var(--c-3F9A4B); }
 [data-css~="pricing"] #pricing-form ::placeholder { color:var(--c-959085); opacity:1; }
-[data-css~="pricing"] #pricing-form :is(input,select,textarea) { width:100%; box-sizing:border-box; border:1px solid var(--c-000000-a0); border-radius:12px; padding:11px 14px; font-size:var(--text-sm); font-family:inherit; color:var(--c-505050); background:var(--c-FFFFFF); outline:none; box-shadow:0 1px 2px var(--c-000000-a5); }
+[data-css~="pricing"] #pricing-form :is(input,select,textarea) { width:100%; box-sizing:border-box; border:1px solid var(--c-E0E0DA); border-radius:10px; padding:12px 14px; font-size:14px; font-family:inherit; color:var(--c-505050); background-color:var(--c-FFFFFF); outline:none; box-shadow:none; transition:border-color .2s ease, box-shadow .2s ease; }
 [data-css~="pricing"] #pricing-form :is(input,select) { height:46px; }
-[data-css~="pricing"] #pricing-form textarea { resize:vertical; }
-[data-css~="pricing"] #pricing-form :is(input,select,textarea):focus { border-color:var(--c-AAD39C); box-shadow:0 0 0 2px var(--c-AAD39C); }
-[data-css~="pricing"] #pricing-form select {
-  -webkit-appearance:none; appearance:none;
-  padding-right:44px; cursor:pointer;
-  background-color:var(--c-FFFFFF);
-  background-image:linear-gradient(45deg,transparent 50%,var(--c-505050) 50%),linear-gradient(135deg,var(--c-505050) 50%,transparent 50%);
-  background-position:calc(100% - 26px) 50%,calc(100% - 20px) 50%;
-  background-size:6px 6px,6px 6px;
-  background-repeat:no-repeat;
-}
-[data-css~="pricing"] #pricing-form .pricing-fine { order:1; grid-column:1; align-self:center; font-size:11px; text-align:center; margin:0; color:var(--c-505050); }
-[data-css~="pricing"] #pricing-form .pricing-submit { order:2; grid-column:2; align-self:center; width:100%; }
-@media(max-width:1000px) {
-  [data-css~="pricing"] .pricing-grid { grid-template-columns:minmax(0,1fr); }
-  [data-css~="pricing"] .pricing-info { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
-}
-@media(max-width:700px) {
-  [data-css~="pricing"] .pricing-info { grid-template-columns:minmax(0,1fr); }
-  [data-css~="pricing"] #pricing-form { grid-template-columns:minmax(0,1fr); }
-  [data-css~="pricing"] #pricing-form > :nth-child(n+5), [data-css~="pricing"] #pricing-form .pricing-fine, [data-css~="pricing"] #pricing-form .pricing-submit { grid-column:1; }
-  [data-css~="pricing"] #pricing-form .pricing-fine { order:3; }
-  [data-css~="pricing"] .pricing-row { grid-template-columns:minmax(0,1fr); }
-}
+[data-css~="pricing"] #pricing-form :is(input,select,textarea):hover { border-color:var(--c-AAD39C); }
+[data-css~="pricing"] #pricing-form textarea { resize:vertical; min-height:96px; }
+[data-css~="pricing"] #pricing-form .pricing-submit { grid-column:1 / -1; width:100%; margin-top:4px; }
+[data-css~="pricing"] .pricing-panel #pricing-form .pricing-fine { grid-column:1 / -1; display:flex; align-items:center; justify-content:center; gap:6px; margin:0; font-size:12px; color:var(--c-676767); }
+[data-css~="pricing"] .pricing-panel #pricing-form .pricing-fine svg { width:14px; height:14px; color:var(--c-3F9A4B); }
 @media(prefers-reduced-motion:reduce){[data-css~="pricing"] .pricing-gate #main-content *{transition:none!important;}html[data-css~="pricing"]:has(.pricing-page){scroll-behavior:auto;}}
 
 
@@ -22501,6 +22603,11 @@ html[data-css~="injury-billing-bh"][data-css~="layout"] body #main-content[data-
 @media(min-width:1024px){
  html[data-css~="for-you-reference"] body #main-content[data-bh-page] .dm-form form{grid-template-columns:repeat(4,minmax(0,1fr))!important;}
 }
+/* Site layout standards (layout block) on For You pages that list "layout" in data-css: the hero and every section use the
+   shared section padding (32px, 40px from 1024px), heading blocks the shared heading gap (32px, 40px from 1024px).
+   !important and the extra classes outrank the hero rule (60px/88px) and the section rules above. */
+html[data-css~="for-you-reference"][data-css~="layout"] body #main-content[data-bh-page] > section.pmex-section { padding-block:var(--pmex-section-y)!important; }
+html[data-css~="for-you-reference"][data-css~="layout"] body #main-content[data-bh-page] [data-bh-heading].pmex-section-head { margin-bottom:var(--pmex-head-gap)!important; }
 
 
 /* ===== css/pmex-platform.css  [data-css~="pmex-platform"] ===== */
@@ -23254,6 +23361,12 @@ html[data-css~="pmex-platform-family"] body #main-content[data-platform-family] 
 @layer reference-typography{
  html[data-css~="company-bh"] body #main-content.company-bh>section:first-of-type h1:not(.bh-hero-title):not(#canonical-role):not(#canonical-role-2):not(#cr-3){line-height:1.2!important;}
 }
+/* Site layout standards (layout block) on company pages that list "layout" in data-css: the hero and every section use the
+   shared section padding (32px, 40px from 1024px), heading blocks the shared heading gap (32px, 40px from 1024px).
+   !important and the extra classes outrank the hero rule (60px/88px) and the page blocks. */
+html[data-css~="company-bh"][data-css~="layout"] body #main-content.company-bh > section.pmex-section:is(#_, *) { padding-block:var(--pmex-section-y)!important; } /* :is(#_, *) only adds id weight (beats #about-stats) */
+html[data-css~="company-bh"][data-css~="layout"] body #main-content.company-bh .pmex-section-head { margin-bottom:var(--pmex-head-gap)!important; }
+html[data-css~="company-bh"][data-css~="layout"] body #main-content.company-bh > section.pmex-section > .pmex-container { padding-inline:var(--pmex-gutter)!important; }
 
 
 /* ===== css/site-motion.css  [data-css~="site-motion-4"] ===== */
@@ -25752,4 +25865,172 @@ html[data-css~="home-responsive"] body section#pmex-faq aside[data-faq-reveal] a
   [data-css~="home-responsive"] .pmex-flow-panel { align-items: stretch; }
   [data-css~="home-responsive"] .pmex-flow-main { display: flex; flex-direction: column; }
   [data-css~="home-responsive"] .pmex-flow-main > .pmex-flow-points { margin-top: auto; }
+}
+
+/* ===== booking modal ("Book a demo" scheduler, markup in company/demo.html, js/demo-modal.js)  [data-css~="booking-modal"] ===== */
+/* The modal is appended to <body> on every page, so it carries its own look here (bk-* classes) instead of relying on the
+   host page. Card up to 1040px wide; summary panel on the left, calendar in the middle, time slots on the right (step 2).
+   Below 900px everything stacks. Steps and the overlay are shown and hidden by the script with the "hidden" class. */
+[data-css~="booking-modal"] .bk-overlay { position:fixed; inset:0; z-index:100000; display:flex; align-items:center; justify-content:center; padding:16px; background:var(--c-000000-a55); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); transition:opacity .3s ease; font-family:Inter, sans-serif; color:var(--c-505050); text-align:left; }
+[data-css~="booking-modal"] .bk-overlay.hidden { display:none; }
+[data-css~="booking-modal"] .bk-overlay *, [data-css~="booking-modal"] .bk-overlay *::before, [data-css~="booking-modal"] .bk-overlay *::after { box-sizing:border-box; }
+[data-css~="booking-modal"] .bk-overlay :is(p, ul) { margin:0; padding:0; }
+[data-css~="booking-modal"] .bk-overlay button { font-family:inherit; cursor:pointer; }
+[data-css~="booking-modal"] .bk-card { position:relative; display:grid; grid-template-columns:minmax(0,1fr); width:100%; max-width:1040px; max-height:calc(100vh - 32px); max-height:calc(100dvh - 32px); overflow-y:auto; background:var(--c-FFFFFF); border-radius:24px; box-shadow:0 30px 80px var(--c-000000-a25); transition:opacity .3s ease, transform .3s ease; }
+@media (min-width:900px) { [data-css~="booking-modal"] .bk-card { grid-template-columns:280px minmax(0,1fr); } }
+
+[data-css~="booking-modal"] .bk-close { position:absolute; top:16px; right:16px; z-index:3; width:40px; height:40px; display:flex; align-items:center; justify-content:center; border:0; border-radius:999px; background:var(--c-F4F5F3); color:var(--c-505050); transition:background-color .2s ease; }
+[data-css~="booking-modal"] .bk-close:hover { background:var(--c-E0E0DA); }
+
+/* summary panel */
+[data-css~="booking-modal"] .bk-aside { display:flex; flex-direction:column; gap:16px; padding:28px 24px; background:linear-gradient(180deg, var(--c-F8FBF0) 0%, var(--c-FFFFFF) 100%); border-bottom:1px solid var(--c-E0E0DA); }
+@media (min-width:900px) { [data-css~="booking-modal"] .bk-aside { padding:36px 32px; border-bottom:0; border-right:1px solid var(--c-E0E0DA); } }
+[data-css~="booking-modal"] .bk-back { width:40px; height:40px; display:flex; align-items:center; justify-content:center; border:1px solid var(--c-E0E0DA); border-radius:999px; background:var(--c-FFFFFF); color:var(--c-3F9A4B); transition:border-color .2s ease, background-color .2s ease; }
+[data-css~="booking-modal"] .bk-back:hover { border-color:var(--c-AAD39C); background:var(--c-EEF5EB); }
+[data-css~="booking-modal"] .bk-logo { display:block; width:128px; height:auto; margin:8px 0 0 -12px; }
+[data-css~="booking-modal"] .bk-event-title { font-size:24px; font-weight:600; line-height:1.25; color:var(--c-505050); }
+[data-css~="booking-modal"] .bk-meta { list-style:none; display:flex; flex-direction:column; gap:12px; }
+[data-css~="booking-modal"] .bk-meta li { display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--c-676767); }
+[data-css~="booking-modal"] .bk-meta svg { flex:0 0 auto; margin-top:1px; color:var(--c-3F9A4B); }
+[data-css~="booking-modal"] .bk-meta-picked { padding-top:16px; border-top:1px solid var(--c-E0E0DA); }
+[data-css~="booking-modal"] .bk-meta-picked li { color:var(--c-505050); font-weight:600; }
+[data-css~="booking-modal"] .bk-meta-picked.hidden { display:none; }
+
+/* steps */
+[data-css~="booking-modal"] .bk-step.hidden { display:none; }
+[data-css~="booking-modal"] .bk-step-cal { display:flex; flex-direction:column; gap:24px; padding:28px 24px; min-width:0; }
+@media (min-width:900px) { [data-css~="booking-modal"] .bk-step-cal { padding:36px 40px; } }
+[data-css~="booking-modal"] .bk-step-slots:not(.hidden) { display:grid; grid-template-columns:minmax(0,1fr); }
+[data-css~="booking-modal"] .bk-step-slots > .bk-step-cal { padding-right:24px; }
+@media (min-width:900px) {
+  [data-css~="booking-modal"] .bk-step-slots:not(.hidden) { grid-template-columns:minmax(0,1fr) 260px; }
+  [data-css~="booking-modal"] .bk-step-slots > .bk-step-cal { padding:36px 32px 36px 40px; }
+}
+[data-css~="booking-modal"] .bk-title { padding-right:48px; font-size:22px; font-weight:600; line-height:1.3; color:var(--c-505050); }
+
+/* calendar */
+[data-css~="booking-modal"] .bk-cal { display:flex; flex-direction:column; gap:20px; }
+[data-css~="booking-modal"] .bk-month { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+[data-css~="booking-modal"] .bk-month-label { font-size:16px; font-weight:600; color:var(--c-505050); }
+[data-css~="booking-modal"] .bk-nav { width:40px; height:40px; display:flex; align-items:center; justify-content:center; border:1px solid var(--c-E0E0DA); border-radius:999px; background:var(--c-FFFFFF); color:var(--c-3F9A4B); transition:border-color .2s ease, background-color .2s ease; }
+[data-css~="booking-modal"] .bk-nav:hover { border-color:var(--c-AAD39C); background:var(--c-EEF5EB); }
+[data-css~="booking-modal"] :is(.bk-weekdays, .bk-days) { display:grid; grid-template-columns:repeat(7, minmax(0,1fr)); column-gap:6px; justify-items:center; }
+[data-css~="booking-modal"] .bk-weekdays span { font-size:12px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--c-959085); }
+[data-css~="booking-modal"] .bk-days { row-gap:8px; margin-top:-8px; }
+[data-css~="booking-modal"] .bk-day { position:relative; width:100%; max-width:46px; aspect-ratio:1; display:flex; align-items:center; justify-content:center; padding:0; border:0; border-radius:999px; background:var(--c-EEF5EB); color:var(--c-2E4A25); font-size:15px; font-weight:600; line-height:1; transition:background-color .2s ease, color .2s ease; }
+[data-css~="booking-modal"] .bk-day:hover { background:var(--c-AAD39C); }
+[data-css~="booking-modal"] .bk-day.is-selected { background:var(--c-3F9A4B); color:var(--c-FFFFFF); }
+[data-css~="booking-modal"] .bk-day.is-past { background:transparent; color:var(--c-C4C4BC); font-weight:400; cursor:not-allowed; }
+[data-css~="booking-modal"] .bk-day.is-today::after { content:""; position:absolute; bottom:6px; left:50%; width:4px; height:4px; margin-left:-2px; border-radius:999px; background:currentColor; }
+[data-css~="booking-modal"] .bk-day-empty { display:block; }
+
+/* time zone row */
+[data-css~="booking-modal"] .bk-tz { margin-top:auto; padding-top:20px; border-top:1px solid var(--c-E0E0DA); }
+[data-css~="booking-modal"] .bk-tz-label { margin-bottom:6px !important; font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--c-505050); }
+[data-css~="booking-modal"] .bk-tz-btn { display:inline-flex; align-items:center; gap:8px; max-width:100%; padding:8px 10px; margin-left:-10px; border:0; border-radius:10px; background:transparent; color:var(--c-505050); font-size:14px; font-weight:500; transition:background-color .2s ease; }
+[data-css~="booking-modal"] .bk-tz-btn:hover { background:var(--c-F4F5F3); }
+[data-css~="booking-modal"] .bk-tz-btn svg { flex:0 0 auto; color:var(--c-3F9A4B); }
+[data-css~="booking-modal"] .bk-tz-btn .tz-trigger-text { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+/* time slots */
+[data-css~="booking-modal"] .bk-slots { display:flex; flex-direction:column; gap:16px; min-width:0; padding:24px; border-top:1px solid var(--c-E0E0DA); }
+@media (min-width:900px) { [data-css~="booking-modal"] .bk-slots { padding:88px 28px 36px; border-top:0; border-left:1px solid var(--c-E0E0DA); } }
+[data-css~="booking-modal"] .bk-slots-date { font-size:15px; font-weight:600; line-height:1.4; color:var(--c-505050); }
+[data-css~="booking-modal"] .bk-slots-list { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px; }
+@media (min-width:900px) {
+  [data-css~="booking-modal"] .bk-slots-list { grid-template-columns:minmax(0,1fr); max-height:420px; overflow-y:auto; padding-right:6px; margin-right:-6px; scrollbar-width:thin; scrollbar-color:var(--c-AAD39C) transparent; }
+  [data-css~="booking-modal"] .bk-slots-list::-webkit-scrollbar { width:6px; }
+  [data-css~="booking-modal"] .bk-slots-list::-webkit-scrollbar-thumb { background:var(--c-AAD39C); border-radius:999px; }
+}
+[data-css~="booking-modal"] .bk-slots-list > div { min-width:0; }
+[data-css~="booking-modal"] .bk-slot, [data-css~="booking-modal"] .bk-slot-next { width:100%; height:46px; display:flex; align-items:center; justify-content:center; padding:0 8px; border-radius:10px; font-size:14px; font-weight:600; white-space:nowrap; transition:background-color .2s ease, border-color .2s ease, color .2s ease; }
+[data-css~="booking-modal"] .bk-slot { border:1px solid var(--c-AAD39C); background:var(--c-FFFFFF); color:var(--c-3F9A4B); }
+[data-css~="booking-modal"] .bk-slot:hover { background:var(--c-EEF5EB); }
+[data-css~="booking-modal"] .bk-slot.is-picked { border-color:var(--c-505050); background:var(--c-505050); color:var(--c-FFFFFF); cursor:default; }
+[data-css~="booking-modal"] .bk-slot-next { border:1px solid var(--c-3F9A4B); background:var(--c-3F9A4B); color:var(--c-FFFFFF); }
+[data-css~="booking-modal"] .bk-slot-next:hover { background:var(--c-2E4A25); border-color:var(--c-2E4A25); }
+[data-css~="booking-modal"] .bk-slot-pair { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; grid-column:1 / -1; }
+@media (min-width:900px) { [data-css~="booking-modal"] .bk-slot-pair { grid-column:auto; } }
+
+/* time zone menu */
+[data-css~="booking-modal"] .bk-tz-menu { position:absolute; z-index:5; left:24px; right:24px; bottom:24px; padding:12px; border:1px solid var(--c-E0E0DA); border-radius:16px; background:var(--c-FFFFFF); box-shadow:0 20px 50px var(--c-000000-a20); font-size:13px; }
+@media (min-width:900px) { [data-css~="booking-modal"] .bk-tz-menu { left:320px; right:auto; bottom:96px; width:360px; } }
+[data-css~="booking-modal"] .bk-tz-menu.hidden { display:none; }
+[data-css~="booking-modal"] .bk-tz-search { position:relative; margin-bottom:10px; }
+[data-css~="booking-modal"] .bk-tz-search svg { position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--c-959085); }
+[data-css~="booking-modal"] .bk-tz-search input { width:100%; height:42px; padding:0 12px 0 38px; border:1px solid var(--c-E0E0DA); border-radius:10px; background:var(--c-FFFFFF); color:var(--c-505050); font:inherit; font-size:14px; }
+[data-css~="booking-modal"] .bk-tz-head { display:flex; align-items:center; justify-content:space-between; padding:0 4px 8px; margin-bottom:6px; border-bottom:1px solid var(--c-E0E0DA); font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--c-676767); }
+[data-css~="booking-modal"] .bk-tz-format { display:flex; align-items:center; gap:6px; font-size:12px; letter-spacing:0; text-transform:none; font-weight:400; color:var(--c-959085); }
+[data-css~="booking-modal"] .bk-tz-format .is-on { color:var(--c-505050); font-weight:600; }
+[data-css~="booking-modal"] .bk-switch { position:relative; width:34px; height:18px; padding:0; border:0; border-radius:999px; background:var(--c-E0E0DA); transition:background-color .2s ease; }
+[data-css~="booking-modal"] .bk-switch span { position:absolute; top:2px; left:2px; width:14px; height:14px; border-radius:999px; background:var(--c-FFFFFF); transition:transform .2s ease; }
+[data-css~="booking-modal"] .bk-switch.is-on { background:var(--c-3F9A4B); }
+[data-css~="booking-modal"] .bk-switch.is-on span { transform:translateX(16px); }
+[data-css~="booking-modal"] .bk-tz-list { max-height:220px; overflow-y:auto; scrollbar-width:thin; scrollbar-color:var(--c-AAD39C) transparent; }
+[data-css~="booking-modal"] .bk-tz-cat { padding:10px 8px 4px; font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--c-959085); }
+[data-css~="booking-modal"] .bk-tz-item { width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:9px 10px; border:0; border-radius:10px; background:transparent; color:var(--c-505050); font-size:13px; text-align:left; }
+[data-css~="booking-modal"] .bk-tz-item:hover { background:var(--c-F4F5F3); }
+[data-css~="booking-modal"] .bk-tz-item.is-selected { background:var(--c-EEF5EB); color:var(--c-2E4A25); font-weight:600; }
+[data-css~="booking-modal"] .bk-tz-time { flex:0 0 auto; color:var(--c-959085); font-weight:400; }
+[data-css~="booking-modal"] .bk-tz-empty { padding:16px 0 !important; text-align:center; color:var(--c-959085); }
+
+/* details form */
+[data-css~="booking-modal"] .bk-step-form:not(.hidden) { display:flex; flex-direction:column; gap:24px; padding:28px 24px; }
+@media (min-width:900px) { [data-css~="booking-modal"] .bk-step-form:not(.hidden) { padding:36px 40px; } }
+[data-css~="booking-modal"] .bk-form { display:flex; flex-direction:column; gap:16px; max-width:560px; }
+[data-css~="booking-modal"] .bk-row { display:grid; grid-template-columns:minmax(0,1fr); gap:16px; }
+@media (min-width:640px) { [data-css~="booking-modal"] .bk-row { grid-template-columns:repeat(2, minmax(0,1fr)); } }
+[data-css~="booking-modal"] .bk-field { display:flex; flex-direction:column; gap:6px; }
+[data-css~="booking-modal"] .bk-field > span { font-size:13px; font-weight:600; color:var(--c-505050); }
+[data-css~="booking-modal"] .bk-field b { color:var(--c-3F9A4B); font-weight:600; }
+[data-css~="booking-modal"] .bk-field input { width:100%; height:46px; padding:0 14px; border:1px solid var(--c-E0E0DA); border-radius:10px; background:var(--c-FFFFFF); color:var(--c-505050); font:inherit; font-size:14px; }
+[data-css~="booking-modal"] .bk-field input:hover { border-color:var(--c-AAD39C); }
+[data-css~="booking-modal"] .bk-guests { width:fit-content; padding:6px 14px; border:1px solid var(--c-AAD39C); border-radius:999px; background:var(--c-FFFFFF); color:var(--c-3F9A4B); font-size:13px; font-weight:600; }
+[data-css~="booking-modal"] .bk-guests:hover { background:var(--c-EEF5EB); }
+[data-css~="booking-modal"] .bk-confirm { width:fit-content; min-width:160px; height:46px; margin-top:4px; padding:0 28px; border:0; border-radius:10px; background:var(--c-3F9A4B); color:var(--c-FFFFFF); font-size:15px; font-weight:600; transition:background-color .2s ease; }
+[data-css~="booking-modal"] .bk-confirm:hover { background:var(--c-2E4A25); }
+@media (prefers-reduced-motion:reduce) { [data-css~="booking-modal"] .bk-overlay, [data-css~="booking-modal"] .bk-overlay * { transition:none !important; } }
+/* stacked layout: a compact summary so the calendar shows sooner */
+@media (max-width:899px) {
+  [data-css~="booking-modal"] .bk-aside { gap:12px; padding:20px 24px; }
+  [data-css~="booking-modal"] .bk-logo { width:96px; margin-top:0; }
+  [data-css~="booking-modal"] .bk-event-title { font-size:20px; }
+  [data-css~="booking-modal"] .bk-close { top:20px; right:20px; }
+}
+/* Size: close to the original 780px modal, a little larger (880px), and compact enough to fit a laptop screen without
+   scrolling (zoomed browsers included). Shorter screens tighten further. */
+[data-css~="booking-modal"] .bk-card { max-width:880px; border-radius:20px; }
+@media (min-width:900px) {
+  [data-css~="booking-modal"] .bk-card { grid-template-columns:240px minmax(0,1fr); }
+  [data-css~="booking-modal"] .bk-aside { padding:28px 24px; gap:14px; }
+  [data-css~="booking-modal"] .bk-step-cal { padding:28px 32px; gap:18px; }
+  [data-css~="booking-modal"] .bk-step-slots:not(.hidden) { grid-template-columns:minmax(0,1fr) 220px; }
+  [data-css~="booking-modal"] .bk-step-slots > .bk-step-cal { padding:28px 24px 28px 32px; }
+  [data-css~="booking-modal"] .bk-slots { padding:76px 24px 28px; gap:12px; }
+  [data-css~="booking-modal"] .bk-slots-list { max-height:340px; }
+  [data-css~="booking-modal"] .bk-step-form:not(.hidden) { padding:28px 32px; gap:18px; }
+  [data-css~="booking-modal"] .bk-tz-menu { left:272px; bottom:84px; width:340px; }
+}
+[data-css~="booking-modal"] .bk-close { width:36px; height:36px; top:14px; right:14px; }
+[data-css~="booking-modal"] :is(.bk-back, .bk-nav) { width:34px; height:34px; }
+[data-css~="booking-modal"] .bk-logo { width:112px; margin-top:4px; }
+[data-css~="booking-modal"] .bk-event-title { font-size:20px; }
+[data-css~="booking-modal"] .bk-title { font-size:18px; }
+[data-css~="booking-modal"] .bk-cal { gap:14px; }
+[data-css~="booking-modal"] .bk-month-label { font-size:15px; }
+[data-css~="booking-modal"] .bk-weekdays span { font-size:11px; }
+[data-css~="booking-modal"] .bk-days { row-gap:6px; margin-top:-6px; }
+[data-css~="booking-modal"] .bk-day { max-width:38px; font-size:13px; }
+[data-css~="booking-modal"] .bk-day.is-today::after { bottom:4px; }
+[data-css~="booking-modal"] .bk-tz { padding-top:14px; }
+[data-css~="booking-modal"] .bk-slots-date { font-size:14px; }
+[data-css~="booking-modal"] .bk-slots-list { gap:8px; }
+[data-css~="booking-modal"] :is(.bk-slot, .bk-slot-next) { height:40px; font-size:13px; }
+[data-css~="booking-modal"] .bk-field input { height:42px; }
+@media (min-width:900px) and (max-height:700px) {
+  [data-css~="booking-modal"] .bk-aside, [data-css~="booking-modal"] .bk-step-cal, [data-css~="booking-modal"] .bk-step-form:not(.hidden) { padding-top:20px; padding-bottom:20px; }
+  [data-css~="booking-modal"] .bk-slots { padding-top:64px; padding-bottom:20px; }
+  [data-css~="booking-modal"] .bk-day { max-width:32px; font-size:12px; }
+  [data-css~="booking-modal"] .bk-days { row-gap:4px; }
+  [data-css~="booking-modal"] .bk-slots-list { max-height:260px; }
 }

@@ -1,4 +1,4 @@
-<!doctype html><html lang="en" data-css="site-buttons reference-typography inline-eb3849d8 style specialty-site-palette pricing site-motion-2 site-faq-accordion-3 specialty-homepage-layout navbar-d90c332f services-mega pmex-common"><head>
+<!doctype html><html lang="en" data-css="site-buttons reference-typography inline-eb3849d8 style specialty-site-palette pricing site-motion-2 site-faq-accordion-3 specialty-homepage-layout navbar-d90c332f services-mega pmex-common layout booking-modal"><head>
 <link rel="stylesheet" href="/css/root.css"/>
 
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -19,8 +19,8 @@
 <main id="main-content">
 
 <!-- HERO -->
-<section id="pricing-hero" class="hero-bg-gradient pmex-hero-pricing">
-  <div>
+<section id="pricing-hero" class="pmex-section hero-bg-gradient pmex-hero-pricing">
+  <div class="pmex-container">
     <p class="bh-eyebrow">Transparent Pricing</p>
     <h1 class="bh-hero-title">Drop your details to <span>Unlock Pricing Now</span></h1>
     <p class="bh-hero-para">PMEX pricing scales with your practice. No hidden fees. No contracts. Plans start at 2.49% of monthly collections.</p>
@@ -30,28 +30,33 @@
 <!-- PMEX INTEGRATION LOGO MARQUEE -->
 <script src="/js/site-shell.js" data-include="marquee"></script>
 
-<section id="pricing-body">
-  <div class="pricing-grid">
+<section id="pricing-body" class="pmex-section">
+  <div class="pmex-container">
+    <div class="pricing-panel">
 
-    <div class="pricing-info">
-      <div class="pricing-card">
-        <div class="pricing-card-head"><span class="pricing-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><use href="/icons/site-icons.svg#clock"></use></svg></span><div class="pricing-card-title">Instant unlock after form</div></div>
-        <p class="pricing-card-note">See full pricing table immediately after submitting</p>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-card-head"><span class="pricing-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><use href="/icons/site-icons.svg#grid"></use></svg></span><div class="pricing-card-title">4 plans, all specialties</div></div>
-        <p class="pricing-card-note">From solo practices to multi-site hospital groups</p>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-card-head"><span class="pricing-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><use href="/icons/site-icons.svg#credit-card"></use></svg></span><div class="pricing-card-title">Starts at 2.49% of collections</div></div>
-        <p class="pricing-card-note">Fixed plans from $450/month also available</p>
-      </div>
-    </div>
+      <aside class="pricing-aside" aria-label="What you unlock">
+        <div class="pricing-aside-eyebrow">What you unlock</div>
+        <div class="pricing-aside-title">Transparent pricing for every practice size</div>
+        <div class="pricing-rate">
+          <span class="pricing-rate-from">From</span>
+          <span class="pricing-rate-num">2.49%</span>
+          <span class="pricing-rate-unit">of monthly collections</span>
+        </div>
+        <div class="pricing-rate-alt">Fixed plans from $450/month also available</div>
+        <ul class="pricing-points">
+          <li><span class="pricing-point-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><use href="/icons/site-icons.svg#clock"></use></svg></span><div><div class="pricing-point-title">Instant unlock after form</div><div class="pricing-point-note">See full pricing table immediately after submitting</div></div></li>
+          <li><span class="pricing-point-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><use href="/icons/site-icons.svg#grid"></use></svg></span><div><div class="pricing-point-title">4 plans, all specialties</div><div class="pricing-point-note">From solo practices to multi-site hospital groups</div></div></li>
+        </ul>
+        <div class="pricing-aside-foot">
+          <span class="pricing-aside-trust"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#shield-check"></use></svg>HIPAA Compliant &middot; Active Encryption</span>
+          <a class="pricing-aside-phone" href="tel:5162084446"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#phone"></use></svg>(516) 208-4446</a>
+        </div>
+      </aside>
 
-    <div class="pricing-form-wrap">
-      <h2>Fill In To Unlock Pricing Plans</h2>
-      <p class="pricing-form-sub">We never share your information. No spam, ever.</p>
-      <form id="pricing-form" onsubmit="unlockPricing(event)">
+      <div class="pricing-form-wrap">
+        <h2>Fill In To Unlock Pricing Plans</h2>
+        <p class="pricing-form-sub">We never share your information. No spam, ever.</p>
+        <form id="pricing-form" onsubmit="unlockPricing(event)">
         <div>
           <label for="practice-type">I am a <span>*</span></label>
           <select id="practice-type" name="practice-type" required>
@@ -98,10 +103,11 @@
           <textarea id="message" name="message" rows="3" placeholder="Tell us about your practice..."></textarea>
         </div>
         <button data-site-button="primary" type="submit" class="pricing-submit">Unlock Pricing NOW</button>
-        <p class="pricing-fine">HIPAA Compliant. Your data is never shared.</p>
+        <div class="pricing-fine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="/icons/site-icons.svg#lock"></use></svg>HIPAA Compliant. Your data is never shared.</div>
       </form>
-    </div>
+      </div>
 
+    </div>
   </div>
 </section>
 

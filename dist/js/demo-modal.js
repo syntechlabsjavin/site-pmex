@@ -117,15 +117,9 @@
         const amLabel = document.getElementById('tz-format-am-label');
         const pmLabel = document.getElementById('tz-format-24-label');
 
-        if (toggleDot) toggleDot.style.transform = is24HourFormat ? 'translateX(16px)' : 'translateX(0)';
-        if (toggleBtn) toggleBtn.classList.toggle('bg-[var(--c-AAD39C)]', is24HourFormat);
-        if (toggleBtn) toggleBtn.classList.toggle('bg-gray-300', !is24HourFormat);
-        if (amLabel) {
-            amLabel.className = is24HourFormat ? 'text-gray-400' : 'font-bold text-gray-900';
-        }
-        if (pmLabel) {
-            pmLabel.className = is24HourFormat ? 'font-bold text-gray-900' : 'text-gray-400';
-        }
+        if (toggleBtn) { toggleBtn.classList.toggle('is-on', is24HourFormat); toggleBtn.setAttribute('aria-pressed', String(is24HourFormat)); }
+        if (amLabel) amLabel.classList.toggle('is-on', !is24HourFormat);
+        if (pmLabel) pmLabel.classList.toggle('is-on', is24HourFormat);
 
         renderTzList();
         updateTzTriggerText();
@@ -148,7 +142,7 @@
         );
 
         if (filtered.length === 0) {
-            container.innerHTML = '<p class="text-center text-gray-400 py-4 text-xs">No time zones found</p>';
+            container.innerHTML = '<p class="bk-tz-empty">No time zones found</p>';
             return;
         }
 
@@ -160,7 +154,7 @@
 
         Object.keys(categories).forEach(cat => {
             const catHeader = document.createElement('div');
-            catHeader.className = 'text-[10px] font-bold text-gray-500 uppercase tracking-wider px-2 pt-2 pb-1';
+            catHeader.className = 'bk-tz-cat';
             catHeader.textContent = cat;
             container.appendChild(catHeader);
 
@@ -170,14 +164,11 @@
 
                 const btn = document.createElement('button');
                 btn.type = 'button';
-                btn.className = 'w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs transition cursor-pointer ' +
-                    (isSelected
-                        ? 'bg-[var(--c-AAD39C)]/70 text-gray-900 font-semibold'
-                        : 'hover:bg-gray-100 text-gray-700 font-normal');
+                btn.className = 'bk-tz-item' + (isSelected ? ' is-selected' : '');
 
                 btn.innerHTML = `
                     <span>${tz.name}</span>
-                    <span class="text-gray-500 font-normal ml-2">${timeStr}</span>
+                    <span class="bk-tz-time">${timeStr}</span>
                 `;
 
                 btn.onclick = (e) => {
@@ -330,7 +321,7 @@
             if (!grid) return;
             grid.innerHTML = '';
             for (let i = 0; i < startOffset; i++) {
-                grid.appendChild(document.createElement('div'));
+                grid.appendChild(Object.assign(document.createElement('span'), { className: 'bk-day-empty' }));
             }
             for (let d = 1; d <= daysInMonth; d++) {
                 const cellDate = new Date(currentYear, currentMonth, d);
@@ -342,15 +333,9 @@
                 const btn = document.createElement('button');
                 btn.textContent = d;
                 btn.type = 'button';
-                btn.className = 'w-8 h-8 mx-auto my-0.5 rounded-full text-xs flex items-center justify-center relative ' +
-                    (isSelected
-                        ? 'bg-[var(--c-3F9A4B)] text-[var(--c-FFFFFF)] font-bold'
-                        : isPast
-                            ? 'text-gray-300 cursor-not-allowed'
-                            : 'text-[var(--c-3F9A4B)] hover:bg-[var(--c-EEF0E8)] bg-[var(--c-EEF0E8)]/60 cursor-pointer');
-                if (isToday && !isSelected) {
-                    btn.innerHTML += '<span class="absolute bottom-0.5 w-1 h-1 rounded-full bg-gray-400"></span>';
-                }
+                btn.className = 'bk-day' + (isSelected ? ' is-selected' : isPast ? ' is-past' : '') + (isToday ? ' is-today' : '');
+                if (isSelected) btn.setAttribute('aria-pressed', 'true');
+                btn.setAttribute('aria-label', cellDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) + (isToday ? ' (today)' : ''));
                 if (!isPast) {
                     btn.onclick = () => selectDate(cellDate);
                 } else {
@@ -369,6 +354,10 @@
         const lbl = document.getElementById('booking-slots-date-label');
         if (lbl) lbl.textContent = dateLabel;
         renderSlots();
+        // Stacked layout (phones, small tablets): the slots sit below the calendar, so bring them into view.
+        if (lbl && window.matchMedia('(max-width: 899px)').matches) {
+            requestAnimationFrame(() => lbl.scrollIntoView({ block: 'start', behavior: 'smooth' }));
+        }
     }
 
     function renderSlots() {
@@ -379,14 +368,11 @@
             const isSelected = selectedTime === time;
             const wrap = document.createElement('div');
             if (isSelected) {
-                wrap.className = 'grid grid-cols-2 gap-1.5';
-                wrap.innerHTML = `
-            <button type="button" class="bg-gray-600 text-[var(--c-FFFFFF)] font-semibold rounded-lg py-2 text-xs">${time}</button>
-            <button type="button" class="bg-[var(--c-AAD39C)] text-[var(--c-2E4A25)] font-semibold rounded-lg py-2 text-xs hover:opacity-90 transition cursor-pointer">Next</button>
-        `;
-                wrap.querySelector('button:last-child').onclick = () => confirmTime(time);
+                wrap.className = 'bk-slot-pair';
+                wrap.innerHTML = `<button type="button" class="bk-slot is-picked" aria-pressed="true">${time}</button><button type="button" class="bk-slot-next">Next</button>`;
+                wrap.querySelector('.bk-slot-next').onclick = () => confirmTime(time);
             } else {
-                wrap.innerHTML = `<button type="button" class="w-full border border-[var(--c-AAD39C)] text-[var(--c-3F9A4B)] font-semibold rounded-lg py-2 text-xs hover:bg-[var(--c-EEF0E8)] transition cursor-pointer">${time}</button>`;
+                wrap.innerHTML = `<button type="button" class="bk-slot">${time}</button>`;
                 wrap.querySelector('button').onclick = () => { selectedTime = time; renderSlots(); };
             }
             list.appendChild(wrap);

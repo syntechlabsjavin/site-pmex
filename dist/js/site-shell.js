@@ -33,14 +33,19 @@
       place();
     }
     // Current page: the matching top-level link, or the dropdown that holds it, is marked aria-current / .is-current.
-    // A specialty or service page that is not listed in the dropdown still marks its own dropdown (by folder).
+    // A page listed in one of the small dropdowns (For You, Resources, About PMEX) marks that dropdown first, even when it
+    // lives in /services/ (the For You pages do). Otherwise a specialty or service page marks its own dropdown by folder,
+    // also when it is not listed there.
     (function markCurrent() {
       const here = location.pathname.replace(/\/index\.html$/, "/");
       if (here === "/") return;
       const toggleFor = el => { const panel = el.closest(".homepage-dropdown-panel"); return panel ? root.querySelector("[aria-controls=\"" + panel.id + "\"]") : null; };
+      const bigPanels = ["homepage-specialties-panel", "homepage-services-panel"];
       let target = null;
-      if (here.indexOf("/specialties/") === 0) target = root.querySelector("[aria-controls=\"homepage-specialties-panel\"]");
-      else if (here.indexOf("/services/") === 0) target = root.querySelector("[aria-controls=\"homepage-services-panel\"]");
+      const listed = [...menu.querySelectorAll(".homepage-dropdown-panel a[href]")].find(a => a.pathname === here && bigPanels.indexOf(a.closest(".homepage-dropdown-panel").id) === -1);
+      if (listed) target = toggleFor(listed);
+      if (!target && here.indexOf("/specialties/") === 0) target = root.querySelector("[aria-controls=\"homepage-specialties-panel\"]");
+      if (!target && here.indexOf("/services/") === 0) target = root.querySelector("[aria-controls=\"homepage-services-panel\"]");
       if (!target) {
         const link = [...menu.querySelectorAll("a[href]")].find(a => a.pathname === here);
         if (link) target = toggleFor(link) || link;
