@@ -1467,7 +1467,7 @@ html[data-css~="style"], [data-css~="style"] body {
   [data-css~="style"] header ul:is(.hidden, .u-hidden):is(.lg\:flex, .u-lg-flex) {
     display: none !important;
   }
-  
+
 }
 [data-css~="style"] .pmex-card-gradient {
   position: absolute;
@@ -1900,13 +1900,10 @@ html body p.bh-hero-para {
   background: var(--c-AAD39C);
 }
 
-
-
 [data-css~="style"] .spec-cat-links > a:hover {
   font-weight: 600;
   color: var(--c-3F9A4B);
 }
-
 
 [data-css~="style"] .spec-card:hover, [data-css~="style"] .spec-problem:hover, [data-css~="style"] .spec-denial:hover {
   border-color: var(--c-AAD39C);
@@ -1933,7 +1930,6 @@ html body p.bh-hero-para {
     padding: 3.5rem 2.5rem 5rem;
   }
 }
-
 
 [data-css~="style"] .spec-hub-grid {
   display: grid;
@@ -2855,7 +2851,6 @@ html:is([data-css~="site-faq-extra"],[data-css~="site-faq-accordion-2"],[data-cs
   color: var(--c-505050) !important;
 }
 
-/* approved-card-match */
 /* Align legacy specialty cards/buttons with approved PT/Cardiology look */
 [data-css~="specialty-site-palette"] .specialty-content :is(.edu-card, .pain-card, .svc-card, .dm-card, .hcard, .feature-card, .stat-c, .why-card, .testi-card, .bc-card) {
   background: var(--c-FFFFFF) !important;
@@ -3102,18 +3097,18 @@ html:is([data-css~="site-faq-extra"],[data-css~="site-faq-accordion-2"],[data-cs
 [data-css~="blogs"] .bl-content > section > div { max-width:1260px; margin-inline:auto; padding-inline:calc(var(--spacing) * 10); }
 [data-css~="blogs"] .bl-content > section:not(#bl-hero) { padding-block:calc(var(--spacing) * 14) calc(var(--spacing) * 18); }
 [data-css~="blogs"] .bl-content :is(a,button):focus-visible { outline:2px solid var(--c-505050); outline-offset:4px; }
-/* hero */
+
 [data-css~="blogs"] #bl-hero { background:var(--c-FFFFFF) radial-gradient(ellipse at right bottom in srgb,var(--c-4A8C3F) 0%,var(--c-AAD39C) 15%,var(--c-D4EDCC) 35%,transparent 55%); padding-block:calc(var(--spacing) * 28); }
 [data-css~="blogs"] .bl-hero-copy { max-width:700px; }
 [data-css~="blogs"] #bl-hero h1 { font-size:clamp(2rem,3.4vw,3rem); font-weight:var(--font-weight-normal); line-height:var(--leading-tight); color:var(--c-505050); margin-bottom:14px; }
 [data-css~="blogs"] #bl-hero h1 span { color:var(--c-E85D3F); }
-/* shared post bits */
+
 [data-css~="blogs"] #bl-posts { background:var(--w); }
 [data-css~="blogs"] .bl-meta { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:6px 10px; }
 [data-css~="blogs"] .bl-tag { display:inline-block; background:var(--bg); color:var(--navy); font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.8px; padding:3px 10px; border-radius:20px; }
 [data-css~="blogs"] .bl-date { font-size:11px; }
 [data-css~="blogs"] .bl-more { font-size:13px; font-weight:700; color:var(--c-3F9A4B); }
-/* featured */
+
 [data-css~="blogs"] .bl-feature { display:grid; grid-template-columns:minmax(0,420px) minmax(0,1fr); background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-2xl); overflow:hidden; margin-bottom:40px; text-decoration:none; transition:var(--transition-c); }
 [data-css~="blogs"] .bl-feature:hover,[data-css~="blogs"] .bl-post:hover { border-color:var(--navy); }
 [data-css~="blogs"] .bl-feature img { width:100%; height:100%; min-height:260px; object-fit:cover; display:block; }
@@ -3121,7 +3116,7 @@ html:is([data-css~="site-faq-extra"],[data-css~="site-faq-accordion-2"],[data-cs
 [data-css~="blogs"] .bl-feature-b .bl-meta { justify-content:flex-start; }
 [data-css~="blogs"] .bl-feature-b h2 { font-size:clamp(1.25rem,2vw,1.75rem); font-weight:700; line-height:1.3; margin:0; }
 [data-css~="blogs"] .bl-feature-b p { font-size:var(--text-sm); line-height:var(--leading-relaxed); margin:0; }
-/* grid */
+
 [data-css~="blogs"] .bl-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:calc(var(--spacing) * 6); }
 [data-css~="blogs"] .bl-post { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:var(--radius-2xl); overflow:hidden; text-decoration:none; display:flex; flex-direction:column; transition:var(--transition-s); }
 [data-css~="blogs"] .bl-post:hover { transform:translateY(-3px); }
@@ -3130,7 +3125,7 @@ html:is([data-css~="site-faq-extra"],[data-css~="site-faq-accordion-2"],[data-cs
 [data-css~="blogs"] .bl-post-b h3 { font-size:var(--text-base); font-weight:600; line-height:1.4; margin:0; }
 [data-css~="blogs"] .bl-post-b p { font-size:12px; line-height:1.55; flex:1; margin:0; }
 [data-css~="blogs"] .bl-post-b .bl-more { font-size:12px; font-weight:600; margin-top:4px; }
-/* more coming note */
+
 [data-css~="blogs"] .bl-note { text-align:center; margin-top:48px; padding:calc(var(--spacing) * 8); background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-2xl); }
 [data-css~="blogs"] .bl-note p { font-size:var(--text-sm); margin:0 auto 16px; max-width:560px; }
 [data-css~="blogs"] .bl-note .bl-note-t { font-size:var(--text-base); font-weight:600; color:var(--navy); margin-bottom:6px; }
@@ -3170,7 +3165,7 @@ html:is([data-css~="site-faq-extra"],[data-css~="site-faq-accordion-2"],[data-cs
 [data-css~="careers"] .cr-btn-link { background:transparent; color:var(--c-3F9A4B); font-weight:600; padding-inline:calc(var(--spacing) * 3); }
 [data-css~="careers"] .cr-btn-link:hover { background:transparent; text-decoration:underline; }
 [data-css~="careers"] .cr-content :is(a,button,input,select,textarea,[role="button"]):focus-visible { outline:2px solid var(--c-505050); outline-offset:4px; }
-/* hero */
+
 [data-css~="careers"] #cr-hero { background:var(--c-FFFFFF) radial-gradient(ellipse at right bottom in srgb,var(--c-4A8C3F) 0%,var(--c-AAD39C) 15%,var(--c-D4EDCC) 35%,transparent 55%); padding-block:calc(var(--spacing) * 28); }
 [data-css~="careers"] .cr-hero-copy { max-width:940px; }
 [data-css~="careers"] #cr-hero h1 { font-size:clamp(2rem,3.4vw,3rem); font-weight:var(--font-weight-normal); line-height:var(--leading-tight); color:var(--c-505050); margin-bottom:16px; }
@@ -3184,7 +3179,7 @@ html:is([data-css~="site-faq-extra"],[data-css~="site-faq-accordion-2"],[data-cs
 [data-css~="careers"] .cr-fact p { margin:0; }
 [data-css~="careers"] .cr-fact p:first-child { font-size:var(--text-sm); font-weight:700; color:var(--navy); margin-bottom:3px; }
 [data-css~="careers"] .cr-fact p:last-child { font-size:12px; line-height:1.5; }
-/* grids */
+
 [data-css~="careers"] .cr-grid { display:grid; gap:20px; }
 [data-css~="careers"] .cr-grid-4 { grid-template-columns:repeat(4,minmax(0,1fr)); }
 [data-css~="careers"] #cr-why { background:var(--w); border-bottom:1px solid var(--border); }
@@ -3198,7 +3193,7 @@ html:is([data-css~="site-faq-extra"],[data-css~="site-faq-accordion-2"],[data-cs
 [data-css~="careers"] .cr-role p { margin:0; }
 [data-css~="careers"] .cr-role p:first-child { font-size:13px; font-weight:600; color:var(--navy); }
 [data-css~="careers"] .cr-role p:last-child { font-size:11px; }
-/* form */
+
 [data-css~="careers"] #apply { background:var(--w); }
 [data-css~="careers"] #cr-form { background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 9); display:flex; flex-direction:column; gap:20px; }
 [data-css~="careers"] #cr-form :is(label,legend) { font-size:12px; font-weight:600; color:var(--navy); display:block; margin-bottom:6px; }
@@ -3409,7 +3404,7 @@ html[data-css~="contact"] body #contact-form :is(input,select,textarea) { backgr
 [data-css~="customers-page"] .cu-text { font-size:var(--text-base); line-height:var(--leading-relaxed); margin-bottom:24px; }
 [data-css~="customers-page"] .cu-head { text-align:center; margin-bottom:calc(var(--spacing) * 12); }
 [data-css~="customers-page"] .cu-head h2 { margin-bottom:0; }
-/* hero */
+
 [data-css~="customers-page"] #cu-hero { background:var(--c-FFFFFF) radial-gradient(ellipse at right bottom in srgb,var(--c-4A8C3F) 0%,var(--c-AAD39C) 15%,var(--c-D4EDCC) 35%,transparent 55%); padding-block:calc(var(--spacing) * 28); }
 [data-css~="customers-page"] .cu-hero-copy { max-width:700px; }
 [data-css~="customers-page"] #cu-hero h1 { font-size:clamp(2rem,3.4vw,3rem); font-weight:var(--font-weight-normal); line-height:var(--leading-tight); color:var(--c-505050); margin-bottom:16px; }
@@ -3428,14 +3423,14 @@ html[data-css~="contact"] body #contact-form :is(input,select,textarea) { backgr
 [data-css~="customers-page"] .cu-stat p { margin:0; }
 [data-css~="customers-page"] .cu-stat p:first-child { font-size:1.875rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
 [data-css~="customers-page"] .cu-stat p:last-child { font-size:12px; }
-/* cards */
+
 [data-css~="customers-page"] .cu-cards { display:grid; gap:calc(var(--spacing) * 6); }
 [data-css~="customers-page"] .cu-cards-4 { grid-template-columns:repeat(4,minmax(0,1fr)); }
 [data-css~="customers-page"] .cu-card { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 7); transition:box-shadow .2s,border-color .2s; }
 [data-css~="customers-page"] .cu-card:hover { border-color:var(--navy); }
 [data-css~="customers-page"] .cu-card h3 { margin-bottom:8px; }
 [data-css~="customers-page"] .cu-card p { font-size:var(--text-sm); line-height:var(--leading-relaxed); margin:0; }
-/* stories */
+
 [data-css~="customers-page"] #stories { background:var(--bg); border-block:1px solid var(--border); }
 [data-css~="customers-page"] .cu-story { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:var(--radius-2xl); overflow:hidden; text-decoration:none; display:flex; flex-direction:column; transition:var(--transition-s); }
 [data-css~="customers-page"] .cu-story:hover { border-color:var(--navy); transform:translateY(-3px); }
@@ -3446,7 +3441,7 @@ html[data-css~="contact"] body #contact-form :is(input,select,textarea) { backgr
 [data-css~="customers-page"] .cu-story-who { font-size:12px; font-weight:600; }
 [data-css~="customers-page"] .cu-story-sum { font-size:12px; line-height:1.5; flex:1; }
 [data-css~="customers-page"] .cu-more { font-size:12px; font-weight:600; color:var(--c-3F9A4B); margin-top:4px; }
-/* portal highlight */
+
 [data-css~="customers-page"] #cu-portal { background:var(--w); }
 [data-css~="customers-page"] .cu-portal-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:calc(var(--spacing) * 12); align-items:center; }
 [data-css~="customers-page"] .cu-dash { background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 6); max-width:480px; }
@@ -3465,11 +3460,9 @@ html[data-css~="contact"] body #contact-form :is(input,select,textarea) { backgr
 [data-css~="customers-page"] .cu-bar span:last-child { width:28px; text-align:right; color:var(--navy); }
 [data-css~="customers-page"] .cu-bar div { flex:1; background:var(--bg); border-radius:4px; height:6px; }
 [data-css~="customers-page"] .cu-bar i { display:block; background:var(--c-3F9A4B); height:6px; border-radius:4px; }
-/* testimonials */
 
 [data-css~="customers-page"] .cu-feature-stats { display:flex; flex-direction:column; gap:16px; }
 
-/* final cta */
 [data-css~="customers-page"] #cu-cta { background:var(--bg); border-top:1px solid var(--border); text-align:center; }
 [data-css~="customers-page"] #cu-cta h2 { margin-bottom:12px; }
 @media(max-width:1100px) {
@@ -3489,7 +3482,7 @@ html[data-css~="contact"] body #contact-form :is(input,select,textarea) { backgr
   [data-css~="customers-page"] .cu-cards-4 { grid-template-columns:minmax(0,1fr); }
   [data-css~="customers-page"] .cu-stats-row { grid-template-columns:repeat(2,minmax(0,1fr)); }
   [data-css~="customers-page"] .cu-stats-row .cu-stat:last-child { grid-column:1 / -1; }
-  
+
   [data-css~="customers-page"] .cu-feature-stats { width:100%; }
 }
 @media(prefers-reduced-motion:reduce) {
@@ -3523,7 +3516,7 @@ html[data-css~="contact"] body #contact-form :is(input,select,textarea) { backgr
 [data-css~="denial-management"] .dm-btn-link { background:transparent; color:var(--c-3F9A4B); font-weight:600; padding-inline:calc(var(--spacing) * 3); }
 [data-css~="denial-management"] .dm-btn-link:hover { background:transparent; text-decoration:underline; }
 [data-css~="denial-management"] .dm-content :is(a,button,input,select):focus-visible { outline:2px solid var(--c-505050); outline-offset:4px; }
-/* hero */
+
 [data-css~="denial-management"] #dm-hero { background:var(--c-FFFFFF) radial-gradient(ellipse at right bottom in srgb,var(--c-4A8C3F) 0%,var(--c-AAD39C) 15%,var(--c-D4EDCC) 35%,transparent 55%); padding-block:calc(var(--spacing) * 28); }
 [data-css~="denial-management"] #dm-hero > .dm-hero-grid { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); gap:calc(var(--spacing) * 12); align-items:center; }
 [data-css~="denial-management"] #dm-hero h1 { font-size:clamp(2rem,3.4vw,3rem); font-weight:var(--font-weight-normal); line-height:var(--leading-tight); color:var(--c-505050); margin-bottom:16px; }
@@ -3548,7 +3541,7 @@ html[data-css~="contact"] body #contact-form :is(input,select,textarea) { backgr
 [data-css~="denial-management"] #audit-form button { min-height:46px; border:0; border-radius:9999px; background:var(--c-AAD39C); color:var(--c-464A25); font-size:var(--text-sm); font-weight:700; font-family:inherit; cursor:pointer; }
 [data-css~="denial-management"] #audit-form button:hover { background:var(--c-EEF0E8); }
 [data-css~="denial-management"] #dm-ok { display:none; color:var(--c-3F9A4B); font-weight:600; text-align:center; padding:20px 0; margin:0; }
-/* intro */
+
 [data-css~="denial-management"] #dm-intro { background:var(--w); border-bottom:1px solid var(--border); }
 [data-css~="denial-management"] .dm-split { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:calc(var(--spacing) * 12); align-items:start; }
 [data-css~="denial-management"] .dm-box { background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 7); }
@@ -3560,7 +3553,7 @@ html[data-css~="contact"] body #contact-form :is(input,select,textarea) { backgr
 [data-css~="denial-management"] .dm-stat p { margin:0; }
 [data-css~="denial-management"] .dm-stat p:first-child { font-size:2.25rem; font-weight:700; color:var(--navy); }
 [data-css~="denial-management"] .dm-stat p:last-child { font-size:12px; margin-top:4px; }
-/* why */
+
 [data-css~="denial-management"] #dm-why { background:var(--bg); border-bottom:1px solid var(--border); padding-block:calc(var(--spacing) * 14)!important; }
 [data-css~="denial-management"] #dm-why h2 { max-width:660px; margin-bottom:0; }
 [data-css~="denial-management"] .dm-benefits { list-style:none; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:calc(var(--spacing) * 8); }
@@ -3568,7 +3561,7 @@ html[data-css~="contact"] body #contact-form :is(input,select,textarea) { backgr
 [data-css~="denial-management"] .dm-benefits li:hover { transform:translateY(-3px); border-color:var(--c-3F9A4B); box-shadow:var(--shadow-d); }
 [data-css~="denial-management"] .dm-bi { width:48px; height:48px; border-radius:14px; background:var(--bg); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--c-3F9A4B); flex-shrink:0; }
 [data-css~="denial-management"] .dm-benefits p { margin:0; font-size:1.0625rem; font-weight:600; color:var(--navy); line-height:1.3; }
-/* accordions */
+
 [data-css~="denial-management"] #dm-reasons { background:var(--bg); border-bottom:1px solid var(--border); }
 [data-css~="denial-management"] #dm-reasons .dm-head { text-align:left; max-width:760px; }
 [data-css~="denial-management"] #dm-reasons .dm-mid { margin-inline:0; }
@@ -3584,13 +3577,13 @@ html[data-css~="contact"] body #contact-form :is(input,select,textarea) { backgr
 [data-css~="denial-management"] .dm-acc-b strong { color:var(--navy); }
 [data-css~="denial-management"] .dm-acc-b .dm-fix { color:var(--c-3F9A4B); }
 [data-css~="denial-management"] #dm-faq { background:var(--w); }
-/* chips and grids */
+
 [data-css~="denial-management"] #dm-serve { background:var(--w); border-bottom:1px solid var(--border); }
 [data-css~="denial-management"] .dm-grid { display:grid; gap:12px; }
 [data-css~="denial-management"] .dm-grid-5 { grid-template-columns:repeat(5,minmax(0,1fr)); }
 [data-css~="denial-management"] .dm-grid-4 { grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
 [data-css~="denial-management"] .dm-chip { background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:12px 16px; font-size:13px; text-align:center; font-weight:500; color:var(--navy); }
-/* pillars */
+
 [data-css~="denial-management"] #process { background:var(--bg); }
 [data-css~="denial-management"] .dm-pillars { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:20px; }
 [data-css~="denial-management"] .dm-pillar { grid-column:span 2; background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 7); display:flex; flex-direction:column; transition:var(--transition-e); }
@@ -3609,9 +3602,9 @@ html[data-css~="contact"] body #contact-form :is(input,select,textarea) { backgr
 [data-css~="denial-management"] .dm-mini h3 { font-size:var(--text-sm); font-weight:600; margin-bottom:4px; }
 [data-css~="denial-management"] .dm-mini p { font-size:12px; line-height:1.55; margin:0; }
 [data-css~="denial-management"] #dm-offer .dm-mini { padding:16px; }
-/* workflow */
+
 [data-css~="denial-management"] #dm-flow { background:var(--c-EEF0E8); border-bottom:1px solid var(--border); }
-/* engine */
+
 [data-css~="denial-management"] #dm-engine { background:var(--w); border-bottom:1px solid var(--border); }
 [data-css~="denial-management"] #dm-engine .dm-split { align-items:center; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); }
 [data-css~="denial-management"] .dm-tag { display:inline-block; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--c-3F9A4B); background:var(--c-FFFFFF); border:1px solid var(--border); padding:4px 12px; border-radius:9999px; margin-bottom:16px; }
@@ -3619,15 +3612,15 @@ html[data-css~="contact"] body #contact-form :is(input,select,textarea) { backgr
 [data-css~="denial-management"] .dm-bullets { list-style:none; display:flex; flex-direction:column; gap:10px; }
 [data-css~="denial-management"] .dm-bullets li { position:relative; padding-left:16px; font-size:var(--text-sm); line-height:1.5; color:var(--navy); }
 [data-css~="denial-management"] .dm-bullets li::before { content:"\2022"; position:absolute; left:0; color:var(--c-3F9A4B); }
-/* hospital */
+
 [data-css~="denial-management"] #dm-hosp { background:var(--bg); border-bottom:1px solid var(--border); }
 [data-css~="denial-management"] #dm-hosp h2 { max-width:760px; margin-bottom:20px; }
 [data-css~="denial-management"] #dm-hosp .dm-mini { background:var(--c-FFFFFF); }
-/* dashboards */
+
 [data-css~="denial-management"] #dm-dash { background:var(--w); border-bottom:1px solid var(--border); }
 [data-css~="denial-management"] .dm-live { background:var(--bg); display:flex; flex-direction:column; justify-content:center; }
 [data-css~="denial-management"] .dm-live .dm-live-n { font-size:1.5rem; font-weight:700; color:var(--c-3F9A4B); margin-bottom:4px; }
-/* cta */
+
 [data-css~="denial-management"] #dm-cta { background:var(--bg); }
 [data-css~="denial-management"] #dm-cta h2 { margin-bottom:12px; }
 [data-css~="denial-management"] #dm-cta .dm-text { max-width:520px; margin-inline:auto; margin-bottom:24px; }
@@ -3766,17 +3759,16 @@ html[data-css~="denial-management"] body #main-content[data-bh-page] > #dm-reaso
 [data-css~="hospital-billing"] .hb-btn-link { background:transparent; color:var(--c-3F9A4B); font-weight:600; padding-inline:calc(var(--spacing) * 3); }
 [data-css~="hospital-billing"] .hb-btn-link:hover { background:transparent; text-decoration:underline; }
 [data-css~="hospital-billing"] .hb-content :is(a,button):focus-visible { outline:2px solid var(--c-505050); outline-offset:4px; }
-/* hero */
-/* stats */
+
 [data-css~="hospital-billing"] #hb-stats { padding-block:calc(var(--spacing) * 12)!important; background:var(--w); }
 [data-css~="hospital-billing"] .hb-stats-row { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:calc(var(--spacing) * 5); }
 [data-css~="hospital-billing"] .hb-stat { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 5); text-align:center; }
 [data-css~="hospital-billing"] .hb-stat p { margin:0; }
 [data-css~="hospital-billing"] .hb-stat p:first-child { font-size:1.625rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
 [data-css~="hospital-billing"] .hb-stat p:last-child { font-size:12px; line-height:1.5; }
-/* what + mips */
+
 [data-css~="hospital-billing"] .hb-split { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:calc(var(--spacing) * 12); align-items:start; }
-/* features */
+
 [data-css~="hospital-billing"] .hb-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
 [data-css~="hospital-billing"] .hb-card { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:14px; padding:22px; transition:var(--transition-c); }
 [data-css~="hospital-billing"] .hb-card:hover { border-color:var(--navy); }
@@ -3790,7 +3782,7 @@ html[data-css~="denial-management"] body #main-content[data-bh-page] > #dm-reaso
 [data-css~="hospital-billing"] .hb-ticks { list-style:none; display:flex; flex-direction:column; gap:8px; min-width:180px; }
 [data-css~="hospital-billing"] .hb-ticks li { background:var(--c-FFFFFF); border-radius:10px; padding:10px 14px; display:flex; align-items:center; gap:8px; font-size:12px; color:var(--navy); }
 [data-css~="hospital-billing"] .hb-ticks b { color:var(--c-3F9A4B); }
-/* cta */
+
 [data-css~="hospital-billing"] #hb-cta { background:var(--bg); }
 [data-css~="hospital-billing"] #hb-cta h2 { font-size:clamp(1.25rem,2.2vw,1.75rem); margin-bottom:24px; }
 @media(max-width:1100px) {
@@ -3819,7 +3811,7 @@ html[data-css~="denial-management"] body #main-content[data-bh-page] > #dm-reaso
   min-width:0;
   }
 }
-/* hospital-specific */
+
 [data-css~="hospital-billing"] #hb-types { background:var(--w); border-bottom:1px solid var(--border); }
 [data-css~="hospital-billing"] #hb-process { background:var(--bg); border-block:1px solid var(--border); }
 [data-css~="hospital-billing"] #hb-process .hb-split { align-items:start; }
@@ -4027,7 +4019,6 @@ html[data-css~="hospital-billing"] body #main-content[data-bh-page] #hb-process 
 }
 [data-css~="approved-longform-specialty"] [data-approved-longform-page] :is(h1,h2,h3,h4) { color:var(--c-505050); font-weight:400; letter-spacing:normal; }
 
-
 [data-css~="approved-longform-specialty"] [data-approved-longform-page] .lbl { font-size:12px; font-weight:500; letter-spacing:1px; text-transform:uppercase; color:var(--c-3F9A4B); }
 /* Live PT/Ortho hero shell — beat specialty *{padding:0} reset inside @scope */
 [data-css~="approved-longform-specialty"] .specialty-content [data-specialty-hero].hero-bg-gradient,
@@ -4084,7 +4075,6 @@ html[data-css~="hospital-billing"] body #main-content[data-bh-page] #hb-process 
 [data-css~="approved-longform-specialty"] [data-approved-longform-page] .stat-c:hover { transform:var(--lift-hover); border-color:var(--c-AAD39C); box-shadow:var(--shadow-f); }
 [data-css~="approved-longform-specialty"] [data-approved-longform-page] .stat-num { font-size:28px; color:var(--c-2E4A25); line-height:1.1; }
 
-
 [data-css~="approved-longform-specialty"] [data-approved-longform-page] .feature-card {
   background:var(--c-FFFFFF) !important;
   border:1px solid var(--c-EDEAE0) !important;
@@ -4132,8 +4122,6 @@ html[data-css~="hospital-billing"] body #main-content[data-bh-page] #hb-process 
 
 /* Before/after results */
 
-
-
 /* Case studies */
 
 @media (hover:hover) and (prefers-reduced-motion:no-preference) {
@@ -4142,13 +4130,11 @@ html[data-css~="hospital-billing"] body #main-content[data-bh-page] #hb-process 
 
 /* Testimonials */
 
-
 /* Blog cards */
 /* Misc content blocks used in education sections */
 /* Education layout (legacy edu-g) */
 /* EHR strip */
 /* Dark / signature section items */
-
 
 /* CPT pill cloud */
 /* Denial cards: closer to approved PATTERN cards */
@@ -4173,7 +4159,7 @@ html[data-css~="hospital-billing"] body #main-content[data-bh-page] #hb-process 
 [data-css~="large-practices"] .lp-btn-link { background:transparent; color:var(--c-3F9A4B); font-weight:600; padding-inline:calc(var(--spacing) * 3); }
 [data-css~="large-practices"] .lp-btn-link:hover { background:transparent; text-decoration:underline; }
 [data-css~="large-practices"] .lp-content :is(a,button):focus-visible { outline:2px solid var(--c-505050); outline-offset:4px; }
-/* hero */
+
 [data-css~="large-practices"] #lp-hero { background:var(--c-FFFFFF) radial-gradient(ellipse at right bottom in srgb,var(--c-4A8C3F) 0%,var(--c-AAD39C) 15%,var(--c-D4EDCC) 35%,transparent 55%); padding-block:calc(var(--spacing) * 28); }
 [data-css~="large-practices"] .lp-hero-copy { max-width:700px; }
 [data-css~="large-practices"] #lp-hero h1 { font-size:clamp(2rem,3.4vw,3rem); font-weight:var(--font-weight-normal); line-height:var(--leading-tight); color:var(--c-505050); margin-bottom:10px; }
@@ -4191,18 +4177,18 @@ html[data-css~="hospital-billing"] body #main-content[data-bh-page] #hb-process 
 }
 [data-css~="large-practices"] #lp-hero .lp-text { margin-bottom:24px; }
 [data-css~="large-practices"] #lp-hero .lp-actions { margin-top:0; }
-/* stats row */
+
 [data-css~="large-practices"] #lp-stats { padding-block:calc(var(--spacing) * 12)!important; background:var(--w); }
 [data-css~="large-practices"] .lp-stats-row { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:calc(var(--spacing) * 5); }
 [data-css~="large-practices"] .lp-stat { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 6); text-align:center; }
 [data-css~="large-practices"] .lp-stat p { margin:0; }
 [data-css~="large-practices"] .lp-stat p:first-child { font-size:1.75rem; font-weight:800; color:var(--navy); margin-bottom:5px; }
 [data-css~="large-practices"] .lp-stat p:last-child { font-size:12px; }
-/* grids */
+
 [data-css~="large-practices"] .lp-grid { display:grid; gap:calc(var(--spacing) * 5); }
 [data-css~="large-practices"] .lp-grid-3 { grid-template-columns:repeat(3,minmax(0,1fr)); }
 [data-css~="large-practices"] .lp-grid-4 { grid-template-columns:repeat(4,minmax(0,1fr)); }
-/* goals */
+
 [data-css~="large-practices"] #lp-goals { background:var(--w); border-bottom:1px solid var(--border); }
 [data-css~="large-practices"] .lp-goal { border:1px solid var(--border); border-radius:var(--radius-2xl); overflow:hidden; transition:var(--transition-c); background:var(--c-FFFFFF); }
 [data-css~="large-practices"] .lp-goal:hover { border-color:var(--navy); }
@@ -4210,7 +4196,7 @@ html[data-css~="hospital-billing"] body #main-content[data-bh-page] #hb-process 
 [data-css~="large-practices"] .lp-goal > div { padding:18px; }
 [data-css~="large-practices"] .lp-ring { width:36px; height:36px; border-radius:50%; background:var(--bg); border:2px solid var(--c-3F9A4B); display:flex; align-items:center; justify-content:center; font-size:16px; margin-bottom:10px; }
 [data-css~="large-practices"] .lp-goal h3 { font-size:var(--text-sm); font-weight:700; margin:0; }
-/* split sections */
+
 [data-css~="large-practices"] .lp-split { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:calc(var(--spacing) * 14); align-items:center; }
 [data-css~="large-practices"] .lp-img img { width:100%; max-height:400px; border-radius:var(--radius-2xl); object-fit:cover; display:block; }
 [data-css~="large-practices"] #lp-infra { background:var(--bg); border-block:1px solid var(--border); }
@@ -4218,14 +4204,14 @@ html[data-css~="hospital-billing"] body #main-content[data-bh-page] #hb-process 
 [data-css~="large-practices"] .lp-row { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:14px; padding:20px; display:flex; align-items:flex-start; gap:14px; }
 [data-css~="large-practices"] .lp-row h3 { font-size:var(--text-sm); font-weight:700; margin-bottom:4px; }
 [data-css~="large-practices"] .lp-row p { font-size:12px; line-height:1.55; margin:0; }
-/* kpis */
+
 [data-css~="large-practices"] #lp-kpis { background:var(--w); border-bottom:1px solid var(--border); }
 [data-css~="large-practices"] .lp-kpi { background:var(--bg); border:1px solid var(--border); border-radius:14px; padding:22px; text-align:center; }
 [data-css~="large-practices"] .lp-kpi p { margin:0; }
 [data-css~="large-practices"] .lp-kpi-t { font-size:var(--text-sm); font-weight:700; color:var(--navy); margin-bottom:8px!important; }
 [data-css~="large-practices"] .lp-kpi-v { font-size:1.75rem; font-weight:800; color:var(--c-3F9A4B); margin-bottom:6px!important; }
 [data-css~="large-practices"] .lp-kpi-d { font-size:12px; }
-/* audits */
+
 [data-css~="large-practices"] #lp-audits { background:var(--bg); border-bottom:1px solid var(--border); }
 [data-css~="large-practices"] .lp-audit { background:var(--c-FFFFFF); border:1px solid var(--border); border-top:4px solid var(--c-3F9A4B); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 7); }
 [data-css~="large-practices"] .lp-audit-red { border-top-color:var(--c-2E4A25); }
@@ -4236,16 +4222,16 @@ html[data-css~="hospital-billing"] body #main-content[data-bh-page] #hb-process 
 [data-css~="large-practices"] .lp-audit-red .lp-ring { border-color:var(--c-2E4A25); }
 [data-css~="large-practices"] .lp-audit h3 { font-size:var(--text-sm); font-weight:700; margin-bottom:8px; }
 [data-css~="large-practices"] .lp-audit-p { font-size:var(--text-sm); line-height:var(--leading-relaxed); margin:0; }
-/* personalized */
+
 [data-css~="large-practices"] #lp-personal { background:var(--w); border-bottom:1px solid var(--border); }
-/* services + addons cards */
+
 [data-css~="large-practices"] #lp-services { background:var(--bg); border-bottom:1px solid var(--border); }
 [data-css~="large-practices"] .lp-card { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 6); transition:var(--transition-c); }
 [data-css~="large-practices"] .lp-card:hover { border-color:var(--navy); }
 [data-css~="large-practices"] .lp-ico { width:44px; height:44px; border-radius:12px; background:var(--bg); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:14px; }
 [data-css~="large-practices"] .lp-card h3 { font-size:var(--text-sm); font-weight:700; margin-bottom:8px; }
 [data-css~="large-practices"] .lp-card p { font-size:var(--text-sm); line-height:var(--leading-relaxed); margin:0; }
-/* process */
+
 [data-css~="large-practices"] #lp-process { background:var(--w); border-bottom:1px solid var(--border); }
 [data-css~="large-practices"] .lp-procs { border:1px solid var(--border); border-radius:var(--radius-2xl); overflow:hidden; }
 [data-css~="large-practices"] .lp-proc { display:flex; border-bottom:1px solid var(--border); }
@@ -4253,7 +4239,7 @@ html[data-css~="hospital-billing"] body #main-content[data-bh-page] #hb-process 
 [data-css~="large-practices"] .lp-proc > div { padding:24px 26px; flex:1; min-width:0; }
 [data-css~="large-practices"] .lp-proc h3 { font-size:var(--text-base); font-weight:700; margin-bottom:8px; }
 [data-css~="large-practices"] .lp-proc p { font-size:var(--text-sm); line-height:1.65; margin:0; }
-/* addons + cta */
+
 [data-css~="large-practices"] #lp-addons { background:var(--bg); border-bottom:1px solid var(--border); }
 [data-css~="large-practices"] #lp-cta { background:var(--w); }
 [data-css~="large-practices"] .lp-cta-in img { height:36px; width:auto; margin:0 auto 20px; display:block; }
@@ -4412,7 +4398,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
   outline: 2px solid var(--c-505050);
   outline-offset: 4px;
 }
-/* hero */
+
 [data-css~="outsource-medical-billing"] #os-hero {
   background: var(--c-FFFFFF)
     radial-gradient(
@@ -4513,7 +4499,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
   padding: 20px 0;
   margin: 0;
 }
-/* split sections */
+
 [data-css~="outsource-medical-billing"] .os-split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -4565,7 +4551,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
   background: var(--w);
   border-bottom: 1px solid var(--border);
 }
-/* comparison */
+
 [data-css~="outsource-medical-billing"] #os-compare {
   background: var(--bg);
   border-block: 1px solid var(--border);
@@ -4628,7 +4614,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
 [data-css~="outsource-medical-billing"] .os-td-yes li {
   color: var(--navy);
 }
-/* trained + fit */
+
 [data-css~="outsource-medical-billing"] #os-trained,
 [data-css~="outsource-medical-billing"] #os-fit {
   background: var(--w);
@@ -4640,7 +4626,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
 [data-css~="outsource-medical-billing"] #os-fit {
   background: var(--w);
 }
-/* expertise */
+
 [data-css~="outsource-medical-billing"] #os-expertise {
   background: var(--bg);
   border-bottom: 1px solid var(--border);
@@ -4701,7 +4687,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
   background: var(--c-3F9A4B);
   border-radius: 4px;
 }
-/* wheel */
+
 [data-css~="outsource-medical-billing"] #os-wheel {
   background: var(--w);
   border-bottom: 1px solid var(--border);
@@ -4752,7 +4738,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
   color: var(--navy);
   margin-bottom: 3px;
 }
-/* services */
+
 [data-css~="outsource-medical-billing"] #os-services {
   background: var(--bg);
   border-block: 1px solid var(--border);
@@ -4792,7 +4778,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
   line-height: var(--leading-relaxed);
   margin: 0;
 }
-/* tech panels */
+
 [data-css~="outsource-medical-billing"] #os-tech {
   background: var(--w);
   border-bottom: 1px solid var(--border);
@@ -4847,7 +4833,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
   line-height: var(--leading-relaxed);
   margin: 0;
 }
-/* final cta */
+
 [data-css~="outsource-medical-billing"] #os-cta {
   background: var(--bg);
   border-top: 1px solid var(--border);
@@ -5267,7 +5253,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
 [data-css~="physician-billing"] .pb-btn-link { background:transparent; color:var(--c-3F9A4B); font-weight:600; padding-inline:calc(var(--spacing) * 3); }
 [data-css~="physician-billing"] .pb-btn-link:hover { background:transparent; text-decoration:underline; }
 [data-css~="physician-billing"] .pb-content :is(a,button):focus-visible { outline:2px solid var(--c-505050); outline-offset:4px; }
-/* hero */
+
 [data-css~="physician-billing"] #pb-hero { background:var(--c-FFFFFF) radial-gradient(ellipse at right bottom in srgb,var(--c-4A8C3F) 0%,var(--c-AAD39C) 15%,var(--c-D4EDCC) 35%,transparent 55%); padding-block:calc(var(--spacing) * 28); }
 [data-css~="physician-billing"] .pb-hero-copy { max-width:700px; }
 [data-css~="physician-billing"] #pb-hero h1 { font-size:clamp(2rem,3.4vw,3rem); font-weight:var(--font-weight-normal); line-height:var(--leading-tight); color:var(--c-505050); margin-bottom:12px; }
@@ -5284,7 +5270,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
   }
 }
 [data-css~="physician-billing"] #pb-hero .pb-text { margin-bottom:24px; }
-/* stats */
+
 [data-css~="physician-billing"] #pb-stats { padding-block:calc(var(--spacing) * 12)!important; background:var(--w); }
 [data-css~="physician-billing"] .pb-stats-row { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:calc(var(--spacing) * 5); }
 [data-css~="physician-billing"] .pb-stat { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 5); text-align:center; }
@@ -5292,7 +5278,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
 [data-css~="physician-billing"] .pb-stat p:first-child { font-size:1.625rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
 [data-css~="physician-billing"] .pb-stat p:last-child { font-size:12px; line-height:1.5; }
 [data-css~="physician-billing"] .pb-stat-red p:first-child { color:var(--c-2E4A25); }
-/* what + mips */
+
 [data-css~="physician-billing"] .pb-split { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:calc(var(--spacing) * 12); align-items:start; }
 [data-css~="physician-billing"] #pb-what { background:var(--w); border-bottom:1px solid var(--border); }
 [data-css~="physician-billing"] #pb-what h2 { font-size:clamp(1.25rem,2vw,1.75rem); }
@@ -5305,7 +5291,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
 [data-css~="physician-billing"] .pb-mini { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
 [data-css~="physician-billing"] .pb-mini .pb-stat p:first-child { font-size:1.375rem; }
 [data-css~="physician-billing"] .pb-mini .pb-stat p:last-child { font-size:11px; }
-/* features */
+
 [data-css~="physician-billing"] #pb-features { background:var(--w); border-bottom:1px solid var(--border); }
 [data-css~="physician-billing"] .pb-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
 [data-css~="physician-billing"] .pb-card { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:14px; padding:22px; transition:var(--transition-c); }
@@ -5320,7 +5306,7 @@ html[data-css~="large-practices"] body #main-content[data-bh-page] #lp-kpis [dat
 [data-css~="physician-billing"] .pb-ticks { list-style:none; display:flex; flex-direction:column; gap:8px; min-width:180px; }
 [data-css~="physician-billing"] .pb-ticks li { background:var(--c-FFFFFF); border-radius:10px; padding:10px 14px; display:flex; align-items:center; gap:8px; font-size:12px; color:var(--navy); }
 [data-css~="physician-billing"] .pb-ticks b { color:var(--c-3F9A4B); }
-/* cta */
+
 [data-css~="physician-billing"] #pb-cta { background:var(--bg); }
 [data-css~="physician-billing"] #pb-cta h2 { font-size:clamp(1.25rem,2.2vw,1.75rem); margin-bottom:24px; }
 @media(max-width:1100px) {
@@ -5588,7 +5574,7 @@ html[data-css~="pricing"][data-css~="layout"] body #main-content > section.pmex-
   [data-css~="resources"] .resources-content h1 br { display:none; }
 }
 @media(prefers-reduced-motion:reduce) {
-  
+
   html[data-css~="resources"]:has(.resources-content) { scroll-behavior:auto; }
 }
 /* Keep the featured portal card and its badge consistent with the resource cards. */
@@ -5842,7 +5828,7 @@ html[data-css~="services-bh"] body #main-content.services-content [data-hero-cop
 }
 
 @media(max-width:639px) {
-  
+
   [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] h1:not(.bh-hero-title) { overflow-wrap:break-word; }
 }
 /* Trust badges below the consultation form (same ring badge as Behavioral Health). */
@@ -5943,7 +5929,7 @@ html[data-css~="services-bh"] body #main-content.services-content .svc-final for
 [data-css~="small-practices"] .sp-btn-link:hover { background:transparent; text-decoration:underline; }
 [data-css~="small-practices"] .sp-btn-sm { min-height:40px; padding-inline:calc(var(--spacing) * 5); font-size:13px; width:fit-content; }
 [data-css~="small-practices"] .sp-content :is(a,button,input,select):focus-visible { outline:2px solid var(--c-505050); outline-offset:4px; }
-/* hero */
+
 [data-css~="small-practices"] #sp-hero { background:var(--c-FFFFFF) radial-gradient(ellipse at right bottom in srgb,var(--c-4A8C3F) 0%,var(--c-AAD39C) 15%,var(--c-D4EDCC) 35%,transparent 55%); padding-block:calc(var(--spacing) * 28); }
 [data-css~="small-practices"] .sp-hero-copy { max-width:760px; }
 [data-css~="small-practices"] #sp-hero h1 { font-size:clamp(2rem,3.4vw,3rem); font-weight:var(--font-weight-normal); line-height:var(--leading-tight); color:var(--c-505050); margin-bottom:16px; }
@@ -5960,14 +5946,14 @@ html[data-css~="services-bh"] body #main-content.services-content .svc-final for
   }
 }
 [data-css~="small-practices"] #sp-hero .sp-text:last-of-type { margin-bottom:28px; }
-/* generic grids and cards */
+
 [data-css~="small-practices"] .sp-grid { display:grid; gap:12px; }
 [data-css~="small-practices"] .sp-grid-3 { grid-template-columns:repeat(3,minmax(0,1fr)); }
 [data-css~="small-practices"] .sp-gap-lg { gap:calc(var(--spacing) * 6); }
 [data-css~="small-practices"] .sp-card { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 8); display:flex; flex-direction:column; gap:14px; }
 [data-css~="small-practices"] .sp-card p { font-size:var(--text-sm); line-height:1.65; margin:0; flex:1; }
 [data-css~="small-practices"] .sp-ico { font-size:32px; }
-/* photo strip + points */
+
 [data-css~="small-practices"] #sp-points { background:var(--w); padding-block:calc(var(--spacing) * 12)!important; }
 [data-css~="small-practices"] .sp-photos { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-bottom:28px; }
 [data-css~="small-practices"] .sp-photos img { width:100%; height:160px; object-fit:cover; border-radius:12px; display:block; }
@@ -5981,7 +5967,7 @@ html[data-css~="services-bh"] body #main-content.services-content .svc-final for
 [data-css~="small-practices"] #sp-hook h2 { margin-bottom:12px; }
 [data-css~="small-practices"] #sp-trans { background:var(--bg); border-block:1px solid var(--border); }
 [data-css~="small-practices"] #sp-partner { background:var(--w); border-bottom:1px solid var(--border); }
-/* split sections */
+
 [data-css~="small-practices"] .sp-split { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.8fr); gap:calc(var(--spacing) * 14); align-items:center; }
 [data-css~="small-practices"] .sp-img img { width:100%; max-height:520px; border-radius:var(--radius-2xl); object-fit:cover; display:block; }
 [data-css~="small-practices"] #sp-afford { background:var(--w); border-bottom:1px solid var(--border); }
@@ -5989,7 +5975,7 @@ html[data-css~="services-bh"] body #main-content.services-content .svc-final for
 [data-css~="small-practices"] .sp-checks li { display:flex; align-items:flex-start; gap:10px; }
 [data-css~="small-practices"] .sp-checks b { color:var(--c-3F9A4B); font-size:18px; flex-shrink:0; }
 [data-css~="small-practices"] .sp-checks p { font-size:var(--text-sm); color:var(--navy); line-height:1.55; margin:0; }
-/* specialty form */
+
 [data-css~="small-practices"] #sp-specialty { background:var(--bg); border-bottom:1px solid var(--border); }
 [data-css~="small-practices"] #sp-specialty .sp-narrow { max-width:800px; }
 [data-css~="small-practices"] #sp-form { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 7); display:flex; flex-direction:column; gap:14px; text-align:left; }
@@ -6000,7 +5986,7 @@ html[data-css~="services-bh"] body #main-content.services-content .svc-final for
 [data-css~="small-practices"] #sp-form button:hover { background:var(--c-EEF0E8); }
 [data-css~="small-practices"] #specialty-success { display:none; background:var(--w); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:24px; margin-top:16px; text-align:center; }
 [data-css~="small-practices"] #specialty-success p { font-size:var(--text-sm); font-weight:600; color:var(--c-3F9A4B); margin:0; }
-/* stats */
+
 [data-css~="small-practices"] #sp-loss { background:var(--w); border-bottom:1px solid var(--border); }
 [data-css~="small-practices"] .sp-stat { text-align:center; padding:calc(var(--spacing) * 9) calc(var(--spacing) * 6); border:1px solid var(--border); border-radius:var(--radius-2xl); position:relative; background:var(--c-FFFFFF); }
 [data-css~="small-practices"] .sp-stat p { margin:0; font-size:var(--text-sm); line-height:var(--leading-relaxed); }
@@ -6009,7 +5995,7 @@ html[data-css~="services-bh"] body #main-content.services-content .svc-final for
 [data-css~="small-practices"] .sp-badge { position:absolute; top:-20px; left:50%; transform:translateX(-50%); width:40px; height:40px; border-radius:50%; background:var(--c-AAD39C); color:var(--c-464A25); display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:800; }
 [data-css~="small-practices"] .sp-banner { margin-top:32px; background:var(--bg); border:1px solid var(--border); border-radius:14px; padding:20px 24px; text-align:center; }
 [data-css~="small-practices"] .sp-banner p { font-size:var(--text-sm); font-weight:500; color:var(--navy); margin:0; }
-/* process */
+
 [data-css~="small-practices"] #sp-process { background:var(--bg); border-bottom:1px solid var(--border); }
 [data-css~="small-practices"] .sp-steps { list-style:none; border:1px solid var(--border); border-radius:var(--radius-2xl); overflow:hidden; background:var(--c-FFFFFF); }
 [data-css~="small-practices"] .sp-step { display:flex; border-bottom:1px solid var(--border); }
@@ -6020,14 +6006,14 @@ html[data-css~="services-bh"] body #main-content.services-content .svc-final for
 [data-css~="small-practices"] .sp-step ul { list-style:none; display:flex; flex-direction:column; gap:5px; }
 [data-css~="small-practices"] .sp-step li { font-size:var(--text-sm); line-height:1.5; padding-left:16px; position:relative; }
 [data-css~="small-practices"] .sp-step li::before { content:"\203A"; position:absolute; left:0; color:var(--c-3F9A4B); }
-/* ease */
+
 [data-css~="small-practices"] #sp-easeS { background:var(--w); border-bottom:1px solid var(--border); }
 [data-css~="small-practices"] .sp-eases { display:flex; flex-direction:column; gap:16px; margin-top:12px; }
 [data-css~="small-practices"] .sp-ease { display:flex; align-items:flex-start; gap:14px; padding:18px; background:var(--bg); border:1px solid var(--border); border-radius:12px; }
 [data-css~="small-practices"] .sp-ease > span { width:40px; height:40px; border-radius:50%; background:var(--c-FFFFFF); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px; }
 [data-css~="small-practices"] .sp-ease h3 { font-size:var(--text-sm); font-weight:700; margin-bottom:4px; }
 [data-css~="small-practices"] .sp-ease p { font-size:var(--text-sm); line-height:1.55; margin:0; }
-/* partner */
+
 [data-css~="small-practices"] .sp-partner-grid { display:grid; grid-template-columns:minmax(0,1fr) 240px; gap:calc(var(--spacing) * 10); align-items:center; }
 [data-css~="small-practices"] .sp-mini { display:flex; flex-direction:column; gap:12px; }
 [data-css~="small-practices"] .sp-mini .sp-stat { padding:18px; }
@@ -6193,11 +6179,11 @@ html[data-css~="services-bh"] body #main-content.services-content .svc-final for
 [data-css~="specialty-homepage-layout"] .specialty-content .specialty-support-inner :is(.hero-vis,.hero-right) { margin:auto; }
 @media(max-width:1023px) {
   [data-css~="specialty-homepage-layout"] .specialty-content [data-specialty-hero] { padding:80px 0!important; }
-  
+
 }
 @media(max-width:639px) {
   [data-css~="specialty-homepage-layout"] .specialty-content [data-specialty-hero] { padding:56px 0!important; }
-  
+
   [data-css~="specialty-homepage-layout"] .specialty-content [data-specialty-hero] h1:not(.bh-hero-title) { overflow-wrap:break-word; }
   [data-css~="specialty-homepage-layout"] .specialty-content .specialty-hero-support { padding:32px 20px; }
 }
@@ -6393,7 +6379,7 @@ html[data-css~="specialty-homepage-layout"] body .specialty-content[data-source-
     background: var(--c-FFFFFF-a85_9);
   }
 }
-/* headings */
+
 [data-css~="service-pages-bh"] #main-content.mb-content .mb-head,
 [data-css~="service-pages-bh"] #main-content.mb-content .mb-head.mb-left {
   text-align: center;
@@ -6948,7 +6934,7 @@ html[data-css~="service-pages-bh"]
     min-height: 45px;
   }
 }
-/* compliance chips */
+
 [data-css~="service-pages-bh"] #main-content.mb-content[data-bh-rich] .mc-pills li {
   background: var(--c-FFFFFF);
   border-color: var(--c-AAD39C);
@@ -8611,7 +8597,7 @@ html[data-css~="injury-billing-bh"] body #main-content[data-bh-imported] #audit-
   html[data-css~="injury-billing-bh"] body #main-content[data-bh-imported] :is(.space-y-5, .u-space-y-5)>div:is(.relative, .rel, .raise, .section-rule.bg-white, .fluid.raise, .raise.stack.fill-h, .u-relative)>div:is([class*="rounded-2xl"], .panel, .card.card--lift, .card.card--lift.stack.gap-md, .u-rounded-2xl, .u-sm-rounded-2xl)>p:first-child:not(#i1):not(#i2):not(#i3):not(#i4) { font-size:16px!important;font-weight:400!important;line-height:1.4!important;color:var(--c-505050)!important;margin-bottom:6px!important; }
   html[data-css~="injury-billing-bh"] body #main-content[data-bh-imported] :is(.space-y-5, .u-space-y-5)>div:is(.relative, .rel, .raise, .section-rule.bg-white, .fluid.raise, .raise.stack.fill-h, .u-relative)>div:is([class*="rounded-2xl"], .panel, .card.card--lift, .card.card--lift.stack.gap-md, .u-rounded-2xl, .u-sm-rounded-2xl)>p:first-child+p:not(#i1):not(#i2):not(#i3):not(#i4) { font-size:13px!important;font-weight:400!important;line-height:1.625!important;color:var(--c-676767)!important; }
 }
-/* label + description rows */
+
 [data-css~="injury-billing-bh"] #main-content[data-bh-imported] :is(.space-y-4, .stack.gap-lg, .u-space-y-4)>div:is([class*="rounded-2xl"], .panel, .card.card--lift, .card.card--lift.stack.gap-md, .u-rounded-2xl, .u-sm-rounded-2xl) { padding:20px 24px;box-shadow:var(--shadow-card);transition:var(--transition-lift); }
 [data-css~="injury-billing-bh"] #main-content[data-bh-imported] :is(.space-y-4, .stack.gap-lg, .u-space-y-4)>div:is([class*="rounded-2xl"], .panel, .card.card--lift, .card.card--lift.stack.gap-md, .u-rounded-2xl, .u-sm-rounded-2xl):hover { transform:var(--lift-hover);border-color:var(--c-AAD39C);box-shadow:var(--shadow-lift); }
 /* "What's included" lists: one item per line. The box keeps its height (rows share it evenly). */
@@ -8722,7 +8708,7 @@ html[data-css~="injury-billing-bh"] body #main-content[data-bh-imported] :is(.gr
 @media(min-width:1024px) {
   html[data-css~="injury-billing-bh"] body #main-content[data-bh-imported] :is(.grid, .grid-3.gap-lg, .u-grid)>div:is([class*="rounded"], .input, .chip, .panel, .card.card--lift, .card.card--lift.stack.gap-md, .check-dot, .u-md-rounded-bl-32px, .u-md-rounded-br-32px, .u-md-rounded-tl-none, .u-md-rounded-tr-32px, .u-rounded, .u-rounded-11px, .u-rounded-12px, .u-rounded-14px, .u-rounded-15px, .u-rounded-18px, .u-rounded-20px, .u-rounded-22px, .u-rounded-24px, .u-rounded-28px, .u-rounded-2xl, .u-rounded-32px, .u-rounded-3xl, .u-rounded-6px, .u-rounded-b-130px, .u-rounded-b-450px, .u-rounded-br-60pct-90pct, .u-rounded-full, .u-rounded-l-16px, .u-rounded-lg, .u-rounded-md, .u-rounded-r-28px, .u-rounded-r-full, .u-rounded-t-3xl, .u-rounded-t-sm, .u-rounded-tl-24px, .u-rounded-tl-none, .u-rounded-xl, .u-sm-rounded-10px, .u-sm-rounded-28px, .u-sm-rounded-2xl, .u-sm-rounded-32px, .u-sm-rounded-3xl, .u-sm-rounded-full, .u-sm-rounded-r-32px, .u-sm-rounded-tl-32px, .u-sm-rounded-xl)>p:is([class*="uppercase"], .t-caps, .u-uppercase):first-child+p { min-height:0!important; }
 }
-/* label as a pill */
+
 html[data-css~="injury-billing-bh"] body #main-content[data-bh-imported] :is(.grid, .grid-3.gap-lg, .u-grid)>div:is([class*="rounded"], .input, .chip, .panel, .card.card--lift, .card.card--lift.stack.gap-md, .check-dot, .u-md-rounded-bl-32px, .u-md-rounded-br-32px, .u-md-rounded-tl-none, .u-md-rounded-tr-32px, .u-rounded, .u-rounded-11px, .u-rounded-12px, .u-rounded-14px, .u-rounded-15px, .u-rounded-18px, .u-rounded-20px, .u-rounded-22px, .u-rounded-24px, .u-rounded-28px, .u-rounded-2xl, .u-rounded-32px, .u-rounded-3xl, .u-rounded-6px, .u-rounded-b-130px, .u-rounded-b-450px, .u-rounded-br-60pct-90pct, .u-rounded-full, .u-rounded-l-16px, .u-rounded-lg, .u-rounded-md, .u-rounded-r-28px, .u-rounded-r-full, .u-rounded-t-3xl, .u-rounded-t-sm, .u-rounded-tl-24px, .u-rounded-tl-none, .u-rounded-xl, .u-sm-rounded-10px, .u-sm-rounded-28px, .u-sm-rounded-2xl, .u-sm-rounded-32px, .u-sm-rounded-3xl, .u-sm-rounded-full, .u-sm-rounded-r-32px, .u-sm-rounded-tl-32px, .u-sm-rounded-xl):not(:is([class*="text-center"], .ta-center, .u-text-center))>p:is([class*="uppercase"], .t-caps, .u-uppercase):first-child { display:inline-flex;align-self:flex-start;align-items:center;padding:4px 12px;margin-bottom:12px!important;border-radius:999px;background:var(--grad-pill);color:var(--c-2E4A25)!important;font-size:11px!important;font-weight:700!important;letter-spacing:.1em; }
 /* numbered steps: connector between the cards */
 @media(min-width:1024px) {
@@ -9434,7 +9420,7 @@ html[data-css~="pmex-platform-family"] body #main-content[data-platform-family] 
 @media (prefers-reduced-motion:reduce) {
   [data-css~="inline-7724f3e2"] .spec-hub-main-bottom .spec-hub-grid > .spec-hub-card:is(:hover,:focus-visible) .spec-hub-icon { transform:none }
 }
-/* section headings centred */
+
 [data-css~="inline-7724f3e2"] .spec-hub-section > h2 { text-align:center }
 /* other specialties: centre the last, shorter row */
 [data-css~="inline-7724f3e2"] .spec-hub-section[aria-labelledby="other-specialties-title"] .spec-hub-grid { display:flex;flex-wrap:wrap;justify-content:center }
@@ -9475,7 +9461,7 @@ html[data-css~="pmex-platform-family"] body #main-content[data-platform-family] 
 [data-css~="testimonials-page"] .tm-content h2 { font-size:clamp(1.5rem,2.5vw,2.25rem); font-weight:var(--font-weight-normal); line-height:var(--leading-tight); margin-bottom:12px; }
 [data-css~="testimonials-page"] .tm-content h2 span { color:var(--c-959085); }
 [data-css~="testimonials-page"] .tm-text { font-size:var(--text-base); line-height:var(--leading-relaxed); margin-bottom:28px; }
-/* hero */
+
 [data-css~="testimonials-page"] #tm-hero { background:var(--c-FFFFFF) radial-gradient(ellipse at right bottom in srgb,var(--c-4A8C3F) 0%,var(--c-AAD39C) 15%,var(--c-D4EDCC) 35%,transparent 55%); padding-block:calc(var(--spacing) * 28); }
 [data-css~="testimonials-page"] .tm-hero-copy { max-width:700px; }
 [data-css~="testimonials-page"] #tm-hero h1 { font-size:clamp(2rem,3.4vw,3rem); font-weight:var(--font-weight-normal); line-height:var(--leading-tight); color:var(--c-505050); margin-bottom:16px; }
@@ -9487,7 +9473,7 @@ html[data-css~="pmex-platform-family"] body #main-content[data-platform-family] 
 [data-css~="testimonials-page"] .tm-stat p { margin:0; }
 [data-css~="testimonials-page"] .tm-stat p:first-child { font-size:1.625rem; font-weight:700; color:var(--navy); margin-bottom:3px; }
 [data-css~="testimonials-page"] .tm-stat p:last-child { font-size:12px; }
-/* grid */
+
 [data-css~="testimonials-page"] #tm-grid { padding-block:calc(var(--spacing) * 4) calc(var(--spacing) * 18); background:var(--w); }
 [data-css~="testimonials-page"] .tm-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:calc(var(--spacing) * 5); }
 [data-css~="testimonials-page"] .tm-card { background:var(--c-FFFFFF); border:1px solid var(--border); border-radius:var(--radius-2xl); padding:calc(var(--spacing) * 7); display:flex; flex-direction:column; gap:16px; transition:var(--transition-c); }
@@ -9501,7 +9487,7 @@ html[data-css~="pmex-platform-family"] body #main-content[data-platform-family] 
 [data-css~="testimonials-page"] .tm-who-n { font-size:var(--text-sm); font-weight:600; color:var(--navy); }
 [data-css~="testimonials-page"] .tm-who-r { font-size:11px; }
 [data-css~="testimonials-page"] .tm-tag { display:inline-block; font-size:9px; font-weight:700; text-transform:uppercase; color:var(--c-3F9A4B); background:var(--bg); padding:2px 8px; border-radius:10px; margin-top:3px; }
-/* cta */
+
 [data-css~="testimonials-page"] #tm-cta { padding-block:calc(var(--spacing) * 16); background:var(--bg); border-block:1px solid var(--border); }
 [data-css~="testimonials-page"] .tm-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; align-items:center; }
 [data-css~="testimonials-page"] .tm-btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding-inline:calc(var(--spacing) * 8); border-radius:9999px; background:var(--c-AAD39C); color:var(--c-464A25); font-size:var(--text-sm); font-weight:700; text-decoration:none; }
@@ -9863,14 +9849,13 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
 [data-css~="navbar-d90c332f"] #homepage-reference-nav :is(#homepage-specialties-panel,#homepage-services-panel) { display:none;position:absolute;top:calc(100% + 18px);left:0;width:min(900px,calc(100vw - 220px));max-height:500px;overflow-y:auto;background:var(--c-FFFFFF);border:1px solid var(--c-AAD39C);border-radius:16px;box-shadow:var(--shadow-p);padding:24px;z-index:200;scrollbar-width:thin;scrollbar-color:var(--c-C2D8B9) white }
 [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-specialties::after { content:"";position:absolute;top:100%;left:0;right:0;height:20px }
 
-
 [data-css~="navbar-d90c332f"] #homepage-reference-nav :is(#homepage-specialties-panel,#homepage-services-panel) a { font-size:16px;font-weight:400;color:var(--c-676767);text-decoration:none;white-space:normal }
 [data-css~="navbar-d90c332f"] #homepage-reference-nav :is(#homepage-specialties-panel,#homepage-services-panel) a:hover { color:var(--c-3F9A4B) }
 [data-css~="navbar-d90c332f"] body:has(> #homepage-reference-nav) { display:flex;flex-direction:column;padding-top:0;align-items:stretch }
 [data-css~="navbar-d90c332f"] body:has(> #homepage-reference-nav)>#homepage-reference-nav { width:100%;flex-shrink:0 }
 @media(max-width:1100px) {
   [data-css~="navbar-d90c332f"] #homepage-reference-nav :is(#homepage-specialties-panel,#homepage-services-panel) { position:static;width:100%;max-height:55vh;padding:16px }
-  
+
   [data-css~="navbar-d90c332f"] #homepage-reference-nav :is(#homepage-specialties-panel,#homepage-services-panel) a { font-size:14px }
   [data-css~="navbar-d90c332f"] #homepage-reference-nav .homepage-specialties::after { display:none }
 }
@@ -10149,7 +10134,7 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
 /* ===== inline <style> block  [data-css~="inline-3ea3813b"] ===== */
 /* PMEX Claims Lifecycle — Updated UI */
 @media (min-width: 768px) {
-  
+
   [data-css~="inline-3ea3813b"] [data-pmex-lifecycle] #normal-content {
             grid-template-columns: minmax(0, 1.4fr) minmax(210px, 0.85fr);
             gap: 18px;
@@ -10188,7 +10173,7 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
 }
 /* Mobile responsive */
 @media (max-width: 767px) {
-  
+
   [data-css~="inline-3ea3813b"] [data-pmex-lifecycle] #normal-content {
             display: block;
   }
@@ -10473,480 +10458,461 @@ html[data-css~="inline-19ba2ad1"] body a.pmex-cta-phone svg {
 /* .pmex-hook-26 = [style*="font-weight:500"] */
 /* .pmex-hook-27 = [style*="font-weight:700"] */
 /* Classes from an inline style that had !important: such a declaration beats every stylesheet rule, including !important rules inside @layer. In CSS the earliest layer wins for !important, so these classes live in the first layer, pmex-inline (declared at the top of this file). */
-/* specialties/aba-therapy.html */
+
 [data-css~="pmex-common"] .pmex-hero-aba-therapy { --hero-bg-mobile:url('../img/abatherapy.webp');--hero-bg-desktop:url('../img/abatherapy.webp');--specialty-hero-image:url('../img/abatherapy.webp') }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-hero-about { --bh-hero-image:url('../img/about.webp') }
-/* services/accounts-receivable-management.html */
+
 [data-css~="pmex-common"] .pmex-hero-accounts-receivable-management { --bh-hero-image:url('../img/accounts-receivable-management.webp');--hero-bg-mobile:url('../img/accounts-receivable-management.webp');--hero-bg-desktop:url('../img/accounts-receivable-management.webp') }
-/* specialties/acupuncture.html */
+
 [data-css~="pmex-common"] .pmex-hero-acupuncture { --hero-bg-mobile:url('../img/acupuncture.webp');--hero-bg-desktop:url('../img/acupuncture.webp');--specialty-hero-image:url('../img/acupuncture.webp') }
-/* specialties/addiction-substance-abuse.html */
+
 [data-css~="pmex-common"] .pmex-hero-addiction-substance-abuse { --hero-bg-mobile:url('../img/addiction-care.webp');--hero-bg-desktop:url('../img/addiction-care.webp');--specialty-hero-image:url('../img/addiction-care.webp') }
-/* specialties/allergy-immunology.html */
+
 [data-css~="pmex-common"] .pmex-hero-allergy-immunology { --hero-bg-mobile:url('../img/allergyimmunology.webp');--hero-bg-desktop:url('../img/allergyimmunology.webp');--specialty-hero-image:url('../img/allergyimmunology.webp') }
-/* specialties/ambulance-ems-billing.html */
+
 [data-css~="pmex-common"] .pmex-hero-ambulance-ems-billing { --hero-bg-mobile:url('../img/ambulance-ems-billing.webp');--hero-bg-desktop:url('../img/ambulance-ems-billing.webp');--specialty-hero-image:url('../img/ambulance-ems-billing.webp') }
-/* specialties/anesthesiology.html */
+
 [data-css~="pmex-common"] .pmex-hero-anesthesiology { --hero-bg-mobile:url('../img/anesthesiology.webp');--hero-bg-desktop:url('../img/anesthesiology.webp');--specialty-hero-image:url('../img/anesthesiology.webp') }
-/* specialties/audiology.html */
+
 [data-css~="pmex-common"] .pmex-hero-audiology { --hero-bg-mobile:url('../img/audiology.webp');--hero-bg-desktop:url('../img/audiology.webp');--specialty-hero-image:url('../img/audiology.webp') }
-/* specialties/bariatric-surgery.html */
+
 [data-css~="pmex-common"] .pmex-hero-bariatric-surgery { --hero-bg-mobile:url('../img/bariatric-surgery.webp');--hero-bg-desktop:url('../img/bariatric-surgery.webp');--specialty-hero-image:url('../img/bariatric-surgery.webp') }
-/* specialties/behavioral-health.html */
+
 [data-css~="pmex-common"] .pmex-hero-behavioral-health { --hero-bg-mobile:url('../img/behaviorbgm.webp');--hero-bg-desktop:url('../img/behaviorbg.webp');--hero-bg-blur:1px }
-/* company/blogs.html */
+
 [data-css~="pmex-common"] .pmex-hero-blogs { --bh-hero-image:url('../img/blogs.webp') }
-/* specialties/cardiology.html */
+
 [data-css~="pmex-common"] .pmex-hero-cardiology { --hero-bg-mobile:url('../img/herocardiom.webp');--hero-bg-desktop:url('../img/herocardio.png');--hero-bg-blur:1px }
-/* company/careers.html */
+
 [data-css~="pmex-common"] .pmex-hero-careers { --bh-hero-image:url('../img/careers.webp') }
-/* specialties/chiropractic.html */
+
 [data-css~="pmex-common"] .pmex-hero-chiropractic { --hero-bg-mobile:url('../img/chirobgm.png');--hero-bg-desktop:url('../img/chirobg.png');--hero-bg-blur:1px }
-/* services/chronic-care-management.html */
+
 [data-css~="pmex-common"] .pmex-hero-chronic-care-management { --bh-hero-image:url('../img/chronic-care-management.webp') }
-/* services/claims-management.html */
+
 [data-css~="pmex-common"] .pmex-hero-claims-management { --bh-hero-image:url('../img/claims-management.webp');--hero-bg-mobile:url('../img/claims-management.webp');--hero-bg-desktop:url('../img/claims-management.webp') }
-/* services/clinical-documentation-improvement.html */
+
 [data-css~="pmex-common"] .pmex-hero-clinical-documentation-improvement { --bh-hero-image:url('../img/clinical-documentation-improvement.webp') }
-/* company/contact.html */
+
 [data-css~="pmex-common"] .pmex-hero-contact { --bh-hero-image:url('../img/contact.webp') }
-/* company/customers.html */
+
 [data-css~="pmex-common"] .pmex-hero-customers { --bh-hero-image:url('../img/customers.webp') }
-/* services/denial-management.html */
+
 [data-css~="pmex-common"] .pmex-hero-denial-management { --bh-hero-image:url('../img/denial-management.webp');--hero-bg-mobile:url('../img/denial-management.webp');--hero-bg-desktop:url('../img/denial-management.webp') }
-/* specialties/dental-billing.html */
+
 [data-css~="pmex-common"] .pmex-hero-dental-billing { --hero-bg-mobile:url('../img/dental-billing.webp');--hero-bg-desktop:url('../img/dental-billing.webp');--specialty-hero-image:url('../img/dental-billing.webp') }
-/* specialties/dermatology.html */
+
 [data-css~="pmex-common"] .pmex-hero-dermatology { --hero-bg-mobile:url('../img/dermatology.webp');--hero-bg-desktop:url('../img/dermatology.webp');--specialty-hero-image:url('../img/dermatology.webp') }
-/* services/dme-pos-services.html */
+
 [data-css~="pmex-common"] .pmex-hero-dme-pos-services { --hero-bg-mobile:url('../img/dme-pos-services.webp');--hero-bg-desktop:url('../img/dme-pos-services.webp');--hero-bg-blur:1px }
-/* services/eligibility-benefits-verification.html */
+
 [data-css~="pmex-common"] .pmex-hero-eligibility-benefits-verification { --bh-hero-image:url('../img/eligibility-benefits-verification.webp') }
-/* specialties/emergency-medicine.html */
+
 [data-css~="pmex-common"] .pmex-hero-emergency-medicine { --hero-bg-mobile:url('../img/emergency-medicine.webp');--hero-bg-desktop:url('../img/emergency-medicine.webp');--specialty-hero-image:url('../img/emergency-medicine.webp') }
-/* specialties/endocrinology.html */
+
 [data-css~="pmex-common"] .pmex-hero-endocrinology { --hero-bg-mobile:url('../img/endocrinology.webp');--hero-bg-desktop:url('../img/endocrinology.webp');--specialty-hero-image:url('../img/endocrinology.webp') }
-/* specialties/family-medicine.html */
+
 [data-css~="pmex-common"] .pmex-hero-family-medicine { --hero-bg-mobile:url('../img/family-medicine-mobile.webp');--hero-bg-desktop:url('../img/family-medicine.webp');--hero-bg-blur:1px }
-/* specialties/fqhc-billing.html */
+
 [data-css~="pmex-common"] .pmex-hero-fqhc-billing { --hero-bg-mobile:url('../img/fqhcbilling.webp');--hero-bg-desktop:url('../img/fqhcbilling.webp');--specialty-hero-image:url('../img/fqhcbilling.webp') }
-/* specialties/gastroenterology.html */
+
 [data-css~="pmex-common"] .pmex-hero-gastroenterology { --hero-bg-mobile:url('../img/gastroenterology.webp');--hero-bg-desktop:url('../img/gastroenterology.webp');--specialty-hero-image:url('../img/gastroenterology.webp') }
-/* specialties/general-surgery.html */
+
 [data-css~="pmex-common"] .pmex-hero-general-surgery { --hero-bg-mobile:url('../img/general-surgery.webp');--hero-bg-desktop:url('../img/general-surgery.webp');--specialty-hero-image:url('../img/general-surgery.webp') }
-/* specialties/geriatric-medicine.html */
+
 [data-css~="pmex-common"] .pmex-hero-geriatric-medicine { --hero-bg-mobile:url('../img/geriatricmedicine.webp');--hero-bg-desktop:url('../img/geriatricmedicine.webp');--specialty-hero-image:url('../img/geriatricmedicine.webp') }
-/* specialties/gynecology.html */
+
 [data-css~="pmex-common"] .pmex-hero-womens-health { --hero-bg-mobile:url('../img/womens-health.webp');--hero-bg-desktop:url('../img/womens-health.webp');--specialty-hero-image:url('../img/womens-health.webp') }
 [data-css~="pmex-common"] .pmex-hero-gynecology { --hero-bg-mobile:url('../img/gynecology.webp');--hero-bg-desktop:url('../img/gynecology.webp');--specialty-hero-image:url('../img/gynecology.webp') }
-/* services/healthcare-digital-marketing.html */
+
 [data-css~="pmex-common"] .pmex-hero-healthcare-digital-marketing { --bh-hero-image:url('../img/healthcare-digital-marketing.webp') }
-/* services/healthcare-staff-augmentation.html */
+
 [data-css~="pmex-common"] .pmex-hero-healthcare-staff-augmentation { --bh-hero-image:url('../img/healthcare-staff-augmentation.webp') }
-/* specialties/hematology.html */
+
 [data-css~="pmex-common"] .pmex-hero-hematology { --hero-bg-mobile:url('../img/hematology.webp');--hero-bg-desktop:url('../img/hematology.webp');--specialty-hero-image:url('../img/hematology.webp') }
-/* specialties/hepatology.html */
+
 [data-css~="pmex-common"] .pmex-hero-hepatology { --hero-bg-mobile:url('../img/hepatology.webp');--hero-bg-desktop:url('../img/hepatology.webp');--specialty-hero-image:url('../img/hepatology.webp') }
-/* specialties/home-health-care.html */
+
 [data-css~="pmex-common"] .pmex-hero-home-health-care { --hero-bg-mobile:url('../img/home-health-care.webp');--hero-bg-desktop:url('../img/home-health-care.webp');--specialty-hero-image:url('../img/home-health-care.webp') }
-/* services/hospital-billing-services.html */
+
 [data-css~="pmex-common"] .pmex-hero-hospital-billing-services { --hero-bg-mobile:url('../img/hospital-billing-services.webp');--hero-bg-desktop:url('../img/hospital-billing-services.webp');--specialty-hero-image:url('../img/hospital-billing-services.webp') }
-/* services/hospital-rcm-consulting.html */
+
 [data-css~="pmex-common"] .pmex-hero-hospital-rcm-consulting { --bh-hero-image:url('../img/hospital-rcm-consulting.webp');--hero-bg-mobile:url('../img/hospital-rcm-consulting.webp');--hero-bg-desktop:url('../img/hospital-rcm-consulting.webp') }
-/* specialties/hospitalist-medicine.html */
+
 [data-css~="pmex-common"] .pmex-hero-hospitalist-medicine { --hero-bg-mobile:url('../img/hospitalist-medicine.webp');--hero-bg-desktop:url('../img/hospitalist-medicine.webp');--specialty-hero-image:url('../img/hospitalist-medicine.webp') }
-/* index.html */
+
 [data-css~="pmex-common"] .pmex-hero-index { --hero-bg-mobile:url('../img/index.webp');--hero-bg-desktop:url('../img/index.webp');--hero-bg-blur:1px }
-/* specialties/index.html */
+
 [data-css~="pmex-common"] .pmex-hero-index-1ae982 { --hero-bg-mobile:url('../img/allspecialities.webp');--hero-bg-desktop:url('../img/allspecialities.webp');--specialty-hero-image:url('../img/allspecialities.webp') }
-/* index.html */
-/* index.html */
-/* services/index.html */
+
 [data-css~="pmex-common"] .pmex-hero-index-b7743f { --bh-hero-image:url('../img/services.webp') }
-/* index.html */
-/* index.html */
-/* specialties/infectious-disease.html */
+
 [data-css~="pmex-common"] .pmex-hero-infectious-disease { --hero-bg-mobile:url('../img/infectiousdisease.webp');--hero-bg-desktop:url('../img/infectiousdisease.webp');--specialty-hero-image:url('../img/infectiousdisease.webp') }
-/* specialties/infusion-therapy.html */
+
 [data-css~="pmex-common"] .pmex-hero-infusion-therapy { --hero-bg-mobile:url('../img/infusion-therapy.webp');--hero-bg-desktop:url('../img/infusion-therapy.webp');--specialty-hero-image:url('../img/infusion-therapy.webp') }
-/* specialties/internal-medicine.html */
+
 [data-css~="pmex-common"] .pmex-hero-internal-medicine { --hero-bg-mobile:url('../img/internal-medicine.webp');--hero-bg-desktop:url('../img/internal-medicine.webp');--specialty-hero-image:url('../img/internal-medicine.webp') }
-/* specialties/laboratory-pathology.html */
+
 [data-css~="pmex-common"] .pmex-hero-laboratory-pathology { --hero-bg-mobile:url('../img/laboratory-pathology.webp');--hero-bg-desktop:url('../img/laboratory-pathology.webp');--specialty-hero-image:url('../img/laboratory-pathology.webp') }
-/* services/large-practices.html */
+
 [data-css~="pmex-common"] .pmex-hero-large-practices { --bh-hero-image:url('../img/large-practices.webp') }
-/* specialties/maternal-fetal-medicine.html */
+
 [data-css~="pmex-common"] .pmex-hero-maternal-fetal-medicine { --hero-bg-mobile:url('../img/maternal-fetal-medicine.webp');--hero-bg-desktop:url('../img/maternal-fetal-medicine.webp');--specialty-hero-image:url('../img/maternal-fetal-medicine.webp') }
-/* services/medical-appointment-scheduling.html */
+
 [data-css~="pmex-common"] .pmex-hero-medical-appointment-scheduling { --bh-hero-image:url('../img/medical-appointment-scheduling.webp') }
-/* services/medical-billing.html */
+
 [data-css~="pmex-common"] .pmex-hero-medical-billing { --bh-hero-image:url('../img/medical-billing.webp');--hero-bg-mobile:url('../img/medical-billing.webp');--hero-bg-desktop:url('../img/medical-billing.webp') }
-/* services/medical-billing-coding-audits.html */
+
 [data-css~="pmex-common"] .pmex-hero-medical-billing-coding-audits { --bh-hero-image:url('../img/medical-billing-coding-audits.webp') }
-/* services/medical-coding.html */
+
 [data-css~="pmex-common"] .pmex-hero-medical-coding { --bh-hero-image:url('../img/medical-coding.webp');--hero-bg-mobile:url('../img/medical-coding.webp');--hero-bg-desktop:url('../img/medical-coding.webp') }
-/* specialties/medical-toxicology.html */
+
 [data-css~="pmex-common"] .pmex-hero-medical-toxicology { --hero-bg-mobile:url('../img/medical-toxicology.webp');--hero-bg-desktop:url('../img/medical-toxicology.webp');--specialty-hero-image:url('../img/medical-toxicology.webp') }
-/* specialties/mental-health-billing.html */
+
 [data-css~="pmex-common"] .pmex-hero-mental-health-billing { --hero-bg-mobile:url('../img/mentalhealthbg.webp');--hero-bg-desktop:url('../img/mentalhealthbg.webp');--hero-bg-blur:1px }
-/* services/mips-quality-reporting.html */
+
 [data-css~="pmex-common"] .pmex-hero-mips-quality-reporting { --bh-hero-image:url('../img/mips-quality-reporting.webp') }
-/* services/mva-billing.html */
+
 [data-css~="pmex-common"] .pmex-hero-mva-billing { --bh-hero-image:url('../img/mva-billing.webp') }
-/* specialties/neonatology.html */
+
 [data-css~="pmex-common"] .pmex-hero-neonatology { --hero-bg-mobile:url('../img/neonatology.webp');--hero-bg-desktop:url('../img/neonatology.webp');--specialty-hero-image:url('../img/neonatology.webp') }
-/* specialties/nephrology.html */
+
 [data-css~="pmex-common"] .pmex-hero-nephrology { --hero-bg-mobile:url('../img/nephrology.webp');--hero-bg-desktop:url('../img/nephrology.webp');--specialty-hero-image:url('../img/nephrology.webp') }
-/* specialties/nephrology.html */
+
 [data-css~="pmex-common"] .pmex-hero-nephrology-dff83a { --k:5.60 }
-/* specialties/neurology.html */
+
 [data-css~="pmex-common"] .pmex-hero-neurology { --hero-bg-mobile:url('../img/neurology.webp');--hero-bg-desktop:url('../img/neurology.webp');--specialty-hero-image:url('../img/neurology.webp') }
-/* specialties/occupational-therapy.html */
+
 [data-css~="pmex-common"] .pmex-hero-occupational-therapy { --hero-bg-mobile:url('../img/occupational-therapy.webp');--hero-bg-desktop:url('../img/occupational-therapy.webp');--specialty-hero-image:url('../img/occupational-therapy.webp') }
-/* specialties/oncology.html */
+
 [data-css~="pmex-common"] .pmex-hero-oncology { --hero-bg-mobile:url('../img/oncology.webp');--hero-bg-desktop:url('../img/oncology.webp');--specialty-hero-image:url('../img/oncology.webp') }
-/* specialties/ophthalmology.html */
+
 [data-css~="pmex-common"] .pmex-hero-ophthalmology { --hero-bg-mobile:url('../img/ophthalmology.webp');--hero-bg-desktop:url('../img/ophthalmology.webp');--specialty-hero-image:url('../img/ophthalmology.webp') }
-/* specialties/optometry.html */
+
 [data-css~="pmex-common"] .pmex-hero-optometry { --hero-bg-mobile:url('../img/optometry.webp');--hero-bg-desktop:url('../img/optometry.webp');--specialty-hero-image:url('../img/optometry.webp') }
-/* specialties/oral-maxillofacial-surgery.html */
+
 [data-css~="pmex-common"] .pmex-hero-oral-maxillofacial-surgery { --hero-bg-mobile:url('../img/oral-maxillofacial-surgery.webp');--hero-bg-desktop:url('../img/oral-maxillofacial-surgery.webp');--specialty-hero-image:url('../img/oral-maxillofacial-surgery.webp') }
-/* specialties/orthopedic.html */
+
 [data-css~="pmex-common"] .pmex-hero-orthopedic { --hero-bg-mobile:url('../img/orthobgm.webp');--hero-bg-desktop:url('../img/orthobgm.webp');--hero-bg-blur:1px }
-/* specialties/osteopathic-medicine.html */
+
 [data-css~="pmex-common"] .pmex-hero-osteopathic-medicine { --hero-bg-mobile:url('../img/osteopathicmedicine.webp');--hero-bg-desktop:url('../img/osteopathicmedicine.webp');--specialty-hero-image:url('../img/osteopathicmedicine.webp') }
-/* specialties/otolaryngology-ent.html */
+
 [data-css~="pmex-common"] .pmex-hero-otolaryngology-ent { --hero-bg-mobile:url('../img/otolaryngology-ent.webp');--hero-bg-desktop:url('../img/otolaryngology-ent.webp');--specialty-hero-image:url('../img/otolaryngology-ent.webp') }
-/* specialties/pain-management.html */
+
 [data-css~="pmex-common"] .pmex-hero-pain-management { --hero-bg-mobile:url('../img/pain-management.webp');--hero-bg-desktop:url('../img/pain-management.webp');--specialty-hero-image:url('../img/pain-management.webp') }
-/* services/patient-billing.html */
+
 [data-css~="pmex-common"] .pmex-hero-patient-billing { --bh-hero-image:url('../img/patient-billing.webp') }
-/* services/payer-contract-negotiation.html */
+
 [data-css~="pmex-common"] .pmex-hero-payer-contract-negotiation { --bh-hero-image:url('../img/payer-contract-negotiation.webp') }
-/* services/payment-posting.html */
+
 [data-css~="pmex-common"] .pmex-hero-payment-posting { --bh-hero-image:url('../img/payment-posting.webp');--hero-bg-mobile:url('../img/payment-posting.webp');--hero-bg-desktop:url('../img/payment-posting.webp') }
-/* specialties/pediatrics.html */
+
 [data-css~="pmex-common"] .pmex-hero-pediatrics { --hero-bg-mobile:url('../img/pediatrics.webp');--hero-bg-desktop:url('../img/pediatrics.webp');--specialty-hero-image:url('../img/pediatrics.webp') }
-/* services/personal-injury-billing.html */
+
 [data-css~="pmex-common"] .pmex-hero-personal-injury-billing { --bh-hero-image:url('../img/personal-injury-billing.webp') }
-/* specialties/physical-therapy.html */
+
 [data-css~="pmex-common"] .pmex-hero-physical-therapy { --hero-bg-mobile:url('../img/heroptm.webp');--hero-bg-desktop:url('../img/heropt.webp') }
-/* services/physician-billing-services.html */
+
 [data-css~="pmex-common"] .pmex-hero-physician-billing-services { --bh-hero-image:url('../img/physician-billing-services.webp') }
-/* services/pip-no-fault-billing.html */
+
 [data-css~="pmex-common"] .pmex-hero-pip-no-fault-billing { --bh-hero-image:url('../img/pip-no-fault-billing.webp') }
-/* specialties/plastic-surgery.html */
+
 [data-css~="pmex-common"] .pmex-hero-plastic-surgery { --hero-bg-mobile:url('../img/plastic-surgery.webp');--hero-bg-desktop:url('../img/plastic-surgery.webp');--specialty-hero-image:url('../img/plastic-surgery.webp') }
-/* specialties/podiatry.html */
+
 [data-css~="pmex-common"] .pmex-hero-podiatry { --hero-bg-mobile:url('../img/podiatry.webp');--hero-bg-desktop:url('../img/podiatry.webp');--specialty-hero-image:url('../img/podiatry.webp') }
-/* company/pricing.html */
+
 [data-css~="pmex-common"] .pmex-hero-pricing { --bh-hero-image:url('../img/pricing.webp') }
-/* services/prior-authorization.html */
+
 [data-css~="pmex-common"] .pmex-hero-prior-authorization { --bh-hero-image:url('../img/prior-authorization.webp') }
-/* services/provider-credentialing.html */
+
 [data-css~="pmex-common"] .pmex-hero-provider-credentialing { --bh-hero-image:url('../img/provider-credentialing.webp') }
-/* specialties/psychiatry.html */
+
 [data-css~="pmex-common"] .pmex-hero-psychiatry { --hero-bg-mobile:url('../img/psychiatry.webp');--hero-bg-desktop:url('../img/psychiatry.webp');--specialty-hero-image:url('../img/psychiatry.webp') }
-/* specialties/pulmonology.html */
+
 [data-css~="pmex-common"] .pmex-hero-pulmonology { --hero-bg-mobile:url('../img/pulmonology.webp');--hero-bg-desktop:url('../img/pulmonology.webp');--specialty-hero-image:url('../img/pulmonology.webp') }
-/* specialties/radiology.html */
+
 [data-css~="pmex-common"] .pmex-hero-radiology { --hero-bg-mobile:url('../img/radiology.webp');--hero-bg-desktop:url('../img/radiology.webp');--specialty-hero-image:url('../img/radiology.webp') }
-/* specialties/rehabilitation.html */
+
 [data-css~="pmex-common"] .pmex-hero-rehabilitation { --hero-bg-mobile:url('../img/rehabilitation.webp');--hero-bg-desktop:url('../img/rehabilitation.webp');--specialty-hero-image:url('../img/rehabilitation.webp') }
-/* services/remote-patient-monitoring.html */
+
 [data-css~="pmex-common"] .pmex-hero-remote-patient-monitoring { --bh-hero-image:url('../img/remote-patient-monitoring.webp') }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-hero-resources { --bh-hero-image:url('../img/resources.webp') }
-/* services/revenue-analytics.html */
+
 [data-css~="pmex-common"] .pmex-hero-revenue-analytics { --bh-hero-image:url('../img/revenue-analytics.webp');--hero-bg-mobile:url('../img/revenue-analytics.webp');--hero-bg-desktop:url('../img/revenue-analytics.webp') }
-/* services/revenue-cycle-management.html */
+
 [data-css~="pmex-common"] .pmex-hero-revenue-cycle-management { --bh-hero-image:url('../img/revenue-cycle-management.webp');--hero-bg-mobile:url('../img/revenue-cycle-management.webp');--hero-bg-desktop:url('../img/revenue-cycle-management.webp') }
-/* specialties/rheumatology.html */
+
 [data-css~="pmex-common"] .pmex-hero-rheumatology { --hero-bg-mobile:url('../img/rheumatology.webp');--hero-bg-desktop:url('../img/rheumatology.webp');--specialty-hero-image:url('../img/rheumatology.webp') }
-/* 2 pages */
+
 [data-css~="pmex-common"] .pmex-hero-shared-444ace { --k:3.20 }
-/* 2 pages */
+
 [data-css~="pmex-common"] .pmex-hero-shared-583ef4 { --k:4.00 }
-/* 2 pages */
+
 [data-css~="pmex-common"] .pmex-hero-shared-81a1c8 { --k:6.40 }
-/* 2 pages */
+
 [data-css~="pmex-common"] .pmex-hero-shared-98ed1d { --k:4.80 }
-/* specialties/sleep-medicine.html */
+
 [data-css~="pmex-common"] .pmex-hero-sleep-medicine { --hero-bg-mobile:url('../img/sleep-medicine.webp');--hero-bg-desktop:url('../img/sleep-medicine.webp');--specialty-hero-image:url('../img/sleep-medicine.webp') }
-/* services/small-practices.html */
+
 [data-css~="pmex-common"] .pmex-hero-small-practices { --bh-hero-image:url('../img/small-practices.webp') }
-/* specialties/snf-long-term-care.html */
+
 [data-css~="pmex-common"] .pmex-hero-snf-long-term-care { --hero-bg-mobile:url('../img/snf-long-term-care.webp');--hero-bg-desktop:url('../img/snf-long-term-care.webp');--specialty-hero-image:url('../img/snf-long-term-care.webp') }
-/* specialties/speech-therapy.html */
+
 [data-css~="pmex-common"] .pmex-hero-speech-therapy { --hero-bg-mobile:url('../img/speech-therapy.webp');--hero-bg-desktop:url('../img/speech-therapy.webp');--specialty-hero-image:url('../img/speech-therapy.webp') }
-/* specialties/sports-medicine.html */
+
 [data-css~="pmex-common"] .pmex-hero-sports-medicine { --hero-bg-mobile:url('../img/sports-medicine.webp');--hero-bg-desktop:url('../img/sports-medicine.webp');--specialty-hero-image:url('../img/sports-medicine.webp') }
-/* specialties/telehealth.html */
+
 [data-css~="pmex-common"] .pmex-hero-telehealth { --hero-bg-mobile:url('../img/telehealth.webp');--hero-bg-desktop:url('../img/telehealth.webp');--specialty-hero-image:url('../img/telehealth.webp') }
-/* company/testimonials.html */
+
 [data-css~="pmex-common"] .pmex-hero-testimonials { --bh-hero-image:url('../img/testimonials.webp') }
-/* specialties/thoracic-surgery.html */
+
 [data-css~="pmex-common"] .pmex-hero-thoracic-surgery { --hero-bg-mobile:url('../img/thoracic-surgery.webp');--hero-bg-desktop:url('../img/thoracic-surgery.webp');--specialty-hero-image:url('../img/thoracic-surgery.webp') }
-/* specialties/trauma-surgery.html */
+
 [data-css~="pmex-common"] .pmex-hero-trauma-surgery { --hero-bg-mobile:url('../img/trauma-surgery.webp');--hero-bg-desktop:url('../img/trauma-surgery.webp');--specialty-hero-image:url('../img/trauma-surgery.webp') }
-/* specialties/urgent-care.html */
+
 [data-css~="pmex-common"] .pmex-hero-urgent-care { --hero-bg-mobile:url('../img/urgentcare.webp');--hero-bg-desktop:url('../img/urgentcare.webp');--specialty-hero-image:url('../img/urgentcare.webp') }
-/* specialties/urology.html */
+
 [data-css~="pmex-common"] .pmex-hero-urology { --hero-bg-mobile:url('../img/urology.webp');--hero-bg-desktop:url('../img/urology.webp');--specialty-hero-image:url('../img/urology.webp') }
-/* specialties/vascular-vein-care.html */
+
 [data-css~="pmex-common"] .pmex-hero-vascular-vein-care { --hero-bg-mobile:url('../img/vascular-vein-care.webp');--hero-bg-desktop:url('../img/vascular-vein-care.webp');--specialty-hero-image:url('../img/vascular-vein-care.webp') }
-/* services/virtual-medical-front-desk.html */
+
 [data-css~="pmex-common"] .pmex-hero-virtual-medical-front-desk { --bh-hero-image:url('../img/virtual-medical-front-desk.webp') }
-/* services/workers-comp-billing.html */
+
 [data-css~="pmex-common"] .pmex-hero-workers-comp-billing { --bh-hero-image:url('../img/workers-comp-billing.webp') }
-/* specialties/wound-care.html */
+
 [data-css~="pmex-common"] .pmex-hero-wound-care { --hero-bg-mobile:url('../img/wound-care.webp');--hero-bg-desktop:url('../img/wound-care.webp');--specialty-hero-image:url('../img/wound-care.webp') }
-/* index.html */
-/* 2 pages */
+
 [data-css~="pmex-common"] .pmex-st-05720c { background:linear-gradient(135deg in srgb,var(--c-FFFFFF),var(--c-EEF0E8)) }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-058833 { flex:1;min-width:260px;max-width:480px }
-/* index.html */
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-0d5e3a { font-size:24px;font-weight:700;color:var(--navy);margin:0 }
-/* specialties/cardiology.html */
+
 [data-css~="pmex-common"] .pmex-st-1164e6 { width:62% }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-1182df { flex:1;min-width:260px;max-width:520px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-13918e { display:flex;flex-direction:column;gap:9px }
-/* services/outsource-medical-billing-services.html */
+
 [data-css~="pmex-common"] .pmex-st-16000c { width:100% }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-16f1d5 { display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-18a2e5 { position:absolute;inset:0;background-image:linear-gradient(in srgb, var(--c-AAD39C-a4) 1px,var(--c-000000-a0) 1px),linear-gradient(90deg in srgb,var(--c-AAD39C-a4) 1px,var(--c-000000-a0) 1px);background-size:64px 64px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-18ca3c { flex:1;background:var(--c-FFFFFF-a10);border-radius:4px;height:6px;overflow:hidden }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-19d98b { background:var(--bg);border-left:4px solid var(--navy);border-radius:0 12px 12px 0;padding:20px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-1f0593 { font-size:clamp(22px,3vw,32px);font-weight:300;color:var(--navy);margin-bottom:16px;line-height:1.25 }
-/* company/resources.html */
-/* 12 pages */
+
 [data-css~="pmex-common"] .pmex-st-256bf8 { background:linear-gradient(135deg in srgb,var(--c-EEF0E8),var(--c-EEF0E8)) }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-25f6fb { background:var(--w);border:1px solid var(--border);border-radius:16px;padding:24px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-26f668 { max-width:600px;margin:0 auto }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-27098d { font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-278f23 { max-width:1260px;margin:0 auto;padding-inline:20px!important }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-28add9 { text-align:center;margin-bottom:44px }
-/* specialties/cardiology.html */
+
 [data-css~="pmex-common"] .pmex-st-2931fc { width:11% }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-2c8614 { font-size:12px;color:var(--navy);text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-3137af { font-size:15px;font-weight:600;color:var(--navy);margin-bottom:8px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-327eea { font-weight:800 }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-34ed8a { font-size:15px;font-weight:600;color:var(--navy);margin:0 }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-3b9c65 { background:var(--bg);color:var(--navy);border:1px solid var(--bg);padding:8px 20px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-3d00a8 { font-size:clamp(22px,3vw,32px);font-weight:300;color:var(--navy) }
-/* specialties/cardiology.html */
+
 [data-css~="pmex-common"] .pmex-st-430346 { width:82% }
-/* company/resources.html */
-/* company/resources.html */
-/* company/customers.html */
+
 [data-css~="pmex-common"] .pmex-st-46b44d { width:72% }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-46e3a3 { font-size:12px;color:var(--body);line-height:1.55;margin:0 }
-/* company/customers.html */
+
 [data-css~="pmex-common"] .pmex-st-55b2e1 { width:18% }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-56747b { font-size:12px;color:var(--body);line-height:1.6 }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-573bc8 { font-size:12px;color:var(--body);line-height:1.5;flex:1 }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-578b01 { background:var(--w);border:1px solid var(--border);border-radius:20px;padding:28px;text-decoration:none;display:flex;flex-direction:column;gap:12px }
-/* index.html */
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-57a758 { font-size:12px;color:var(--navy);background:var(--c-AAD39C-a15);padding:3px 10px;border-radius:20px }
-/* services/outsource-medical-billing-services.html */
+
 [data-css~="pmex-common"] .pmex-st-592d42 { --bh-hero-image:url("../img/outsource-medical-billing-services.webp") }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-5b39fa { font-size:14px;color:var(--body);line-height:1.65 }
-/* specialties/physical-therapy.html */
+
 [data-css~="pmex-common"] .pmex-st-5c7ea8 { background:var(--c-F6F4EE) }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-5d379a { font-size:14px;font-weight:600;color:var(--navy);line-height:1.4;margin:0 0 10px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-5db3cc { font-size:13px;color:var(--body);line-height:1.55;margin:0 }
-/* index.html */
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-5eda04 { display:flex;justify-content:space-between;align-items:center;margin-bottom:18px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-60bcc6 { padding:72px 24px;background:var(--bg);border-bottom:1px solid var(--border) }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-63b5d5 { background:var(--c-FFFFFF-a4);border-radius:10px;padding:14px }
-/* index.html */
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-64a305 { max-width:1260px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start }
-/* services/outsource-medical-billing-services.html */
+
 [data-css~="pmex-common"] .pmex-st-65a11f { width:95% }
-/* index.html */
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-68772b { display:flex;flex-wrap:wrap;gap:12px }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-6bba47 { font-size:clamp(24px,3vw,36px);font-weight:300;color:var(--navy);margin-bottom:12px }
-/* specialties/internal-medicine.html */
+
 [data-css~="pmex-common"] .pmex-st-6bbafa { width:11% }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-6cf7f4 { display:flex;flex-direction:column;background:var(--w);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;transition:all .2s }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-6dc845 { padding:72px 24px;background:var(--bg);border-top:1px solid var(--border);text-align:center }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-6e9a10 { font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-6ec987 { padding:56px 24px 72px!important }
-/* specialties/cardiology.html */
+
 [data-css~="pmex-common"] .pmex-st-71753b { box-shadow:0 16px 36px -6px var(--c-000000-a20) }
-/* specialties/cardiology.html */
+
 [data-css~="pmex-common"] .pmex-st-722ece { box-shadow:0 12px 30px var(--c-000000-a14) }
-/* 2 pages */
+
 [data-css~="pmex-common"] .pmex-st-758a88 { font-weight:700 }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-792fd0 { font-size:12px;color:var(--navy);width:32px;text-align:right;flex-shrink:0 }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-7941e4 { display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-7ec42a { font-size:15px;font-weight:600;color:var(--navy);line-height:1.35 }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-814f22 { display:inline-block;background:var(--bg);color:var(--navy);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:3px 10px;border-radius:20px;margin-bottom:12px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-84f442 { font-size:clamp(24px,3.5vw,40px);font-weight:300;color:var(--navy);line-height:1.15;margin-bottom:16px }
-/* 2 pages */
+
 [data-css~="pmex-common"] .pmex-st-883469 { background:linear-gradient(135deg in srgb,var(--c-EEF0E8),var(--c-FFFFFF)) }
-/* services/dme-pos-services.html */
+
 [data-css~="pmex-common"] .pmex-st-8b5cbd { background:var(--c-F8FBF0);min-height:auto }
-/* company/resources.html */
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-8ce60e { font-size:12px;color:var(--c-FFFFFF-a50);width:70px;flex-shrink:0 }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-8d2724 { font-size:clamp(22px,3vw,34px);font-weight:300;color:var(--navy);line-height:1.2 }
-/* company/customers.html */
+
 [data-css~="pmex-common"] .pmex-st-8db500 { width:7% }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-926b6c { background:var(--c-FFFFFF-a7);border-radius:10px;padding:12px;text-align:center }
-/* index.html */
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-976071 { display:inline-block;background:var(--bg);color:var(--navy);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:3px 10px;border-radius:20px;width:fit-content }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-986a4d { font-size:14px;color:var(--body);margin-bottom:28px;line-height:1.6 }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-9b28b7 { padding:72px 24px;background:var(--bg);position:relative;overflow:hidden }
-/* company/customers.html */
+
 [data-css~="pmex-common"] .pmex-st-9d7e14 { width:3% }
-/* services/outsource-medical-billing-services.html */
+
 [data-css~="pmex-common"] .pmex-st-9e2b4e { width:80% }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-9ee1c9 { background:var(--border);height:6px;border-radius:4px;width:0% }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-9eeaf0 { text-align:center;padding:28px 20px;border:1px solid var(--border);border-radius:16px }
-/* index.html */
-/* company/login.html */
+
 [data-css~="pmex-common"] .pmex-st-a36b9b { box-shadow:0 6px 16px var(--c-7BA175-a35), 0 2px 4px var(--c-000000-a8), inset 0 1px 0 var(--c-FFFFFF-a35), inset 0 -2px 4px var(--c-000000-a8) }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-a3bd20 { font-size:14px;color:var(--c-FFFFFF-a70);line-height:1.65;margin-bottom:24px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-a42851 { font-weight:800;color:var(--navy) }
-/* specialties/internal-medicine.html */
+
 [data-css~="pmex-common"] .pmex-st-a7b988 { width:2% }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-a8c777 { display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-aa1b13 { font-size:clamp(22px,3vw,34px);font-weight:300;color:var(--navy);margin-bottom:12px }
-/* specialties/physical-therapy.html */
+
 [data-css~="pmex-common"] .pmex-st-aa7091 { overflow-x:clip }
-/* specialties/internal-medicine.html */
+
 [data-css~="pmex-common"] .pmex-st-b0655a { width:87% }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-b0c1aa { background:var(--c-3F9A4B-a20);border-radius:10px;padding:12px;text-align:center }
-/* company/resources.html */
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-b6cbb3 { display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:18px }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-b6d9e3 { font-size:14px;color:var(--body);margin-bottom:28px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-b8b87e { background:var(--c-EF4444);height:6px;border-radius:4px;width:0% }
-/* company/resources.html */
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-bded4a { background:var(--c-F59E0B);height:6px;border-radius:4px;width:0% }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-bfba80 { flex:1;min-width:260px;max-width:440px;background:var(--c-FFFFFF-a6);border:1px solid var(--c-AAD39C-a20);border-radius:18px;padding:24px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-c04d30 { max-width:1260px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:center }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-c25e80 { max-width:1260px;margin:0 auto;position:relative;display:flex;flex-wrap:wrap;gap:48px;align-items:center;justify-content:space-between }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-c2f1ba { font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-c3c635 { width:100%;height:140px;object-fit:cover;border-radius:12px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-c47a28 { background:var(--navy);height:6px;border-radius:4px;width:0% }
-/* services/outsource-medical-billing-services.html */
+
 [data-css~="pmex-common"] .pmex-st-c58480 { width:98% }
-/* services/outsource-medical-billing-services.html */
+
 [data-css~="pmex-common"] .pmex-st-c6530c { background:var(--c-F8FBF0)!important }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-c88ced { flex:1;min-width:280px;max-width:600px }
-/* specialties/cardiology.html */
+
 [data-css~="pmex-common"] .pmex-st-cccbc5 { width:89% }
-/* index.html */
+
 [data-css~="pmex-common"] .pmex-st-d04cb5 { outline:1px solid var(--c-AAD39C-a60);outline-offset:-1px }
-/* services/dme-pos-services.html */
+
 [data-css~="pmex-common"] .pmex-st-d2abbd { background:var(--c-2A3828);color:var(--c-C6CAC5);font-size:11px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;padding:4px 12px;border-radius:9999px;display:inline-block;margin-bottom:1.25rem }
-/* index.html */
-/* specialties/cardiology.html */
+
 [data-css~="pmex-common"] .pmex-st-d83024 { box-shadow:0 20px 45px -8px var(--c-000000-a22)!important }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-dc005b { flex:1;min-width:260px;display:flex;flex-direction:column;gap:16px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-e1a0ce { font-size:14px;color:var(--body);line-height:1.65;margin-bottom:16px }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-e6612c { padding:64px 24px!important;background:var(--bg);border-top:1px solid var(--border)!important;border-bottom:1px solid var(--border)!important }
-/* specialties/cardiology.html */
+
 [data-css~="pmex-common"] .pmex-st-e6743a { width:2% }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-ecbbfd { display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-edb6a3 { padding:72px 24px;background:var(--w);border-bottom:1px solid var(--border) }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-f38120 { background:var(--w);color:var(--navy);border:1px solid var(--border);padding:8px 20px;border-radius:20px;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit }
-/* services/dme-pos-services.html */
+
 [data-css~="pmex-common"] .pmex-st-f38a1e { background:var(--c-F4F5F3) }
-/* specialties/cardiology.html */
+
 [data-css~="pmex-common"] .pmex-st-f44f0d { box-shadow:0 16px 36px -6px var(--c-000000-a8) }
-/* company/about.html */
+
 [data-css~="pmex-common"] .pmex-st-f60023 { display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--navy);margin-bottom:24px }
-/* 2 pages */
+
 [data-css~="pmex-common"] .pmex-st-f62c81 { text-align:center;margin-bottom:48px }
-/* 2 pages */
+
 [data-css~="pmex-common"] .pmex-st-f70079 { display:flex;flex-wrap:wrap;justify-content:center;gap:12px }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-f8343c { display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;padding-bottom:0 }
-/* company/resources.html */
+
 [data-css~="pmex-common"] .pmex-st-f8c380 { max-width:760px!important;margin:0 auto!important;text-align:center }
-/* 2 pages */
+
 [data-css~="pmex-common"] .pmex-st-fb55c6 { background:var(--c-EEF0E8) }
-/* services/dme-pos-services.html */
+
 [data-css~="pmex-common"] .pmex-st-fe64cc { background:linear-gradient(to right in srgb, var(--c-D2D6DF), var(--c-F5F7F2)) }
-/* specialties/cardiology.html */
+
 [data-css~="pmex-common"] .pmex-st-fee18f { width:5% }
 @layer pmex-inline {
-  /* index.html */
+
   [data-css~="pmex-common"] .pmex-st-eed732 { display:flex!important;width:100%!important;max-width:none!important;border-radius:8px!important;box-sizing:border-box }
 }
 /* ===== home page hero: floating cards  [data-css~="pmex-common"] ===== */
@@ -10968,7 +10934,7 @@ html[data-css~="inline-19ba2ad1"] body a.pmex-cta-phone svg {
 @media(prefers-reduced-motion:reduce) {
   [data-css~="pmex-common"] .pmex-hero-card { animation:none }
 }
-/* blog detail pages */
+
 [data-css~="company-bh"] #main-content.company-bh .bl-note { background:var(--grad-callout) }
 [data-css~="pmex-common"] .mb-trust { list-style:none;display:flex;flex-wrap:wrap;gap:8px 32px;font-size:12px }
 [data-css~="pmex-platform"] .mb-trust { list-style:none;display:flex;flex-wrap:wrap;gap:8px 32px;font-size:12px }
@@ -11004,7 +10970,7 @@ html body h1 .usa-text,
   [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-side { padding-top:36px }
   [data-css~="services-mega"] #homepage-reference-nav #homepage-services-panel .svc-mega-main { padding-top:44px;min-height:540px }
 }
-/* logo font */
+
 .logo-font { display:inline-block;height:1.1em;width:3.19em;vertical-align:-.33em;background:url('../img/logo/pmex-wordmark.svg') no-repeat center/contain }
 /* same wordmark with the x tip in the letter grey (for use on green buttons) */
 /* cta-primary-btn on the scroll-reveal pills keeps their fade/slide transition */
@@ -11126,7 +11092,7 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
   [data-css~="home-responsive"] .pmex-hero-content { max-width: min(460px, 60vw); }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  
+
   [data-css~="home-responsive"] [data-pmex-lifecycle] #normal-content { grid-template-columns: minmax(0, 1fr) minmax(180px, 0.75fr); gap: 14px; }
 }
 /* Hero background from 640px: plain white fade over the photo (no green glow), a little wider so the copy never sits on the image. */
@@ -11648,7 +11614,7 @@ html[data-css~="home-responsive"] body section#pmex-faq aside[data-faq-reveal] a
 }
 [data-css~="booking-modal"] .bk-close { position:absolute; top:16px; right:16px; z-index:3; width:40px; height:40px; display:flex; align-items:center; justify-content:center; border:0; border-radius:999px; background:var(--c-F4F5F3); color:var(--c-505050); transition:background-color .2s ease; }
 [data-css~="booking-modal"] .bk-close:hover { background:var(--c-E0E0DA); }
-/* summary panel */
+
 [data-css~="booking-modal"] .bk-aside { display:flex; flex-direction:column; gap:16px; padding:28px 24px; background:linear-gradient(180deg, var(--c-F8FBF0) 0%, var(--c-FFFFFF) 100%); border-bottom:1px solid var(--c-E0E0DA); }
 @media (min-width:900px) {
   [data-css~="booking-modal"] .bk-aside { padding:36px 32px; border-bottom:0; border-right:1px solid var(--c-E0E0DA); }
@@ -11663,7 +11629,7 @@ html[data-css~="home-responsive"] body section#pmex-faq aside[data-faq-reveal] a
 [data-css~="booking-modal"] .bk-meta-picked { padding-top:16px; border-top:1px solid var(--c-E0E0DA); }
 [data-css~="booking-modal"] .bk-meta-picked li { color:var(--c-505050); font-weight:600; }
 [data-css~="booking-modal"] .bk-meta-picked:is(.hidden, .u-hidden) { display:none; }
-/* steps */
+
 [data-css~="booking-modal"] .bk-step:is(.hidden, .u-hidden) { display:none; }
 [data-css~="booking-modal"] .bk-step-cal { display:flex; flex-direction:column; gap:24px; padding:28px 24px; min-width:0; }
 @media (min-width:900px) {
@@ -11676,7 +11642,7 @@ html[data-css~="home-responsive"] body section#pmex-faq aside[data-faq-reveal] a
   [data-css~="booking-modal"] .bk-step-slots > .bk-step-cal { padding:36px 32px 36px 40px; }
 }
 [data-css~="booking-modal"] .bk-title { padding-right:48px; font-size:22px; font-weight:600; line-height:1.3; color:var(--c-505050); }
-/* calendar */
+
 [data-css~="booking-modal"] .bk-cal { display:flex; flex-direction:column; gap:20px; }
 [data-css~="booking-modal"] .bk-month { display:flex; align-items:center; justify-content:space-between; gap:12px; }
 [data-css~="booking-modal"] .bk-month-label { font-size:16px; font-weight:600; color:var(--c-505050); }
@@ -11691,14 +11657,14 @@ html[data-css~="home-responsive"] body section#pmex-faq aside[data-faq-reveal] a
 [data-css~="booking-modal"] .bk-day.is-past { background:transparent; color:var(--c-C4C4BC); font-weight:400; cursor:not-allowed; }
 [data-css~="booking-modal"] .bk-day.is-today::after { content:""; position:absolute; bottom:6px; left:50%; width:4px; height:4px; margin-left:-2px; border-radius:999px; background:currentColor; }
 [data-css~="booking-modal"] .bk-day-empty { display:block; }
-/* time zone row */
+
 [data-css~="booking-modal"] .bk-tz { margin-top:auto; padding-top:20px; border-top:1px solid var(--c-E0E0DA); }
 [data-css~="booking-modal"] .bk-tz-label { margin-bottom:6px !important; font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--c-505050); }
 [data-css~="booking-modal"] .bk-tz-btn { display:inline-flex; align-items:center; gap:8px; max-width:100%; padding:8px 10px; margin-left:-10px; border:0; border-radius:10px; background:transparent; color:var(--c-505050); font-size:14px; font-weight:500; transition:background-color .2s ease; }
 [data-css~="booking-modal"] .bk-tz-btn:hover { background:var(--c-F4F5F3); }
 [data-css~="booking-modal"] .bk-tz-btn svg { flex:0 0 auto; color:var(--c-3F9A4B); }
 [data-css~="booking-modal"] .bk-tz-btn .tz-trigger-text { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-/* time slots */
+
 [data-css~="booking-modal"] .bk-slots { display:flex; flex-direction:column; gap:16px; min-width:0; padding:24px; border-top:1px solid var(--c-E0E0DA); }
 @media (min-width:900px) {
   [data-css~="booking-modal"] .bk-slots { padding:88px 28px 36px; border-top:0; border-left:1px solid var(--c-E0E0DA); }
@@ -11721,7 +11687,7 @@ html[data-css~="home-responsive"] body section#pmex-faq aside[data-faq-reveal] a
 @media (min-width:900px) {
   [data-css~="booking-modal"] .bk-slot-pair { grid-column:auto; }
 }
-/* time zone menu */
+
 [data-css~="booking-modal"] .bk-tz-menu { position:absolute; z-index:5; left:24px; right:24px; bottom:24px; padding:12px; border:1px solid var(--c-E0E0DA); border-radius:16px; background:var(--c-FFFFFF); box-shadow:0 20px 50px var(--c-000000-a20); font-size:13px; }
 @media (min-width:900px) {
   [data-css~="booking-modal"] .bk-tz-menu { left:320px; right:auto; bottom:96px; width:360px; }
@@ -11744,7 +11710,7 @@ html[data-css~="home-responsive"] body section#pmex-faq aside[data-faq-reveal] a
 [data-css~="booking-modal"] .bk-tz-item.is-selected { background:var(--c-EEF5EB); color:var(--c-2E4A25); font-weight:600; }
 [data-css~="booking-modal"] .bk-tz-time { flex:0 0 auto; color:var(--c-959085); font-weight:400; }
 [data-css~="booking-modal"] .bk-tz-empty { padding:16px 0 !important; text-align:center; color:var(--c-959085); }
-/* details form */
+
 [data-css~="booking-modal"] .bk-step-form:not(:is(.hidden, .u-hidden)) { display:flex; flex-direction:column; gap:24px; padding:28px 24px; }
 @media (min-width:900px) {
   [data-css~="booking-modal"] .bk-step-form:not(:is(.hidden, .u-hidden)) { padding:36px 40px; }
@@ -12025,8 +11991,7 @@ html[data-css~="home-responsive"] body section#pmex-faq aside[data-faq-reveal] a
   [data-css~="site-footer"] .pf-talk-actions { grid-template-columns:minmax(0,1fr); }
 }
 [data-css~="site-footer"] .pf-talk-btn span { white-space:nowrap; }
-/* link columns */
-/* legal bar */
+
 [data-css~="site-footer"] .pf-bottom { display:flex; flex-direction:column-reverse; align-items:center; gap:14px; margin-top:40px; padding:22px 0 28px; border-top:1px solid var(--c-AAD39C); }
 @media (min-width:768px) {
   [data-css~="site-footer"] .pf-bottom { flex-direction:row; justify-content:space-between; }
@@ -12105,9 +12070,9 @@ html[data-css~="site-footer"] body footer.pmex-footer .pf-talk-btn span { color:
   .t-caps { text-transform: uppercase; letter-spacing: 0.06em; }
   .ls-wide { letter-spacing: 0.05em; }
   .ls-tight { letter-spacing: -0.025em; }
-  
+
   .ta-center { text-align: center; }
-  
+
   .d-block { display: block; }
 
   /* ---- Spacing steps: 2xs 2px, xs 4px, sm 8px, md 12px, lg 16px, xl 24px, 2xl 32px ---- */
@@ -12132,14 +12097,14 @@ html[data-css~="site-footer"] body footer.pmex-footer .pf-talk-btn span { color:
   .row-top { display: flex; align-items: flex-start; }
   .row-stretch { display: flex; }
   .stack { display: flex; flex-direction: column; }
-  
+
   .between { justify-content: space-between; }
   .fluid { flex: 1 1 0%; min-width: 0; }
-  
+
   .gap-sm { gap: 0.5rem; }
   .gap-md { gap: 0.75rem; }
   .gap-lg { gap: 1rem; }
-  
+
   .grid-3 { display: grid; grid-template-columns: minmax(0, 1fr); }
   @media (min-width: 640px) { .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (min-width: 1024px) { .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
