@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-css="site-buttons reference-typography style specialty-site-palette specialty-homepage-layout site-motion-3 site-faq-accordion-4 imported-services injury-billing-bh navbar-d90c332f inline-a8164582 services-mega pmex-common layout booking-modal site-footer">
+<html lang="en" data-css="site-buttons reference-typography tailwind style specialty-site-palette specialty-homepage-layout site-motion site-faq imported-services injury-billing-bh navbar-d90c332f inline-a8164582 services-mega pmex-common layout booking-modal site-footer">
 <head>
 <link rel="stylesheet" href="/css/root.css"/>
 
@@ -24,7 +24,7 @@
     <div data-hero-layout class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
       <div data-hero-copy class="max-w-[600px]">
         <p class="bh-eyebrow">Care Management · Chronic Care Management</p>
-        <h1 class="bh-hero-title">Care Coordination, <span class="text-[var(--c-E85D3F)]">Finally a Billable Program.</span></h1>
+        <h1 class="bh-hero-title">Care Coordination, <span class="t-orange">Finally a Billable Program.</span></h1>
         <p class="bh-hero-para">PMEX identifies eligible patients, builds and maintains comprehensive care plans, tracks monthly time against the CPT requirement, and documents everything to CMS standards, turning existing coordination work into a sustainable program.</p>
         <div class="flex flex-wrap gap-3 mb-8">
           <a href="#audit-form" class="cta-primary-btn">Talk to a CCM Specialist</a>
@@ -46,12 +46,12 @@
 <!-- ===== HERO ===== -->
 
 <section class="pmex-section specialty-hero-support"><div class="specialty-support-inner"><div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-6 sm:p-7 shadow-xl w-full max-w-[360px] shrink-0">
-        <p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-3F9A4B)] mb-1">Free CCM Consultation</p>
-        <p class="text-[13px] text-[var(--c-676767)] mb-5">See how many patients in your panel could be eligible today. No obligation, no cost.</p>
-        <form id="audit-form" class="space-y-3" onsubmit="return false;">
-          <input type="text" placeholder="Practice Name" class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)]"/>
-          <input type="email" placeholder="Email Address" class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)]"/>
-          <input type="tel" placeholder="Phone Number" class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)]"/>
+        <p class="t-xs fw-bold t-caps t-accent mb-xs">Free CCM Consultation</p>
+        <p class="t-base t-muted mb-lg">See how many patients in your panel could be eligible today. No obligation, no cost.</p>
+        <form id="audit-form" class="stack gap-md" onsubmit="return false;">
+          <input type="text" placeholder="Practice Name" class="input"/>
+          <input type="email" placeholder="Email Address" class="input"/>
+          <input type="tel" placeholder="Phone Number" class="input"/>
           <select class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)] text-[var(--c-959085)]">
             <option>Monthly Claim Volume</option>
             <option>Under 200</option>
@@ -60,7 +60,7 @@
           </select>
           <button data-site-button type="submit" class="w-full bg-[var(--c-3F9A4B)] hover:bg-[var(--c-2E8A3A)] text-[var(--c-FFFFFF)] text-[13px] font-semibold py-3 rounded-xl transition-colors">Request Free Consultation</button>
         </form>
-        <p class="text-[10px] text-[var(--c-888888)] mt-3 text-center">PMEX &middot; CCM program management for U.S. practices</p>
+        <p class="t-2xs t-subtle mt-md ta-center">PMEX &middot; CCM program management for U.S. practices</p>
       </div></div></section>
 
 
@@ -70,31 +70,31 @@
     <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-start mb-14">
       <div>
         <p class="bh-eyebrow">Chronic Care Management (CCM)</p>
-        <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-2E4A25)] leading-snug mb-4">The Care Coordination That Happens Between Appointments</h2>
-        <p class="text-[14px] sm:text-[15px] text-[var(--c-676767)] leading-relaxed mb-4">Chronic care management is a Medicare program that reimburses non-face-to-face care coordination for patients with two or more chronic conditions expected to last at least 12 months. It covers the work that happens between visits: medication management, care plan updates, coordinating with specialists, and checking in on a patient who's managing diabetes, hypertension, COPD or another ongoing condition alone at home.</p>
-        <p class="text-[14px] sm:text-[15px] text-[var(--c-676767)] leading-relaxed mb-4">That coordination work has always happened informally in most practices, a nurse calling a patient, a staff member following up on a referral, but it rarely gets billed because tracking the required 20 minutes of monthly clinical time per patient, documenting it correctly, and building a comprehensive care plan is its own administrative burden on top of an already full day.</p>
-        <p class="text-[14px] sm:text-[15px] text-[var(--c-676767)] leading-relaxed">PMEX identifies eligible patients, builds and maintains comprehensive care plans, tracks monthly time against the CPT requirement, and documents everything to CMS standards, so the coordination work your practice already does becomes a billable, sustainable program instead of unpaid overhead.</p>
+        <h2 class="t-2xl fw-normal t-strong lh-snug mb-lg">The Care Coordination That Happens Between Appointments</h2>
+        <p class="t-md t-muted lh-relaxed mb-lg">Chronic care management is a Medicare program that reimburses non-face-to-face care coordination for patients with two or more chronic conditions expected to last at least 12 months. It covers the work that happens between visits: medication management, care plan updates, coordinating with specialists, and checking in on a patient who's managing diabetes, hypertension, COPD or another ongoing condition alone at home.</p>
+        <p class="t-md t-muted lh-relaxed mb-lg">That coordination work has always happened informally in most practices, a nurse calling a patient, a staff member following up on a referral, but it rarely gets billed because tracking the required 20 minutes of monthly clinical time per patient, documenting it correctly, and building a comprehensive care plan is its own administrative burden on top of an already full day.</p>
+        <p class="t-md t-muted lh-relaxed">PMEX identifies eligible patients, builds and maintains comprehensive care plans, tracks monthly time against the CPT requirement, and documents everything to CMS standards, so the coordination work your practice already does becomes a billable, sustainable program instead of unpaid overhead.</p>
       </div>
       <div class="pmex-color-background bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl p-6 sm:p-7">
-        <p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-2E4A25)] mb-4">What's Included</p>
+        <p class="t-xs fw-bold t-caps t-strong mb-lg">What's Included</p>
         <ul class="space-y-3 text-[13.5px] text-[var(--c-505050)]">
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Patient eligibility identification</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Enrollment and consent documentation</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Comprehensive care plan development</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Monthly patient engagement and check-ins</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Care coordination with specialists and other providers</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Monthly clinical time tracking</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>CPT-compliant documentation</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>CCM billing (99490, 99439, 99487, 99489)</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Performance and enrollment reporting</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Patient eligibility identification</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Enrollment and consent documentation</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Comprehensive care plan development</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Monthly patient engagement and check-ins</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Care coordination with specialists and other providers</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Monthly clinical time tracking</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>CPT-compliant documentation</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>CCM billing (99490, 99439, 99487, 99489)</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Performance and enrollment reporting</li>
         </ul>
       </div>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="text-[26px] sm:text-[32px] font-bold text-[var(--c-2E4A25)]">2+</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Chronic conditions required for eligibility</p></div>
-      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="text-[26px] sm:text-[32px] font-bold text-[var(--c-2E4A25)]">20 Min</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Minimum monthly time per patient</p></div>
-      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="text-[26px] sm:text-[32px] font-bold text-[var(--c-2E4A25)]">4</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">CCM CPT codes billed compliantly</p></div>
-      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="text-[26px] sm:text-[32px] font-bold text-[var(--c-2E4A25)]">Monthly</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Patient engagement cadence</p></div>
+      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="t-3xl fw-bold t-strong">2+</p><p class="t-xs t-muted mt-xs">Chronic conditions required for eligibility</p></div>
+      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="t-3xl fw-bold t-strong">20 Min</p><p class="t-xs t-muted mt-xs">Minimum monthly time per patient</p></div>
+      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="t-3xl fw-bold t-strong">4</p><p class="t-xs t-muted mt-xs">CCM CPT codes billed compliantly</p></div>
+      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="t-3xl fw-bold t-strong">Monthly</p><p class="t-xs t-muted mt-xs">Patient engagement cadence</p></div>
     </div>
   </div>
 </section>
@@ -102,13 +102,13 @@
 <!-- ===== WHY CHOOSE US ===== -->
 <section class="pmex-section pmex-color-background bh-why bg-[var(--c-2E4A25)]">
   <div class="pmex-container">
-    <p class="text-[11px] font-bold uppercase tracking-[2px] text-[var(--c-AAD39C)] mb-2">Why Choose Us</p>
+    <p class="t-xs fw-bold t-caps t-light mb-sm">Why Choose Us</p>
     <h2 class="text-[22px] sm:text-[27px] font-normal text-[var(--c-FFFFFF)] leading-snug mb-8 max-w-[660px]">Turning Existing Care Coordination Into a Billable Program</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-FFFFFF)] mb-1"><span class="bh-t">Eligibility Identification</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Patient panels reviewed to find every eligible patient, not just the obvious ones.</p></div>
-      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-FFFFFF)] mb-1"><span class="bh-t">Time Tracking Built In</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">The 20-minute monthly threshold tracked automatically per patient.</p></div>
-      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-FFFFFF)] mb-1"><span class="bh-t">Care Plans Maintained</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Comprehensive care plans built and kept current, not created once and forgotten.</p></div>
-      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-FFFFFF)] mb-1"><span class="bh-t"><span class="bh-nw">Audit-Ready</span> Documentation</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Every billed month documented to CMS standards from day one.</p></div>
+      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="t-base fw-semibold t-white mb-xs"><span class="bh-t">Eligibility Identification</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Patient panels reviewed to find every eligible patient, not just the obvious ones.</p></div>
+      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="t-base fw-semibold t-white mb-xs"><span class="bh-t">Time Tracking Built In</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">The 20-minute monthly threshold tracked automatically per patient.</p></div>
+      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="t-base fw-semibold t-white mb-xs"><span class="bh-t">Care Plans Maintained</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Comprehensive care plans built and kept current, not created once and forgotten.</p></div>
+      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="t-base fw-semibold t-white mb-xs"><span class="bh-t"><span class="bh-nw">Audit-Ready</span> Documentation</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Every billed month documented to CMS standards from day one.</p></div>
     </div>
   </div>
 </section>
@@ -118,17 +118,17 @@
   <div class="pmex-container">
     <div class="max-w-[760px] pmex-section-head">
       <p class="bh-eyebrow">CCM Billing Codes</p>
-      <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-2E4A25)] leading-snug mb-3">Four Codes for Different Levels of Complexity</h2>
+      <h2 class="t-2xl fw-normal t-strong lh-snug mb-md">Four Codes for Different Levels of Complexity</h2>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-3F9A4B)] mb-1">CPT 99490</p><p class="text-[13px] font-semibold text-[var(--c-2E4A25)] mb-2"><span class="bh-t">Standard CCM</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">First 20 minutes of clinical staff time coordinating care for the month.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-3F9A4B)] mb-1">CPT 99439</p><p class="text-[13px] font-semibold text-[var(--c-2E4A25)] mb-2"><span class="bh-t">Additional 20 Minutes</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">Each additional 20-minute block beyond the first, billed as needed.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-3F9A4B)] mb-1">CPT 99487</p><p class="text-[13px] font-semibold text-[var(--c-2E4A25)] mb-2"><span class="bh-t">Complex CCM</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">First 60 minutes for patients needing complex, moderate-to-high complexity decision making.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-3F9A4B)] mb-1">CPT 99489</p><p class="text-[13px] font-semibold text-[var(--c-2E4A25)] mb-2"><span class="bh-t">Complex, Additional</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">Each additional 30-minute block for complex CCM beyond the first 60 minutes.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="t-xs fw-bold t-caps t-accent mb-xs">CPT 99490</p><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Standard CCM</span></p><p class="t-sm t-muted lh-relaxed">First 20 minutes of clinical staff time coordinating care for the month.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="t-xs fw-bold t-caps t-accent mb-xs">CPT 99439</p><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Additional 20 Minutes</span></p><p class="t-sm t-muted lh-relaxed">Each additional 20-minute block beyond the first, billed as needed.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="t-xs fw-bold t-caps t-accent mb-xs">CPT 99487</p><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Complex CCM</span></p><p class="t-sm t-muted lh-relaxed">First 60 minutes for patients needing complex, moderate-to-high complexity decision making.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="t-xs fw-bold t-caps t-accent mb-xs">CPT 99489</p><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Complex, Additional</span></p><p class="t-sm t-muted lh-relaxed">Each additional 30-minute block for complex CCM beyond the first 60 minutes.</p></div>
     </div>
     <div class="pmex-color-background mt-4 bg-[var(--c-2E4A25)] rounded-2xl p-6 flex items-center gap-5">
       <p class="text-[30px] font-bold text-[var(--c-AAD39C)] shrink-0"></p>
-      <div><p class="text-[13.5px] font-semibold text-[var(--c-FFFFFF)]"><span class="bh-t">Performance Reporting</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 mt-0.5">Enrollment, time logged and billing status reported so the program's impact stays visible.</p></div>
+      <div><p class="t-base fw-semibold t-white"><span class="bh-t">Performance Reporting</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 mt-0.5">Enrollment, time logged and billing status reported so the program's impact stays visible.</p></div>
     </div>
   </div>
 </section>
@@ -136,45 +136,45 @@
 <!-- ===== FAQ ===== -->
 <section class="pmex-section bg-[var(--c-FFFFFF)]">
   <div class="max-w-[860px] mx-auto px-5 sm:px-6 lg:px-10">
-    <div class="text-center pmex-section-head">
+    <div class="pmex-section-head ta-center">
       <p class="bh-eyebrow">Questions</p>
-      <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-2E4A25)]">Chronic Care Management: Frequently Asked Questions</h2>
+      <h2 class="t-2xl fw-normal t-strong">Chronic Care Management: Frequently Asked Questions</h2>
     </div>
-    <div class="space-y-2" id="faq-list">
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">Which patients are eligible for CCM?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+    <div class="stack gap-sm" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">Which patients are eligible for CCM?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Medicare patients with two or more chronic conditions expected to last at least 12 months, or until the patient's death, and that place the patient at significant risk of decline, are eligible for CCM.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Medicare patients with two or more chronic conditions expected to last at least 12 months, or until the patient's death, and that place the patient at significant risk of decline, are eligible for CCM.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">Does the patient need to give consent?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">Does the patient need to give consent?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Yes. Patients must give verbal or written consent to enroll in CCM, including acknowledgment of any applicable cost-sharing, and that consent is documented as part of enrollment.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Yes. Patients must give verbal or written consent to enroll in CCM, including acknowledgment of any applicable cost-sharing, and that consent is documented as part of enrollment.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">What counts toward the 20 minutes of monthly time?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">What counts toward the 20 minutes of monthly time?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Non-face-to-face care coordination time, including phone calls with the patient, medication reconciliation, care plan updates, and coordination with other providers involved in the patient's care.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Non-face-to-face care coordination time, including phone calls with the patient, medication reconciliation, care plan updates, and coordination with other providers involved in the patient's care.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">Can CCM and RPM be billed for the same patient?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">Can CCM and RPM be billed for the same patient?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Yes, both programs can run for the same patient, as long as the time counted toward each program's requirement is tracked separately and not double-billed.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Yes, both programs can run for the same patient, as long as the time counted toward each program's requirement is tracked separately and not double-billed.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">Who at our practice does the actual care coordination work?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">Who at our practice does the actual care coordination work?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Clinical staff at your practice, typically a nurse or care coordinator, perform the patient outreach. PMEX manages the eligibility tracking, care plan documentation, time logging and billing around that work.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Clinical staff at your practice, typically a nurse or care coordinator, perform the patient outreach. PMEX manages the eligibility tracking, care plan documentation, time logging and billing around that work.</p></div>
       </div>
     </div>
   </div>
@@ -183,7 +183,7 @@
 <!-- ===== FINAL CTA ===== -->
 <section class="pmex-section pmex-color-background bg-[var(--c-F8FBF0)]">
   <div class="max-w-[860px] mx-auto px-5 sm:px-6 lg:px-10 text-center">
-    <h2 class="text-[22px] sm:text-[28px] font-normal text-[var(--c-2E4A25)] mb-3">Turn Care Coordination Into a Billable Program</h2>
+    <h2 class="t-2xl fw-normal t-strong mb-md">Turn Care Coordination Into a Billable Program</h2>
     <p class="text-[14px] text-[var(--c-676767)] mb-6 max-w-[520px] mx-auto">See how many patients in your panel could be eligible for chronic care management today.</p>
     <a data-site-button href="#audit-form" class="inline-flex items-center gap-2 bg-[var(--c-3F9A4B)] hover:bg-[var(--c-2E8A3A)] text-[var(--c-FFFFFF)] text-[14px] font-semibold px-7 py-3.5 rounded-xl transition-colors">Talk to a CCM Specialist</a>
   </div>
@@ -191,289 +191,7 @@
 
 
 <!-- Trusted by leading organizations -->
-<div data-specialty-marquee class="border-y border-[var(--c-AAD39C)] bg-[var(--c-FFFFFF)] py-6">
-        <div class="marquee-container w-full overflow-hidden" data-pmex-marquee>
-          <div
-            class="flex w-max animate-marquee whitespace-nowrap"
-            data-pmex-marquee-track
-          >
-            <!-- =====================================================
-                LOGO SET 01
-            ====================================================== -->
-
-            <div class="flex shrink-0 items-center gap-16 pr-16">
-              <!-- AdvancedMD -->
-              <img
-                src="/img/marquee logo/advancedmd.svg"
-                alt="AdvancedMD"
-                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <!-- Allscripts -->
-              <img
-                src="/img/marquee logo/Allscripts.svg"
-                alt="Allscripts"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- athenahealth -->
-              <img
-                src="/img/marquee logo/athenahealth.svg"
-                alt="athenahealth"
-                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Cerner -->
-              <img
-                src="/img/marquee logo/Cerner.svg"
-                alt="Cerner"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- ChiroTouch -->
-              <img
-                src="/img/marquee logo/ChiroTouch.svg"
-                alt="ChiroTouch"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Dentrix -->
-              <img
-                src="/img/marquee logo/dentrix-logo-1400.svg"
-                alt="Dentrix"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- DrChrono -->
-              <img
-                src="/img/marquee logo/DrChrono.svg"
-                alt="DrChrono"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- eClinicalWorks -->
-              <img
-                src="/img/marquee logo/eclinicalworks.svg"
-                alt="eClinicalWorks"
-                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- ECLIPSE -->
-              <img
-                src="/img/marquee logo/ECLIPSE.svg"
-                alt="ECLIPSE"
-                class="h-7 w-auto max-w-[140px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <!-- Epic -->
-              <img
-                src="/img/marquee logo/epic.svg"
-                alt="Epic"
-                class="h-5 w-auto max-w-[100px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Genesis Chiropractic -->
-              <img
-                src="/img/marquee logo/Genesis-Chiropractic-Software-Logo.svg"
-                alt="Genesis Chiropractic"
-                class="h-7 w-auto max-w-[150px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <!-- Jane -->
-              <img
-                src="/img/marquee logo/Jane.svg"
-                alt="Jane App"
-                class="h-7 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <!-- Jopari -->
-              <img
-                src="/img/marquee logo/Jopari.svg"
-                alt="Jopari"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Kareo -->
-              <img
-                src="/img/marquee logo/Kareo.svg"
-                alt="Kareo"
-                class="h-6 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <!-- ModMed -->
-              <img
-                src="/img/marquee logo/modmed.svg"
-                alt="ModMed"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- NextGen -->
-              <img
-                src="/img/marquee logo/NexGen.svg"
-                alt="NextGen"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Office Ally -->
-              <img
-                src="/img/marquee logo/office-ally.svg"
-                alt="Office Ally"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Optum -->
-              <img
-                src="/img/marquee logo/optum.svg"
-                alt="Optum"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Practice Fusion -->
-              <img
-                src="/img/marquee logo/Practice-Fusion.svg"
-                alt="Practice Fusion"
-                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <!-- Tebra -->
-              <img
-                src="/img/marquee logo/tebra.svg"
-                alt="Tebra"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-            </div>
-
-            <!-- =====================================================
-                LOGO SET 02 — DUPLICATE FOR SEAMLESS LOOP
-            ====================================================== -->
-
-            <div
-              class="flex shrink-0 items-center gap-16 pr-16"
-              aria-hidden="true"
-            >
-              <img
-                src="/img/marquee logo/advancedmd.svg"
-                alt=""
-                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <img
-                src="/img/marquee logo/Allscripts.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/athenahealth.svg"
-                alt=""
-                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/Cerner.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/ChiroTouch.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/dentrix-logo-1400.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/DrChrono.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/eclinicalworks.svg"
-                alt=""
-                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/ECLIPSE.svg"
-                alt=""
-                class="h-7 w-auto max-w-[140px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <img
-                src="/img/marquee logo/epic.svg"
-                alt=""
-                class="h-5 w-auto max-w-[100px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/Genesis-Chiropractic-Software-Logo.svg"
-                alt=""
-                class="h-7 w-auto max-w-[150px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <img
-                src="/img/marquee logo/Jane.svg"
-                alt=""
-                class="h-7 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <img
-                src="/img/marquee logo/Jopari.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/Kareo.svg"
-                alt=""
-                class="h-6 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <img
-                src="/img/marquee logo/modmed.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/NexGen.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/office-ally.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/optum.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/Practice-Fusion.svg"
-                alt=""
-                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <img
-                src="/img/marquee logo/tebra.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+<script src="/js/site-shell.js" data-include="marquee"></script>
 
 <!-- ===== FOOTER ===== -->
 

@@ -1,0 +1,93 @@
+# PMEX design system plan
+
+Goal: one centralized, reusable stylesheet (`dist/css/root.css`), 100% plain CSS, no Tailwind classes in any page,
+target 3,000-5,000 lines. Small visual changes during the migration are accepted; structure and reuse come first.
+
+## Where we started (tag `css-baseline`, commit cf542c9)
+
+| Problem | Size |
+|---|---|
+| Frozen Tailwind output (block `style`) | 10,313 lines, 2,233 utility classes |
+| Tailwind classes in the HTML | 45,198 elements, 2,160 distinct class combinations, 120 pages |
+| Duplicate page blocks (FAQ x5, motion x4, service pages x8) | ~2,500 lines |
+| `!important` | 3,209 |
+| `@media` blocks (one per rule) | 1,467 |
+| Colors | 228 hex values named after their value (`--c-3F9A4B`) |
+
+## Target structure of root.css
+
+```
+@layer tokens, base, layout, components, pages, utilities;
+
+tokens      THEME colors (--theme-*), type scale, spacing, radius, shadows, transitions
+base        reset, body, h1-h4, p, a, img, lists
+layout      .container, .section (+ sizes), .grid-2/3/4, .stack, .split
+components  button, card, section-head, hero, form, faq, tabs, chip, stats, check-list,
+            logo-strip, testimonial slider, pricing, comparison table, header + mega menu,
+            footer, booking modal
+pages       only what is unique to one page
+utilities   a few helpers used everywhere (text-center, visually-hidden)
+```
+
+Rules:
+- Colors only through `var(--theme-*)` (legacy `var(--c-HEX)` still resolves, generated from THEME).
+- Responsive rules live inside the component they change, mobile first.
+- No `!important` outside utilities; the layer order decides.
+- One class per role (`.card`, `.card-title`), modifiers with `--` (`.btn--link`, `.section--tint`).
+- Every gradient names its color space (`in srgb`).
+
+## Phases
+
+| # | Phase | Status |
+|---|---|---|
+| 0 | Safety net: `npm run check:regression` (pixel + computed-style diff vs `css-baseline`) | done |
+| 1 | THEME tokens: 18 `--theme-*` colors, every `--c-HEX` generated (`npm run theme:build`) | done (a5d50be) |
+| 1b | Remove duplicate blocks (`scripts/build/dedupe-css-blocks.js`, `scripts/build/merge-css-blocks.js`) | done |
+| 2 | Scale tokens + base layer | tokens done; base layer comes with step 5 (replaces Tailwind preflight) |
+| 3 | Components library + migration of the pages (`@layer ds`) | in progress: 17,586 Tailwind elements left |
+| 4 | Migrate page families: specialties (template, ~70 pages, heaviest) -> services -> platform -> company -> homepage | |
+| 5 | Delete the Tailwind block and the tailwindcss packages | |
+| 6 | Remove `!important`, hacks and dead selectors; settle `@layer` order | |
+| 7 | `npm run check:css` guard (no Tailwind classes, no color literals, size limit) + docs | |
+
+## Tools
+
+| Command | Purpose |
+|---|---|
+| `npm run theme:build` | regenerate legacy colors after editing the THEME block |
+| `npm run gradients:check` | every gradient names its color space |
+| `npm run check:regression [pages]` | visual and computed-style diff against `css-baseline` (`--cur=<dir>` tests a snapshot) |
+| `node scripts/build/merge-css-blocks.js --name=<block> <blocks...>` | split near-identical blocks into shared + page-only blocks |
+| `node scripts/build/dedupe-css-blocks.js` | drop exact duplicate and empty blocks |
+
+## Progress log
+
+| Date | Step | root.css lines |
+|---|---|---|
+| 2026-11-11 | start | 23,596 |
+| 2026-11-11 | THEME tokens | 23,636 |
+| 2026-11-11 | duplicate blocks removed | 22,834 |
+| 2026-11-11 | service pages merged (8 blocks -> service-detail, service-rcm, service-analytics) | 21,563 |
+| 2026-11-11 | FAQ blocks merged (site-faq + site-faq-extra) | 21,244 |
+| 2026-11-11 | 83 pages load the marquee partial instead of an inline copy (HTML -26,375 lines) | 21,244 |
+| 2026-11-11 | scale tokens; `style` block split into `tailwind` (generated) + `style` (custom); `ds` layer | 21,290 |
+| 2026-11-11 | Tailwind -> design system: FAQ (3,368 el.), text roles (11,397 el.), components (6,150 el.); Tailwind elements 40,379 -> 17,586 | 21,447 |
+
+## Design-system layer (`@layer ds`, end of root.css)
+
+The `ds` layer comes right after Tailwind's `utilities` layer, so a design-system class has the same priority as the
+utilities it replaces. Classes (no Tailwind names, no color literals):
+
+| Group | Classes |
+|---|---|
+| Text size (grows one step from 640px) | `t-2xs t-xs t-sm t-base t-md t-lg t-xl t-2xl t-h2 t-3xl t-4xl` |
+| Text color | `t-text t-muted t-subtle t-strong t-ink t-accent t-light t-white t-orange t-warning t-danger` |
+| Weight, line height, case, align | `fw-normal..fw-extrabold`, `lh-tight lh-snug lh-normal lh-relaxed lh-loose`, `t-caps ls-wide ls-tight t-italic`, `ta-left ta-center ta-right` |
+| Spacing steps (2/4/8/12/16/24/32px) | `mt-* mb-* gap-*` with `2xs xs sm md lg xl 2xl` |
+| Layout | `row row-top row-stretch stack row-wrap between fluid grid-3 rel raise clip fill-h deco-layer` |
+| Components | `chip check-dot icon icon-xs/sm/md icon-fill icon-stroke card card--lift card-foot panel input section-rule section-head bg-white` |
+
+Migration tools: `node scripts/build/tw-migrate.js --todo` lists the most used Tailwind combinations left;
+`scripts/build/tw-map.json` maps an exact combination to classes; `scripts/build/tw-rules.js` maps whole families
+(text-only lists today). CSS selectors in older blocks that still point at a migrated utility are rewritten to also
+match the new class (`[class*="uppercase"]` -> `:is([class*="uppercase"], .t-caps)`).

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-css="site-buttons reference-typography style specialty-site-palette specialty-homepage-layout site-motion-3 site-faq-accordion-4 imported-services injury-billing-bh navbar-d90c332f inline-a8164582 services-mega pmex-common layout booking-modal site-footer">
+<html lang="en" data-css="site-buttons reference-typography tailwind style specialty-site-palette specialty-homepage-layout site-motion site-faq imported-services injury-billing-bh navbar-d90c332f inline-a8164582 services-mega pmex-common layout booking-modal site-footer">
 <head>
 <link rel="stylesheet" href="/css/root.css"/>
 
@@ -24,7 +24,7 @@
     <div data-hero-layout class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
       <div data-hero-copy class="max-w-[600px]">
         <p class="bh-eyebrow">Coding &amp; Compliance · Clinical Documentation Improvement</p>
-        <h1 class="bh-hero-title">Documentation That Matches <span class="text-[var(--c-E85D3F)]">the Care Actually Given.</span></h1>
+        <h1 class="bh-hero-title">Documentation That Matches <span class="t-orange">the Care Actually Given.</span></h1>
         <p class="bh-hero-para">PMEX reviews charts while care is still active and queries physicians through a formal, compliant process, so documentation captures the true severity of every case, supports fair reimbursement, and prevents denials before they happen.</p>
         <div class="flex flex-wrap gap-3 mb-8">
           <a href="#audit-form" class="cta-primary-btn">Request a Free Documentation Review</a>
@@ -46,12 +46,12 @@
 <!-- ===== HERO ===== -->
 
 <section class="pmex-section specialty-hero-support"><div class="specialty-support-inner"><div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-6 sm:p-7 shadow-xl w-full max-w-[360px] shrink-0">
-        <p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-3F9A4B)] mb-1">Free Documentation Review</p>
-        <p class="text-[13px] text-[var(--c-676767)] mb-5">Get a sample of charts checked against the clinical evidence they should support. No obligation, no cost.</p>
-        <form id="audit-form" class="space-y-3" onsubmit="return false;">
-          <input type="text" placeholder="Practice Name" class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)]"/>
-          <input type="email" placeholder="Email Address" class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)]"/>
-          <input type="tel" placeholder="Phone Number" class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)]"/>
+        <p class="t-xs fw-bold t-caps t-accent mb-xs">Free Documentation Review</p>
+        <p class="t-base t-muted mb-lg">Get a sample of charts checked against the clinical evidence they should support. No obligation, no cost.</p>
+        <form id="audit-form" class="stack gap-md" onsubmit="return false;">
+          <input type="text" placeholder="Practice Name" class="input"/>
+          <input type="email" placeholder="Email Address" class="input"/>
+          <input type="tel" placeholder="Phone Number" class="input"/>
           <select class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)] text-[var(--c-959085)]">
             <option>Monthly Claim Volume</option>
             <option>Under 200</option>
@@ -60,7 +60,7 @@
           </select>
           <button data-site-button type="submit" class="w-full bg-[var(--c-3F9A4B)] hover:bg-[var(--c-2E8A3A)] text-[var(--c-FFFFFF)] text-[13px] font-semibold py-3 rounded-xl transition-colors">Request Free Review</button>
         </form>
-        <p class="text-[10px] text-[var(--c-888888)] mt-3 text-center">PMEX &middot; Documentation integrity platform built for U.S. practices</p>
+        <p class="t-2xs t-subtle mt-md ta-center">PMEX &middot; Documentation integrity platform built for U.S. practices</p>
       </div></div></section>
 
 
@@ -70,31 +70,31 @@
     <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-start mb-14">
       <div>
         <p class="bh-eyebrow">Clinical Documentation Improvement (CDI)</p>
-        <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-2E4A25)] leading-snug mb-4">Making the Chart Say What Actually Happened</h2>
-        <p class="text-[14px] sm:text-[15px] text-[var(--c-676767)] leading-relaxed mb-4">Clinical documentation improvement is the discipline of making sure a patient's chart fully and accurately reflects how sick they were and how complex their care actually was. A coder can only code what's written down. If a physician treats a patient for sepsis but only documents "infection," the chart, the code, the DRG and the reimbursement all end up understating what really happened.</p>
-        <p class="text-[14px] sm:text-[15px] text-[var(--c-676767)] leading-relaxed mb-4">CDI closes that gap by reviewing documentation while a patient is still in care, or shortly after, and querying the physician for clarification when something is unclear, incomplete, or inconsistent with the clinical picture. This isn't about adding diagnoses that didn't happen, it's about making sure the ones that did happen are written down clearly enough for coding to capture them correctly.</p>
-        <p class="text-[14px] sm:text-[15px] text-[var(--c-676767)] leading-relaxed">PMEX's CDI specialists work directly with providers, using a formal, respectful query process, so documentation supports accurate coding, fair reimbursement, and quality metrics that actually reflect the care delivered.</p>
+        <h2 class="t-2xl fw-normal t-strong lh-snug mb-lg">Making the Chart Say What Actually Happened</h2>
+        <p class="t-md t-muted lh-relaxed mb-lg">Clinical documentation improvement is the discipline of making sure a patient's chart fully and accurately reflects how sick they were and how complex their care actually was. A coder can only code what's written down. If a physician treats a patient for sepsis but only documents "infection," the chart, the code, the DRG and the reimbursement all end up understating what really happened.</p>
+        <p class="t-md t-muted lh-relaxed mb-lg">CDI closes that gap by reviewing documentation while a patient is still in care, or shortly after, and querying the physician for clarification when something is unclear, incomplete, or inconsistent with the clinical picture. This isn't about adding diagnoses that didn't happen, it's about making sure the ones that did happen are written down clearly enough for coding to capture them correctly.</p>
+        <p class="t-md t-muted lh-relaxed">PMEX's CDI specialists work directly with providers, using a formal, respectful query process, so documentation supports accurate coding, fair reimbursement, and quality metrics that actually reflect the care delivered.</p>
       </div>
       <div class="pmex-color-background bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl p-6 sm:p-7">
-        <p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-2E4A25)] mb-4">What's Included</p>
+        <p class="t-xs fw-bold t-caps t-strong mb-lg">What's Included</p>
         <ul class="space-y-3 text-[13.5px] text-[var(--c-505050)]">
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Concurrent chart review during the patient stay</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Formal, compliant physician query process</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Medical necessity documentation support</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Provider documentation education and feedback</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>CC/MCC and severity capture review</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>DRG and case mix index optimization support</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Denial prevention through stronger documentation</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Audit readiness and documentation compliance</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Revenue integrity monitoring</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Concurrent chart review during the patient stay</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Formal, compliant physician query process</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Medical necessity documentation support</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Provider documentation education and feedback</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>CC/MCC and severity capture review</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>DRG and case mix index optimization support</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Denial prevention through stronger documentation</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Audit readiness and documentation compliance</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Revenue integrity monitoring</li>
         </ul>
       </div>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="text-[26px] sm:text-[32px] font-bold text-[var(--c-2E4A25)]">Concurrent</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Review timing, while care is still active</p></div>
-      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="text-[26px] sm:text-[32px] font-bold text-[var(--c-2E4A25)]">80%+</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Target physician query agreement rate</p></div>
-      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="text-[26px] sm:text-[32px] font-bold text-[var(--c-2E4A25)]">CMI</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Tracked as a core success metric</p></div>
-      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="text-[26px] sm:text-[32px] font-bold text-[var(--c-2E4A25)]">0</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Leading queries used to inflate diagnoses</p></div>
+      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="t-3xl fw-bold t-strong">Concurrent</p><p class="t-xs t-muted mt-xs">Review timing, while care is still active</p></div>
+      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="t-3xl fw-bold t-strong">80%+</p><p class="t-xs t-muted mt-xs">Target physician query agreement rate</p></div>
+      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="t-3xl fw-bold t-strong">CMI</p><p class="t-xs t-muted mt-xs">Tracked as a core success metric</p></div>
+      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="t-3xl fw-bold t-strong">0</p><p class="t-xs t-muted mt-xs">Leading queries used to inflate diagnoses</p></div>
     </div>
   </div>
 </section>
@@ -104,29 +104,29 @@
   <div class="pmex-container">
     <div class="max-w-[760px] pmex-section-head">
       <p class="bh-eyebrow">Complete Service Breakdown</p>
-      <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-2E4A25)] leading-snug mb-3">Every Documentation Function, Grouped by What It Solves</h2>
+      <h2 class="t-2xl fw-normal t-strong lh-snug mb-md">Every Documentation Function, Grouped by What It Solves</h2>
     </div>
 
-    <div class="mb-10">
+    <div class="mb-2xl">
       <div class="flex items-center gap-3 mb-4">
         <span class="w-8 h-8 rounded-lg bg-[var(--c-3F9A4B)] text-[var(--c-FFFFFF)] flex items-center justify-center text-[14px] font-bold">1</span>
-        <p class="text-[13px] font-bold uppercase tracking-wider text-[var(--c-2E4A25)]">Closing the Documentation Gap</p>
+        <p class="t-base fw-bold t-caps t-strong">Closing the Documentation Gap</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div class="sm:col-span-2 bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5 flex items-center gap-5">
-          <div class="shrink-0 text-center w-[70px]"><p class="text-[24px] font-bold text-[var(--c-3F9A4B)]">✓</p></div>
-          <div><p class="text-[13.5px] font-semibold text-[var(--c-2E4A25)]"><span class="bh-t">Documentation Accuracy &amp; <span class="bh-nw">Coding-Supportive</span> Notes</span></p><p class="text-[11.5px] text-[var(--c-676767)] mt-0.5">Charts reviewed while care is still active so what's written down actually supports the codes it will generate.</p></div>
+          <div class="shrink-0 text-center w-[70px]"><p class="t-2xl fw-bold t-accent">✓</p></div>
+          <div><p class="t-base fw-semibold t-strong"><span class="bh-t">Documentation Accuracy &amp; <span class="bh-nw">Coding-Supportive</span> Notes</span></p><p class="t-xs t-muted mt-2xs">Charts reviewed while care is still active so what's written down actually supports the codes it will generate.</p></div>
         </div>
-        <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-2E4A25)]"><span class="bh-t">Documentation Gaps</span></p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Vague or incomplete notes flagged fast.</p></div>
-        <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-2E4A25)]"><span class="bh-t">Query Management</span></p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Compliant, non-leading physician queries.</p></div>
-        <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-2E4A25)]"><span class="bh-t">Provider Education</span></p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Patterns coached down over time.</p></div>
+        <div class="panel"><p class="t-base fw-semibold t-strong"><span class="bh-t">Documentation Gaps</span></p><p class="t-xs t-muted mt-xs">Vague or incomplete notes flagged fast.</p></div>
+        <div class="panel"><p class="t-base fw-semibold t-strong"><span class="bh-t">Query Management</span></p><p class="t-xs t-muted mt-xs">Compliant, non-leading physician queries.</p></div>
+        <div class="panel"><p class="t-base fw-semibold t-strong"><span class="bh-t">Provider Education</span></p><p class="t-xs t-muted mt-xs">Patterns coached down over time.</p></div>
       </div>
     </div>
 
-    <div class="mb-10">
+    <div class="mb-2xl">
       <div class="flex items-center gap-3 mb-4">
         <span class="w-8 h-8 rounded-lg bg-[var(--c-3F9A4B)] text-[var(--c-FFFFFF)] flex items-center justify-center text-[14px] font-bold">2</span>
-        <p class="text-[13px] font-bold uppercase tracking-wider text-[var(--c-2E4A25)]">Protecting the Claim Before It's Filed</p>
+        <p class="t-base fw-bold t-caps t-strong">Protecting the Claim Before It's Filed</p>
       </div>
       <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl overflow-hidden">
         <table class="w-full text-[13px]">
@@ -142,16 +142,16 @@
     <div>
       <div class="flex items-center gap-3 mb-4">
         <span class="w-8 h-8 rounded-lg bg-[var(--c-3F9A4B)] text-[var(--c-FFFFFF)] flex items-center justify-center text-[14px] font-bold">3</span>
-        <p class="text-[13px] font-bold uppercase tracking-wider text-[var(--c-2E4A25)]">Standing Up to Scrutiny</p>
+        <p class="t-base fw-bold t-caps t-strong">Standing Up to Scrutiny</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="pmex-color-background bg-[var(--c-2E4A25)] rounded-2xl p-6 flex items-center gap-5">
           <p class="text-[30px] font-bold text-[var(--c-AAD39C)] shrink-0"></p>
-          <div><p class="text-[13.5px] font-semibold text-[var(--c-FFFFFF)]"><span class="bh-t">Audit Readiness</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 mt-0.5">Charts built to hold up under RAC, TPE and other payer review.</p></div>
+          <div><p class="t-base fw-semibold t-white"><span class="bh-t">Audit Readiness</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 mt-0.5">Charts built to hold up under RAC, TPE and other payer review.</p></div>
         </div>
         <div class="pmex-color-background bg-[var(--c-2E4A25)] rounded-2xl p-6 flex items-center gap-5">
           <p class="text-[30px] font-bold text-[var(--c-AAD39C)] shrink-0"></p>
-          <div><p class="text-[13.5px] font-semibold text-[var(--c-FFFFFF)]"><span class="bh-t">Revenue Integrity</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 mt-0.5">Reimbursement reflects the true complexity of care, no more and no less.</p></div>
+          <div><p class="t-base fw-semibold t-white"><span class="bh-t">Revenue Integrity</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 mt-0.5">Reimbursement reflects the true complexity of care, no more and no less.</p></div>
         </div>
       </div>
     </div>
@@ -161,13 +161,13 @@
 <!-- ===== WHY CHOOSE US ===== -->
 <section class="pmex-section pmex-color-background bh-why bg-[var(--c-2E4A25)]">
   <div class="pmex-container">
-    <p class="text-[11px] font-bold uppercase tracking-[2px] text-[var(--c-AAD39C)] mb-2">Why Choose Us</p>
+    <p class="t-xs fw-bold t-caps t-light mb-sm">Why Choose Us</p>
     <h2 class="text-[22px] sm:text-[27px] font-normal text-[var(--c-FFFFFF)] leading-snug mb-8 max-w-[660px]">Documentation Specialists Who Work With Physicians, Not Against Them</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-FFFFFF)] mb-1"><span class="bh-t">Concurrent Review</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Charts reviewed while the patient is still in care, when a query can still change the note.</p></div>
-      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-FFFFFF)] mb-1"><span class="bh-t">Compliant Query Standards</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Queries written to industry guidelines, never leading or suggestive of a specific diagnosis.</p></div>
-      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-FFFFFF)] mb-1"><span class="bh-t">Provider Education</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Physicians coached on documentation patterns, so query volume drops over time.</p></div>
-      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-FFFFFF)] mb-1"><span class="bh-t"><span class="bh-nw">Coding-Aligned</span> Reviews</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">CDI and coding teams work off the same chart, so findings never conflict downstream.</p></div>
+      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="t-base fw-semibold t-white mb-xs"><span class="bh-t">Concurrent Review</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Charts reviewed while the patient is still in care, when a query can still change the note.</p></div>
+      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="t-base fw-semibold t-white mb-xs"><span class="bh-t">Compliant Query Standards</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Queries written to industry guidelines, never leading or suggestive of a specific diagnosis.</p></div>
+      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="t-base fw-semibold t-white mb-xs"><span class="bh-t">Provider Education</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Physicians coached on documentation patterns, so query volume drops over time.</p></div>
+      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="t-base fw-semibold t-white mb-xs"><span class="bh-t"><span class="bh-nw">Coding-Aligned</span> Reviews</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">CDI and coding teams work off the same chart, so findings never conflict downstream.</p></div>
     </div>
   </div>
 </section>
@@ -177,14 +177,14 @@
   <div class="pmex-container">
     <div class="max-w-[760px] pmex-section-head">
       <p class="bh-eyebrow">The Physician Query Process</p>
-      <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-2E4A25)] leading-snug mb-3">Asking the Right Question, the Right Way</h2>
-      <p class="text-[14px] text-[var(--c-676767)] leading-relaxed">A query is a clarifying question to a physician, never a suggestion of what to write. Every query PMEX sends follows the same compliant structure.</p>
+      <h2 class="t-2xl fw-normal t-strong lh-snug mb-md">Asking the Right Question, the Right Way</h2>
+      <p class="t-md t-muted lh-relaxed">A query is a clarifying question to a physician, never a suggestion of what to write. Every query PMEX sends follows the same compliant structure.</p>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-5">
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-2E4A25)] mb-2"><span class="bh-t">Identify the Gap</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">Documentation reviewed for vague, incomplete or clinically inconsistent notes.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-2E4A25)] mb-2"><span class="bh-t">Draft a Compliant Query</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">A clarifying, non-leading question is written, with clinical indicators cited.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-2E4A25)] mb-2"><span class="bh-t">Physician Response</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">The provider reviews and responds directly in the chart, in their own words.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-2E4A25)] mb-2"><span class="bh-t">Coding Reflects the Update</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">The clarified documentation flows directly into final coding and DRG assignment.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Identify the Gap</span></p><p class="t-sm t-muted lh-relaxed">Documentation reviewed for vague, incomplete or clinically inconsistent notes.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Draft a Compliant Query</span></p><p class="t-sm t-muted lh-relaxed">A clarifying, non-leading question is written, with clinical indicators cited.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Physician Response</span></p><p class="t-sm t-muted lh-relaxed">The provider reviews and responds directly in the chart, in their own words.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Coding Reflects the Update</span></p><p class="t-sm t-muted lh-relaxed">The clarified documentation flows directly into final coding and DRG assignment.</p></div>
     </div>
   </div>
 </section>
@@ -194,26 +194,26 @@
   <div class="pmex-container">
     <div class="max-w-[760px] pmex-section-head">
       <p class="bh-eyebrow">CDI Program Metrics</p>
-      <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-2E4A25)] leading-snug mb-3">Productivity Metrics and Program Success Metrics</h2>
-      <p class="text-[14px] text-[var(--c-676767)] leading-relaxed">A healthy CDI program is measured two ways: how the team is working, and whether that work is actually changing outcomes.</p>
+      <h2 class="t-2xl fw-normal t-strong lh-snug mb-md">Productivity Metrics and Program Success Metrics</h2>
+      <p class="t-md t-muted lh-relaxed">A healthy CDI program is measured two ways: how the team is working, and whether that work is actually changing outcomes.</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <div class="pmex-color-background bh-callout bh-fill bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl p-6">
-        <p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-3F9A4B)] mb-2">Productivity Metrics</p>
+        <p class="t-xs fw-bold t-caps t-accent mb-sm">Productivity Metrics</p>
         <ul class="space-y-2 text-[12.5px] text-[var(--c-505050)]">
-          <li class="flex gap-2"><span class="text-[var(--c-3F9A4B)]">•</span>Review rate: share of eligible charts reviewed</li>
-          <li class="flex gap-2"><span class="text-[var(--c-3F9A4B)]">•</span>Query rate: how often a chart generates a query</li>
-          <li class="flex gap-2"><span class="text-[var(--c-3F9A4B)]">•</span>Response rate: how many queries get a physician response</li>
-          <li class="flex gap-2"><span class="text-[var(--c-3F9A4B)]">•</span>Query agreement rate: how often the response supports the query</li>
+          <li class="row-stretch gap-sm"><span class="t-accent">•</span>Review rate: share of eligible charts reviewed</li>
+          <li class="row-stretch gap-sm"><span class="t-accent">•</span>Query rate: how often a chart generates a query</li>
+          <li class="row-stretch gap-sm"><span class="t-accent">•</span>Response rate: how many queries get a physician response</li>
+          <li class="row-stretch gap-sm"><span class="t-accent">•</span>Query agreement rate: how often the response supports the query</li>
         </ul>
       </div>
       <div class="pmex-color-background bh-callout bh-fill bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl p-6">
-        <p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-3F9A4B)] mb-2">Program Success Metrics</p>
+        <p class="t-xs fw-bold t-caps t-accent mb-sm">Program Success Metrics</p>
         <ul class="space-y-2 text-[12.5px] text-[var(--c-505050)]">
-          <li class="flex gap-2"><span class="text-[var(--c-3F9A4B)]">•</span>Case mix index (CMI) trend</li>
-          <li class="flex gap-2"><span class="text-[var(--c-3F9A4B)]">•</span>CC/MCC capture rate</li>
-          <li class="flex gap-2"><span class="text-[var(--c-3F9A4B)]">•</span>Severity of illness (SOI) and risk of mortality (ROM) accuracy</li>
-          <li class="flex gap-2"><span class="text-[var(--c-3F9A4B)]">•</span>Observed-to-expected (O/E) mortality alignment</li>
+          <li class="row-stretch gap-sm"><span class="t-accent">•</span>Case mix index (CMI) trend</li>
+          <li class="row-stretch gap-sm"><span class="t-accent">•</span>CC/MCC capture rate</li>
+          <li class="row-stretch gap-sm"><span class="t-accent">•</span>Severity of illness (SOI) and risk of mortality (ROM) accuracy</li>
+          <li class="row-stretch gap-sm"><span class="t-accent">•</span>Observed-to-expected (O/E) mortality alignment</li>
         </ul>
       </div>
     </div>
@@ -225,12 +225,12 @@
   <div class="pmex-container">
     <div class="max-w-[760px] pmex-section-head">
       <p class="bh-eyebrow">Documentation &amp; Denial Prevention</p>
-      <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-2E4A25)] leading-snug mb-3">Strong Documentation Is the Best Denial Prevention There Is</h2>
+      <h2 class="t-2xl fw-normal t-strong lh-snug mb-md">Strong Documentation Is the Best Denial Prevention There Is</h2>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-5"><p class="text-[13.5px] font-semibold text-[var(--c-2E4A25)] mb-1.5"><span class="bh-t">Medical Necessity Support</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">Documentation strengthened to clearly justify the medical necessity of services billed.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-5"><p class="text-[13.5px] font-semibold text-[var(--c-2E4A25)] mb-1.5"><span class="bh-t">Audit Readiness</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">Charts built to hold up under RAC, TPE and other payer-mandated review.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-5"><p class="text-[13.5px] font-semibold text-[var(--c-2E4A25)] mb-1.5"><span class="bh-t">Revenue Integrity</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">Reimbursement reflects the true complexity of care, no more and no less.</p></div>
+    <div class="grid-3 gap-lg">
+      <div class="panel"><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Medical Necessity Support</span></p><p class="t-sm t-muted lh-relaxed">Documentation strengthened to clearly justify the medical necessity of services billed.</p></div>
+      <div class="panel"><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Audit Readiness</span></p><p class="t-sm t-muted lh-relaxed">Charts built to hold up under RAC, TPE and other payer-mandated review.</p></div>
+      <div class="panel"><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Revenue Integrity</span></p><p class="t-sm t-muted lh-relaxed">Reimbursement reflects the true complexity of care, no more and no less.</p></div>
     </div>
   </div>
 </section>
@@ -238,45 +238,45 @@
 <!-- ===== FAQ ===== -->
 <section class="pmex-section bg-[var(--c-FFFFFF)]">
   <div class="max-w-[860px] mx-auto px-5 sm:px-6 lg:px-10">
-    <div class="text-center pmex-section-head">
+    <div class="pmex-section-head ta-center">
       <p class="bh-eyebrow">Questions</p>
-      <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-2E4A25)]">Clinical Documentation Improvement: Frequently Asked Questions</h2>
+      <h2 class="t-2xl fw-normal t-strong">Clinical Documentation Improvement: Frequently Asked Questions</h2>
     </div>
-    <div class="space-y-2" id="faq-list">
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">Is CDI the same thing as medical coding?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+    <div class="stack gap-sm" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">Is CDI the same thing as medical coding?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">No. Coding assigns codes to whatever is documented. CDI works before and alongside coding to make sure the documentation itself is complete and accurate enough for coding to capture the full clinical picture.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">No. Coding assigns codes to whatever is documented. CDI works before and alongside coding to make sure the documentation itself is complete and accurate enough for coding to capture the full clinical picture.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">Is querying a physician the same as pressuring them to upcode?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">Is querying a physician the same as pressuring them to upcode?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">No. A compliant query only asks the physician to clarify something already suggested by the clinical evidence, and never suggests a specific diagnosis or leads the response. The physician always decides what to write.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">No. A compliant query only asks the physician to clarify something already suggested by the clinical evidence, and never suggests a specific diagnosis or leads the response. The physician always decides what to write.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">What is CC/MCC capture and why does it matter?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">What is CC/MCC capture and why does it matter?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">A complication or comorbidity (CC) or major complication or comorbidity (MCC) reflects added clinical complexity that affects DRG assignment and reimbursement. If documentation doesn't clearly capture a CC or MCC that was actually present, the DRG understates the true resource intensity of the case.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">A complication or comorbidity (CC) or major complication or comorbidity (MCC) reflects added clinical complexity that affects DRG assignment and reimbursement. If documentation doesn't clearly capture a CC or MCC that was actually present, the DRG understates the true resource intensity of the case.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">Does CDI only apply to inpatient hospital charts?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">Does CDI only apply to inpatient hospital charts?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">CDI started as an inpatient MS-DRG discipline, but the same documentation principles apply to outpatient and professional fee charts, particularly for supporting medical necessity and HCC risk-adjustment accuracy.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">CDI started as an inpatient MS-DRG discipline, but the same documentation principles apply to outpatient and professional fee charts, particularly for supporting medical necessity and HCC risk-adjustment accuracy.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">How does CDI actually prevent denials?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">How does CDI actually prevent denials?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Most medical necessity denials trace back to documentation that doesn't clearly support the service billed. Fixing that gap at the source, while the patient is still in care, means fewer claims ever reach the point of being denied.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Most medical necessity denials trace back to documentation that doesn't clearly support the service billed. Fixing that gap at the source, while the patient is still in care, means fewer claims ever reach the point of being denied.</p></div>
       </div>
     </div>
   </div>
@@ -285,7 +285,7 @@
 <!-- ===== FINAL CTA ===== -->
 <section class="pmex-section pmex-color-background bg-[var(--c-F8FBF0)]">
   <div class="max-w-[860px] mx-auto px-5 sm:px-6 lg:px-10 text-center">
-    <h2 class="text-[22px] sm:text-[28px] font-normal text-[var(--c-2E4A25)] mb-3">See What Your Documentation Might Be Missing</h2>
+    <h2 class="t-2xl fw-normal t-strong mb-md">See What Your Documentation Might Be Missing</h2>
     <p class="text-[14px] text-[var(--c-676767)] mb-6 max-w-[520px] mx-auto">A free documentation review checks a sample of charts against the clinical evidence they should support.</p>
     <a data-site-button href="#audit-form" class="inline-flex items-center gap-2 bg-[var(--c-3F9A4B)] hover:bg-[var(--c-2E8A3A)] text-[var(--c-FFFFFF)] text-[14px] font-semibold px-7 py-3.5 rounded-xl transition-colors">Get Your Free Documentation Review</a>
   </div>
@@ -293,289 +293,7 @@
 
 
 <!-- Trusted by leading organizations -->
-<div data-specialty-marquee class="border-y border-[var(--c-AAD39C)] bg-[var(--c-FFFFFF)] py-6">
-        <div class="marquee-container w-full overflow-hidden" data-pmex-marquee>
-          <div
-            class="flex w-max animate-marquee whitespace-nowrap"
-            data-pmex-marquee-track
-          >
-            <!-- =====================================================
-                LOGO SET 01
-            ====================================================== -->
-
-            <div class="flex shrink-0 items-center gap-16 pr-16">
-              <!-- AdvancedMD -->
-              <img
-                src="/img/marquee logo/advancedmd.svg"
-                alt="AdvancedMD"
-                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <!-- Allscripts -->
-              <img
-                src="/img/marquee logo/Allscripts.svg"
-                alt="Allscripts"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- athenahealth -->
-              <img
-                src="/img/marquee logo/athenahealth.svg"
-                alt="athenahealth"
-                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Cerner -->
-              <img
-                src="/img/marquee logo/Cerner.svg"
-                alt="Cerner"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- ChiroTouch -->
-              <img
-                src="/img/marquee logo/ChiroTouch.svg"
-                alt="ChiroTouch"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Dentrix -->
-              <img
-                src="/img/marquee logo/dentrix-logo-1400.svg"
-                alt="Dentrix"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- DrChrono -->
-              <img
-                src="/img/marquee logo/DrChrono.svg"
-                alt="DrChrono"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- eClinicalWorks -->
-              <img
-                src="/img/marquee logo/eclinicalworks.svg"
-                alt="eClinicalWorks"
-                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- ECLIPSE -->
-              <img
-                src="/img/marquee logo/ECLIPSE.svg"
-                alt="ECLIPSE"
-                class="h-7 w-auto max-w-[140px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <!-- Epic -->
-              <img
-                src="/img/marquee logo/epic.svg"
-                alt="Epic"
-                class="h-5 w-auto max-w-[100px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Genesis Chiropractic -->
-              <img
-                src="/img/marquee logo/Genesis-Chiropractic-Software-Logo.svg"
-                alt="Genesis Chiropractic"
-                class="h-7 w-auto max-w-[150px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <!-- Jane -->
-              <img
-                src="/img/marquee logo/Jane.svg"
-                alt="Jane App"
-                class="h-7 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <!-- Jopari -->
-              <img
-                src="/img/marquee logo/Jopari.svg"
-                alt="Jopari"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Kareo -->
-              <img
-                src="/img/marquee logo/Kareo.svg"
-                alt="Kareo"
-                class="h-6 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <!-- ModMed -->
-              <img
-                src="/img/marquee logo/modmed.svg"
-                alt="ModMed"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- NextGen -->
-              <img
-                src="/img/marquee logo/NexGen.svg"
-                alt="NextGen"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Office Ally -->
-              <img
-                src="/img/marquee logo/office-ally.svg"
-                alt="Office Ally"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Optum -->
-              <img
-                src="/img/marquee logo/optum.svg"
-                alt="Optum"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Practice Fusion -->
-              <img
-                src="/img/marquee logo/Practice-Fusion.svg"
-                alt="Practice Fusion"
-                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <!-- Tebra -->
-              <img
-                src="/img/marquee logo/tebra.svg"
-                alt="Tebra"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-            </div>
-
-            <!-- =====================================================
-                LOGO SET 02 — DUPLICATE FOR SEAMLESS LOOP
-            ====================================================== -->
-
-            <div
-              class="flex shrink-0 items-center gap-16 pr-16"
-              aria-hidden="true"
-            >
-              <img
-                src="/img/marquee logo/advancedmd.svg"
-                alt=""
-                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <img
-                src="/img/marquee logo/Allscripts.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/athenahealth.svg"
-                alt=""
-                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/Cerner.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/ChiroTouch.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/dentrix-logo-1400.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/DrChrono.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/eclinicalworks.svg"
-                alt=""
-                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/ECLIPSE.svg"
-                alt=""
-                class="h-7 w-auto max-w-[140px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <img
-                src="/img/marquee logo/epic.svg"
-                alt=""
-                class="h-5 w-auto max-w-[100px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/Genesis-Chiropractic-Software-Logo.svg"
-                alt=""
-                class="h-7 w-auto max-w-[150px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <img
-                src="/img/marquee logo/Jane.svg"
-                alt=""
-                class="h-7 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <img
-                src="/img/marquee logo/Jopari.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/Kareo.svg"
-                alt=""
-                class="h-6 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <img
-                src="/img/marquee logo/modmed.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/NexGen.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/office-ally.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/optum.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/Practice-Fusion.svg"
-                alt=""
-                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <img
-                src="/img/marquee logo/tebra.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+<script src="/js/site-shell.js" data-include="marquee"></script>
 
 <!-- ===== FOOTER ===== -->
 

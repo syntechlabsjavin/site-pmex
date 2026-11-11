@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-css="site-buttons reference-typography style specialty-site-palette specialty-homepage-layout site-motion-3 site-faq-accordion-4 imported-services injury-billing-bh navbar-d90c332f inline-a8164582 services-mega pmex-common layout booking-modal site-footer">
+<html lang="en" data-css="site-buttons reference-typography tailwind style specialty-site-palette specialty-homepage-layout site-motion site-faq imported-services injury-billing-bh navbar-d90c332f inline-a8164582 services-mega pmex-common layout booking-modal site-footer">
 <head>
 <link rel="stylesheet" href="/css/root.css"/>
 
@@ -24,7 +24,7 @@
     <div data-hero-layout class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
       <div data-hero-copy class="max-w-[600px]">
         <p class="bh-eyebrow">Credentialing · MIPS & Quality Reporting</p>
-        <h1 class="bh-hero-title">Reporting That Protects <span class="text-[var(--c-E85D3F)]">Your Medicare Reimbursement.</span></h1>
+        <h1 class="bh-hero-title">Reporting That Protects <span class="t-orange">Your Medicare Reimbursement.</span></h1>
         <p class="bh-hero-para">PMEX determines your MIPS eligibility, selects the measures most likely to score well for your specialty, tracks performance data all year, and submits before the deadline, so reporting reflects the care you're already delivering.</p>
         <div class="flex flex-wrap gap-3 mb-8">
           <a href="#audit-form" class="cta-primary-btn">Get Your Free MIPS Review</a>
@@ -46,12 +46,12 @@
 <!-- ===== HERO ===== -->
 
 <section class="pmex-section specialty-hero-support"><div class="specialty-support-inner"><div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-6 sm:p-7 shadow-xl w-full max-w-[360px] shrink-0">
-        <p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-3F9A4B)] mb-1">Free MIPS Review</p>
-        <p class="text-[13px] text-[var(--c-676767)] mb-5">Find out your eligibility and current measure performance. No obligation, no cost.</p>
-        <form id="audit-form" class="space-y-3" onsubmit="return false;">
-          <input type="text" placeholder="Practice Name" class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)]"/>
-          <input type="email" placeholder="Email Address" class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)]"/>
-          <input type="tel" placeholder="Phone Number" class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)]"/>
+        <p class="t-xs fw-bold t-caps t-accent mb-xs">Free MIPS Review</p>
+        <p class="t-base t-muted mb-lg">Find out your eligibility and current measure performance. No obligation, no cost.</p>
+        <form id="audit-form" class="stack gap-md" onsubmit="return false;">
+          <input type="text" placeholder="Practice Name" class="input"/>
+          <input type="email" placeholder="Email Address" class="input"/>
+          <input type="tel" placeholder="Phone Number" class="input"/>
           <select class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)] text-[var(--c-959085)]">
             <option>Monthly Claim Volume</option>
             <option>Under 200</option>
@@ -60,7 +60,7 @@
           </select>
           <button data-site-button type="submit" class="w-full bg-[var(--c-3F9A4B)] hover:bg-[var(--c-2E8A3A)] text-[var(--c-FFFFFF)] text-[13px] font-semibold py-3 rounded-xl transition-colors">Request Free Review</button>
         </form>
-        <p class="text-[10px] text-[var(--c-888888)] mt-3 text-center">PMEX &middot; Quality reporting platform built for U.S. practices</p>
+        <p class="t-2xs t-subtle mt-md ta-center">PMEX &middot; Quality reporting platform built for U.S. practices</p>
       </div></div></section>
 
 
@@ -70,31 +70,31 @@
     <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-start mb-14">
       <div>
         <p class="bh-eyebrow">MIPS &amp; Quality Reporting</p>
-        <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-2E4A25)] leading-snug mb-4">A Missed Measure Today Is a Payment Adjustment Next Year</h2>
-        <p class="text-[14px] sm:text-[15px] text-[var(--c-676767)] leading-relaxed mb-4">The Merit-based Incentive Payment System, MIPS, adjusts Medicare Part B reimbursement up or down based on performance across four categories: Quality, Promoting Interoperability, Improvement Activities and Cost. A low score doesn't just mean a missed bonus, it means a payment penalty applied to Medicare claims the following year.</p>
-        <p class="text-[14px] sm:text-[15px] text-[var(--c-676767)] leading-relaxed mb-4">Most practices lose points not because their care is poor, but because the reporting itself falls through the cracks: a measure never gets tracked, a submission deadline is missed, or documentation doesn't quite support the measure being claimed. The clinical work happened, it just never got captured in a way the program recognizes.</p>
-        <p class="text-[14px] sm:text-[15px] text-[var(--c-676767)] leading-relaxed">PMEX determines eligibility, selects the measures most likely to score well for your specialty, tracks performance data throughout the year, and handles submission before the deadline, so reporting reflects the care you're already delivering.</p>
+        <h2 class="t-2xl fw-normal t-strong lh-snug mb-lg">A Missed Measure Today Is a Payment Adjustment Next Year</h2>
+        <p class="t-md t-muted lh-relaxed mb-lg">The Merit-based Incentive Payment System, MIPS, adjusts Medicare Part B reimbursement up or down based on performance across four categories: Quality, Promoting Interoperability, Improvement Activities and Cost. A low score doesn't just mean a missed bonus, it means a payment penalty applied to Medicare claims the following year.</p>
+        <p class="t-md t-muted lh-relaxed mb-lg">Most practices lose points not because their care is poor, but because the reporting itself falls through the cracks: a measure never gets tracked, a submission deadline is missed, or documentation doesn't quite support the measure being claimed. The clinical work happened, it just never got captured in a way the program recognizes.</p>
+        <p class="t-md t-muted lh-relaxed">PMEX determines eligibility, selects the measures most likely to score well for your specialty, tracks performance data throughout the year, and handles submission before the deadline, so reporting reflects the care you're already delivering.</p>
       </div>
       <div class="pmex-color-background bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl p-6 sm:p-7">
-        <p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-2E4A25)] mb-4">What's Included</p>
+        <p class="t-xs fw-bold t-caps t-strong mb-lg">What's Included</p>
         <ul class="space-y-3 text-[13.5px] text-[var(--c-505050)]">
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>MIPS eligibility determination</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Quality measure selection by specialty</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Promoting Interoperability tracking</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Improvement Activities documentation</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Cost category performance monitoring</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Year-round performance data collection</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Submission assistance ahead of CMS deadlines</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Performance analysis and score projection</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Compliance support for QPP requirements</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>MIPS eligibility determination</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Quality measure selection by specialty</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Promoting Interoperability tracking</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Improvement Activities documentation</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Cost category performance monitoring</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Year-round performance data collection</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Submission assistance ahead of CMS deadlines</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Performance analysis and score projection</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Compliance support for QPP requirements</li>
         </ul>
       </div>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="text-[26px] sm:text-[32px] font-bold text-[var(--c-2E4A25)]">4</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Performance categories scored</p></div>
-      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="text-[26px] sm:text-[32px] font-bold text-[var(--c-2E4A25)]">Year-Round</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Performance data tracked, not year-end</p></div>
-      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="text-[26px] sm:text-[32px] font-bold text-[var(--c-2E4A25)]">Specialty-Matched</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Measures selected for your specialty</p></div>
-      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="text-[26px] sm:text-[32px] font-bold text-[var(--c-2E4A25)]">0</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Missed submission deadlines</p></div>
+      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="t-3xl fw-bold t-strong">4</p><p class="t-xs t-muted mt-xs">Performance categories scored</p></div>
+      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="t-3xl fw-bold t-strong">Year-Round</p><p class="t-xs t-muted mt-xs">Performance data tracked, not year-end</p></div>
+      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="t-3xl fw-bold t-strong">Specialty-Matched</p><p class="t-xs t-muted mt-xs">Measures selected for your specialty</p></div>
+      <div class="pmex-color-background text-center bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl py-6 px-3"><p class="t-3xl fw-bold t-strong">0</p><p class="t-xs t-muted mt-xs">Missed submission deadlines</p></div>
     </div>
   </div>
 </section>
@@ -102,13 +102,13 @@
 <!-- ===== WHY CHOOSE US ===== -->
 <section class="pmex-section pmex-color-background bh-why bg-[var(--c-2E4A25)]">
   <div class="pmex-container">
-    <p class="text-[11px] font-bold uppercase tracking-[2px] text-[var(--c-AAD39C)] mb-2">Why Choose Us</p>
+    <p class="t-xs fw-bold t-caps t-light mb-sm">Why Choose Us</p>
     <h2 class="text-[22px] sm:text-[27px] font-normal text-[var(--c-FFFFFF)] leading-snug mb-8 max-w-[660px]">Reporting That Matches the Care You're Already Delivering</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-FFFFFF)] mb-1"><span class="bh-t">Measures Chosen Strategically</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Measures selected for what your specialty is realistically strong on.</p></div>
-      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-FFFFFF)] mb-1"><span class="bh-t">Tracked All Year</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Performance data collected continuously, not scrambled together in Q4.</p></div>
-      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-FFFFFF)] mb-1"><span class="bh-t">Deadline Discipline</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Submissions filed ahead of CMS deadlines, never at the last minute.</p></div>
-      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-FFFFFF)] mb-1"><span class="bh-t">Score Projections</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Mid-year visibility into projected score, so there's time to course-correct.</p></div>
+      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="t-base fw-semibold t-white mb-xs"><span class="bh-t">Measures Chosen Strategically</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Measures selected for what your specialty is realistically strong on.</p></div>
+      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="t-base fw-semibold t-white mb-xs"><span class="bh-t">Tracked All Year</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Performance data collected continuously, not scrambled together in Q4.</p></div>
+      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="t-base fw-semibold t-white mb-xs"><span class="bh-t">Deadline Discipline</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Submissions filed ahead of CMS deadlines, never at the last minute.</p></div>
+      <div class="bg-[var(--c-FFFFFF)]/10 border border-[var(--c-FFFFFF)]/15 rounded-2xl p-4"><p class="t-base fw-semibold t-white mb-xs"><span class="bh-t">Score Projections</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 leading-relaxed">Mid-year visibility into projected score, so there's time to course-correct.</p></div>
     </div>
   </div>
 </section>
@@ -118,17 +118,17 @@
   <div class="pmex-container">
     <div class="max-w-[760px] pmex-section-head">
       <p class="bh-eyebrow">The Four MIPS Categories</p>
-      <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-2E4A25)] leading-snug mb-3">Every Category, Tracked and Managed</h2>
+      <h2 class="t-2xl fw-normal t-strong lh-snug mb-md">Every Category, Tracked and Managed</h2>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-2E4A25)] mb-2"><span class="bh-t">Quality</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">Clinical performance measures selected to fit your specialty's strongest data.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-2E4A25)] mb-2"><span class="bh-t">Promoting Interoperability</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">EHR use and health information exchange requirements tracked and documented.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-2E4A25)] mb-2"><span class="bh-t">Improvement Activities</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">Practice-level activities selected and documented to earn full category credit.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-2E4A25)] mb-2"><span class="bh-t">Cost</span></p><p class="text-[12px] text-[var(--c-676767)] leading-relaxed">Calculated automatically by CMS from claims data, monitored to flag issues early.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Quality</span></p><p class="t-sm t-muted lh-relaxed">Clinical performance measures selected to fit your specialty's strongest data.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Promoting Interoperability</span></p><p class="t-sm t-muted lh-relaxed">EHR use and health information exchange requirements tracked and documented.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Improvement Activities</span></p><p class="t-sm t-muted lh-relaxed">Practice-level activities selected and documented to earn full category credit.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5"><p class="t-base fw-semibold t-strong mb-sm"><span class="bh-t">Cost</span></p><p class="t-sm t-muted lh-relaxed">Calculated automatically by CMS from claims data, monitored to flag issues early.</p></div>
     </div>
     <div class="pmex-color-background mt-4 bg-[var(--c-2E4A25)] rounded-2xl p-6 flex items-center gap-5">
       <p class="text-[30px] font-bold text-[var(--c-AAD39C)] shrink-0"></p>
-      <div><p class="text-[13.5px] font-semibold text-[var(--c-FFFFFF)]"><span class="bh-t">Reporting Strategy</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 mt-0.5">Category weighting reviewed each year to protect the overall score, not just to hit a minimum threshold.</p></div>
+      <div><p class="t-base fw-semibold t-white"><span class="bh-t">Reporting Strategy</span></p><p class="text-[11.5px] text-[var(--c-FFFFFF)]/70 mt-0.5">Category weighting reviewed each year to protect the overall score, not just to hit a minimum threshold.</p></div>
     </div>
   </div>
 </section>
@@ -136,45 +136,45 @@
 <!-- ===== FAQ ===== -->
 <section class="pmex-section bg-[var(--c-FFFFFF)]">
   <div class="max-w-[860px] mx-auto px-5 sm:px-6 lg:px-10">
-    <div class="text-center pmex-section-head">
+    <div class="pmex-section-head ta-center">
       <p class="bh-eyebrow">Questions</p>
-      <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-2E4A25)]">MIPS &amp; Quality Reporting: Frequently Asked Questions</h2>
+      <h2 class="t-2xl fw-normal t-strong">MIPS &amp; Quality Reporting: Frequently Asked Questions</h2>
     </div>
-    <div class="space-y-2" id="faq-list">
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">Who is required to participate in MIPS?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+    <div class="stack gap-sm" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">Who is required to participate in MIPS?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Eligibility depends on billing volume and patient count under Medicare Part B, along with clinician type. PMEX checks your specific eligibility status each year, since thresholds and exemptions can change.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Eligibility depends on billing volume and patient count under Medicare Part B, along with clinician type. PMEX checks your specific eligibility status each year, since thresholds and exemptions can change.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">What happens if we score poorly?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">What happens if we score poorly?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">A low MIPS score results in a negative payment adjustment applied to Medicare Part B reimbursement two years later, so poor reporting this year affects revenue well into the future.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">A low MIPS score results in a negative payment adjustment applied to Medicare Part B reimbursement two years later, so poor reporting this year affects revenue well into the future.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">How are quality measures chosen for our specialty?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">How are quality measures chosen for our specialty?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Measures are matched to the clinical work your specialty already documents well, so reporting captures existing strengths rather than asking providers to change how they practice.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Measures are matched to the clinical work your specialty already documents well, so reporting captures existing strengths rather than asking providers to change how they practice.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">Can we see our projected score before the year ends?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">Can we see our projected score before the year ends?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Yes. Performance data is tracked continuously through the year, giving you a mid-year projection with enough runway to adjust before the submission deadline.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Yes. Performance data is tracked continuously through the year, giving you a mid-year projection with enough runway to adjust before the submission deadline.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">Does MIPS reporting work with our existing EHR?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">Does MIPS reporting work with our existing EHR?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Yes. Performance tracking connects to the EHR and practice management system you already use, so quality data is pulled from documentation you're already producing.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Yes. Performance tracking connects to the EHR and practice management system you already use, so quality data is pulled from documentation you're already producing.</p></div>
       </div>
     </div>
   </div>
@@ -183,7 +183,7 @@
 <!-- ===== FINAL CTA ===== -->
 <section class="pmex-section pmex-color-background bg-[var(--c-F8FBF0)]">
   <div class="max-w-[860px] mx-auto px-5 sm:px-6 lg:px-10 text-center">
-    <h2 class="text-[22px] sm:text-[28px] font-normal text-[var(--c-2E4A25)] mb-3">Find Out Where Your MIPS Score Actually Stands</h2>
+    <h2 class="t-2xl fw-normal t-strong mb-md">Find Out Where Your MIPS Score Actually Stands</h2>
     <p class="text-[14px] text-[var(--c-676767)] mb-6 max-w-[520px] mx-auto">A free MIPS review checks your eligibility, current measure performance and what a payment adjustment could look like.</p>
     <a data-site-button href="#audit-form" class="inline-flex items-center gap-2 bg-[var(--c-3F9A4B)] hover:bg-[var(--c-2E8A3A)] text-[var(--c-FFFFFF)] text-[14px] font-semibold px-7 py-3.5 rounded-xl transition-colors">Get Your Free MIPS Review</a>
   </div>
@@ -191,289 +191,7 @@
 
 
 <!-- Trusted by leading organizations -->
-<div data-specialty-marquee class="border-y border-[var(--c-AAD39C)] bg-[var(--c-FFFFFF)] py-6">
-        <div class="marquee-container w-full overflow-hidden" data-pmex-marquee>
-          <div
-            class="flex w-max animate-marquee whitespace-nowrap"
-            data-pmex-marquee-track
-          >
-            <!-- =====================================================
-                LOGO SET 01
-            ====================================================== -->
-
-            <div class="flex shrink-0 items-center gap-16 pr-16">
-              <!-- AdvancedMD -->
-              <img
-                src="/img/marquee logo/advancedmd.svg"
-                alt="AdvancedMD"
-                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <!-- Allscripts -->
-              <img
-                src="/img/marquee logo/Allscripts.svg"
-                alt="Allscripts"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- athenahealth -->
-              <img
-                src="/img/marquee logo/athenahealth.svg"
-                alt="athenahealth"
-                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Cerner -->
-              <img
-                src="/img/marquee logo/Cerner.svg"
-                alt="Cerner"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- ChiroTouch -->
-              <img
-                src="/img/marquee logo/ChiroTouch.svg"
-                alt="ChiroTouch"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Dentrix -->
-              <img
-                src="/img/marquee logo/dentrix-logo-1400.svg"
-                alt="Dentrix"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- DrChrono -->
-              <img
-                src="/img/marquee logo/DrChrono.svg"
-                alt="DrChrono"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- eClinicalWorks -->
-              <img
-                src="/img/marquee logo/eclinicalworks.svg"
-                alt="eClinicalWorks"
-                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- ECLIPSE -->
-              <img
-                src="/img/marquee logo/ECLIPSE.svg"
-                alt="ECLIPSE"
-                class="h-7 w-auto max-w-[140px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <!-- Epic -->
-              <img
-                src="/img/marquee logo/epic.svg"
-                alt="Epic"
-                class="h-5 w-auto max-w-[100px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Genesis Chiropractic -->
-              <img
-                src="/img/marquee logo/Genesis-Chiropractic-Software-Logo.svg"
-                alt="Genesis Chiropractic"
-                class="h-7 w-auto max-w-[150px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <!-- Jane -->
-              <img
-                src="/img/marquee logo/Jane.svg"
-                alt="Jane App"
-                class="h-7 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <!-- Jopari -->
-              <img
-                src="/img/marquee logo/Jopari.svg"
-                alt="Jopari"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Kareo -->
-              <img
-                src="/img/marquee logo/Kareo.svg"
-                alt="Kareo"
-                class="h-6 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <!-- ModMed -->
-              <img
-                src="/img/marquee logo/modmed.svg"
-                alt="ModMed"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- NextGen -->
-              <img
-                src="/img/marquee logo/NexGen.svg"
-                alt="NextGen"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Office Ally -->
-              <img
-                src="/img/marquee logo/office-ally.svg"
-                alt="Office Ally"
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Optum -->
-              <img
-                src="/img/marquee logo/optum.svg"
-                alt="Optum"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <!-- Practice Fusion -->
-              <img
-                src="/img/marquee logo/Practice-Fusion.svg"
-                alt="Practice Fusion"
-                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <!-- Tebra -->
-              <img
-                src="/img/marquee logo/tebra.svg"
-                alt="Tebra"
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-            </div>
-
-            <!-- =====================================================
-                LOGO SET 02 — DUPLICATE FOR SEAMLESS LOOP
-            ====================================================== -->
-
-            <div
-              class="flex shrink-0 items-center gap-16 pr-16"
-              aria-hidden="true"
-            >
-              <img
-                src="/img/marquee logo/advancedmd.svg"
-                alt=""
-                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <img
-                src="/img/marquee logo/Allscripts.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/athenahealth.svg"
-                alt=""
-                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/Cerner.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/ChiroTouch.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/dentrix-logo-1400.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/DrChrono.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/eclinicalworks.svg"
-                alt=""
-                class="h-5 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/ECLIPSE.svg"
-                alt=""
-                class="h-7 w-auto max-w-[140px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <img
-                src="/img/marquee logo/epic.svg"
-                alt=""
-                class="h-5 w-auto max-w-[100px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/Genesis-Chiropractic-Software-Logo.svg"
-                alt=""
-                class="h-7 w-auto max-w-[150px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <img
-                src="/img/marquee logo/Jane.svg"
-                alt=""
-                class="h-7 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-8"
-              />
-
-              <img
-                src="/img/marquee logo/Jopari.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/Kareo.svg"
-                alt=""
-                class="h-6 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <img
-                src="/img/marquee logo/modmed.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/NexGen.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/office-ally.svg"
-                alt=""
-                class="h-5 w-auto max-w-[120px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/optum.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-
-              <img
-                src="/img/marquee logo/Practice-Fusion.svg"
-                alt=""
-                class="h-6 w-auto max-w-[130px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-7"
-              />
-
-              <img
-                src="/img/marquee logo/tebra.svg"
-                alt=""
-                class="h-5 w-auto max-w-[110px] shrink-0 object-contain grayscale opacity-60 transition-all duration-300 ease-out hover:scale-105 hover:grayscale-0 hover:opacity-100 sm:h-6"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+<script src="/js/site-shell.js" data-include="marquee"></script>
 
 <!-- ===== FOOTER ===== -->
 

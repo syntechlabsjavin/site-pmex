@@ -3,7 +3,7 @@
 // the computed style of every element. Pixels that differ between two loads of the baseline (marquee, counters,
 // sliders) are ignored. Output goes to .regression/ (report.json and a diff image for each page that changed).
 //
-// Usage: node scripts/checks/check-regression.js [--ref=css-baseline] [--widths=1440,390] [--tabs=4] [page ...]
+// Usage: node scripts/checks/check-regression.js [--ref=css-baseline] [--cur=dist] [--widths=1440,390] [--tabs=4] [page ...]
 //        Pages can be names (cardiology.html) or paths (specialties/cardiology.html). Default: every page.
 // Exit code 1 when any page differs or fails to load.
 const fs = require('fs'), os = require('os'), path = require('path'), http = require('http');
@@ -15,6 +15,7 @@ const opt = (name, def) => { const a = args.find(x => x.startsWith('--' + name +
 const REF = opt('ref', 'css-baseline');
 const WIDTHS = opt('widths', '1440,390').split(',').map(Number);
 const TABS = Number(opt('tabs', 4));
+const CUR = opt('cur', DIST); // folder served as the current site (a snapshot of dist lets you keep editing during a run)
 const PIXEL_TOLERANCE = 24; // per colour channel, absorbs anti-aliasing
 const MAX_HEIGHT = 30000;
 const pages = args.filter(a => !a.startsWith('--')).map(p => path.relative(DIST, pagePath(p)).split(path.sep).join('/'));
@@ -129,7 +130,7 @@ const COMPARE = `async (b1, b2, cur, tol) => {
 }`;
 
 (async () => {
-  const [baseServer, curServer] = await Promise.all([serve(path.join(BASE, DIST)), serve(DIST)]);
+  const [baseServer, curServer] = await Promise.all([serve(path.join(BASE, DIST)), serve(CUR)]);
   const baseUrl = 'http://127.0.0.1:' + baseServer.address().port + '/', curUrl = 'http://127.0.0.1:' + curServer.address().port + '/';
   const port = 9300 + Math.floor(Math.random() * 500);
   const chrome = spawn('C:/Program Files/Google/Chrome/Application/chrome.exe', ['--headless=new', '--disable-gpu', '--no-first-run', '--hide-scrollbars', '--force-color-profile=srgb', '--disable-background-timer-throttling', '--disable-renderer-backgrounding', '--disable-backgrounding-occluded-windows', '--remote-debugging-port=' + port, '--user-data-dir=' + fs.mkdtempSync(path.join(os.tmpdir(), 'pmex-regression-')), 'about:blank'], { stdio: 'ignore' });

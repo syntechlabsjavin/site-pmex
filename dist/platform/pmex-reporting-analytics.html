@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-css="site-buttons reference-typography style specialty-site-palette specialty-homepage-layout site-motion-3 site-faq-accordion-4 pmex-platform pmex-platform-family pmex-platform-bh navbar-d90c332f inline-a8164582 services-mega layout booking-modal site-footer">
+<html lang="en" data-css="site-buttons reference-typography tailwind style specialty-site-palette specialty-homepage-layout site-motion site-faq pmex-platform pmex-platform-family pmex-platform-bh navbar-d90c332f inline-a8164582 services-mega layout booking-modal site-footer">
 <head>
 <link rel="stylesheet" href="/css/root.css"/>
 
@@ -25,7 +25,7 @@
     <div data-hero-layout class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
       <div data-hero-copy class="max-w-[600px]">
         <p class="bh-eyebrow">PMEX Portal · Reporting & Analytics</p>
-        <h1 class="bh-hero-title">Reports Built to Answer <span class="text-[var(--c-3F9A4B)]">a Real Question.</span></h1>
+        <h1 class="bh-hero-title">Reports Built to Answer <span class="t-accent">a Real Question.</span></h1>
         <p class="bh-hero-para">Custom KPIs, historical comparisons, executive dashboards and exportable reports, all built around a specific decision someone on your team actually needs to make, not a generic template.</p>
         <div class="flex flex-wrap gap-3 mb-8">
           <a href="/company/demo.html" class="cta-primary-btn">Schedule a Platform Demo</a>
@@ -48,11 +48,11 @@
 
 <section class="pmex-section specialty-hero-support"><div class="specialty-support-inner"><div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-6 sm:p-7 shadow-xl w-full max-w-[360px] shrink-0">
         <h3 class="platform-form-title">Free Platform Demo</h3>
-        <p class="text-[13px] text-[var(--c-676767)] mb-5">See a sample executive dashboard and custom report. No obligation, no cost.</p>
-        <form id="audit-form" class="space-y-3" onsubmit="return false;">
-          <input type="text" placeholder="Practice Name" class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)]"/>
-          <input type="email" placeholder="Email Address" class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)]"/>
-          <input type="tel" placeholder="Phone Number" class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)]"/>
+        <p class="t-base t-muted mb-lg">See a sample executive dashboard and custom report. No obligation, no cost.</p>
+        <form id="audit-form" class="stack gap-md" onsubmit="return false;">
+          <input type="text" placeholder="Practice Name" class="input"/>
+          <input type="email" placeholder="Email Address" class="input"/>
+          <input type="tel" placeholder="Phone Number" class="input"/>
           <select class="w-full border border-[var(--c-E0E0DA)] rounded-lg px-3.5 py-2.5 text-[13px] outline-none focus:border-[var(--c-3F9A4B)] text-[var(--c-959085)]">
             <option>Monthly Claim Volume</option>
             <option>Under 200</option>
@@ -61,7 +61,7 @@
           </select>
           <button data-site-button type="submit" class="w-full bg-[var(--c-3F9A4B)] hover:bg-[var(--c-2E8A3A)] text-[var(--c-505050)] text-[13px] font-semibold py-3 rounded-xl transition-colors">Request Free Demo</button>
         </form>
-        <p class="text-[10px] text-[var(--c-676767)] mt-3 text-center">PMEX &middot; Revenue Operating System for Healthcare</p>
+        <p class="t-2xs t-muted mt-md ta-center">PMEX &middot; Revenue Operating System for Healthcare</p>
       </div></div></section>
 
 
@@ -71,26 +71,26 @@
     <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-start mb-14">
       <div>
         <p class="bh-eyebrow">Reporting &amp; Analytics</p>
-        <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-505050)] leading-snug mb-4">Reports Built to Answer a Real Question, Not Just Display Numbers</h2>
-        <p class="text-[14px] sm:text-[15px] text-[var(--c-676767)] leading-relaxed mb-4">A live dashboard is one thing. A report that a practice owner can hand to a financial committee, or that a physician group can use to compare quarter over quarter, is another. Reporting & Analytics turns the raw data behind Practice Intelligence into something built for a specific audience and a specific decision.</p>
-        <p class="text-[14px] sm:text-[15px] text-[var(--c-676767)] leading-relaxed">Every report is built around a question someone actually needs answered: is collections trending up or down, which payer is underperforming, which provider needs support, how this quarter compares to last.</p>
+        <h2 class="t-2xl fw-normal t-text lh-snug mb-lg">Reports Built to Answer a Real Question, Not Just Display Numbers</h2>
+        <p class="t-md t-muted lh-relaxed mb-lg">A live dashboard is one thing. A report that a practice owner can hand to a financial committee, or that a physician group can use to compare quarter over quarter, is another. Reporting & Analytics turns the raw data behind Practice Intelligence into something built for a specific audience and a specific decision.</p>
+        <p class="t-md t-muted lh-relaxed">Every report is built around a question someone actually needs answered: is collections trending up or down, which payer is underperforming, which provider needs support, how this quarter compares to last.</p>
       </div>
       <div class="pmex-color-background bg-[var(--c-F8FBF0)] border border-[var(--c-AAD39C)] rounded-2xl p-6 sm:p-7">
-        <p class="text-[11px] font-bold uppercase tracking-wider text-[var(--c-505050)] mb-4">What's Included</p>
+        <p class="t-xs fw-bold t-caps t-text mb-lg">What's Included</p>
         <ul class="space-y-3 text-[13.5px] text-[var(--c-505050)]">
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Custom KPIs built around what your practice tracks</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Historical comparisons, quarter over quarter and year over year</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Executive dashboards built for owners and financial committees</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Custom reports, scheduled or pulled on demand</li>
-          <li class="flex gap-2.5"><span class="text-[var(--c-3F9A4B)] font-bold">✓</span>Exportable formats for accountants and outside stakeholders</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Custom KPIs built around what your practice tracks</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Historical comparisons, quarter over quarter and year over year</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Executive dashboards built for owners and financial committees</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Custom reports, scheduled or pulled on demand</li>
+          <li class="row-stretch gap-sm"><span class="t-accent fw-bold">✓</span>Exportable formats for accountants and outside stakeholders</li>
         </ul>
       </div>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-      <div class="platform-result-card"><div class="platform-result-face"><span class="platform-result-icon" aria-hidden="true"><img src="/img/timely-claim.svg" alt="" width="30" height="30"></span><strong class="text-[26px] sm:text-[32px] font-bold text-[var(--c-505050)]">Custom</strong><h4 class="text-[11.5px] text-[var(--c-676767)] mt-1">Built around your specific KPIs</h4><span class="platform-result-number" aria-hidden="true">01</span></div></div>
-      <div class="platform-result-card"><div class="platform-result-face"><span class="platform-result-icon" aria-hidden="true"><img src="/img/accept-check.svg" alt="" width="30" height="30"></span><strong class="text-[26px] sm:text-[32px] font-bold text-[var(--c-505050)]">Exportable</strong><h4 class="text-[11.5px] text-[var(--c-676767)] mt-1">Standard formats, ready to share</h4><span class="platform-result-number" aria-hidden="true">02</span></div></div>
-      <div class="platform-result-card"><div class="platform-result-face"><span class="platform-result-icon" aria-hidden="true"><img src="/img/claim.svg" alt="" width="30" height="30"></span><strong class="text-[26px] sm:text-[32px] font-bold text-[var(--c-505050)]">Scheduled or On-Demand</strong><h4 class="text-[11.5px] text-[var(--c-676767)] mt-1">Pulled whenever it's needed</h4><span class="platform-result-number" aria-hidden="true">03</span></div></div>
-      <div class="platform-result-card"><div class="platform-result-face"><span class="platform-result-icon" aria-hidden="true"><img src="/img/shield-check.svg" alt="" width="30" height="30"></span><strong class="text-[26px] sm:text-[32px] font-bold text-[var(--c-505050)]">Same Data</strong><h4 class="text-[11.5px] text-[var(--c-676767)] mt-1">No repackaging before it reaches you</h4><span class="platform-result-number" aria-hidden="true">04</span></div></div>
+      <div class="platform-result-card"><div class="platform-result-face"><span class="platform-result-icon" aria-hidden="true"><img src="/img/timely-claim.svg" alt="" width="30" height="30"></span><strong class="t-3xl fw-bold t-text">Custom</strong><h4 class="t-xs t-muted mt-xs">Built around your specific KPIs</h4><span class="platform-result-number" aria-hidden="true">01</span></div></div>
+      <div class="platform-result-card"><div class="platform-result-face"><span class="platform-result-icon" aria-hidden="true"><img src="/img/accept-check.svg" alt="" width="30" height="30"></span><strong class="t-3xl fw-bold t-text">Exportable</strong><h4 class="t-xs t-muted mt-xs">Standard formats, ready to share</h4><span class="platform-result-number" aria-hidden="true">02</span></div></div>
+      <div class="platform-result-card"><div class="platform-result-face"><span class="platform-result-icon" aria-hidden="true"><img src="/img/claim.svg" alt="" width="30" height="30"></span><strong class="t-3xl fw-bold t-text">Scheduled or On-Demand</strong><h4 class="t-xs t-muted mt-xs">Pulled whenever it's needed</h4><span class="platform-result-number" aria-hidden="true">03</span></div></div>
+      <div class="platform-result-card"><div class="platform-result-face"><span class="platform-result-icon" aria-hidden="true"><img src="/img/shield-check.svg" alt="" width="30" height="30"></span><strong class="t-3xl fw-bold t-text">Same Data</strong><h4 class="t-xs t-muted mt-xs">No repackaging before it reaches you</h4><span class="platform-result-number" aria-hidden="true">04</span></div></div>
     </div>
   </div>
 </section>
@@ -99,14 +99,14 @@
 <section class="pmex-section platform-benefits">
   <div class="pmex-container">
     <div class="pmex-section-head">
-      <p class="text-[11px] font-bold uppercase tracking-[2px] text-[var(--c-AAD39C)] mb-2">Why Choose Us</p>
+      <p class="t-xs fw-bold t-caps t-light mb-sm">Why Choose Us</p>
       <h2 class="text-[22px] sm:text-[27px] font-normal text-[var(--c-505050)] leading-snug max-w-[720px]">A Report Should Change a Decision, Not Just Fill a Folder</h2>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-505050)] mb-1">Built for a Question</p><p class="text-[11.5px] text-[var(--c-676767)] leading-relaxed">Every report answers something specific, not a generic template.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-505050)] mb-1">Built for the Audience</p><p class="text-[11.5px] text-[var(--c-676767)] leading-relaxed">A billing manager and a board member need different reports, and get them.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-505050)] mb-1">No Repackaging</p><p class="text-[11.5px] text-[var(--c-676767)] leading-relaxed">The same data your billing team works from, not a filtered summary.</p></div>
-      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-4"><p class="text-[13px] font-semibold text-[var(--c-505050)] mb-1">Comparable Over Time</p><p class="text-[11.5px] text-[var(--c-676767)] leading-relaxed">Historical views built in, not a one-time snapshot.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-4"><p class="t-base fw-semibold t-text mb-xs">Built for a Question</p><p class="t-xs t-muted lh-relaxed">Every report answers something specific, not a generic template.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-4"><p class="t-base fw-semibold t-text mb-xs">Built for the Audience</p><p class="t-xs t-muted lh-relaxed">A billing manager and a board member need different reports, and get them.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-4"><p class="t-base fw-semibold t-text mb-xs">No Repackaging</p><p class="t-xs t-muted lh-relaxed">The same data your billing team works from, not a filtered summary.</p></div>
+      <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-4"><p class="t-base fw-semibold t-text mb-xs">Comparable Over Time</p><p class="t-xs t-muted lh-relaxed">Historical views built in, not a one-time snapshot.</p></div>
     </div>
   </div>
 </section>
@@ -116,32 +116,32 @@
   <div class="pmex-container">
     <div class="max-w-[760px] pmex-section-head">
       <p class="bh-eyebrow">Complete Service Breakdown</p>
-      <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-505050)] leading-snug mb-3">Every Reporting Function, Grouped by Its Audience</h2>
+      <h2 class="t-2xl fw-normal t-text lh-snug mb-md">Every Reporting Function, Grouped by Its Audience</h2>
     </div>
 
-    <div class="mb-10">
+    <div class="mb-2xl">
       <div class="flex items-center gap-3 mb-4">
         <span class="w-8 h-8 rounded-lg bg-[var(--c-3F9A4B)] text-[var(--c-505050)] flex items-center justify-center text-[14px] font-bold">1</span>
-        <p class="text-[13px] font-bold uppercase tracking-wider text-[var(--c-505050)]">Built Around Your Metrics</p>
+        <p class="t-base fw-bold t-caps t-text">Built Around Your Metrics</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div class="sm:col-span-2 bg-[var(--c-FFFFFF)] border border-[var(--c-AAD39C)] rounded-2xl p-5 flex items-center gap-5">
           <div class="shrink-0 text-center w-[70px]"></div>
-          <div><p class="text-[13.5px] font-semibold text-[var(--c-505050)]">Custom KPIs</p><p class="text-[11.5px] text-[var(--c-676767)] mt-0.5">Metrics defined around what your practice actually needs to track, not a fixed list of generic numbers.</p></div>
+          <div><p class="t-base fw-semibold t-text">Custom KPIs</p><p class="t-xs t-muted mt-2xs">Metrics defined around what your practice actually needs to track, not a fixed list of generic numbers.</p></div>
         </div>
-        <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-505050)]">Historical Comparisons</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">This quarter against last, this year against last.</p></div>
-        <div class="bg-[var(--c-FFFFFF)] border border-[var(--c-E0E0DA)] rounded-2xl p-5"><p class="text-[13px] font-semibold text-[var(--c-505050)]">Custom Reports</p><p class="text-[11.5px] text-[var(--c-676767)] mt-1">Scheduled or pulled on demand.</p></div>
+        <div class="panel"><p class="t-base fw-semibold t-text">Historical Comparisons</p><p class="t-xs t-muted mt-xs">This quarter against last, this year against last.</p></div>
+        <div class="panel"><p class="t-base fw-semibold t-text">Custom Reports</p><p class="t-xs t-muted mt-xs">Scheduled or pulled on demand.</p></div>
       </div>
     </div>
 
     <div>
       <div class="flex items-center gap-3 mb-4">
         <span class="w-8 h-8 rounded-lg bg-[var(--c-3F9A4B)] text-[var(--c-505050)] flex items-center justify-center text-[14px] font-bold">2</span>
-        <p class="text-[13px] font-bold uppercase tracking-wider text-[var(--c-505050)]">Built for Who's Reading It</p>
+        <p class="t-base fw-bold t-caps t-text">Built for Who's Reading It</p>
       </div>
       <div class="pmex-color-background bg-[var(--c-2E4A25)] rounded-2xl p-6 flex items-center gap-5">
         
-        <div><p class="text-[13.5px] font-semibold text-[var(--c-505050)]">Executive Dashboards</p><p class="text-[11.5px] text-[var(--c-676767)] mt-0.5">Built for owners, partners and financial committees who need the high-level view without digging through raw data.</p></div>
+        <div><p class="t-base fw-semibold t-text">Executive Dashboards</p><p class="t-xs t-muted mt-2xs">Built for owners, partners and financial committees who need the high-level view without digging through raw data.</p></div>
       </div>
     </div>
   </div>
@@ -150,31 +150,31 @@
 <!-- ===== FAQ ===== -->
 <section class="pmex-section bg-[var(--c-FFFFFF)]">
   <div class="max-w-[860px] mx-auto px-5 sm:px-6 lg:px-10">
-    <div class="text-center pmex-section-head">
+    <div class="pmex-section-head ta-center">
       <p class="bh-eyebrow">Questions</p>
-      <h2 class="text-[24px] sm:text-[30px] font-normal text-[var(--c-505050)]">Reporting &amp; Analytics: Frequently Asked Questions</h2>
+      <h2 class="t-2xl fw-normal t-text">Reporting &amp; Analytics: Frequently Asked Questions</h2>
     </div>
-    <div class="space-y-2" id="faq-list">
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">How is this different from Practice Intelligence?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+    <div class="stack gap-sm" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">How is this different from Practice Intelligence?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Practice Intelligence is the live dashboard you check day to day. Reporting & Analytics turns that same data into structured reports for a specific audience, like a board meeting or an accountant's request.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Practice Intelligence is the live dashboard you check day to day. Reporting & Analytics turns that same data into structured reports for a specific audience, like a board meeting or an accountant's request.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">Can we define our own KPIs?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">Can we define our own KPIs?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Yes. Custom KPIs are built around what your practice specifically wants to track, not limited to a fixed default list.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Yes. Custom KPIs are built around what your practice specifically wants to track, not limited to a fixed default list.</p></div>
       </div>
-      <div class="faq-item border border-[var(--c-E0E0DA)] rounded-xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-[var(--c-FFFFFF)] hover:bg-[var(--c-F8FBF0)] transition-colors">
-          <span class="text-[14px] font-medium text-[var(--c-505050)]">Can reports be exported for an accountant or outside party?</span>
-          <svg class="faq-icon w-4 h-4 shrink-0 text-[var(--c-3F9A4B)] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span class="t-md fw-medium t-text">Can reports be exported for an accountant or outside party?</span>
+          <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#chevron-down-wide"></use></svg>
         </button>
-        <div class="pmex-color-background faq-content px-5 pb-4 bg-[var(--c-F8FBF0)]"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Yes. Reports export in standard formats suitable for internal review, financial committees, or an outside accountant.</p></div>
+        <div class="pmex-color-background faq-content"><p class="text-[13px] text-[var(--c-676767)] leading-relaxed pt-3">Yes. Reports export in standard formats suitable for internal review, financial committees, or an outside accountant.</p></div>
       </div>
     </div>
   </div>
@@ -183,7 +183,7 @@
 <!-- ===== FINAL CTA ===== -->
 <section class="pmex-section pmex-color-background bg-[var(--c-F8FBF0)]">
   <div class="max-w-[860px] mx-auto px-5 sm:px-6 lg:px-10 text-center">
-    <h2 class="text-[22px] sm:text-[28px] font-normal text-[var(--c-505050)] mb-3">Get Reports That Actually Answer the Question</h2>
+    <h2 class="t-2xl fw-normal t-text mb-md">Get Reports That Actually Answer the Question</h2>
     <p class="text-[14px] text-[var(--c-676767)] mb-6 max-w-[520px] mx-auto">See a sample executive dashboard and custom report built around your practice's own metrics.</p>
     <a data-site-button href="#audit-form" class="inline-flex items-center gap-2 bg-[var(--c-3F9A4B)] hover:bg-[var(--c-2E8A3A)] text-[var(--c-505050)] text-[14px] font-semibold px-7 py-3.5 rounded-xl transition-colors">Schedule a Platform Demo</a>
   </div>
