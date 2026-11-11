@@ -6,7 +6,7 @@ function switchAccordion(index) {
         const content = document.getElementById('acc-content-' + i);
 
         if (i === index) {
-            item.style.background = 'linear-gradient(90deg, var(--c-E3ECDA) 0%, var(--c-F4F6F0) 60%)';
+            item.style.background = 'linear-gradient(90deg in srgb, var(--c-E3ECDA) 0%, var(--c-F4F6F0) 60%)';
             dot.className = 'w-[7px] h-[7px] rounded-full flex-shrink-0 bg-[var(--c-7FB35C)]';
             label.className = 'text-[11px] font-bold tracking-[1.5px] uppercase text-[var(--c-6A6A62)]';
             content.classList.remove('hidden');

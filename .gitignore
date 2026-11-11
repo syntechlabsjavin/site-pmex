@@ -4,3 +4,9 @@ Thumbs.db
 *.log
 .env
 .env.*
+
+# visual regression output (scripts/checks/check-regression.js)
+.regression/
+
+# audit output of the check scripts (regenerated on every run)
+reports/

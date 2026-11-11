@@ -87,7 +87,7 @@ function switchTab(index) {
     // add dot if not already there
     if (!active.querySelector('span')) {
         const dot = document.createElement('span');
-        dot.style.cssText = 'width:10px;height:10px;border-radius:50%;background:radial-gradient(circle, var(--c-BDE2B1) 0%, var(--c-8DB87E) 100%);box-shadow:0 0 0 4px var(--c-AAD39C-a30);display:inline-block;flex-shrink:0;';
+        dot.style.cssText = 'width:10px;height:10px;border-radius:50%;background:radial-gradient(circle in srgb, var(--c-BDE2B1) 0%, var(--c-8DB87E) 100%);box-shadow:0 0 0 4px var(--c-AAD39C-a30);display:inline-block;flex-shrink:0;';
         active.prepend(dot);
     }
 

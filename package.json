@@ -21,7 +21,12 @@
     "shell:sync": "node scripts/build/sync-site-shell.js",
     "shell:check": "node scripts/build/sync-site-shell.js --check",
     "icons:share": "node scripts/build/share-site-icons.js",
-    "icons:shared:check": "node scripts/build/share-site-icons.js --check"
+    "icons:shared:check": "node scripts/build/share-site-icons.js --check",
+    "theme:build": "node scripts/build/build-theme-tokens.js",
+    "theme:report": "node scripts/build/build-theme-tokens.js --report",
+    "gradients:pin": "node scripts/build/pin-gradient-space.js",
+    "gradients:check": "node scripts/build/pin-gradient-space.js --check",
+    "check:regression": "node scripts/checks/check-regression.js"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.3.0",
