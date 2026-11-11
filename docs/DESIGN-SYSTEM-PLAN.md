@@ -73,6 +73,10 @@ Rules:
 | 2026-11-11 | scale tokens; `style` block split into `tailwind` (generated) + `style` (custom); `ds` layer | 21,290 |
 | 2026-11-11 | Tailwind -> design system: FAQ (3,368 el.), text roles (11,397 el.), components (6,150 el.); Tailwind elements 40,379 -> 17,586 | 21,447 |
 | 2026-11-11 | remaining 17,586 elements and 22 scripts -> `u-*` classes (1,691, generated, one line each); Tailwind block, `src/input.css` and the tailwindcss packages removed; Tailwind reset kept as `[data-css]` reset | 14,217 |
+| 2026-11-11 | `npm run check:css` guard; css-coverage.js (120 pages x 4 widths): 879 of 7,062 rules never used; the 324 that cannot match any markup removed (incl. the unused `.c-HEX` color classes) | 13,910 |
+
+Remaining unused rules (555) belong to hidden elements (modal, menus) or script states, or to page structures that
+changed; they are reviewed by hand while consolidating the page blocks (phase 4/6).
 
 ## Design-system layer (`@layer ds`, end of root.css)
 
