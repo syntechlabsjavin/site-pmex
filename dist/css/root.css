@@ -1880,7 +1880,7 @@ html[data-css~="style"], [data-css~="style"] body {
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: var(--c-3F9A4B, #3F9A4B);
+  color: var(--c-3F9A4B);
   text-transform: uppercase;
   margin: 0 0 12px;
 }
@@ -1897,7 +1897,7 @@ html body h1.bh-hero-title {
   font-weight: 400 !important;
   line-height: 1.2 !important;
   margin: 0 0 12px !important;
-  color: var(--c-505050, #505050) !important;
+  color: var(--c-505050) !important;
   max-width: 500px !important;
   letter-spacing: normal !important;
 }
@@ -1913,7 +1913,7 @@ html body p.bh-hero-para {
   font-size: 14px !important;
   font-weight: 400 !important;
   line-height: 1.625 !important;
-  color: var(--c-676767, #676767) !important;
+  color: var(--c-676767) !important;
   margin: 0 0 12px !important;
 }
 @media (min-width: 640px) {
@@ -11381,7 +11381,7 @@ html[data-css~="navbar-d90c332f"] body section :is(a,button).cta-primary-btn:is(
   font-size: clamp(32px, 5vw, 64px);
   font-weight: 800;
   line-height: 1.2;
-  color: #000;
+  color: var(--theme-black);
 }
 @font-face {
   font-family: 'PMEX Inter Black';

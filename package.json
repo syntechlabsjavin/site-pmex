@@ -26,7 +26,8 @@
     "theme:report": "node scripts/build/build-theme-tokens.js --report",
     "gradients:pin": "node scripts/build/pin-gradient-space.js",
     "gradients:check": "node scripts/build/pin-gradient-space.js --check",
-    "check:regression": "node scripts/checks/check-regression.js"
+    "check:regression": "node scripts/checks/check-regression.js",
+    "check:css": "node scripts/checks/check-css.js"
   },
   "dependencies": {
     "colors": "*",
