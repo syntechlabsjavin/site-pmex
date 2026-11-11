@@ -45,8 +45,8 @@
                     const doc = parser.parseFromString(htmlText, 'text/html');
                     const overlay = doc.getElementById('booking-modal-overlay');
                     if (overlay) {
-                        overlay.classList.add('hidden');
-                        overlay.classList.remove('flex');
+                        overlay.classList.add('u-hidden');
+                        overlay.classList.remove('u-flex');
                         document.body.appendChild(overlay);
                         setupModalEvents(overlay);
                         updateTzTriggerText();
@@ -75,7 +75,7 @@
             const dropdown = document.getElementById('booking-tz-dropdown');
             const isTrigger = e.target.closest('.tz-trigger-btn');
             if (dropdown && !dropdown.contains(e.target) && !isTrigger) {
-                dropdown.classList.add('hidden');
+                dropdown.classList.add('u-hidden');
             }
         });
     }
@@ -99,14 +99,14 @@
         if (e) e.stopPropagation();
         const dropdown = document.getElementById('booking-tz-dropdown');
         if (!dropdown) return;
-        const isHidden = dropdown.classList.contains('hidden');
+        const isHidden = dropdown.classList.contains('u-hidden');
         if (isHidden) {
             renderTzList();
-            dropdown.classList.remove('hidden');
+            dropdown.classList.remove('u-hidden');
             const searchInput = document.getElementById('tz-search-input');
             if (searchInput) searchInput.focus();
         } else {
-            dropdown.classList.add('hidden');
+            dropdown.classList.add('u-hidden');
         }
     };
 
@@ -177,7 +177,7 @@
                     updateTzTriggerText();
                     renderTzList();
                     const dropdown = document.getElementById('booking-tz-dropdown');
-                    if (dropdown) dropdown.classList.add('hidden');
+                    if (dropdown) dropdown.classList.add('u-hidden');
                 };
 
                 container.appendChild(btn);
@@ -212,15 +212,15 @@
 
         const sdt = document.getElementById('booking-selected-datetime');
         if (sdt) {
-            sdt.classList.add('hidden');
-            sdt.classList.remove('flex');
+            sdt.classList.add('u-hidden');
+            sdt.classList.remove('u-flex');
         }
 
         const form = document.querySelector('#booking-step-3 form');
         if (form) form.reset();
 
         const dropdown = document.getElementById('booking-tz-dropdown');
-        if (dropdown) dropdown.classList.add('hidden');
+        if (dropdown) dropdown.classList.add('u-hidden');
 
         goToStep(1);
     }
@@ -233,8 +233,8 @@
         updateTzTriggerText();
 
         const card = document.getElementById('booking-modal-card');
-        overlay.classList.remove('hidden');
-        overlay.classList.add('flex');
+        overlay.classList.remove('u-hidden');
+        overlay.classList.add('u-flex');
         if (card) card.style.height = '';
         lockCardHeight();
 
@@ -245,10 +245,10 @@
         document.body.style.overflow = 'hidden';
 
         requestAnimationFrame(() => {
-            overlay.classList.remove('opacity-0');
+            overlay.classList.remove('u-opacity-0');
             if (card) {
-                card.classList.remove('opacity-0', 'scale-95');
-                card.classList.add('opacity-100', 'scale-100');
+                card.classList.remove('u-opacity-0', 'u-scale-95');
+                card.classList.add('u-opacity-100', 'u-scale-100');
             }
         });
     };
@@ -258,15 +258,15 @@
         const card = document.getElementById('booking-modal-card');
         if (!overlay) return;
 
-        overlay.classList.add('opacity-0');
+        overlay.classList.add('u-opacity-0');
         if (card) {
-            card.classList.remove('opacity-100', 'scale-100');
-            card.classList.add('opacity-0', 'scale-95');
+            card.classList.remove('u-opacity-100', 'u-scale-100');
+            card.classList.add('u-opacity-0', 'u-scale-95');
         }
 
         setTimeout(() => {
-            overlay.classList.add('hidden');
-            overlay.classList.remove('flex');
+            overlay.classList.add('u-hidden');
+            overlay.classList.remove('u-flex');
             document.body.style.overflow = '';
             document.body.style.paddingRight = '';
             resetModalState();
@@ -276,13 +276,13 @@
     window.bookingBack = function () {
         const step2 = document.getElementById('booking-step-2');
         const step3 = document.getElementById('booking-step-3');
-        if (step3 && !step3.classList.contains('hidden')) {
+        if (step3 && !step3.classList.contains('u-hidden')) {
             goToStep(2);
-        } else if (step2 && !step2.classList.contains('hidden')) {
+        } else if (step2 && !step2.classList.contains('u-hidden')) {
             selectedDate = null;
             selectedTime = null;
             const dt = document.getElementById('booking-selected-datetime');
-            if (dt) dt.classList.add('hidden');
+            if (dt) dt.classList.add('u-hidden');
             goToStep(1);
         } else {
             window.closeBookingModal();
@@ -294,7 +294,7 @@
         if (card) card.setAttribute('data-step', String(step));
         [1, 2, 3].forEach(n => {
             const el = document.getElementById('booking-step-' + n);
-            if (el) el.classList.toggle('hidden', n !== step);
+            if (el) el.classList.toggle('u-hidden', n !== step);
         });
         renderCalendar();
         lockCardHeight();
@@ -313,7 +313,7 @@
     function lockCardHeight() {
         const card = document.getElementById('booking-modal-card');
         const overlay = document.getElementById('booking-modal-overlay');
-        if (!card || !overlay || overlay.classList.contains('hidden')) return;
+        if (!card || !overlay || overlay.classList.contains('u-hidden')) return;
         if (!window.matchMedia('(min-width: 900px)').matches) { card.style.height = ''; return; }
         // all three steps keep the calendar step height, so the card never jumps
         if (card.getAttribute('data-step') === '3' && card.style.height) return;
@@ -325,7 +325,7 @@
     }
     window.addEventListener('resize', () => {
         const overlay = document.getElementById('booking-modal-overlay');
-        if (overlay && !overlay.classList.contains('hidden')) lockCardHeight();
+        if (overlay && !overlay.classList.contains('u-hidden')) lockCardHeight();
     });
 
     window.changeMonth = function (delta) {
@@ -422,8 +422,8 @@
 
         const sdt = document.getElementById('booking-selected-datetime');
         if (sdt) {
-            sdt.classList.remove('hidden');
-            sdt.classList.add('flex');
+            sdt.classList.remove('u-hidden');
+            sdt.classList.add('u-flex');
         }
         const sdtt = document.getElementById('booking-selected-datetime-text');
         if (sdtt) sdtt.textContent = `${start} - ${end}, ${dateLabel}`;

@@ -27,14 +27,14 @@
                 }
 
                 entry.target.classList.remove(
-                    "opacity-0",
-                    "translate-y-4",
-                    "translate-y-5"
+                    "u-opacity-0",
+                    "u-translate-y-4",
+                    "u-translate-y-5"
                 );
 
                 entry.target.classList.add(
-                    "opacity-100",
-                    "translate-y-0"
+                    "u-opacity-100",
+                    "u-translate-y-0"
                 );
 
                 observer.unobserve(entry.target);

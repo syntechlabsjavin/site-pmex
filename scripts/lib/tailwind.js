@@ -67,7 +67,7 @@ function compile(classes, selector) {
   let out = '';
   for (const [key, g] of [...groups].sort((a, b) => order(a[0]) - order(b[0]))) {
     let sel = selector, wrap = [];
-    for (const c of g.conds) { if (c.startsWith('&')) sel += c.slice(1); else wrap.push(c); }
+    for (const c of g.conds) { if (c.startsWith('&')) sel += c.slice(1); else if (c.includes('&')) sel = c.replace(/&/g, sel); else wrap.push(c); }
     const decls = [...new Map(g.decls.map(d => [d.slice(0, d.indexOf(':')).trim(), d])).values()];
     let inner = `${sel} {\n${decls.map(d => '  ' + d + ';').join('\n')}\n}`;
     for (const w of wrap.reverse()) inner = `${w} {\n${inner.replace(/^/gm, '  ')}\n}`;
@@ -93,13 +93,13 @@ function themeEnv() {
 }
 
 // replace var(--name, fallback) using lookup(name) -> value | undefined
-function subst(value, lookup) {
+function subst(value, lookup, keepTw = false) {
   for (let guard = 0; guard < 20; guard++) {
     let changed = false;
     value = value.replace(/var\((--[\w-]+)\s*(?:,((?:[^()]|\([^()]*(?:\([^()]*\))*[^()]*\))*))?\)/g, (all, name, fb) => {
       const v = lookup(name);
       if (v !== undefined) { changed = true; return v; }
-      if (name.startsWith('--tw-')) { changed = true; return fb !== undefined ? fb.trim() : ''; }
+      if (name.startsWith('--tw-') && !keepTw) { changed = true; return fb !== undefined ? fb.trim() : ''; }
       return all;
     });
     if (!changed) break;
@@ -118,7 +118,9 @@ function tidy(prop, v) {
   if (prop === 'scale' || prop === 'translate' || prop === 'rotate') v = v.replace(/\s+/g, ' ');
   return v;
 }
-function clean(css) {
+// keepTw: keep the --tw-* plumbing (needed when one utility is emitted on its own and works together with others
+// on the same element, e.g. from-* + to-* + bg-gradient-*, or translate-x + translate-y)
+function clean(css, { keepTw = false } = {}) {
   const E = themeEnv();
   // per rule body: collect --tw vars of this body (and of the base rule for hover/focus/media copies)
   const baseVars = new Map();
@@ -128,14 +130,14 @@ function clean(css) {
     const local = new Map(decls.filter(([p]) => p.startsWith('--tw-')));
     if (s === base) baseVars.set(base, local);
     const vars = new Map([...(baseVars.get(base) || []), ...local]);
-    const lookup = name => vars.has(name) ? vars.get(name) : name.startsWith('--tw-') ? E.props[name] : E.theme[name] !== undefined && !name.startsWith('--color-') ? E.theme[name] : E.colors[name] ? `var(${E.colors[name]})` : name === '--color-white' ? 'var(--theme-white)' : name === '--color-black' ? 'var(--theme-black)' : undefined;
+    const lookup = name => keepTw && name.startsWith('--tw-') ? undefined : vars.has(name) ? vars.get(name) : name.startsWith('--tw-') ? E.props[name] : E.theme[name] !== undefined && !name.startsWith('--color-') ? E.theme[name] : E.colors[name] ? `var(${E.colors[name]})` : name === '--color-white' ? 'var(--theme-white)' : name === '--color-black' ? 'var(--theme-black)' : undefined;
     const out = [];
     for (const [p, v] of decls) {
-      if (p.startsWith('--tw-')) continue;
-      out.push([p, tidy(p, subst(v, lookup))]);
+      if (p.startsWith('--tw-') && !keepTw) continue;
+      out.push([p, keepTw ? subst(v, lookup, true).replace(/calc\(0\.25rem \* (-?[\d.]+)\)/g, (a, n) => n == 0 ? '0' : num(n * 0.25) + 'rem') : tidy(p, subst(v, lookup))]);
     }
     // transition shorthand
-    const tp = out.find(d => d[0] === 'transition-property');
+    const tp = !keepTw && out.find(d => d[0] === 'transition-property');
     if (tp) {
       const dur = (out.find(d => d[0] === 'transition-duration') || [, '150ms'])[1], ease = (out.find(d => d[0] === 'transition-timing-function') || [, 'ease'])[1];
       const props = tp[1] === 'all' ? ['all'] : tp[1].split(',').map(x => x.trim()).filter(x => !x.startsWith('--'));

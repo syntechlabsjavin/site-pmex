@@ -23,17 +23,17 @@ function showTab(index) {
         const dot = btn.querySelector('.dot');
         const extra = btn.querySelector('.tab-extra');
         if (i === index) {
-            btn.classList.add('bg-[var(--c-FFFFFF)]');
-            btn.classList.remove('bg-gray-50');
-            dot.classList.add('bg-[var(--c-AAD39C)]');
-            dot.classList.remove('bg-gray-300');
-            if (extra) extra.classList.remove('hidden');
+            btn.classList.add('u-bg-FFFFFF');
+            btn.classList.remove('u-bg-gray-50');
+            dot.classList.add('u-bg-AAD39C');
+            dot.classList.remove('u-bg-gray-300');
+            if (extra) extra.classList.remove('u-hidden');
         } else {
-            btn.classList.remove('bg-[var(--c-FFFFFF)]');
-            btn.classList.add('bg-gray-50');
-            dot.classList.remove('bg-[var(--c-AAD39C)]');
-            dot.classList.add('bg-gray-300');
-            if (extra) extra.classList.add('hidden');
+            btn.classList.remove('u-bg-FFFFFF');
+            btn.classList.add('u-bg-gray-50');
+            dot.classList.remove('u-bg-AAD39C');
+            dot.classList.add('u-bg-gray-300');
+            if (extra) extra.classList.add('u-hidden');
         }
     });
 
@@ -74,14 +74,14 @@ function switchTab(index) {
 
     // reset all desktop tabs
     document.querySelectorAll('[id^="lifecycle-tab-"]').forEach((btn) => {
-        btn.className = 'text-gray-400 hover:text-gray-600 transition-colors';
+        btn.className = 'u-text-gray-400 u-hov-text-gray-600 u-transition-colors';
         btn.style.cssText = 'font-size: 14px; font-weight: 500;';
         btn.innerHTML = btn.innerHTML.replace(/<span[^>]*><\/span>\s*/, '');
     });
 
     // activate clicked desktop tab
     const active = document.getElementById('lifecycle-tab-' + index);
-    active.className = 'flex items-center gap-2 rounded-full px-5 py-2.5 shadow-sm';
+    active.className = 'u-flex u-items-center u-gap-2 u-rounded-full u-px-5 u-py-2-5 u-shadow-sm';
     active.style.cssText = 'font-size: 14px; font-weight: 600; color: var(--c-1F2937); background: var(--c-AAD39C-a15); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid var(--c-AAD39C-a35); box-shadow: 0 4px 12px var(--c-AAD39C-a15);';
 
     // add dot if not already there
@@ -126,8 +126,8 @@ function showSide(panelIndex, sideIndex) {
 
     document.querySelectorAll(`.dot-indicator[data-panel="${panelIndex}"]`).forEach(dot => {
         const s = parseInt(dot.dataset.side);
-        dot.classList.toggle('bg-[var(--c-FFFFFF)]', s === sideIndex);
-        dot.classList.toggle('bg-[var(--c-FFFFFF)]/40', s !== sideIndex);
+        dot.classList.toggle('u-bg-FFFFFF', s === sideIndex);
+        dot.classList.toggle('u-bg-FFFFFF-a40', s !== sideIndex);
     });
 }
 
@@ -157,7 +157,7 @@ function switchWhoTab(index) {
     // reset all desktop tabs (skip mobile prev/next arrows)
     document.querySelectorAll('[id^="who-tab-"]').forEach(btn => {
         if (!btn.id.includes('prev') && !btn.id.includes('next')) {
-            btn.className = 'text-gray-400 hover:text-gray-600 transition-colors';
+            btn.className = 'u-text-gray-400 u-hov-text-gray-600 u-transition-colors';
             btn.style.fontSize = '14px';
             btn.style.fontWeight = '500';
             btn.style.color = '';
@@ -169,7 +169,7 @@ function switchWhoTab(index) {
     // activate clicked desktop tab
     const active = document.getElementById('who-tab-' + index);
     if (active) {
-        active.className = 'flex items-center gap-2 bg-[var(--c-FFFFFF)] border border-gray-200 rounded-full px-4 py-2 shadow-sm';
+        active.className = 'u-flex u-items-center u-gap-2 u-bg-FFFFFF u-border u-border-gray-200 u-rounded-full u-px-4 u-py-2 u-shadow-sm';
         active.style.fontWeight = '600';
         active.style.color = 'var(--c-374151)';
 
@@ -229,8 +229,8 @@ function initNavDropdowns() {
         const arrow = li.querySelector('.nav-arrow');
         if (!panel) return;
 
-        panel.classList.remove('opacity-0', 'invisible', 'pointer-events-none', 'translate-y-1');
-        panel.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+        panel.classList.remove('u-opacity-0', 'u-invisible', 'u-pointer-events-none', 'u-translate-y-1');
+        panel.classList.add('u-opacity-100', 'u-visible', 'u-pointer-events-auto');
         if (arrow) arrow.style.transform = 'rotate(180deg)';
     }
 
@@ -240,8 +240,8 @@ function initNavDropdowns() {
         if (!panel) return;
 
         const doClose = () => {
-            panel.classList.add('opacity-0', 'invisible', 'pointer-events-none');
-            panel.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+            panel.classList.add('u-opacity-0', 'u-invisible', 'u-pointer-events-none');
+            panel.classList.remove('u-opacity-100', 'u-visible', 'u-pointer-events-auto');
             if (arrow) arrow.style.transform = '';
             if (activeItem === li) activeItem = null;
         };

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-css="site-buttons reference-typography tailwind style site-motion site-faq site-faq-extra specialty-site-palette navbar-d90c332f services-mega booking-modal">
+<html lang="en" data-css="site-buttons reference-typography style site-motion site-faq site-faq-extra specialty-site-palette navbar-d90c332f services-mega booking-modal">
 
 <head>
 <link rel="stylesheet" href="/css/root.css"/>
@@ -15,7 +15,7 @@
 <script src="/js/services-mega.js" defer></script>
 </head>
 
-<body class="min-h-screen bg-[var(--c-EEF0E8)] flex items-center justify-center p-4">
+<body class="u-min-h-screen u-bg-EEF0E8 u-flex u-items-center u-justify-center u-p-4">
 <script src="/js/site-shell.js" data-include="header"></script>
 
     <!-- ===================================================
@@ -41,7 +41,7 @@
                     <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><use href="/icons/site-icons.svg#clock-rounded"></use></svg><span>15 min</span></li>
                     <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><use href="/icons/site-icons.svg#demo-intro-to-pmex"></use></svg><span>Web conferencing details provided upon confirmation.</span></li>
                 </ul>
-                <ul id="booking-selected-datetime" class="bk-meta bk-meta-picked hidden">
+                <ul id="booking-selected-datetime" class="bk-meta bk-meta-picked u-hidden">
                     <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><use href="/icons/site-icons.svg#demo-intro-to-pmex-variant-2"></use></svg><span id="booking-selected-datetime-text"></span></li>
                     <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><use href="/icons/site-icons.svg#globe"></use></svg><span id="booking-selected-tz-text">Pacific Time - US &amp; Canada</span></li>
                 </ul>
@@ -75,7 +75,7 @@
             </section>
 
             <!-- STEP 2: calendar + time slots -->
-            <section id="booking-step-2" class="bk-step bk-step-slots hidden">
+            <section id="booking-step-2" class="bk-step bk-step-slots u-hidden">
                 <div class="bk-step-cal">
                     <div class="bk-cal">
                         <div class="bk-title" role="heading" aria-level="3">Select a Date &amp; Time</div>
@@ -103,7 +103,7 @@
             </section>
 
             <!-- TIME ZONE DROPDOWN -->
-            <div id="booking-tz-dropdown" class="bk-tz-menu hidden">
+            <div id="booking-tz-dropdown" class="bk-tz-menu u-hidden">
                 <div class="bk-tz-search">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><use href="/icons/site-icons.svg#demo-icon-variant-2"></use></svg>
                     <input type="text" id="tz-search-input" oninput="window.filterTzList(this.value)" placeholder="Search time zones" aria-label="Search time zones">
@@ -120,7 +120,7 @@
             </div>
 
             <!-- STEP 3: details form -->
-            <section id="booking-step-3" class="bk-step bk-step-form hidden">
+            <section id="booking-step-3" class="bk-step bk-step-form u-hidden">
                 <div class="bk-form-head">
                     <div class="bk-title" role="heading" aria-level="3">Enter Details</div>
                     <p class="bk-form-sub">Share a few details so we can prepare for your call.</p>

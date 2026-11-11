@@ -5,7 +5,7 @@ function switchPlatformTab(index) {
 
     // Reset all tab buttons
     document.querySelectorAll('[id^="ptab-"]').forEach(btn => {
-        btn.className = 'text-gray-400 hover:text-gray-600 transition-colors text-[14px] font-medium';
+        btn.className = 'u-text-gray-400 u-hov-text-gray-600 u-transition-colors u-text-14px u-font-medium';
         btn.style.cssText = '';
         const dot = btn.querySelector('span');
         if (dot) dot.remove();
@@ -13,7 +13,7 @@ function switchPlatformTab(index) {
 
     // Activate clicked tab
     const active = document.getElementById('ptab-' + index);
-    active.className = 'flex items-center gap-2 rounded-full px-5 py-2.5 text-[14px] font-semibold text-gray-800';
+    active.className = 'u-flex u-items-center u-gap-2 u-rounded-full u-px-5 u-py-2-5 u-text-14px u-font-semibold u-text-gray-800';
     active.style.cssText = 'background:var(--c-AAD39C-a15);backdrop-filter:blur(8px);border:1px solid var(--c-AAD39C-a35);box-shadow:0 4px 12px var(--c-AAD39C-a15);';
 
     if (!active.querySelector('span')) {
@@ -53,8 +53,8 @@ const layers = [
     }
 ];
 
-const activeDotClasses = ['w-5', 'bg-[var(--c-AAD39C)]'];
-const inactiveDotClasses = ['w-1.5', 'bg-gray-300'];
+const activeDotClasses = ['u-w-5', 'u-bg-AAD39C'];
+const inactiveDotClasses = ['u-w-1-5', 'u-bg-gray-300'];
 
 let currentLayer = 0;
 
@@ -85,8 +85,8 @@ function switchLayer(index) {
         img.style.filter = 'grayscale(80%) brightness(0.90) drop-shadow(0px 4px 8px var(--c-000000-a20))';
         img.style.maskImage = 'radial-gradient(ellipse at center in srgb, black 40%, var(--c-000000-a30) 100%)';
         img.style.webkitMaskImage = 'radial-gradient(ellipse at center in srgb, black 40%, var(--c-000000-a30) 100%)';
-        document.getElementById('label-' + i).className = 'hidden md:block text-[11px] font-bold tracking-[0.12em] uppercase text-[var(--c-9CA3AF)]';
-        document.getElementById('bar-' + i).className = 'pmex-color-background hidden md:block w-full h-[2px] rounded-full bg-[var(--c-D1D5DB)] mt-1';
+        document.getElementById('label-' + i).className = 'u-hidden u-md-block u-text-11px u-font-bold u-tracking-0-12em u-uppercase u-text-9CA3AF';
+        document.getElementById('bar-' + i).className = 'pmex-color-background u-hidden u-md-block u-w-full u-h-2px u-rounded-full u-bg-D1D5DB u-mt-1';
     }
 
     // activate selected - active state
@@ -96,8 +96,8 @@ function switchLayer(index) {
     activeImg.style.filter = 'grayscale(0%) brightness(1) drop-shadow(0px 8px 16px var(--c-000000-a18))';
     activeImg.style.maskImage = 'none';
     activeImg.style.webkitMaskImage = 'none';
-    document.getElementById('label-' + index).className = 'hidden md:block text-[11px] font-bold tracking-[0.12em] uppercase text-[var(--c-505050)]';
-    document.getElementById('bar-' + index).className = 'pmex-color-background hidden md:block w-full h-[3px] rounded-full bg-[var(--c-AAD39C)] mt-1';
+    document.getElementById('label-' + index).className = 'u-hidden u-md-block u-text-11px u-font-bold u-tracking-0-12em u-uppercase u-text-505050';
+    document.getElementById('bar-' + index).className = 'pmex-color-background u-hidden u-md-block u-w-full u-h-3px u-rounded-full u-bg-AAD39C u-mt-1';
 
     // ---- Mobile dots ----
     document.querySelectorAll('.mobile-dot').forEach(el => {
@@ -150,18 +150,18 @@ function switchStep(index) {
 
         if (i === index) {
             sidebar.style.background = 'var(--c-F8FBF5)';
-            sidebar.classList.remove('border-l-transparent');
-            sidebar.classList.add('border-l-[var(--c-7FB35C)]');
-            dot.className = 'pmex-color-background w-[10px] h-[10px] rounded-full bg-[var(--c-7FB35C)]';
-            stitle.className = 'text-[13px] font-medium tracking-[1px] uppercase text-[var(--c-505050)]';
-            sdesc.classList.remove('hidden');
+            sidebar.classList.remove('u-border-l-transparent');
+            sidebar.classList.add('u-border-l-7FB35C');
+            dot.className = 'pmex-color-background u-w-10px u-h-10px u-rounded-full u-bg-7FB35C';
+            stitle.className = 'u-text-13px u-font-medium u-tracking-1px u-uppercase u-text-505050';
+            sdesc.classList.remove('u-hidden');
         } else {
             sidebar.style.background = '';
-            sidebar.classList.remove('border-l-[var(--c-7FB35C)]');
-            sidebar.classList.add('border-l-transparent');
-            dot.className = 'pmex-color-background w-[10px] h-[10px] rounded-full bg-[var(--c-C4C4BC)]';
-            stitle.className = 'text-[13px] font-medium tracking-[1px] uppercase text-[var(--c-9A9A92)]';
-            sdesc.classList.add('hidden');
+            sidebar.classList.remove('u-border-l-7FB35C');
+            sidebar.classList.add('u-border-l-transparent');
+            dot.className = 'pmex-color-background u-w-10px u-h-10px u-rounded-full u-bg-C4C4BC';
+            stitle.className = 'u-text-13px u-font-medium u-tracking-1px u-uppercase u-text-9A9A92';
+            sdesc.classList.add('u-hidden');
         }
     }
 
@@ -176,12 +176,12 @@ function switchStep(index) {
     const bigPicture = document.getElementById('bigpicture-content');
 
     if (index === 4) {
-        normalContent.classList.add('hidden');
-        bigPicture.classList.remove('hidden');
+        normalContent.classList.add('u-hidden');
+        bigPicture.classList.remove('u-hidden');
         return; // card loop skip kar do
     } else {
-        normalContent.classList.remove('hidden');
-        bigPicture.classList.add('hidden');
+        normalContent.classList.remove('u-hidden');
+        bigPicture.classList.add('u-hidden');
     }
 
     for (let i = 0; i < 4; i++) {
@@ -195,16 +195,16 @@ function switchStep(index) {
             card.style.boxShadow = '0 0 120px 5px var(--c-FFFFFF-a55), 0 10px 30px var(--c-000000-a30)';
             card.style.position = 'relative';
             card.style.zIndex = '10';
-            ctitle.className = 'text-[11px] sm:text-[14px] font-medium text-[var(--c-2D5C3F)] mb-1';
-            csub.className = 'hidden sm:block text-[12px] text-[var(--c-4A7058)] leading-[1.4]';
+            ctitle.className = 'u-text-11px u-sm-text-14px u-font-medium u-text-2D5C3F u-mb-1';
+            csub.className = 'u-hidden u-sm-block u-text-12px u-text-4A7058 u-leading-1-4';
             if (img) img.style.filter = 'none';
         } else {
             card.style.background = 'var(--c-456E53)';
             card.style.boxShadow = 'none';
             card.style.position = 'relative';
             card.style.zIndex = '1';
-            ctitle.className = 'text-[11px] sm:text-[14px] font-medium text-[var(--c-FFFFFF)] mb-1';
-            csub.className = 'hidden sm:block text-[12px] text-[var(--c-A8C2A0)] leading-[1.4]';
+            ctitle.className = 'u-text-11px u-sm-text-14px u-font-medium u-text-FFFFFF u-mb-1';
+            csub.className = 'u-hidden u-sm-block u-text-12px u-text-A8C2A0 u-leading-1-4';
             if (img) img.style.filter = 'brightness(0) invert(1) opacity(0.85)';
         }
     }
@@ -216,8 +216,8 @@ function switchStep(index) {
 switchStep(0);
 
 // ===== UPDATED: responsive padding via classes instead of fixed inline px =====
-const activeFeatPadding = ['py-4', 'px-5', 'md:!p-[clamp(18px,2.4vw,32px)]'];
-const inactiveFeatPadding = ['py-3', 'px-4', 'md:!p-[clamp(14px,1.8vw,22px)]'];
+const activeFeatPadding = ['u-py-4', 'u-px-5', 'u-md-imp-p-clamp-18px-2-4vw-32px'];
+const inactiveFeatPadding = ['u-py-3', 'u-px-4', 'u-md-imp-p-clamp-14px-1-8vw-22px'];
 
 function switchFeature(index) {
     for (let i = 0; i < 4; i++) {
@@ -233,21 +233,21 @@ function switchFeature(index) {
         if (i === index) {
             feat.style.background = 'var(--c-EDEEE9)';
             feat.classList.add(...activeFeatPadding);
-            feat.classList.remove('border-l-transparent');
-            feat.classList.add('border-l-[var(--c-7FB35C)]');
-            dot.className = 'pmex-color-background w-[8px] h-[8px] rounded-full flex-shrink-0 bg-[var(--c-7FB35C)]';
-            label.className = 'text-[11px] font-bold tracking-[2px] uppercase text-[var(--c-505050)]';
-            expand.classList.remove('hidden');
-            if (content) { content.classList.remove('hidden'); content.style.display = 'flex'; }
+            feat.classList.remove('u-border-l-transparent');
+            feat.classList.add('u-border-l-7FB35C');
+            dot.className = 'pmex-color-background u-w-8px u-h-8px u-rounded-full u-flex-shrink-0 u-bg-7FB35C';
+            label.className = 'u-text-11px u-font-bold u-tracking-2px u-uppercase u-text-505050';
+            expand.classList.remove('u-hidden');
+            if (content) { content.classList.remove('u-hidden'); content.style.display = 'flex'; }
         } else {
             feat.style.background = '';
             feat.classList.add(...inactiveFeatPadding);
-            feat.classList.remove('border-l-[var(--c-7FB35C)]');
-            feat.classList.add('border-l-transparent');
-            dot.className = 'pmex-color-background w-[8px] h-[8px] rounded-full flex-shrink-0 bg-[var(--c-C4C4BC)]';
-            label.className = 'text-[11px] font-bold tracking-[2px] uppercase text-[var(--c-9A9A92)]';
-            expand.classList.add('hidden');
-            if (content) { content.classList.add('hidden'); content.style.display = 'none'; }
+            feat.classList.remove('u-border-l-7FB35C');
+            feat.classList.add('u-border-l-transparent');
+            dot.className = 'pmex-color-background u-w-8px u-h-8px u-rounded-full u-flex-shrink-0 u-bg-C4C4BC';
+            label.className = 'u-text-11px u-font-bold u-tracking-2px u-uppercase u-text-9A9A92';
+            expand.classList.add('u-hidden');
+            if (content) { content.classList.add('u-hidden'); content.style.display = 'none'; }
         }
     }
 }

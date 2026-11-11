@@ -50,7 +50,7 @@
   // Class-based labels may use spans or divs instead of paragraphs.
   hero.querySelectorAll('.hero-lbl,.lbl,[class*="eyebrow"]').forEach(el=>el.dataset.referenceLabel='');
   const after=paragraphs.filter(p=>(h1.compareDocumentPosition(p)&Node.DOCUMENT_POSITION_FOLLOWING)&&!p.closest('.hero-actions,.hero-btns,.family-hero-actions,[class*="trust"],[class*="stat"],[class*="form"]'));
-  after.filter(p=>p.parentElement===h1.parentElement || p.classList.contains('hero-sub') || p.matches('[class*="lead"]')).forEach(p=>{
+  after.filter(p=>p.parentElement===h1.parentElement || p.classList.contains('hero-sub') || p.matches('[class*="lead"],[class*="lh-"]')).forEach(p=>{
    if(p.textContent.trim().length<40)return;
    p.removeAttribute('data-reference-small');p.removeAttribute('data-reference-card-title');p.dataset.referenceDescription='';
   });

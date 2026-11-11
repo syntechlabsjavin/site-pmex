@@ -29,10 +29,8 @@
     "check:regression": "node scripts/checks/check-regression.js"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.0",
     "colors": "*",
-    "express": "*",
-    "tailwindcss": "^4.3.1"
+    "express": "*"
   },
   "devDependencies": {
     "concurrently": "^10.0.5",

@@ -30,14 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     setTimeout(function () {
 
                         item.classList.remove(
-                            "opacity-0",
-                            "translate-y-5",
-                            "translate-y-4"
+                            "u-opacity-0",
+                            "u-translate-y-5",
+                            "u-translate-y-4"
                         );
 
                         item.classList.add(
-                            "opacity-100",
-                            "translate-y-0"
+                            "u-opacity-100",
+                            "u-translate-y-0"
                         );
 
                     }, index * 120);
@@ -50,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     setTimeout(function () {
 
-                        line.classList.remove("w-0");
-                        line.classList.add("w-full");
+                        line.classList.remove("u-w-0");
+                        line.classList.add("u-w-full");
 
                     }, 150);
 
@@ -64,13 +64,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     setTimeout(function () {
 
                         pill.classList.remove(
-                            "opacity-0",
-                            "translate-y-3"
+                            "u-opacity-0",
+                            "u-translate-y-3"
                         );
 
                         pill.classList.add(
-                            "opacity-100",
-                            "translate-y-0"
+                            "u-opacity-100",
+                            "u-translate-y-0"
                         );
 
                     }, 220 + (index * 35));

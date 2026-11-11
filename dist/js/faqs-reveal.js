@@ -36,21 +36,21 @@
 
 
         answer.classList.remove(
-            "grid-rows-[1fr]"
+            "u-grid-rows-1fr"
         );
 
         answer.classList.add(
-            "grid-rows-[0fr]"
+            "u-grid-rows-0fr"
         );
 
 
         icon.classList.remove(
-            "rotate-180",
-            "bg-[var(--c-EEF5EB)]"
+            "u-rotate-180",
+            "u-bg-EEF5EB"
         );
 
         icon.classList.add(
-            "bg-[var(--c-F5F7F3)]"
+            "u-bg-F5F7F3"
         );
 
     };
@@ -75,21 +75,21 @@
 
 
         answer.classList.remove(
-            "grid-rows-[0fr]"
+            "u-grid-rows-0fr"
         );
 
         answer.classList.add(
-            "grid-rows-[1fr]"
+            "u-grid-rows-1fr"
         );
 
 
         icon.classList.remove(
-            "bg-[var(--c-F5F7F3)]"
+            "u-bg-F5F7F3"
         );
 
         icon.classList.add(
-            "rotate-180",
-            "bg-[var(--c-EEF5EB)]"
+            "u-rotate-180",
+            "u-bg-EEF5EB"
         );
 
     };
@@ -159,13 +159,13 @@
         revealItems.forEach((item) => {
 
             item.classList.remove(
-                "opacity-0",
-                "translate-y-5"
+                "u-opacity-0",
+                "u-translate-y-5"
             );
 
             item.classList.add(
-                "opacity-100",
-                "translate-y-0"
+                "u-opacity-100",
+                "u-translate-y-0"
             );
 
         });
@@ -186,13 +186,13 @@
 
 
                     entry.target.classList.remove(
-                        "opacity-0",
-                        "translate-y-5"
+                        "u-opacity-0",
+                        "u-translate-y-5"
                     );
 
                     entry.target.classList.add(
-                        "opacity-100",
-                        "translate-y-0"
+                        "u-opacity-100",
+                        "u-translate-y-0"
                     );
 
 

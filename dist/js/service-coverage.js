@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const items = Array.from(section.querySelectorAll(".pmex-service-reveal"));
 
     function show(item) {
-        item.classList.remove("opacity-0", "translate-y-5", "translate-y-6");
-        item.classList.add("opacity-100", "translate-y-0");
+        item.classList.remove("u-opacity-0", "u-translate-y-5", "u-translate-y-6");
+        item.classList.add("u-opacity-100", "u-translate-y-0");
     }
 
     // No observer support or reduced motion: show everything right away.

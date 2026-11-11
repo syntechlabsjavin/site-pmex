@@ -17,8 +17,8 @@
             const arrow = li.querySelector('.nav-arrow');
             if (!panel) return;
 
-            panel.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
-            panel.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+            panel.classList.remove('u-opacity-0', 'u-invisible', 'u-pointer-events-none');
+            panel.classList.add('u-opacity-100', 'u-visible', 'u-pointer-events-auto');
             if (arrow) arrow.style.transform = 'rotate(180deg)';
         }
 
@@ -28,8 +28,8 @@
             if (!panel) return;
 
             const doClose = () => {
-                panel.classList.add('opacity-0', 'invisible', 'pointer-events-none');
-                panel.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                panel.classList.add('u-opacity-0', 'u-invisible', 'u-pointer-events-none');
+                panel.classList.remove('u-opacity-100', 'u-visible', 'u-pointer-events-auto');
                 if (arrow) arrow.style.transform = '';
                 if (activeItem === li) activeItem = null;
             };

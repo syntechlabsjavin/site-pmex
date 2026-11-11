@@ -229,9 +229,9 @@ function switchBillingStep(index, options) {
     if (dot) {
       dot.style.background = isActive ? "var(--c-3F9A4B)" : "var(--c-959085)";
       if (isActive) {
-        dot.classList.add("ml-1");
+        dot.classList.add("u-ml-1");
       } else {
-        dot.classList.remove("ml-1");
+        dot.classList.remove("u-ml-1");
       }
     }
 
@@ -310,7 +310,7 @@ function animateContent(element) {
       { opacity: 0.55, transform: "translateY(5px)" },
       { opacity: 1, transform: "translateY(0)" },
     ],
-    { duration: 280, easing: "ease-out" },
+    { duration: 280, easing: "u-ease-out" },
   );
 }
 

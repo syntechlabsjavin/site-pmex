@@ -22,8 +22,8 @@
       const item = trigger.closest('.faq-item');
       const panel = item?.querySelector('.faq-content');
       if (panel) {
-        const open = panel.classList.contains('hidden');
-        panel.classList.toggle('hidden', !open);
+        const open = panel.classList.contains('u-hidden');
+        panel.classList.toggle('u-hidden', !open);
         trigger.setAttribute('aria-expanded', String(open));
         const icon = item.querySelector('.faq-icon');
         if (icon) icon.style.transform = open ? 'rotate(180deg)' : '';

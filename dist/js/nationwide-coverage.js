@@ -103,14 +103,14 @@ document.addEventListener("DOMContentLoaded", function () {
                             setTimeout(function () {
 
                                 item.classList.remove(
-                                    "opacity-0",
-                                    "translate-y-5",
-                                    "translate-y-6"
+                                    "u-opacity-0",
+                                    "u-translate-y-5",
+                                    "u-translate-y-6"
                                 );
 
                                 item.classList.add(
-                                    "opacity-100",
-                                    "translate-y-0"
+                                    "u-opacity-100",
+                                    "u-translate-y-0"
                                 );
 
                             }, index * 130);
@@ -129,13 +129,13 @@ document.addEventListener("DOMContentLoaded", function () {
                             setTimeout(function () {
 
                                 pill.classList.remove(
-                                    "opacity-0",
-                                    "translate-y-2"
+                                    "u-opacity-0",
+                                    "u-translate-y-2"
                                 );
 
                                 pill.classList.add(
-                                    "opacity-100",
-                                    "translate-y-0"
+                                    "u-opacity-100",
+                                    "u-translate-y-0"
                                 );
 
                             }, 250 + (index * 45));
@@ -154,13 +154,13 @@ document.addEventListener("DOMContentLoaded", function () {
                             setTimeout(function () {
 
                                 item.classList.remove(
-                                    "opacity-0",
-                                    "translate-y-2"
+                                    "u-opacity-0",
+                                    "u-translate-y-2"
                                 );
 
                                 item.classList.add(
-                                    "opacity-100",
-                                    "translate-y-0"
+                                    "u-opacity-100",
+                                    "u-translate-y-0"
                                 );
 
                             }, 450 + (index * 65));

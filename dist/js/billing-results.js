@@ -145,14 +145,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     header.classList.remove(
-      "opacity-0",
-      "translate-y-5"
+      "u-opacity-0",
+      "u-translate-y-5"
     );
 
 
     header.classList.add(
-      "opacity-100",
-      "translate-y-0"
+      "u-opacity-100",
+      "u-translate-y-0"
     );
 
   }
@@ -169,19 +169,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     card.classList.remove(
-      "opacity-0",
-      "-translate-x-4",
-      "translate-x-4",
-      "-translate-y-4",
-      "translate-y-3",
-      "translate-y-5"
+      "u-opacity-0",
+      "u-ntranslate-x-4",
+      "u-translate-x-4",
+      "u-ntranslate-y-4",
+      "u-translate-y-3",
+      "u-translate-y-5"
     );
 
 
     card.classList.add(
-      "opacity-100",
-      "translate-x-0",
-      "translate-y-0"
+      "u-opacity-100",
+      "u-translate-x-0",
+      "u-translate-y-0"
     );
 
 
@@ -196,14 +196,14 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
 
         icon.classList.remove(
-          "opacity-0",
-          "scale-90"
+          "u-opacity-0",
+          "u-scale-90"
         );
 
 
         icon.classList.add(
-          "opacity-100",
-          "scale-100"
+          "u-opacity-100",
+          "u-scale-100"
         );
 
       }, 160);

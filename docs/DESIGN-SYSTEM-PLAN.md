@@ -44,9 +44,9 @@ Rules:
 | 1 | THEME tokens: 18 `--theme-*` colors, every `--c-HEX` generated (`npm run theme:build`) | done (a5d50be) |
 | 1b | Remove duplicate blocks (`scripts/build/dedupe-css-blocks.js`, `scripts/build/merge-css-blocks.js`) | done |
 | 2 | Scale tokens + base layer | tokens done; base layer comes with step 5 (replaces Tailwind preflight) |
-| 3 | Components library + migration of the pages (`@layer ds`) | in progress: 17,586 Tailwind elements left |
-| 4 | Migrate page families: specialties (template, ~70 pages, heaviest) -> services -> platform -> company -> homepage | |
-| 5 | Delete the Tailwind block and the tailwindcss packages | |
+| 3 | Components library + migration of the pages (`@layer ds`) | done: 0 Tailwind classes in pages and scripts |
+| 4 | Replace groups of `u-*` classes with components, family by family: specialties (template, ~70 pages) -> services -> platform -> company -> homepage | next |
+| 5 | Delete the Tailwind block and the tailwindcss packages | done |
 | 6 | Remove `!important`, hacks and dead selectors; settle `@layer` order | |
 | 7 | `npm run check:css` guard (no Tailwind classes, no color literals, size limit) + docs | |
 
@@ -72,6 +72,7 @@ Rules:
 | 2026-11-11 | 83 pages load the marquee partial instead of an inline copy (HTML -26,375 lines) | 21,244 |
 | 2026-11-11 | scale tokens; `style` block split into `tailwind` (generated) + `style` (custom); `ds` layer | 21,290 |
 | 2026-11-11 | Tailwind -> design system: FAQ (3,368 el.), text roles (11,397 el.), components (6,150 el.); Tailwind elements 40,379 -> 17,586 | 21,447 |
+| 2026-11-11 | remaining 17,586 elements and 22 scripts -> `u-*` classes (1,691, generated, one line each); Tailwind block, `src/input.css` and the tailwindcss packages removed; Tailwind reset kept as `[data-css]` reset | 14,217 |
 
 ## Design-system layer (`@layer ds`, end of root.css)
 

@@ -42,7 +42,7 @@ function parse(text, ctx = '') {
 const data = MEMBERS.map(name => {
   const secs = sections.filter(s => s.name === name);
   if (!secs.length) throw new Error('block not found: ' + name);
-  const text = secs.map(s => lines.slice(s.start + 1, s.end).join('\n')).join('\n').split(`"${name}"`).join('"X"');
+  const text = secs.map(s => lines.slice(s.start + 1, s.end).join('\n')).join('\n').split(`data-css~="${name}"`).join('data-css~="X"');
   return { name, secs, items: parse(text) };
 });
 const key = it => it.ctx + '\u0001' + it.rule;
@@ -81,7 +81,7 @@ function emit(g) {
   let ctx = '';
   for (const it of g.items) {
     if (it.ctx !== ctx) { if (ctx) out += '}\n'; if (it.ctx) out += `${it.ctx} {\n`; ctx = it.ctx; }
-    out += format(it.rule.split('"X"').join(`"${g.name}"`), ctx ? '  ' : '');
+    out += format(it.rule.split('data-css~="X"').join(`data-css~="${g.name}"`), ctx ? '  ' : '');
   }
   if (ctx) out += '}\n';
   return out;
