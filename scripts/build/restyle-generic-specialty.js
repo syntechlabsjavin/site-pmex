@@ -65,13 +65,13 @@ const CLASS_MAP = new Map([
   ['inline-flex items-center gap-2 bg-[#3f9a4b] hover:bg-[#2e8a3a] text-white text-[13px] font-semibold px-6 py-3 rounded-xl transition-colors', 'inline-flex items-center bg-[#AAD39C] text-[#2e4a25] px-6 py-2.5 rounded-full font-normal text-sm transition-colors duration-200 hover:bg-[#9ED08D]'],
 ]);
 
-const FIELD_CLASS = 'w-full md:flex-1 bg-white text-[#505050] placeholder-[#959085] text-[14px] rounded-xl px-4 py-3.5 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#AAD39C] transition-all shadow-xs';
-const BUTTON_CLASS = 'w-full md:w-auto bg-[#AAD39C] hover:bg-[#96C488] text-[#2e4a25] font-semibold text-[13px] tracking-wider uppercase rounded-xl px-8 py-3.5 transition-all shadow-md shrink-0 cursor-pointer';
-const CARD_CLASS = 'bg-gradient-to-br from-[#EDEFE7] via-[#e8eaed] to-[#d8dce3] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-white transition-all duration-300 border border-transparent hover:border-[#AAD39C] shadow-[0_0_35px_rgba(0,0,0,0.25)] hover:shadow-[0_0_45px_rgba(170,211,156,0.75)]';
-const PHONE_ICON = '<svg class="w-4 h-4 text-[#3f9a4b]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="/icons/site-icons.svg#phone-spaced"></use></svg>';
+const FIELD_CLASS = 'audit-input'; // design-system components (root.css @layer ds, group "audit form")
+const BUTTON_CLASS = 'audit-submit';
+const CARD_CLASS = 'audit-card';
+const PHONE_ICON = '<svg class="icon icon-md t-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="/icons/site-icons.svg#phone-spaced"></use></svg>';
 
 const hasLegacyForm = html => /<section class="specialty-hero-support[^"]*">[\s\S]*?<\/section>/.test(html);
-const isApprovedForm = html => html.includes('Inline Form') || /specialty-hero-support[^>]*>\s*<div class="max-w-\[1260px\] mx-auto w-full px-5 sm:px-6 lg:px-10">\s*<div class="bg-gradient-to-br/.test(html);
+const isApprovedForm = html => html.includes('Inline Form') || html.includes('class="audit-card"');
 
 // Rebuild the legacy centered audit card as the approved horizontal form card, keeping the page's own text.
 function applyForm(html) {
@@ -89,21 +89,21 @@ function applyForm(html) {
   if (!eyebrow || !sentence || fields.length < 3 || !button) return html;
   const phone = /\(?(\d{3})\)?[ -](\d{3})-(\d{4})/;
   const footHtml = foot
-    ? foot.replace(phone, (all, a, b, c) => `<a href="tel:${a}${b}${c}" class="font-medium text-[#505050] hover:text-[#3f9a4b] transition-colors inline-flex items-center gap-1.5">${PHONE_ICON}${all}</a>`)
+    ? foot.replace(phone, (all, a, b, c) => `<a href="tel:${a}${b}${c}" class="inline-link">${PHONE_ICON}${all}</a>`)
     : '';
   const inputs = fields.slice(0, 3).map(f => `<input type="${f.type}" placeholder="${f.ph}" required\n            class="${FIELD_CLASS}" />`).join('\n          ');
-  const next = `<section class="specialty-hero-support py-8 sm:py-12 bg-white border-b border-[#AAD39C]">
-    <div class="max-w-[1260px] mx-auto w-full px-5 sm:px-6 lg:px-10">
+  const next = `<section class="specialty-hero-support pmex-section section-rule bg-white">
+    <div class="pmex-container">
       <div class="${CARD_CLASS}">
-        <p class="text-center text-[12px] font-medium uppercase tracking-[1px] text-[#3f9a4b] mb-2">${eyebrow}</p>
+        <p class="t-sm ta-center fw-medium t-caps t-accent mb-sm">${eyebrow}</p>
         <!-- Title -->
-        <h3 class="text-center text-[20px] sm:text-[24px] lg:text-[28px] font-normal mb-6 text-[#505050] tracking-wide">${sentence}</h3>
+        <h3 class="t-xl ta-center fw-normal mb-xl t-text ls-wide">${sentence}</h3>
         <!-- Inline Form -->
-        <form class="flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-4 max-w-[1100px] mx-auto mb-5" onsubmit="event.preventDefault();">
+        <form class="audit-fields" onsubmit="event.preventDefault();">
           ${inputs}
           <button type="submit" class="${BUTTON_CLASS}">${button[1].trim()}</button>
         </form>${footHtml ? `
-        <p class="text-center text-[13px] sm:text-[14px] text-[#505050] font-normal flex items-center justify-center gap-2 flex-wrap">${footHtml}</p>` : ''}
+        <p class="audit-phone">${footHtml}</p>` : ''}
       </div>
     </div>
   </section>`;

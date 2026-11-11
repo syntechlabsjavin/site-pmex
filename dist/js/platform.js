@@ -61,6 +61,7 @@ let currentLayer = 0;
 function switchLayer(index) {
     currentLayer = index;
     const content = document.getElementById('layer-content');
+    if (!content) return; // pages that load this script without the layer section
 
     // Smooth text fade out — opacity only, no movement
     content.style.opacity = '0';

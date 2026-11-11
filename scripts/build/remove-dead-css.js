@@ -25,17 +25,25 @@ const exists = name => words.has(name);
 
 // a selector can match only if every class and id it requires exists; :not(...) and :is/:where alternatives are optional
 function canMatch(sel) {
-  const required = sel.replace(/:(not|is|where|has)\((?:[^()]|\([^()]*\))*\)/g, '').replace(/\[[^\]]*\]/g, '');
+  // drop optional parts from the innermost outwards (they nest: :has(>:is(...):is(...)))
+  let required = sel.replace(/\[[^\]]*\]/g, ''), prev;
+  do { prev = required; required = required.replace(/:(not|is|where|has)\([^()]*\)/g, ''); } while (required !== prev);
   for (const m of required.matchAll(/[.#]((?:\\.|[\w-])+)/g)) { const n = m[1].replace(/\\(.)/g, '$1'); if (!/^\d/.test(n) && !exists(n)) return false; }
   return true;
 }
 const splitList = s => { const out = []; let d = 0, cur = ''; for (const ch of s) { if (ch === '(') d++; if (ch === ')') d--; if (ch === ',' && !d) { out.push(cur); cur = ''; } else cur += ch; } out.push(cur); return out.map(x => x.trim()).filter(Boolean); };
 
 const lines = css.split('\n');
-const dead = cov.dead.filter(r => splitList(r.selector).every(s => !canMatch(s)));
 // locate each rule by its line and selector text, remove "selector { ... }"
 let removed = 0, removedLines = 0;
 const offsets = []; let off = 0; for (const l of lines) { offsets.push(off); off += l.length + 1; }
+// the coverage report shortens long selectors: read the whole selector from root.css
+const fullSelector = r => {
+  const start = css.indexOf(r.selector.slice(0, 60), offsets[r.line - 1] - 5);
+  if (start < 0 || start > offsets[r.line - 1] + 400) return null;
+  return css.slice(start, css.indexOf('{', start)).trim();
+};
+const dead = cov.dead.filter(r => { const sel = fullSelector(r); return sel && splitList(sel).every(s => !canMatch(s)); });
 const cuts = [];
 for (const r of dead) {
   const start = css.indexOf(r.selector.slice(0, 60), offsets[r.line - 1] - 5);
@@ -51,5 +59,6 @@ for (const [a, b] of cuts) { removedLines += css.slice(a, b).split('\n').length 
 for (let k = 0; k < 3; k++) css = css.replace(/@(media|supports|layer)[^{;]*\{\s*\}/g, '');
 css = css.replace(/\n[ \t]*\n(?=[ \t]*\n)/g, '\n');
 console.log(`coverage-unused: ${cov.dead.length}, impossible to match: ${dead.length}, removed: ${removed}`);
+if (process.argv.includes("--list")) for (const r of dead) console.log(r.line, r.selector.slice(0, 110));
 if (!DRY) fs.writeFileSync(FILE, css);
 console.log(`root.css: ${lines.length} -> ${css.split('\n').length} lines`);

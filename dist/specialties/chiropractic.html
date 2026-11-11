@@ -19,7 +19,7 @@
 </head>
 
 <body class="u-min-h-screen">
-    <div class="u-min-h-screen u-bg-FFFFFF u-relative u-flex u-flex-col u-w-full">
+    <div class="page-shell">
 
         <!-- ===== HEADER ===== -->
         <script src="/js/site-shell.js" data-include="header"></script>
@@ -28,10 +28,7 @@
         <section class="hero-bg-gradient pmex-hero-chiropractic pmex-section u-relative u-w-full u-pb-22 u-pt-15 u-flex u-items-center"
            >
             <div class="pmex-container">
-                <!-- <div
-                    class="u-absolute u-inset-0 u-pointer-events-none u-z-0 u-bg-radial-gradient-0ace07">
-                </div> -->
-                <div class="u-relative u-z-10 u-w-full">
+                <div class="hero-body">
                     <p class="bh-eyebrow">
                         PMEX for Chiropractic</p>
                     <h1 class="bh-hero-title">
@@ -46,7 +43,7 @@
                         revenue cycle for surgeons across all 50 states. From 90-day global period tracking and surgical
                         modifier precision to workers' comp billing, DME claims, and prior authorization. We work with
                         your existing EHR no migration required.</p>
-                    <div class="u-flex u-flex-wrap u-items-center u-gap-4 u-sm-gap-6 u-text-sm">
+                    <div class="meta-row">
                         <p class="t-xs t-accent fw-normal">Get a Free Revenue Assesment →
                         </p>
                         <a href="/company/demo.html" class="cta-primary-btn">Book a
@@ -62,7 +59,7 @@
         <section class="pmex-section section-rule bg-white">
             <div class="pmex-container">
                 <div
-                    class="u-bg-gradient-to-br u-from-EDEFE7 u-via-E8EAED u-to-D8DCE3 u-rounded-2xl u-sm-rounded-3xl u-p-6 u-sm-p-8 u-lg-p-10 u-text-FFFFFF u-transition-all u-duration-300 u-border u-border-000000-a0 u-hov-border-AAD39C u-shadow-0-0-35px-000000-a25 u-hov-shadow-0-0-45px-AAD39C-a75">
+                    class="audit-card">
 
                     <!-- Title -->
                     <h3
@@ -72,19 +69,19 @@
 
                     <!-- Inline Form -->
                     <form
-                        class="u-flex u-flex-col u-md-flex-row u-items-center u-justify-center u-gap-3 u-sm-gap-4 u-max-w-1100px u-mx-auto u-mb-5"
+                        class="audit-fields"
                         onsubmit="event.preventDefault();">
                         <input type="text" placeholder="Name*" required
-                            class="u-w-full u-md-flex-1 u-bg-FFFFFF u-text-505050 u-placeholder-959085 u-text-14px u-rounded-xl u-px-4 u-py-3-5 u-border u-border-000000-a0 u-foc-outline-none u-foc-ring-2 u-foc-ring-AAD39C u-transition-all u-shadow-xs" />
+                            class="audit-input" />
 
                         <input type="email" placeholder="Email*" required
-                            class="u-w-full u-md-flex-1 u-bg-FFFFFF u-text-505050 u-placeholder-959085 u-text-14px u-rounded-xl u-px-4 u-py-3-5 u-border u-border-000000-a0 u-foc-outline-none u-foc-ring-2 u-foc-ring-AAD39C u-transition-all u-shadow-xs" />
+                            class="audit-input" />
 
                         <input type="tel" placeholder="Phone*" required
-                            class="u-w-full u-md-flex-1 u-bg-FFFFFF u-text-505050 u-placeholder-959085 u-text-14px u-rounded-xl u-px-4 u-py-3-5 u-border u-border-000000-a0 u-foc-outline-none u-foc-ring-2 u-foc-ring-AAD39C u-transition-all u-shadow-xs" />
+                            class="audit-input" />
 
                         <button type="submit"
-                            class="u-w-full u-md-w-auto u-bg-AAD39C u-hov-bg-96C488 u-text-2E4A25 u-font-semibold u-text-13px u-tracking-wider u-uppercase u-rounded-xl u-px-8 u-py-3-5 u-transition-all u-shadow-md u-shrink-0 u-cursor-pointer">
+                            class="audit-submit">
                             SUBMIT
                         </button>
                     </form>
@@ -107,13 +104,8 @@
 
         <!-- ===== TRUST STATS BAR PMEX native style ===== -->
         <!-- ===== 4-STEP BILLING PROCESS INFOGRAPHIC SECTION ===== -->
-        <section class="pmex-section u-relative u-border-b u-border-AAD39C u-overflow-hidden">
+        <section class="pmex-section section-rule clip">
             <!-- Background ambient glow -->
-            <!-- <div class="deco-layer">
-                <div
-                    class="pmex-color-background u-absolute u-top-50pct u-left-50pct u-ntranslate-x-50pct u-ntranslate-y-50pct u-w-600px u-h-600px u-rounded-full u-bg-AAD39C-a10 u-blur-3xl">
-                </div>
-            </div> -->
 
             <div class="pmex-container">
 
@@ -125,28 +117,25 @@
                     <h2 class="t-h2 fw-normal t-text lh-tight mb-md">
                         Chiropractic Billing Results That Speak for Themselves
                     </h2>
-                    <!-- <p class="t-md t-muted">
-                        A proven, transparent process to eliminate PT claim denials and accelerate cash flow.
-                    </p> -->
                 </div>
 
                 <!-- 2x2 Grid Infographic Cards (Ordered 01, 02, 03, 04) -->
-                <div class="u-grid u-grid-cols-1 u-md-grid-cols-2 u-gap-6 u-md-gap-6 u-lg-gap-6 u-relative u-max-w-960px u-mx-auto">
+                <div class="metric-grid">
 
                     <!-- STEP 01 (Top-Left: PMEX Light Sage Green) -->
                     <div class="group rel">
                         <!-- Offset Color Backing Box -->
                         <div
-                            class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-rounded-24px u-sm-rounded-28px u-translate-x-2 u-translate-y-2 u-md-ntranslate-x-3 u-md-ntranslate-y-3 u-transition-transform u-duration-300 u-gh-translate-x-3 u-gh-translate-y-3 u-md-gh-ntranslate-x-4 u-md-gh-ntranslate-y-4">
+                            class="tile-shadow tile-shadow--tl">
                         </div>
 
                         <!-- White Main Card -->
                         <div
-                            class="u-relative u-bg-FFFFFF u-rounded-24px u-sm-rounded-28px u-p-6 u-sm-p-7 u-shadow-0-10px-30px-000000-a5 u-border u-border-gray-100 u-flex u-flex-col u-items-center u-text-center u-overflow-hidden u-min-h-165px u-justify-center">
+                            class="metric-tile">
 
                             <!-- Icon -->
                             <div
-                                class="pmex-color-background u-w-12 u-h-12 u-sm-w-14 u-sm-h-14 u-rounded-2xl u-bg-AAD39C-a20 u-flex u-items-center u-justify-center u-mb-3 u-text-2E4A25">
+                                class="metric-tile__icon">
                                 <img src="/img/claim.svg" alt="Clean Claim Rate" width="30" height="30">
                             </div>
 
@@ -161,9 +150,7 @@
 
                             <!-- Step Badge (Bottom-Right) -->
                             <div
-                                class="pmex-color-background u-absolute u-bottom-0 u-right-0 u-bg-AAD39C u-text-FFFFFF u-px-4 u-py-2-5 u-sm-px-5 u-sm-py-3 u-rounded-tl-24px u-sm-rounded-tl-32px u-font-bold u-flex u-flex-col u-items-center u-justify-center u-leading-none u-min-w-65px u-sm-min-w-75px u-shadow-sm">
-                                <!-- <span
-                                    class="u-text-9px u-sm-text-10px u-tracking-widest u-uppercase u-opacity-90 u-mb-0-5">STEP</span> -->
+                                class="tile-num">
                                 <span class="t-lg fw-extrabold">01</span>
                             </div>
                         </div>
@@ -173,16 +160,16 @@
                     <div class="group rel">
                         <!-- Offset Color Backing Box -->
                         <div
-                            class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-rounded-24px u-sm-rounded-28px u-translate-x-2 u-translate-y-2 u-md-translate-x-3 u-md-ntranslate-y-3 u-transition-transform u-duration-300 u-gh-translate-x-3 u-gh-translate-y-3 u-md-gh-translate-x-4 u-md-gh-ntranslate-y-4">
+                            class="tile-shadow tile-shadow--tr">
                         </div>
 
                         <!-- White Main Card -->
                         <div
-                            class="u-relative u-bg-FFFFFF u-rounded-24px u-sm-rounded-28px u-p-6 u-sm-p-7 u-shadow-0-10px-30px-000000-a5 u-border u-border-gray-100 u-flex u-flex-col u-items-center u-text-center u-overflow-hidden u-min-h-165px u-justify-center">
+                            class="metric-tile">
 
                             <!-- Icon -->
                             <div
-                                class="pmex-color-background u-w-12 u-h-12 u-sm-w-14 u-sm-h-14 u-rounded-2xl u-bg-AAD39C-a20 u-flex u-items-center u-justify-center u-mb-3 u-text-2E4A25">
+                                class="metric-tile__icon">
                                 <img src="/img/accept-check.svg" alt="First-Pass Acceptance" width="30" height="30">
                             </div>
 
@@ -197,9 +184,7 @@
 
                             <!-- Step Badge (Bottom-Right on mobile, Bottom-Left on desktop) -->
                             <div
-                                class="pmex-color-background u-absolute u-bottom-0 u-right-0 u-md-right-auto u-md-left-0 u-bg-AAD39C u-text-FFFFFF u-px-4 u-py-2-5 u-sm-px-5 u-sm-py-3 u-rounded-tl-24px u-md-rounded-tl-none u-md-rounded-tr-32px u-font-bold u-flex u-flex-col u-items-center u-justify-center u-leading-none u-min-w-65px u-sm-min-w-75px u-shadow-sm">
-                                <!-- <span
-                                    class="u-text-9px u-sm-text-10px u-tracking-widest u-uppercase u-opacity-90 u-mb-0-5">STEP</span> -->
+                                class="tile-num tile-num--bl">
                                 <span class="t-lg fw-extrabold">02</span>
                             </div>
                         </div>
@@ -209,16 +194,16 @@
                     <div class="group rel">
                         <!-- Offset Color Backing Box -->
                         <div
-                            class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-rounded-24px u-sm-rounded-28px u-translate-x-2 u-translate-y-2 u-md-ntranslate-x-3 u-md-translate-y-3 u-transition-transform u-duration-300 u-gh-translate-x-3 u-gh-translate-y-3 u-md-gh-ntranslate-x-4 u-md-gh-translate-y-4">
+                            class="tile-shadow tile-shadow--bl">
                         </div>
 
                         <!-- White Main Card -->
                         <div
-                            class="u-relative u-bg-FFFFFF u-rounded-24px u-sm-rounded-28px u-p-6 u-sm-p-7 u-shadow-0-10px-30px-000000-a5 u-border u-border-gray-100 u-flex u-flex-col u-items-center u-text-center u-overflow-hidden u-min-h-165px u-justify-center">
+                            class="metric-tile">
 
                             <!-- Icon -->
                             <div
-                                class="pmex-color-background u-w-12 u-h-12 u-sm-w-14 u-sm-h-14 u-rounded-2xl u-bg-AAD39C-a20 u-flex u-items-center u-justify-center u-mb-3 u-text-2E4A25">
+                                class="metric-tile__icon">
                                 <img src="/img/calendar.svg" alt="Average AR Days" width="30" height="30">
                             </div>
 
@@ -233,9 +218,7 @@
 
                             <!-- Step Badge (Bottom-Right on mobile, Top-Right on desktop) -->
                             <div
-                                class="pmex-color-background u-absolute u-bottom-0 u-right-0 u-md-bottom-auto u-md-top-0 u-bg-AAD39C u-text-FFFFFF u-px-4 u-py-2-5 u-sm-px-5 u-sm-py-3 u-rounded-tl-24px u-md-rounded-tl-none u-md-rounded-bl-32px u-font-bold u-flex u-flex-col u-items-center u-justify-center u-leading-none u-min-w-65px u-sm-min-w-75px u-shadow-sm">
-                                <!-- <span
-                                    class="u-text-9px u-sm-text-10px u-tracking-widest u-uppercase u-opacity-90 u-mb-0-5">STEP</span> -->
+                                class="tile-num tile-num--tr">
                                 <span class="t-lg fw-extrabold">03</span>
                             </div>
                         </div>
@@ -245,16 +228,16 @@
                     <div class="group rel">
                         <!-- Offset Color Backing Box -->
                         <div
-                            class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-rounded-24px u-sm-rounded-28px u-translate-x-2 u-translate-y-2 u-md-translate-x-3 u-md-translate-y-3 u-transition-transform u-duration-300 u-gh-translate-x-3 u-gh-translate-y-3 u-md-gh-translate-x-4 u-md-gh-translate-y-4">
+                            class="tile-shadow">
                         </div>
 
                         <!-- White Main Card -->
                         <div
-                            class="u-relative u-bg-FFFFFF u-rounded-24px u-sm-rounded-28px u-p-6 u-sm-p-7 u-shadow-0-10px-30px-000000-a5 u-border u-border-gray-100 u-flex u-flex-col u-items-center u-text-center u-overflow-hidden u-min-h-165px u-justify-center">
+                            class="metric-tile">
 
                             <!-- Icon -->
                             <div
-                                class="pmex-color-background u-w-12 u-h-12 u-sm-w-14 u-sm-h-14 u-rounded-2xl u-bg-AAD39C-a20 u-flex u-items-center u-justify-center u-mb-3 u-text-2E4A25">
+                                class="metric-tile__icon">
                                 <img src="/img/revenue.svg" alt="Average Revenue Increase" width="30" height="30">
                             </div>
 
@@ -269,9 +252,7 @@
 
                             <!-- Step Badge (Bottom-Right on mobile, Top-Left on desktop) -->
                             <div
-                                class="pmex-color-background u-absolute u-bottom-0 u-right-0 u-md-bottom-auto u-md-top-0 u-md-right-auto u-md-left-0 u-bg-AAD39C u-text-FFFFFF u-px-4 u-py-2-5 u-sm-px-5 u-sm-py-3 u-rounded-tl-24px u-md-rounded-tl-none u-md-rounded-br-32px u-font-bold u-flex u-flex-col u-items-center u-justify-center u-leading-none u-min-w-65px u-sm-min-w-75px u-shadow-sm">
-                                <!-- <span
-                                    class="u-text-9px u-sm-text-10px u-tracking-widest u-uppercase u-opacity-90 u-mb-0-5">STEP</span> -->
+                                class="tile-num tile-num--tl">
                                 <span class="t-lg fw-extrabold">04</span>
                             </div>
                         </div>
@@ -280,39 +261,31 @@
                 </div>
 
                 <!-- ===== TRUST BADGES ROW ===== -->
-                <div class="u-mt-14 u-lg-mt-12 u-pt-10 u-border-t u-border-AAD39C-a40">
+                <div class="trust-row">
 
-                    <!-- <div class="pmex-section-head ta-center">
-                        <p class="t-sm fw-normal t-muted t-caps mb-xs">
-                            COMPLIANCE & QUALITY GUARANTEE
-                        </p>
-                        <h3 class="t-2xl fw-normal t-text">
-                            Certified RCM Security & Accreditation
-                        </h3>
-                    </div> -->
 
                     <div
-                        class="u-grid u-grid-cols-2 u-sm-grid-cols-3 u-lg-grid-cols-5 u-gap-5 u-sm-gap-6 u-lg-gap-6 u-justify-items-center u-max-w-1000px u-mx-auto">
+                        class="trust-grid trust-grid--5">
 
                         <!-- Badge 1: HIPAA Compliant -->
                         <div
-                            class="group u-relative u-w-130px u-h-130px u-sm-w-150px u-sm-h-150px u-flex u-items-center u-justify-center">
+                            class="group trust-badge">
                             <!-- Outer Teardrop Shape -->
                             <div
-                                class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-rounded-full u-rounded-tl-none u-shadow-md u-transition-transform u-duration-300 u-gh-scale-105">
+                                class="trust-badge__bg">
                             </div>
 
                             <!-- Bookmark Ribbon Icon -->
-                            <div class="u-absolute u-top-2-5 u-left-2-5 u-z-20 u-text-2E4A25">
+                            <div class="trust-badge__pin">
                                 <svg class="icon icon-sm icon-fill" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#bookmark-spaced"></use></svg>
                             </div>
 
                             <!-- Inner White Circle -->
                             <div
-                                class="u-relative u-z-10 u-w-82pct u-h-82pct u-bg-FFFFFF u-rounded-full u-shadow-0-4px-16px-000000-a8 u-flex u-flex-col u-items-center u-justify-center u-py-8 u-px-3-5 u-text-center">
+                                class="trust-badge__face trust-badge__face--tall">
                                 <!-- Top Logo Mark -->
-                                <div class="u-flex u-items-center u-justify-center u-gap-0-5 u-text-2E4A25 u-mt-0-5">
-                                    <svg class="u-w-4 u-h-4 u-fill-current" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#shield-filled"></use></svg>
+                                <div class="star-row">
+                                    <svg class="icon-md icon-fill" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#shield-filled"></use></svg>
                                 </div>
 
                                 <!-- Content -->
@@ -336,22 +309,22 @@
 
                         <!-- Badge 2: SOC 2 Type II -->
                         <div
-                            class="group u-relative u-w-130px u-h-130px u-sm-w-150px u-sm-h-150px u-flex u-items-center u-justify-center">
+                            class="group trust-badge">
                             <!-- Outer Teardrop Shape -->
                             <div
-                                class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-rounded-full u-rounded-tl-none u-shadow-md u-transition-transform u-duration-300 u-gh-scale-105">
+                                class="trust-badge__bg">
                             </div>
 
                             <!-- Bookmark Ribbon Icon -->
-                            <div class="u-absolute u-top-2-5 u-left-2-5 u-z-20 u-text-2E4A25">
+                            <div class="trust-badge__pin">
                                 <svg class="icon icon-sm icon-fill" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#bookmark-spaced"></use></svg>
                             </div>
 
                             <!-- Inner White Circle -->
                             <div
-                                class="u-relative u-z-10 u-w-82pct u-h-82pct u-bg-FFFFFF u-rounded-full u-shadow-0-4px-16px-000000-a8 u-flex u-flex-col u-items-center u-justify-center u-py-8 u-px-3-5 u-text-center">
+                                class="trust-badge__face trust-badge__face--tall">
                                 <!-- Top Logo Mark -->
-                                <div class="u-flex u-items-center u-justify-center u-gap-0-5 u-text-2E4A25 u-mt-0-5">
+                                <div class="star-row">
                                     <img src="/img/google.svg" alt="Google Reviews" class="certify-icons" width="20"
                                         height="20">
                                 </div>
@@ -377,22 +350,22 @@
 
                         <!-- Badge 3: AAPC Certified Coders -->
                         <div
-                            class="group u-relative u-w-130px u-h-130px u-sm-w-150px u-sm-h-150px u-flex u-items-center u-justify-center">
+                            class="group trust-badge">
                             <!-- Outer Teardrop Shape -->
                             <div
-                                class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-rounded-full u-rounded-tl-none u-shadow-md u-transition-transform u-duration-300 u-gh-scale-105">
+                                class="trust-badge__bg">
                             </div>
 
                             <!-- Bookmark Ribbon Icon -->
-                            <div class="u-absolute u-top-2-5 u-left-2-5 u-z-20 u-text-2E4A25">
+                            <div class="trust-badge__pin">
                                 <svg class="icon icon-sm icon-fill" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#bookmark-spaced"></use></svg>
                             </div>
 
                             <!-- Inner White Circle -->
                             <div
-                                class="u-relative u-z-10 u-w-82pct u-h-82pct u-bg-FFFFFF u-rounded-full u-shadow-0-4px-16px-000000-a8 u-flex u-flex-col u-items-center u-justify-center u-py-8 u-px-3-5 u-text-center">
+                                class="trust-badge__face trust-badge__face--tall">
                                 <!-- Top Logo Mark -->
-                                <div class="u-flex u-items-center u-justify-center u-gap-0-5 u-text-2E4A25 u-mt-0-5">
+                                <div class="star-row">
                                     <img src="/img/certified.svg" alt="AAPC Certified" width="20" height="20">
                                 </div>
 
@@ -417,22 +390,22 @@
 
                         <!-- Badge 4: ONC Certified -->
                         <div
-                            class="group u-relative u-w-130px u-h-130px u-sm-w-150px u-sm-h-150px u-flex u-items-center u-justify-center">
+                            class="group trust-badge">
                             <!-- Outer Teardrop Shape -->
                             <div
-                                class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-rounded-full u-rounded-tl-none u-shadow-md u-transition-transform u-duration-300 u-gh-scale-105">
+                                class="trust-badge__bg">
                             </div>
 
                             <!-- Bookmark Ribbon Icon -->
-                            <div class="u-absolute u-top-2-5 u-left-2-5 u-z-20 u-text-2E4A25">
+                            <div class="trust-badge__pin">
                                 <svg class="icon icon-sm icon-fill" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#bookmark-spaced"></use></svg>
                             </div>
 
                             <!-- Inner White Circle -->
                             <div
-                                class="u-relative u-z-10 u-w-82pct u-h-82pct u-bg-FFFFFF u-rounded-full u-shadow-0-4px-16px-000000-a8 u-flex u-flex-col u-items-center u-justify-center u-py-8 u-px-3-5 u-text-center">
+                                class="trust-badge__face trust-badge__face--tall">
                                 <!-- Top Logo Mark -->
-                                <div class="u-flex u-items-center u-justify-center u-gap-0-5 u-text-2E4A25 u-mt-0-5">
+                                <div class="star-row">
                                     <img src="/img/bbb.png" alt="BBB Accredited A+ Rating" width="30" height="30">
                                 </div>
 
@@ -457,22 +430,22 @@
 
                         <!-- Badge 5: Trustpilot 4.7★ -->
                         <div
-                            class="group u-relative u-w-130px u-h-130px u-sm-w-150px u-sm-h-150px u-flex u-items-center u-justify-center u-col-span-2 u-sm-col-span-1">
+                            class="group trust-badge trust-badge--wide">
                             <!-- Outer Teardrop Shape -->
                             <div
-                                class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-rounded-full u-rounded-tl-none u-shadow-md u-transition-transform u-duration-300 u-gh-scale-105">
+                                class="trust-badge__bg">
                             </div>
 
                             <!-- Bookmark Ribbon Icon -->
-                            <div class="u-absolute u-top-2-5 u-left-2-5 u-z-20 u-text-2E4A25">
+                            <div class="trust-badge__pin">
                                 <svg class="icon icon-sm icon-fill" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#bookmark-spaced"></use></svg>
                             </div>
 
                             <!-- Inner White Circle -->
                             <div
-                                class="u-relative u-z-10 u-w-82pct u-h-82pct u-bg-FFFFFF u-rounded-full u-shadow-0-4px-16px-000000-a8 u-flex u-flex-col u-items-center u-justify-center u-py-8 u-px-3-5 u-text-center">
+                                class="trust-badge__face trust-badge__face--tall">
                                 <!-- Top Logo Mark -->
-                                <div class="u-flex u-items-center u-justify-center u-gap-0-5 u-text-2E4A25 u-mt-0-5">
+                                <div class="star-row">
                                     <img src="/img/trustpilot.svg" alt="Trustpilot Reviews" width="20" height="20">
                                 </div>
 
@@ -508,7 +481,7 @@
                 <div class="u-grid u-grid-cols-1 u-lg-grid-cols-1-1fr-0-9fr u-gap-6 u-lg-gap-6 u-items-start">
 
                     <!-- Left Column: Content & Stats -->
-                    <div class="u-flex u-flex-col">
+                    <div class="stack">
                         <p class="bh-eyebrow">
                             PROUDLY USA-BASED
                         </p>
@@ -517,7 +490,7 @@
                             Chiropractic Billing Specialists Serving All 50 U.S States
                         </h2>
 
-                        <div class="u-text-14px u-sm-text-15px u-text-676767 u-leading-1-65 u-space-y-4">
+                        <div class="prose">
                             <p>
                                 PMEX is a<strong class="fw-semibold t-text">USA-based chiropractic billing
                                     company.</strong> Our billers, coders, and RCM specialists operate within U.S.
@@ -553,16 +526,16 @@
                     </div>
 
                     <!-- Right Column: State Grid & 3 Stat Cards Row -->
-                    <div class="u-flex u-flex-col u-space-y-8 u-mt-6">
+                    <div class="step-list">
 
                         <!-- 3x3 State Grid (Counting shifted towards bottom right) -->
-                        <div class="u-grid u-grid-cols-2 u-sm-grid-cols-3 u-gap-2 u-sm-gap-2-5 u-xl-gap-3-5">
+                        <div class="code-grid">
 
                             <!-- CA (Card 01) -->
                             <div
                                 class="group u-relative u-bg-FFFFFF u-rounded-2xl u-shadow-sm u-hov-shadow-md u-hov-ntranslate-y-1 u-transition-all u-duration-300 u-border u-border-AAD39C-a50 u-overflow-hidden u-h-94px u-sm-h-98px">
                                 <div
-                                    class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-p-3 u-sm-p-3-5 u-rounded-2xl u-rounded-br-60pct-90pct u-flex u-items-center u-gap-2-5 u-sm-gap-3 u-pr-10 u-shadow-xs">
+                                    class="code-chip__bg">
                                     <div class="fluid raise">
                                         <h4
                                             class="u-text-13px u-sm-text-15px u-font-extrabold u-text-505050 u-leading-tight u-truncate u-uppercase u-tracking-wider">
@@ -573,7 +546,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="u-absolute u-bottom-1 u-right-2 u-font-extrabold u-text-12px u-md-text-14px u-lg-text-16px u-text-2E4A25 u-tracking-tight u-z-20">
+                                    class="code-chip__num">
                                     01
                                 </div>
                             </div>
@@ -582,7 +555,7 @@
                             <div
                                 class="group u-relative u-bg-FFFFFF u-rounded-2xl u-shadow-sm u-hov-shadow-md u-hov-ntranslate-y-1 u-transition-all u-duration-300 u-border u-border-AAD39C-a50 u-overflow-hidden u-h-94px u-sm-h-98px">
                                 <div
-                                    class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-p-3 u-sm-p-3-5 u-rounded-2xl u-rounded-br-60pct-90pct u-flex u-items-center u-gap-2-5 u-sm-gap-3 u-pr-10 u-shadow-xs">
+                                    class="code-chip__bg">
 
                                     <div class="fluid raise">
                                         <h4
@@ -594,7 +567,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="u-absolute u-bottom-1 u-right-2 u-font-extrabold u-text-12px u-md-text-14px u-lg-text-16px u-text-2E4A25 u-tracking-tight u-z-20">
+                                    class="code-chip__num">
                                     02
                                 </div>
                             </div>
@@ -603,7 +576,7 @@
                             <div
                                 class="group u-relative u-bg-FFFFFF u-rounded-2xl u-shadow-sm u-hov-shadow-md u-hov-ntranslate-y-1 u-transition-all u-duration-300 u-border u-border-AAD39C-a50 u-overflow-hidden u-h-94px u-sm-h-98px">
                                 <div
-                                    class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-p-3 u-sm-p-3-5 u-rounded-2xl u-rounded-br-60pct-90pct u-flex u-items-center u-gap-2-5 u-sm-gap-3 u-pr-10 u-shadow-xs">
+                                    class="code-chip__bg">
                                     <div class="fluid raise">
                                         <h4
                                             class="u-text-13px u-sm-text-15px u-font-extrabold u-text-505050 u-leading-tight u-truncate u-uppercase u-tracking-wider">
@@ -614,7 +587,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="u-absolute u-bottom-1 u-right-2 u-font-extrabold u-text-12px u-md-text-14px u-lg-text-16px u-text-2E4A25 u-tracking-tight u-z-20">
+                                    class="code-chip__num">
                                     03
                                 </div>
                             </div>
@@ -623,7 +596,7 @@
                             <div
                                 class="group u-relative u-bg-FFFFFF u-rounded-2xl u-shadow-sm u-hov-shadow-md u-hov-ntranslate-y-1 u-transition-all u-duration-300 u-border u-border-AAD39C-a50 u-overflow-hidden u-h-94px u-sm-h-98px">
                                 <div
-                                    class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-p-3 u-sm-p-3-5 u-rounded-2xl u-rounded-br-60pct-90pct u-flex u-items-center u-gap-2-5 u-sm-gap-3 u-pr-10 u-shadow-xs">
+                                    class="code-chip__bg">
                                     <div class="fluid raise">
                                         <h4
                                             class="u-text-13px u-sm-text-15px u-font-extrabold u-text-505050 u-leading-tight u-truncate u-uppercase u-tracking-wider">
@@ -634,7 +607,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="u-absolute u-bottom-1 u-right-2 u-font-extrabold u-text-12px u-md-text-14px u-lg-text-16px u-text-2E4A25 u-tracking-tight u-z-20">
+                                    class="code-chip__num">
                                     04
                                 </div>
                             </div>
@@ -643,7 +616,7 @@
                             <div
                                 class="group u-relative u-bg-FFFFFF u-rounded-2xl u-shadow-sm u-hov-shadow-md u-hov-ntranslate-y-1 u-transition-all u-duration-300 u-border u-border-AAD39C-a50 u-overflow-hidden u-h-94px u-sm-h-98px">
                                 <div
-                                    class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-p-3 u-sm-p-3-5 u-rounded-2xl u-rounded-br-60pct-90pct u-flex u-items-center u-gap-2-5 u-sm-gap-3 u-pr-10 u-shadow-xs">
+                                    class="code-chip__bg">
                                     <div class="fluid raise">
                                         <h4
                                             class="u-text-13px u-sm-text-15px u-font-extrabold u-text-505050 u-leading-tight u-truncate u-uppercase u-tracking-wider">
@@ -654,7 +627,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="u-absolute u-bottom-1 u-right-2 u-font-extrabold u-text-12px u-md-text-14px u-lg-text-16px u-text-2E4A25 u-tracking-tight u-z-20">
+                                    class="code-chip__num">
                                     05
                                 </div>
                             </div>
@@ -663,7 +636,7 @@
                             <div
                                 class="group u-relative u-bg-FFFFFF u-rounded-2xl u-shadow-sm u-hov-shadow-md u-hov-ntranslate-y-1 u-transition-all u-duration-300 u-border u-border-AAD39C-a50 u-overflow-hidden u-h-94px u-sm-h-98px">
                                 <div
-                                    class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-p-3 u-sm-p-3-5 u-rounded-2xl u-rounded-br-60pct-90pct u-flex u-items-center u-gap-2-5 u-sm-gap-3 u-pr-10 u-shadow-xs">
+                                    class="code-chip__bg">
                                     <div class="fluid raise">
                                         <h4
                                             class="u-text-13px u-sm-text-15px u-font-extrabold u-text-505050 u-leading-tight u-truncate u-uppercase u-tracking-wider">
@@ -674,7 +647,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="u-absolute u-bottom-1 u-right-2 u-font-extrabold u-text-12px u-md-text-14px u-lg-text-16px u-text-2E4A25 u-tracking-tight u-z-20">
+                                    class="code-chip__num">
                                     06
                                 </div>
                             </div>
@@ -683,7 +656,7 @@
                             <div
                                 class="group u-relative u-bg-FFFFFF u-rounded-2xl u-shadow-sm u-hov-shadow-md u-hov-ntranslate-y-1 u-transition-all u-duration-300 u-border u-border-AAD39C-a50 u-overflow-hidden u-h-94px u-sm-h-98px">
                                 <div
-                                    class="pmex-color-background u-absolute u-inset-0 u-bg-AAD39C u-p-3 u-sm-p-3-5 u-rounded-2xl u-rounded-br-60pct-90pct u-flex u-items-center u-gap-2-5 u-sm-gap-3 u-pr-10 u-shadow-xs">
+                                    class="code-chip__bg">
                                     <div class="fluid raise">
                                         <h4
                                             class="u-text-13px u-sm-text-15px u-font-extrabold u-text-505050 u-leading-tight u-truncate u-uppercase u-tracking-wider">
@@ -694,7 +667,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="u-absolute u-bottom-1 u-right-2 u-font-extrabold u-text-12px u-md-text-14px u-lg-text-16px u-text-2E4A25 u-tracking-tight u-z-20">
+                                    class="code-chip__num">
                                     07
                                 </div>
                             </div>
@@ -714,7 +687,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="u-absolute u-bottom-1 u-right-2 u-font-extrabold u-text-12px u-md-text-14px u-lg-text-16px u-text-2E4A25 u-tracking-tight u-z-20">
+                                    class="code-chip__num">
                                     08
                                 </div>
                             </div>
@@ -734,7 +707,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="u-absolute u-bottom-1 u-right-2 u-font-extrabold u-text-12px u-md-text-14px u-lg-text-16px u-text-2E4A25 u-tracking-tight u-z-20">
+                                    class="code-chip__num">
                                     09
                                 </div>
                             </div>
@@ -745,21 +718,21 @@
                         <div class="u-grid u-grid-cols-1 u-sm-grid-cols-3 u-gap-2-5 u-sm-gap-4">
                             <!-- Stat 1 -->
                             <div
-                                class="u-bg-FFFFFF u-hov-bg-gradient-to-t u-hov-from-AAD39C-a40 u-hov-to-EDEFE8-a20 u-border u-border-AAD39C-a60 u-rounded-xl u-p-3 u-sm-p-4 u-text-center u-shadow-xs u-transition-all u-duration-300 u-hov-shadow-md u-hov-border-AAD39C">
+                                class="state-tile state-tile--compact">
                                 <p class="t-2xl fw-bold t-text lh-tight mb-xs">50</p>
                                 <p class="t-2xs fw-medium t-muted lh-tight">States
                                     served with chiropractic billing expertise</p>
                             </div>
                             <!-- Stat 2 -->
                             <div
-                                class="u-bg-FFFFFF u-hov-bg-gradient-to-t u-hov-from-AAD39C-a40 u-hov-to-EDEFE8-a20 u-border u-border-AAD39C-a60 u-rounded-xl u-p-3 u-sm-p-4 u-text-center u-shadow-xs u-transition-all u-duration-300 u-hov-shadow-md u-hov-border-AAD39C">
+                                class="state-tile state-tile--compact">
                                 <p class="t-2xl fw-bold t-text lh-tight mb-xs">36h</p>
                                 <p class="t-2xs fw-medium t-muted lh-tight">Average
                                     claim cycle from signed note to submission</p>
                             </div>
                             <!-- Stat 3 -->
                             <div
-                                class="u-bg-FFFFFF u-hov-bg-gradient-to-t u-hov-from-AAD39C-a40 u-hov-to-EDEFE8-a20 u-border u-border-AAD39C-a60 u-rounded-xl u-p-3 u-sm-p-4 u-text-center u-shadow-xs u-transition-all u-duration-300 u-hov-shadow-md u-hov-border-AAD39C">
+                                class="state-tile state-tile--compact">
                                 <p class="t-2xl fw-bold t-text lh-tight mb-xs">0</p>
                                 <p class="t-2xs fw-medium t-muted lh-tight">
                                     AT modifier denials across our chiropractic client base</p>
@@ -784,7 +757,7 @@
         </section>
 
         <!-- ===== EHR INTEGRATION SECTION ===== -->
-        <section class="pmex-color-background pmex-section u-border-b u-border-AAD39C u-relative u-bg-EEF0E8">
+        <section class="pmex-color-background pmex-section section-rule bg-tint">
             <div class="pmex-container ta-center">
 
                 <!-- Subtitle / Tag Header -->
@@ -873,8 +846,8 @@
                     <div
                         class="payer-box group u-relative u-overflow-hidden u-bg-gradient-to-r u-from-EDEFE7 u-to-D8DCE3 u-border u-border-AAD39C u-hov-border-3F9A4B u-rounded-full u-px-5 u-py-3 u-flex u-items-center u-justify-center u-gap-2-5 u-shadow-xs u-transition-all u-duration-300 u-w-full u-h-74px u-sm-h-82px u-lg-h-88px">
                         <div class="cpt-gradient"></div>
-                        <span class="u-relative u-z-10 u-w-2-5 u-h-2-5 u-rounded-full u-bg-3F9A4B u-shrink-0"></span>
-                        <span class="u-relative u-z-10 u-text-14px u-sm-text-15px u-font-semibold u-text-2E4A25">+ 40
+                        <span class="dot-marker"></span>
+                        <span class="code-chip__label">+ 40
                             more</span>
                     </div>
 
@@ -883,7 +856,7 @@
         </section>
 
         <!-- ===== 6 CHIROPRACTIC DENIAL PATTERNS SECTION ===== -->
-        <section class="pmex-section u-border-b u-border-AAD39C u-relative u-bg-FFFFFF u-overflow-hidden">
+        <section class="pmex-section section-rule bg-white clip">
 
             <!-- Ambient soft background blur accents -->
             <div class="deco-layer">
@@ -910,7 +883,7 @@
                 </div>
 
                 <!-- 3 Top Metric Cards -->
-                <div class="pmex-card-grid u-grid u-grid-cols-1 u-sm-grid-cols-3 u-mb-10 u-sm-mb-12">
+                <div class="pmex-card-grid grid-sm-3 stat-grid">
                     <!-- Metric 1 -->
                     <div
                         class="pmex-color-background group u-bh-metric-card u-bg-EEF0E8-a40 u-border u-border-AAD39C u-hov-border-DC2626-a60 u-rounded-2xl u-p-4 u-sm-p-5 u-text-center u-shadow-xs u-cursor-pointer">
@@ -927,7 +900,7 @@
                     <div
                         class="pmex-color-background group u-bh-metric-card u-bg-EEF0E8-a40 u-border u-border-AAD39C u-hov-border-3F9A4B u-rounded-2xl u-p-4 u-sm-p-5 u-text-center u-shadow-xs u-cursor-pointer">
                         <p
-                            class="u-text-26px u-sm-text-32px u-lg-text-36px u-font-extrabold u-text-3F9A4B u-gh-text-3F9A4B u-leading-tight u-mb-1 u-transition-colors">
+                            class="metric-num metric-num--accent">
                             &lt; 4.2%
                         </p>
                         <p class="t-xs fw-medium t-text lh-snug">
@@ -939,7 +912,7 @@
                     <div
                         class="pmex-color-background group u-bh-metric-card u-bg-EEF0E8-a40 u-border u-border-AAD39C u-hov-border-3F9A4B u-rounded-2xl u-p-4 u-sm-p-5 u-text-center u-shadow-xs u-cursor-pointer">
                         <p
-                            class="u-text-26px u-sm-text-32px u-lg-text-36px u-font-extrabold u-text-505050 u-leading-tight u-mb-1 u-transition-colors">
+                            class="metric-num">
                             48hr
                         </p>
                         <p class="t-xs fw-medium t-text lh-snug">
@@ -949,17 +922,17 @@
                 </div>
 
                 <!-- 6 Denial Patterns Cards (2 Columns x 3 Rows) -->
-                <div class="u-grid u-grid-cols-1 u-md-grid-cols-2 u-gap-6 u-lg-gap-8">
+                <div class="grid-2up">
 
                     <!-- Denial Card 1 -->
                     <div
-                        class="group u-relative u-overflow-hidden u-bg-gradient-to-b u-from-EDEFE8 u-to-D3D7DF u-border u-border-E0E0DA u-hov-border-AAD39C u-rounded-2xl u-sm-rounded-3xl u-p-6 u-sm-p-8 u-flex u-flex-col u-justify-between u-shadow-sm u-hov-shadow-xl u-transition-all u-duration-300">
+                        class="group gradient-card">
 
                         <!-- Problem Section (Top) -->
                         <div class="stack gap-lg">
                             <div class="row between">
                                 <span
-                                    class="u-text-10px u-sm-text-11px u-font-bold u-uppercase u-tracking-wider u-text-3F9A4B u-bg-F8FBF0 u-border u-border-AAD39C u-px-3 u-py-1 u-rounded-full">
+                                    class="tag-pill">
                                     PATTERN 01
                                 </span>
                             </div>
@@ -978,8 +951,8 @@
 
                         <!-- PMEX Solution Box (Bottom) -->
                         <div
-                            class="pmex-color-background u-mt-6 u-bg-F8FBF0 u-border u-border-AAD39C u-rounded-2xl u-p-4 u-sm-p-5 u-space-y-2 u-gh-border-3F9A4B u-transition-colors">
-                            <div class="u-flex u-items-center u-gap-2 u-text-3F9A4B">
+                            class="pmex-color-background note-box note-box--list">
+                            <div class="row gap-sm t-accent">
                                 <svg class="icon icon-md icon-fill" viewBox="0 0 20 20"><use href="/icons/site-icons.svg#check-circle-filled-spaced"></use></svg>
                                 <span class="t-xs fw-bold t-caps t-strong">PMEX
                                     SOLUTION</span>
@@ -1001,7 +974,7 @@
                         <div class="stack gap-lg">
                             <div class="row between">
                                 <span
-                                    class="u-text-10px u-sm-text-11px u-font-bold u-uppercase u-tracking-wider u-text-3F9A4B u-bg-F8FBF0 u-border u-border-AAD39C u-px-3 u-py-1 u-rounded-full">
+                                    class="tag-pill">
                                     PATTERN 02
                                 </span>
                             </div>
@@ -1021,8 +994,8 @@
 
                         <!-- PMEX Solution Box (Bottom) -->
                         <div
-                            class="pmex-color-background u-mt-6 u-bg-F8FBF0 u-border u-border-AAD39C u-rounded-2xl u-p-4 u-sm-p-5 u-space-y-2 u-gh-border-3F9A4B u-transition-colors">
-                            <div class="u-flex u-items-center u-gap-2 u-text-3F9A4B">
+                            class="pmex-color-background note-box note-box--list">
+                            <div class="row gap-sm t-accent">
                                 <svg class="icon icon-md icon-fill" viewBox="0 0 20 20"><use href="/icons/site-icons.svg#check-circle-filled-spaced"></use></svg>
                                 <span class="t-xs fw-bold t-caps t-strong">PMEX
                                     SOLUTION</span>
@@ -1045,7 +1018,7 @@
                         <div class="stack gap-lg">
                             <div class="row between">
                                 <span
-                                    class="u-text-10px u-sm-text-11px u-font-bold u-uppercase u-tracking-wider u-text-3F9A4B u-bg-F8FBF0 u-border u-border-AAD39C u-px-3 u-py-1 u-rounded-full">
+                                    class="tag-pill">
                                     PATTERN 03
                                 </span>
                             </div>
@@ -1065,8 +1038,8 @@
 
                         <!-- PMEX Solution Box (Bottom) -->
                         <div
-                            class="pmex-color-background u-mt-6 u-bg-F8FBF0 u-border u-border-AAD39C u-rounded-2xl u-p-4 u-sm-p-5 u-space-y-2 u-gh-border-3F9A4B u-transition-colors">
-                            <div class="u-flex u-items-center u-gap-2 u-text-3F9A4B">
+                            class="pmex-color-background note-box note-box--list">
+                            <div class="row gap-sm t-accent">
                                 <svg class="icon icon-md icon-fill" viewBox="0 0 20 20"><use href="/icons/site-icons.svg#check-circle-filled-spaced"></use></svg>
                                 <span class="t-xs fw-bold t-caps t-strong">PMEX
                                     SOLUTION</span>
@@ -1090,7 +1063,7 @@
                         <div class="stack gap-lg">
                             <div class="row between">
                                 <span
-                                    class="u-text-10px u-sm-text-11px u-font-bold u-uppercase u-tracking-wider u-text-3F9A4B u-bg-F8FBF0 u-border u-border-AAD39C u-px-3 u-py-1 u-rounded-full">
+                                    class="tag-pill">
                                     PATTERN 04
                                 </span>
                             </div>
@@ -1109,8 +1082,8 @@
 
                         <!-- PMEX Solution Box (Bottom) -->
                         <div
-                            class="pmex-color-background u-mt-6 u-bg-F8FBF0 u-border u-border-AAD39C u-rounded-2xl u-p-4 u-sm-p-5 u-space-y-2 u-gh-border-3F9A4B u-transition-colors">
-                            <div class="u-flex u-items-center u-gap-2 u-text-3F9A4B">
+                            class="pmex-color-background note-box note-box--list">
+                            <div class="row gap-sm t-accent">
                                 <svg class="icon icon-md icon-fill" viewBox="0 0 20 20"><use href="/icons/site-icons.svg#check-circle-filled-spaced"></use></svg>
                                 <span class="t-xs fw-bold t-caps t-strong">PMEX
                                     SOLUTION</span>
@@ -1126,13 +1099,13 @@
 
                     <!-- Denial Card 5 -->
                     <div
-                        class="group u-relative u-overflow-hidden u-bg-gradient-to-b u-from-EDEFE8 u-to-D3D7DF u-border u-border-E0E0DA u-hov-border-AAD39C u-rounded-2xl u-sm-rounded-3xl u-p-6 u-sm-p-8 u-flex u-flex-col u-justify-between u-shadow-sm u-hov-shadow-xl u-transition-all u-duration-300">
+                        class="group gradient-card">
 
                         <!-- Problem Section (Top) -->
                         <div class="stack gap-lg">
                             <div class="row between">
                                 <span
-                                    class="u-text-10px u-sm-text-11px u-font-bold u-uppercase u-tracking-wider u-text-3F9A4B u-bg-F8FBF0 u-border u-border-AAD39C u-px-3 u-py-1 u-rounded-full">
+                                    class="tag-pill">
                                     PATTERN 05
                                 </span>
                             </div>
@@ -1151,8 +1124,8 @@
 
                         <!-- PMEX Solution Box (Bottom) -->
                         <div
-                            class="pmex-color-background u-mt-6 u-bg-F8FBF0 u-border u-border-AAD39C u-rounded-2xl u-p-4 u-sm-p-5 u-space-y-2 u-gh-border-3F9A4B u-transition-colors">
-                            <div class="u-flex u-items-center u-gap-2 u-text-3F9A4B">
+                            class="pmex-color-background note-box note-box--list">
+                            <div class="row gap-sm t-accent">
                                 <svg class="icon icon-md icon-fill" viewBox="0 0 20 20"><use href="/icons/site-icons.svg#check-circle-filled-spaced"></use></svg>
                                 <span class="t-xs fw-bold t-caps t-strong">PMEX
                                     SOLUTION</span>
@@ -1175,7 +1148,7 @@
                         <div class="stack gap-lg">
                             <div class="row between">
                                 <span
-                                    class="u-text-10px u-sm-text-11px u-font-bold u-uppercase u-tracking-wider u-text-3F9A4B u-bg-F8FBF0 u-border u-border-AAD39C u-px-3 u-py-1 u-rounded-full">
+                                    class="tag-pill">
                                     PATTERN 06
                                 </span>
                             </div>
@@ -1195,8 +1168,8 @@
 
                         <!-- PMEX Solution Box (Bottom) -->
                         <div
-                            class="pmex-color-background u-mt-6 u-bg-F8FBF0 u-border u-border-AAD39C u-rounded-2xl u-p-4 u-sm-p-5 u-space-y-2 u-gh-border-3F9A4B u-transition-colors">
-                            <div class="u-flex u-items-center u-gap-2 u-text-3F9A4B">
+                            class="pmex-color-background note-box note-box--list">
+                            <div class="row gap-sm t-accent">
                                 <svg class="icon icon-md icon-fill" viewBox="0 0 20 20"><use href="/icons/site-icons.svg#check-circle-filled-spaced"></use></svg>
                                 <span class="t-xs fw-bold t-caps t-strong">PMEX
                                     SOLUTION</span>
@@ -1221,7 +1194,7 @@
             <div class="pmex-container">
 
                 <!-- Centered Section Header -->
-                <div class="pmex-section-head u-max-w-780px u-mx-auto u-text-center">
+                <div class="pmex-section-head section-head section-head--md">
                     <p class="bh-eyebrow">
                         BUILT FOR
                     </p>
@@ -1293,15 +1266,15 @@
                             class="u-space-y-3 u-sm-space-y-3-5 u-relative u-z-10 u-overflow-y-auto u-max-h-475px u-lg-max-h-590px u-xl-max-h-505px u-py-3 u-md-pl-2 u-pt-7 u-md-pt-2 u-scroll-smooth u-scrollbar-width-none u-nms-overflow-style-none u-webkitscrollbar-hidden">
 
                             <!-- Item 1 -->
-                            <div class="group u-flex u-items-center u-gap-3 u-sm-gap-4">
+                            <div class="group link-row">
                                 <!-- Circular Badge Node -->
                                 <div
                                     class="pmex-color-background u-relative u-flex u-items-center u-justify-center u-w-11 u-h-11 u-sm-w-13 u-sm-h-13 u-rounded-full u-bg-gradient-to-r u-from-AAD39C u-to-9ED08D u-border-2 u-border-FFFFFF u-text-FFFFFF u-font-bold u-text-15px u-sm-text-17px u-shadow-md u-gh-scale-105 u-gh-bg-3F9A4B u-transition-all u-duration-300 u-shrink-0">
                                     1
                                 </div>
                                 <!-- Arrow Connector -->
-                                <div class="u-hidden u-sm-flex u-items-center u-text-3F9A4B u-shrink-0">
-                                    <svg class="u-w-4 u-h-4 u-gh-translate-x-1 u-transition-transform" fill="none"
+                                <div class="link-row__arrow">
+                                    <svg class="arrow-nudge" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#behavioral-health-icon"></use></svg>
                                 </div>
                                 <!-- Item Content Card -->
@@ -1315,13 +1288,13 @@
                             </div>
 
                             <!-- Item 2 -->
-                            <div class="group u-flex u-items-center u-gap-3 u-sm-gap-4">
+                            <div class="group link-row">
                                 <div
                                     class="pmex-color-background u-relative u-flex u-items-center u-justify-center u-w-11 u-h-11 u-sm-w-13 u-sm-h-13 u-rounded-full u-bg-gradient-to-r u-from-AAD39C u-to-9ED08D u-border-2 u-border-FFFFFF u-text-FFFFFF u-font-bold u-text-15px u-sm-text-17px u-shadow-md u-gh-scale-105 u-gh-bg-3F9A4B u-transition-all u-duration-300 u-shrink-0">
                                     2
                                 </div>
-                                <div class="u-hidden u-sm-flex u-items-center u-text-3F9A4B u-shrink-0">
-                                    <svg class="u-w-4 u-h-4 u-gh-translate-x-1 u-transition-transform" fill="none"
+                                <div class="link-row__arrow">
+                                    <svg class="arrow-nudge" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#behavioral-health-icon"></use></svg>
                                 </div>
                                 <div
@@ -1334,13 +1307,13 @@
                             </div>
 
                             <!-- Item 3 -->
-                            <div class="group u-flex u-items-center u-gap-3 u-sm-gap-4">
+                            <div class="group link-row">
                                 <div
                                     class="pmex-color-background u-relative u-flex u-items-center u-justify-center u-w-11 u-h-11 u-sm-w-13 u-sm-h-13 u-rounded-full u-bg-gradient-to-r u-from-AAD39C u-to-9ED08D u-border-2 u-border-FFFFFF u-text-FFFFFF u-font-bold u-text-15px u-sm-text-17px u-shadow-md u-gh-scale-105 u-gh-bg-3F9A4B u-transition-all u-duration-300 u-shrink-0">
                                     3
                                 </div>
-                                <div class="u-hidden u-sm-flex u-items-center u-text-3F9A4B u-shrink-0">
-                                    <svg class="u-w-4 u-h-4 u-gh-translate-x-1 u-transition-transform" fill="none"
+                                <div class="link-row__arrow">
+                                    <svg class="arrow-nudge" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#behavioral-health-icon"></use></svg>
                                 </div>
                                 <div
@@ -1353,13 +1326,13 @@
                             </div>
 
                             <!-- Item 4 -->
-                            <div class="group u-flex u-items-center u-gap-3 u-sm-gap-4">
+                            <div class="group link-row">
                                 <div
                                     class="pmex-color-background u-relative u-flex u-items-center u-justify-center u-w-11 u-h-11 u-sm-w-13 u-sm-h-13 u-rounded-full u-bg-gradient-to-r u-from-AAD39C u-to-9ED08D u-border-2 u-border-FFFFFF u-text-FFFFFF u-font-bold u-text-15px u-sm-text-17px u-shadow-md u-gh-scale-105 u-gh-bg-3F9A4B u-transition-all u-duration-300 u-shrink-0">
                                     4
                                 </div>
-                                <div class="u-hidden u-sm-flex u-items-center u-text-3F9A4B u-shrink-0">
-                                    <svg class="u-w-4 u-h-4 u-gh-translate-x-1 u-transition-transform" fill="none"
+                                <div class="link-row__arrow">
+                                    <svg class="arrow-nudge" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#behavioral-health-icon"></use></svg>
                                 </div>
                                 <div
@@ -1372,13 +1345,13 @@
                             </div>
 
                             <!-- Item 5 -->
-                            <div class="group u-flex u-items-center u-gap-3 u-sm-gap-4">
+                            <div class="group link-row">
                                 <div
                                     class="pmex-color-background u-relative u-flex u-items-center u-justify-center u-w-11 u-h-11 u-sm-w-13 u-sm-h-13 u-rounded-full u-bg-gradient-to-r u-from-AAD39C u-to-9ED08D u-border-2 u-border-FFFFFF u-text-FFFFFF u-font-bold u-text-15px u-sm-text-17px u-shadow-md u-gh-scale-105 u-gh-bg-3F9A4B u-transition-all u-duration-300 u-shrink-0">
                                     5
                                 </div>
-                                <div class="u-hidden u-sm-flex u-items-center u-text-3F9A4B u-shrink-0">
-                                    <svg class="u-w-4 u-h-4 u-gh-translate-x-1 u-transition-transform" fill="none"
+                                <div class="link-row__arrow">
+                                    <svg class="arrow-nudge" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#behavioral-health-icon"></use></svg>
                                 </div>
                                 <div
@@ -1391,13 +1364,13 @@
                             </div>
 
                             <!-- Item 6 -->
-                            <div class="group u-flex u-items-center u-gap-3 u-sm-gap-4">
+                            <div class="group link-row">
                                 <div
                                     class="pmex-color-background u-relative u-flex u-items-center u-justify-center u-w-11 u-h-11 u-sm-w-13 u-sm-h-13 u-rounded-full u-bg-gradient-to-r u-from-AAD39C u-to-9ED08D u-border-2 u-border-FFFFFF u-text-FFFFFF u-font-bold u-text-15px u-sm-text-17px u-shadow-md u-gh-scale-105 u-gh-bg-3F9A4B u-transition-all u-duration-300 u-shrink-0">
                                     6
                                 </div>
-                                <div class="u-hidden u-sm-flex u-items-center u-text-3F9A4B u-shrink-0">
-                                    <svg class="u-w-4 u-h-4 u-gh-translate-x-1 u-transition-transform" fill="none"
+                                <div class="link-row__arrow">
+                                    <svg class="arrow-nudge" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#behavioral-health-icon"></use></svg>
                                 </div>
                                 <div
@@ -1410,13 +1383,13 @@
                             </div>
 
                             <!-- Item 7 -->
-                            <div class="group u-flex u-items-center u-gap-3 u-sm-gap-4">
+                            <div class="group link-row">
                                 <div
                                     class="pmex-color-background u-relative u-flex u-items-center u-justify-center u-w-11 u-h-11 u-sm-w-13 u-sm-h-13 u-rounded-full u-bg-gradient-to-r u-from-AAD39C u-to-9ED08D u-border-2 u-border-FFFFFF u-text-FFFFFF u-font-bold u-text-15px u-sm-text-17px u-shadow-md u-gh-scale-105 u-gh-bg-3F9A4B u-transition-all u-duration-300 u-shrink-0">
                                     7
                                 </div>
-                                <div class="u-hidden u-sm-flex u-items-center u-text-3F9A4B u-shrink-0">
-                                    <svg class="u-w-4 u-h-4 u-gh-translate-x-1 u-transition-transform" fill="none"
+                                <div class="link-row__arrow">
+                                    <svg class="arrow-nudge" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#behavioral-health-icon"></use></svg>
                                 </div>
                                 <div
@@ -1429,13 +1402,13 @@
                             </div>
 
                             <!-- Item 8 -->
-                            <div class="group u-flex u-items-center u-gap-3 u-sm-gap-4">
+                            <div class="group link-row">
                                 <div
                                     class="pmex-color-background u-relative u-flex u-items-center u-justify-center u-w-11 u-h-11 u-sm-w-13 u-sm-h-13 u-rounded-full u-bg-gradient-to-r u-from-AAD39C u-to-9ED08D u-border-2 u-border-FFFFFF u-text-FFFFFF u-font-bold u-text-15px u-sm-text-17px u-shadow-md u-gh-scale-105 u-gh-bg-3F9A4B u-transition-all u-duration-300 u-shrink-0">
                                     8
                                 </div>
-                                <div class="u-hidden u-sm-flex u-items-center u-text-3F9A4B u-shrink-0">
-                                    <svg class="u-w-4 u-h-4 u-gh-translate-x-1 u-transition-transform" fill="none"
+                                <div class="link-row__arrow">
+                                    <svg class="arrow-nudge" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#behavioral-health-icon"></use></svg>
                                 </div>
                                 <div
@@ -1448,13 +1421,13 @@
                             </div>
 
                             <!-- Item 9 -->
-                            <div class="group u-flex u-items-center u-gap-3 u-sm-gap-4">
+                            <div class="group link-row">
                                 <div
                                     class="pmex-color-background u-relative u-flex u-items-center u-justify-center u-w-11 u-h-11 u-sm-w-13 u-sm-h-13 u-rounded-full u-bg-gradient-to-r u-from-AAD39C u-to-9ED08D u-border-2 u-border-FFFFFF u-text-FFFFFF u-font-bold u-text-15px u-sm-text-17px u-shadow-md u-gh-scale-105 u-gh-bg-3F9A4B u-transition-all u-duration-300 u-shrink-0">
                                     9
                                 </div>
-                                <div class="u-hidden u-sm-flex u-items-center u-text-3F9A4B u-shrink-0">
-                                    <svg class="u-w-4 u-h-4 u-gh-translate-x-1 u-transition-transform" fill="none"
+                                <div class="link-row__arrow">
+                                    <svg class="arrow-nudge" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24"><use href="/icons/site-icons.svg#behavioral-health-icon"></use></svg>
                                 </div>
                                 <div
@@ -1480,7 +1453,7 @@
             <div class="pmex-container">
 
                 <!-- Section Header (Centered) -->
-                <div class="pmex-section-head u-max-w-850px u-mx-auto u-text-center">
+                <div class="pmex-section-head section-head section-head--lg">
                     <p class="bh-eyebrow">
                         THE EDUCATION
                     </p>
@@ -1547,20 +1520,20 @@
 
                         <!-- Card 1: $20B -->
                         <div
-                            class="group u-relative u-bg-FFFFFF u-rounded-2xl u-sm-rounded-3xl u-p-2 u-sm-p-2-5 u-flex u-items-stretch u-gap-2-5 u-shadow-sm u-hov-shadow-md u-transition-all u-duration-300">
+                            class="group stat-pair">
                             <div
-                                class="stat-badge-block u-relative u-text-2E4A25 u-rounded-xl u-sm-rounded-2xl u-px-3 u-py-3 u-sm-px-4 u-sm-py-3 u-flex u-flex-col u-items-center u-justify-center u-min-w-95px u-sm-min-w-115px u-flex-shrink-0 u-text-center u-shadow-sm">
+                                class="stat-badge-block stat-badge">
                                 <span
-                                    class="u-text-9px u-sm-text-10px u-font-bold u-uppercase u-tracking-widest u-text-2E4A25-a80">STAT
+                                    class="stat-badge__label">STAT
                                     01</span>
                                 <span
                                     class="t-xl fw-bold lh-tight ls-tight mt-2xs">$20B</span>
                                 <div
-                                    class="stat-arrow-pointer u-absolute u-nright-2 u-top-50pct u-ntranslate-y-50pct u-w-0 u-h-0 u-border-y-7px u-border-y-transparent u-border-l-8px u-z-20">
+                                    class="stat-arrow-pointer stat-badge__pointer">
                                 </div>
                             </div>
                             <div
-                                class="pmex-color-background u-flex-1 u-bg-AAD39C-a12 u-border u-border-AAD39C-a30 u-rounded-xl u-sm-rounded-2xl u-p-3 u-sm-p-3 u-relative u-z-10 u-flex u-items-center">
+                                class="stat-pair__body">
                                 <p class="t-sm t-muted lh-normal">
                                     U.S. chiropractic services market projected to reach <strong
                                         class="t-text fw-bold">$20 billion by 2028</strong> driven by chronic
@@ -1571,20 +1544,20 @@
 
                         <!-- Card 2: 25% -->
                         <div
-                            class="group u-relative u-bg-FFFFFF u-rounded-2xl u-sm-rounded-3xl u-p-2 u-sm-p-2-5 u-flex u-items-stretch u-gap-2-5 u-shadow-sm u-hov-shadow-md u-transition-all u-duration-300">
+                            class="group stat-pair">
                             <div
-                                class="stat-badge-block u-relative u-text-2E4A25 u-rounded-xl u-sm-rounded-2xl u-px-3 u-py-3 u-sm-px-4 u-sm-py-3 u-flex u-flex-col u-items-center u-justify-center u-min-w-95px u-sm-min-w-115px u-flex-shrink-0 u-text-center u-shadow-sm">
+                                class="stat-badge-block stat-badge">
                                 <span
-                                    class="u-text-9px u-sm-text-10px u-font-bold u-uppercase u-tracking-widest u-text-2E4A25-a80">STAT
+                                    class="stat-badge__label">STAT
                                     02</span>
                                 <span
                                     class="t-xl fw-bold lh-tight ls-tight mt-2xs">25%</span>
                                 <div
-                                    class="stat-arrow-pointer u-absolute u-nright-2 u-top-50pct u-ntranslate-y-50pct u-w-0 u-h-0 u-border-y-7px u-border-y-transparent u-border-l-8px u-z-20">
+                                    class="stat-arrow-pointer stat-badge__pointer">
                                 </div>
                             </div>
                             <div
-                                class="pmex-color-background u-flex-1 u-bg-AAD39C-a12 u-border u-border-AAD39C-a30 u-rounded-xl u-sm-rounded-2xl u-p-3 u-sm-p-3 u-relative u-z-10 u-flex u-items-center">
+                                class="stat-pair__body">
                                 <p class="t-sm t-muted lh-normal">
                                     Average U.S. chiropractic claim denial rate AT modifier errors and medical necessity
                                     documentation gaps are the two primary drivers. Both are preventable.
@@ -1594,21 +1567,21 @@
 
                         <!-- Card 3: 3x Rate -->
                         <div
-                            class="group u-relative u-bg-FFFFFF u-rounded-2xl u-sm-rounded-3xl u-p-2 u-sm-p-2-5 u-flex u-items-stretch u-gap-2-5 u-shadow-sm u-hov-shadow-md u-transition-all u-duration-300">
+                            class="group stat-pair">
                             <div
-                                class="stat-badge-block u-relative u-text-2E4A25 u-rounded-xl u-sm-rounded-2xl u-px-3 u-py-3 u-sm-px-4 u-sm-py-3 u-flex u-flex-col u-items-center u-justify-center u-min-w-95px u-sm-min-w-115px u-flex-shrink-0 u-text-center u-shadow-sm">
+                                class="stat-badge-block stat-badge">
                                 <span
-                                    class="u-text-9px u-sm-text-10px u-font-bold u-uppercase u-tracking-widest u-text-2E4A25-a80">STAT
+                                    class="stat-badge__label">STAT
                                     03</span>
                                 <span
                                     class="t-xl fw-bold lh-tight ls-tight mt-2xs">3x
                                     Rate</span>
                                 <div
-                                    class="stat-arrow-pointer u-absolute u-nright-2 u-top-50pct u-ntranslate-y-50pct u-w-0 u-h-0 u-border-y-7px u-border-y-transparent u-border-l-8px u-z-20">
+                                    class="stat-arrow-pointer stat-badge__pointer">
                                 </div>
                             </div>
                             <div
-                                class="pmex-color-background u-flex-1 u-bg-AAD39C-a12 u-border u-border-AAD39C-a30 u-rounded-xl u-sm-rounded-2xl u-p-3 u-sm-p-3 u-relative u-z-10 u-flex u-items-center">
+                                class="stat-pair__body">
                                 <p class="t-sm t-muted lh-normal">
                                     Medicare audits chiropractic practices at three times the rate of most other
                                     specialties. Incorrect medical necessity documentation is the most cited audit
@@ -1619,20 +1592,20 @@
 
                         <!-- Card 4: $90K -->
                         <div
-                            class="group u-relative u-bg-FFFFFF u-rounded-2xl u-sm-rounded-3xl u-p-2 u-sm-p-2-5 u-flex u-items-stretch u-gap-2-5 u-shadow-sm u-hov-shadow-md u-transition-all u-duration-300">
+                            class="group stat-pair">
                             <div
-                                class="stat-badge-block u-relative u-text-2E4A25 u-rounded-xl u-sm-rounded-2xl u-px-3 u-py-3 u-sm-px-4 u-sm-py-3 u-flex u-flex-col u-items-center u-justify-center u-min-w-95px u-sm-min-w-115px u-flex-shrink-0 u-text-center u-shadow-sm">
+                                class="stat-badge-block stat-badge">
                                 <span
-                                    class="u-text-9px u-sm-text-10px u-font-bold u-uppercase u-tracking-widest u-text-2E4A25-a80">STAT
+                                    class="stat-badge__label">STAT
                                     04</span>
                                 <span
                                     class="t-xl fw-bold lh-tight ls-tight mt-2xs">$90K</span>
                                 <div
-                                    class="stat-arrow-pointer u-absolute u-nright-2 u-top-50pct u-ntranslate-y-50pct u-w-0 u-h-0 u-border-y-7px u-border-y-transparent u-border-l-8px u-z-20">
+                                    class="stat-arrow-pointer stat-badge__pointer">
                                 </div>
                             </div>
                             <div
-                                class="pmex-color-background u-flex-1 u-bg-AAD39C-a12 u-border u-border-AAD39C-a30 u-rounded-xl u-sm-rounded-2xl u-p-3 u-sm-p-3 u-relative u-z-10 u-flex u-items-center">
+                                class="stat-pair__body">
                                 <p class="t-sm t-muted lh-normal">
                                     Average annual revenue recovered by PMEX chiropractic clients from AT modifier
                                     correction, workers comp fee schedule alignment, and PI billing improvements.
@@ -1972,7 +1945,7 @@
             <div class="pmex-container">
 
                 <!-- Section Header -->
-                <div class="pmex-section-head u-max-w-850px u-mx-auto u-text-center">
+                <div class="pmex-section-head section-head section-head--lg">
                     <p class="bh-eyebrow">
                         THE PMEX Portal
                     </p>
@@ -1998,7 +1971,7 @@
                                 class="animate-moving-bg u-mb-4 u-flex u-items-center u-justify-between u-gap-3 u-bg-gradient-to-r u-from-D8DCE3 u-via-EDEFE7 u-to-FFFFFF u-p-3 u-rounded-xl u-shadow-xs">
                                 <div class="u-flex u-items-center u-gap-3-5">
                                     <div
-                                        class="u-flex u-h-10 u-w-10 u-shrink-0 u-items-center u-justify-center u-rounded-lg u-bg-FFFFFF u-shadow-xs">
+                                        class="icon-tile icon-tile--white">
                                         <img src="/img/payment.svg" alt="EHR Integration" width="22" height="22">
                                     </div>
                                     <h3 class="t-lg fw-bold t-text">EHR Integration</h3>
@@ -2018,9 +1991,9 @@
                         <div class="pmex-card-gradient"></div>
                         <div class="raise stack fill-h">
                             <div
-                                class="animate-moving-bg u-mb-4 u-flex u-items-center u-gap-3-5 u-bg-gradient-to-r u-from-D8DCE3 u-via-EDEFE7 u-to-FFFFFF u-p-3 u-rounded-xl u-shadow-xs">
+                                class="animate-moving-bg card-title-band">
                                 <div
-                                    class="u-flex u-h-10 u-w-10 u-shrink-0 u-items-center u-justify-center u-rounded-lg u-bg-FFFFFF u-shadow-xs">
+                                    class="icon-tile icon-tile--white">
                                     <img src="/img/billing.svg" alt="PMEX Billing" width="22" height="22">
                                 </div>
                                 <h3 class="t-lg fw-bold t-text">PMEX Billing</h3>
@@ -2039,9 +2012,9 @@
                         <div class="pmex-card-gradient"></div>
                         <div class="raise stack fill-h">
                             <div
-                                class="animate-moving-bg u-mb-4 u-flex u-items-center u-gap-3-5 u-bg-gradient-to-r u-from-D8DCE3 u-via-EDEFE7 u-to-FFFFFF u-p-3 u-rounded-xl u-shadow-xs">
+                                class="animate-moving-bg card-title-band">
                                 <div
-                                    class="u-flex u-h-10 u-w-10 u-shrink-0 u-items-center u-justify-center u-rounded-lg u-bg-FFFFFF u-shadow-xs">
+                                    class="icon-tile icon-tile--white">
                                     <img src="/img/revenue.svg" alt="PMEX RCM" width="22" height="22">
                                 </div>
                                 <h3 class="t-lg fw-bold t-text">PMEX RCM</h3>
@@ -2060,9 +2033,9 @@
                         <div class="pmex-card-gradient"></div>
                         <div class="raise stack fill-h">
                             <div
-                                class="animate-moving-bg u-mb-4 u-flex u-items-center u-gap-3-5 u-bg-gradient-to-r u-from-D8DCE3 u-via-EDEFE7 u-to-FFFFFF u-p-3 u-rounded-xl u-shadow-xs">
+                                class="animate-moving-bg card-title-band">
                                 <div
-                                    class="u-flex u-h-10 u-w-10 u-shrink-0 u-items-center u-justify-center u-rounded-lg u-bg-FFFFFF u-shadow-xs">
+                                    class="icon-tile icon-tile--white">
                                     <img src="/img/eligibility.svg" alt="PMEX Eligibility" width="22" height="22">
                                 </div>
                                 <h3 class="t-lg fw-bold t-text">PMEX Eligibility</h3>
@@ -2081,9 +2054,9 @@
                         <div class="pmex-card-gradient"></div>
                         <div class="raise stack fill-h">
                             <div
-                                class="animate-moving-bg u-mb-4 u-flex u-items-center u-gap-3-5 u-bg-gradient-to-r u-from-D8DCE3 u-via-EDEFE7 u-to-FFFFFF u-p-3 u-rounded-xl u-shadow-xs">
+                                class="animate-moving-bg card-title-band">
                                 <div
-                                    class="u-flex u-h-10 u-w-10 u-shrink-0 u-items-center u-justify-center u-rounded-lg u-bg-FFFFFF u-shadow-xs">
+                                    class="icon-tile icon-tile--white">
                                     <img src="/img/auth.svg" alt="PMEX Prior Auth" width="22" height="22">
                                 </div>
                                 <h3 class="t-lg fw-bold t-text">PMEX Prior Auth</h3>
@@ -2102,11 +2075,11 @@
                         <div class="pmex-card-gradient"></div>
                         <div class="raise stack fill-h">
                             <div
-                                class="animate-moving-bg u-mb-4 u-flex u-items-center u-gap-3-5 u-bg-gradient-to-r u-from-D8DCE3 u-via-EDEFE7 u-to-FFFFFF u-p-3 u-rounded-xl u-shadow-xs">
+                                class="animate-moving-bg card-title-band">
                                 <div
-                                    class="u-flex u-h-10 u-w-10 u-shrink-0 u-items-center u-justify-center u-rounded-lg u-bg-FFFFFF u-shadow-xs">
+                                    class="icon-tile icon-tile--white">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="1.5" class="u-h-5 u-w-5 u-text-505050"><use href="/icons/site-icons.svg#headphones"></use></svg>
+                                        stroke="currentColor" stroke-width="1.5" class="icon-lg t-text"><use href="/icons/site-icons.svg#headphones"></use></svg>
                                 </div>
                                 <h3 class="t-lg fw-bold t-text">PMEX Front Desk</h3>
                             </div>
@@ -2128,12 +2101,12 @@
             <div class="pmex-container">
 
                 <!-- Section Header -->
-                <div class="pmex-section-head u-max-w-780px u-mx-auto u-text-center">
+                <div class="pmex-section-head section-head section-head--md">
                     <p class="bh-eyebrow">
                         Full Service Coverage
                     </p>
                     <h2
-                        class="u-max-w-780px u-mx-auto u-text-22px u-sm-text-30px u-lg-text-36px u-font-normal u-text-505050 u-leading-1-2 u-mb-3">
+                        class="section-title section-title--wide">
                         Everything PMEX Does for <br> Chiropractic Practices
                     </h2>
                     <p class="u-max-w-700px u-mx-auto u-text-676767 u-text-13px u-sm-text-15px u-leading-1-5">
@@ -2150,13 +2123,13 @@
                         class="group u-relative u-bg-FFFFFF u-rounded-2xl u-border u-border-E0E0DA u-pt-7 u-px-6 u-pb-6 u-shadow-md u-hov-border-AAD39C u-hov-shadow-xl u-hov-ntranslate-y-1 u-transition-all u-duration-200 u-flex u-flex-col u-justify-between">
                         <!-- Top Overhang Clip/Pill -->
                         <div
-                            class="overhang-pill u-absolute u-ntop-2 u-left-50pct u-ntranslate-x-50pct u-w-16 u-h-3-5 u-rounded-full u-shadow-xs">
+                            class="overhang-pill overhang-pin">
                             <span aria-hidden="true" class="pmex-accent-bar"></span>
                         </div>
 
                         <div>
                             <div
-                                class="u-flex u-items-center u-justify-between u-pb-3 u-mb-3 u-border-b u-border-E0E0DA u-gh-border-AAD39C-a60 u-transition-colors">
+                                class="card-head-row">
                                 <h3
                                     class="t-md fw-bold t-caps t-accent lh-tight">
                                     AT Modifier Compliance</h3>
@@ -2174,13 +2147,13 @@
                         class="group u-relative u-bg-FFFFFF u-rounded-2xl u-border u-border-E0E0DA u-pt-7 u-px-6 u-pb-6 u-shadow-md u-hov-border-AAD39C u-hov-shadow-xl u-hov-ntranslate-y-1 u-transition-all u-duration-200 u-flex u-flex-col u-justify-between">
                         <!-- Top Overhang Clip/Pill -->
                         <div
-                            class="overhang-pill u-absolute u-ntop-2 u-left-50pct u-ntranslate-x-50pct u-w-16 u-h-3-5 u-rounded-full u-shadow-xs">
+                            class="overhang-pill overhang-pin">
                             <span aria-hidden="true" class="pmex-accent-bar"></span>
                         </div>
 
                         <div>
                             <div
-                                class="u-flex u-items-center u-justify-between u-pb-3 u-mb-3 u-border-b u-border-E0E0DA u-gh-border-AAD39C-a60 u-transition-colors">
+                                class="card-head-row">
                                 <h3
                                     class="t-md fw-bold t-caps t-accent lh-tight">
                                     CMT Coding</h3>
@@ -2198,13 +2171,13 @@
                         class="group u-relative u-bg-FFFFFF u-rounded-2xl u-border u-border-E0E0DA u-pt-7 u-px-6 u-pb-6 u-shadow-md u-hov-border-AAD39C u-hov-shadow-xl u-hov-ntranslate-y-1 u-transition-all u-duration-200 u-flex u-flex-col u-justify-between">
                         <!-- Top Overhang Clip/Pill -->
                         <div
-                            class="overhang-pill u-absolute u-ntop-2 u-left-50pct u-ntranslate-x-50pct u-w-16 u-h-3-5 u-rounded-full u-shadow-xs">
+                            class="overhang-pill overhang-pin">
                             <span aria-hidden="true" class="pmex-accent-bar"></span>
                         </div>
 
                         <div>
                             <div
-                                class="u-flex u-items-center u-justify-between u-pb-3 u-mb-3 u-border-b u-border-E0E0DA u-gh-border-AAD39C-a60 u-transition-colors">
+                                class="card-head-row">
                                 <h3
                                     class="t-md fw-bold t-caps t-accent lh-tight">
                                     Insurance Credentialing</h3>
@@ -2222,13 +2195,13 @@
                         class="group u-relative u-bg-FFFFFF u-rounded-2xl u-border u-border-E0E0DA u-pt-7 u-px-6 u-pb-6 u-shadow-md u-hov-border-AAD39C u-hov-shadow-xl u-hov-ntranslate-y-1 u-transition-all u-duration-200 u-flex u-flex-col u-justify-between">
                         <!-- Top Overhang Clip/Pill -->
                         <div
-                            class="overhang-pill u-absolute u-ntop-2 u-left-50pct u-ntranslate-x-50pct u-w-16 u-h-3-5 u-rounded-full u-shadow-xs">
+                            class="overhang-pill overhang-pin">
                             <span aria-hidden="true" class="pmex-accent-bar"></span>
                         </div>
 
                         <div>
                             <div
-                                class="u-flex u-items-center u-justify-between u-pb-3 u-mb-3 u-border-b u-border-E0E0DA u-gh-border-AAD39C-a60 u-transition-colors">
+                                class="card-head-row">
                                 <h3
                                     class="t-md fw-bold t-caps t-accent lh-tight">
                                     Real-Time Claim Scrubbing</h3>
@@ -2246,13 +2219,13 @@
                         class="group u-relative u-bg-FFFFFF u-rounded-2xl u-border u-border-E0E0DA u-pt-7 u-px-6 u-pb-6 u-shadow-md u-hov-border-AAD39C u-hov-shadow-xl u-hov-ntranslate-y-1 u-transition-all u-duration-200 u-flex u-flex-col u-justify-between">
                         <!-- Top Overhang Clip/Pill -->
                         <div
-                            class="overhang-pill u-absolute u-ntop-2 u-left-50pct u-ntranslate-x-50pct u-w-16 u-h-3-5 u-rounded-full u-shadow-xs">
+                            class="overhang-pill overhang-pin">
                             <span aria-hidden="true" class="pmex-accent-bar"></span>
                         </div>
 
                         <div>
                             <div
-                                class="u-flex u-items-center u-justify-between u-pb-3 u-mb-3 u-border-b u-border-E0E0DA u-gh-border-AAD39C-a60 u-transition-colors">
+                                class="card-head-row">
                                 <h3
                                     class="t-md fw-bold t-caps t-accent lh-tight">
                                     Workers Comp Billing</h3>
@@ -2270,13 +2243,13 @@
                         class="group u-relative u-bg-FFFFFF u-rounded-2xl u-border u-border-E0E0DA u-pt-7 u-px-6 u-pb-6 u-shadow-md u-hov-border-AAD39C u-hov-shadow-xl u-hov-ntranslate-y-1 u-transition-all u-duration-200 u-flex u-flex-col u-justify-between">
                         <!-- Top Overhang Clip/Pill -->
                         <div
-                            class="overhang-pill u-absolute u-ntop-2 u-left-50pct u-ntranslate-x-50pct u-w-16 u-h-3-5 u-rounded-full u-shadow-xs">
+                            class="overhang-pill overhang-pin">
                             <span aria-hidden="true" class="pmex-accent-bar"></span>
                         </div>
 
                         <div>
                             <div
-                                class="u-flex u-items-center u-justify-between u-pb-3 u-mb-3 u-border-b u-border-E0E0DA u-gh-border-AAD39C-a60 u-transition-colors">
+                                class="card-head-row">
                                 <h3
                                     class="t-md fw-bold t-caps t-accent lh-tight">
                                     Personal Injury and Lien Billing</h3>
@@ -2294,13 +2267,13 @@
                         class="group u-relative u-bg-FFFFFF u-rounded-2xl u-border u-border-E0E0DA u-pt-7 u-px-6 u-pb-6 u-shadow-md u-hov-border-AAD39C u-hov-shadow-xl u-hov-ntranslate-y-1 u-transition-all u-duration-200 u-flex u-flex-col u-justify-between">
                         <!-- Top Overhang Clip/Pill -->
                         <div
-                            class="overhang-pill u-absolute u-ntop-2 u-left-50pct u-ntranslate-x-50pct u-w-16 u-h-3-5 u-rounded-full u-shadow-xs">
+                            class="overhang-pill overhang-pin">
                             <span aria-hidden="true" class="pmex-accent-bar"></span>
                         </div>
 
                         <div>
                             <div
-                                class="u-flex u-items-center u-justify-between u-pb-3 u-mb-3 u-border-b u-border-E0E0DA u-gh-border-AAD39C-a60 u-transition-colors">
+                                class="card-head-row">
                                 <h3
                                     class="t-md fw-bold t-caps t-accent lh-tight">
                                     Denial Repair and Appeal</h3>
@@ -2318,13 +2291,13 @@
                         class="group u-relative u-bg-FFFFFF u-rounded-2xl u-border u-border-E0E0DA u-pt-7 u-px-6 u-pb-6 u-shadow-md u-hov-border-AAD39C u-hov-shadow-xl u-hov-ntranslate-y-1 u-transition-all u-duration-200 u-flex u-flex-col u-justify-between">
                         <!-- Top Overhang Clip/Pill -->
                         <div
-                            class="overhang-pill u-absolute u-ntop-2 u-left-50pct u-ntranslate-x-50pct u-w-16 u-h-3-5 u-rounded-full u-shadow-xs">
+                            class="overhang-pill overhang-pin">
                             <span aria-hidden="true" class="pmex-accent-bar"></span>
                         </div>
 
                         <div>
                             <div
-                                class="u-flex u-items-center u-justify-between u-pb-3 u-mb-3 u-border-b u-border-E0E0DA u-gh-border-AAD39C-a60 u-transition-colors">
+                                class="card-head-row">
                                 <h3
                                     class="t-md fw-bold t-caps t-accent lh-tight">
                                     Live Revenue Dashboard</h3>
@@ -2343,7 +2316,7 @@
         </section>
 
         <!-- ===== THE DIFFERENCE WHAT HAPPENS TO CHIROPRACTIC REVENUE WITHOUT THE RIGHT BILLING PARTNER ===== -->
-        <section class="pmex-color-background pmex-section u-border-b u-border-AAD39C u-relative u-bg-EEF0E8-a40">
+        <section class="pmex-color-background pmex-section section-rule bg-tint-soft">
             <div class="pmex-container rel">
 
                 <!-- Section Header -->
@@ -2352,27 +2325,27 @@
                         THE DIFFERENCE
                     </p>
                     <h2
-                        class="u-text-22px u-sm-text-30px u-lg-text-36px u-font-normal u-text-505050 u-leading-1-2 u-mb-3 u-max-w-780px u-mx-auto">
+                        class="section-title section-title--wide">
                         What Happens to Chiropractic Revenue Without the Right Billing Partner
                     </h2>
                 </div>
 
                 <!-- Comparison Table / Mobile Cards Container -->
-                <div class="u-max-w-1260px u-mx-auto">
+                <div class="wide-wrap">
 
                     <!-- Mobile Screen Layout (Stacked: WITHOUT PMEX on top, WITH PMEX below - hidden on sm and up) -->
-                    <div class="u-flex u-flex-col u-gap-6 u-sm-hidden">
+                    <div class="mobile-stack">
 
                         <!-- Top Card: WITHOUT PMEX -->
-                        <div class="u-bg-FFFFFF u-rounded-2xl u-border u-border-red-200 u-shadow-sm u-overflow-hidden">
-                            <div class="u-bg-red-50-a70 u-border-b u-border-red-200 u-py-3-5 u-px-4 u-text-center">
-                                <span class="u-text-15px u-font-bold u-text-red-500 u-uppercase u-tracking-wider">Others</span>
+                        <div class="compare-bad">
+                            <div class="compare-bad__head">
+                                <span class="compare-bad__title">Others</span>
                             </div>
-                            <div class="u-p-4 u-flex u-flex-col u-gap-4 u-divide-y u-divide-red-100">
+                            <div class="compare-bad__list">
                                 <!-- Point 1 -->
-                                <div class="u-flex u-items-start u-gap-3 u-pt-3 u-first-pt-0 u-p-2">
+                                <div class="list-row list-row--flush">
                                     <div
-                                        class="u-w-5 u-h-5 u-rounded-full u-bg-red-100 u-text-red-500 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                        class="mark-x">
                                         <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                             stroke-width="3"><use href="/icons/site-icons.svg#close-rounded"></use></svg>
                                     </div>
@@ -2384,9 +2357,9 @@
                                     </p>
                                 </div>
                                 <!-- Point 2 -->
-                                <div class="u-flex u-items-start u-gap-3 u-pt-3 u-p-2">
+                                <div class="list-row">
                                     <div
-                                        class="u-w-5 u-h-5 u-rounded-full u-bg-red-100 u-text-red-500 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                        class="mark-x">
                                         <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                             stroke-width="3"><use href="/icons/site-icons.svg#close-rounded"></use></svg>
                                     </div>
@@ -2397,9 +2370,9 @@
                                     </p>
                                 </div>
                                 <!-- Point 3 -->
-                                <div class="u-flex u-items-start u-gap-3 u-pt-3 u-p-2">
+                                <div class="list-row">
                                     <div
-                                        class="u-w-5 u-h-5 u-rounded-full u-bg-red-100 u-text-red-500 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                        class="mark-x">
                                         <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                             stroke-width="3"><use href="/icons/site-icons.svg#close-rounded"></use></svg>
                                     </div>
@@ -2410,9 +2383,9 @@
                                     </p>
                                 </div>
                                 <!-- Point 4 -->
-                                <div class="u-flex u-items-start u-gap-3 u-pt-3 u-p-2">
+                                <div class="list-row">
                                     <div
-                                        class="u-w-5 u-h-5 u-rounded-full u-bg-red-100 u-text-red-500 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                        class="mark-x">
                                         <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                             stroke-width="3"><use href="/icons/site-icons.svg#close-rounded"></use></svg>
                                     </div>
@@ -2423,9 +2396,9 @@
                                     </p>
                                 </div>
                                 <!-- Point 5 -->
-                                <div class="u-flex u-items-start u-gap-3 u-pt-3 u-p-2">
+                                <div class="list-row">
                                     <div
-                                        class="u-w-5 u-h-5 u-rounded-full u-bg-red-100 u-text-red-500 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                        class="mark-x">
                                         <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                             stroke-width="3"><use href="/icons/site-icons.svg#close-rounded"></use></svg>
                                     </div>
@@ -2440,16 +2413,16 @@
 
                         <!-- Bottom Card: WITH PMEX -->
                         <div
-                            class="u-bg-FFFFFF u-rounded-2xl u-border u-border-AAD39C u-shadow-md u-shadow-AAD39C-a10 u-overflow-hidden">
-                            <div class="pmex-color-background u-bg-AAD39C-a20 u-border-b u-border-AAD39C-a40 u-py-3-5 u-px-4 u-text-center">
+                            class="compare-good">
+                            <div class="compare-good__head">
                                 <span class="t-md fw-bold t-accent t-caps">WITH
                                     PMEX</span>
                             </div>
-                            <div class="pmex-color-background u-p-4 u-flex u-flex-col u-gap-4 u-divide-y u-divide-AAD39C-a30 u-bg-F7FCF5-a30">
+                            <div class="pmex-color-background compare-good__list">
                                 <!-- Point 1 -->
-                                <div class="u-flex u-items-start u-gap-3 u-pt-3 u-first-pt-0 u-p-2">
+                                <div class="list-row list-row--flush">
                                     <div
-                                        class="pmex-color-background u-w-5 u-h-5 u-rounded-full u-bg-AAD39C-a35 u-text-2E4A25 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                        class="mark-check">
                                         <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                             stroke-width="3"><use href="/icons/site-icons.svg#check-rounded"></use></svg>
                                     </div>
@@ -2460,9 +2433,9 @@
                                     </p>
                                 </div>
                                 <!-- Point 2 -->
-                                <div class="u-flex u-items-start u-gap-3 u-pt-3 u-p-2">
+                                <div class="list-row">
                                     <div
-                                        class="pmex-color-background u-w-5 u-h-5 u-rounded-full u-bg-AAD39C-a35 u-text-2E4A25 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                        class="mark-check">
                                         <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                             stroke-width="3"><use href="/icons/site-icons.svg#check-rounded"></use></svg>
                                     </div>
@@ -2474,9 +2447,9 @@
                                     </p>
                                 </div>
                                 <!-- Point 3 -->
-                                <div class="u-flex u-items-start u-gap-3 u-pt-3 u-p-2">
+                                <div class="list-row">
                                     <div
-                                        class="pmex-color-background u-w-5 u-h-5 u-rounded-full u-bg-AAD39C-a35 u-text-2E4A25 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                        class="mark-check">
                                         <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                             stroke-width="3"><use href="/icons/site-icons.svg#check-rounded"></use></svg>
                                     </div>
@@ -2488,9 +2461,9 @@
                                     </p>
                                 </div>
                                 <!-- Point 4 -->
-                                <div class="u-flex u-items-start u-gap-3 u-pt-3 u-p-2">
+                                <div class="list-row">
                                     <div
-                                        class="pmex-color-background u-w-5 u-h-5 u-rounded-full u-bg-AAD39C-a35 u-text-2E4A25 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                        class="mark-check">
                                         <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                             stroke-width="3"><use href="/icons/site-icons.svg#check-rounded"></use></svg>
                                     </div>
@@ -2502,9 +2475,9 @@
                                     </p>
                                 </div>
                                 <!-- Point 5 -->
-                                <div class="u-flex u-items-start u-gap-3 u-pt-3 u-p-2">
+                                <div class="list-row">
                                     <div
-                                        class="pmex-color-background u-w-5 u-h-5 u-rounded-full u-bg-AAD39C-a35 u-text-2E4A25 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                        class="mark-check">
                                         <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                             stroke-width="3"><use href="/icons/site-icons.svg#check-rounded"></use></svg>
                                     </div>
@@ -2521,18 +2494,18 @@
 
                     <!-- Tablet & Desktop Table Layout (Side-by-side: hidden on small screens < sm, visible on sm and up) -->
                     <div
-                        class="u-hidden u-sm-block u-bg-FFFFFF u-rounded-3xl u-border u-border-AAD39C-a60 u-shadow-lg u-shadow-AAD39C-a10 u-overflow-hidden">
-                        <table class="u-w-full u-text-left u-border-collapse">
+                        class="compare-table">
+                        <table class="cmp-table">
                             <thead>
                                 <tr
-                                    class="u-border-b u-border-AAD39C-a40 u-bg-gradient-to-r u-from-red-50-a50 u-via-FFFFFF u-to-AAD39C-a10">
-                                    <th class="u-w-50pct u-p-3 u-sm-p-4 u-lg-p-5 u-border-r u-border-AAD39C-a40 u-text-center">
+                                    class="table-head-row">
+                                    <th class="compare-cell">
                                         <div
                                             class="u-inline-flex u-items-center u-gap-1-5 u-px-3-5 u-py-1-5 u-rounded-full u-text-16px u-sm-text-18px u-font-bold u-text-red-500 u-uppercase u-tracking-wider">
                                             Others
                                         </div>
                                     </th>
-                                    <th class="u-w-50pct u-p-3 u-sm-p-4 u-lg-p-5 u-bg-AAD39C-a10 u-text-center">
+                                    <th class="compare-cell compare-cell--good">
                                         <div
                                             class="u-inline-flex u-items-center u-gap-1-5 u-px-3-5 u-py-1-5 u-rounded-full u-text-16px u-sm-text-18px u-font-bold u-text-3F9A4B u-tracking-wider u-uppercase">
                                             WITH PMEX
@@ -2540,7 +2513,7 @@
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody class="u-divide-y u-divide-gray-100">
+                            <tbody class="divided">
 
                                 <!-- Row 1 -->
                                 <tr>
@@ -2548,7 +2521,7 @@
                                         class="u-w-50pct u-p-4 u-lg-p-5 u-border-r u-border-AAD39C-a40 u-align-top u-transition-all u-duration-300 u-hov-bg-gradient-to-r u-hov-from-red-100-a70 u-hov-via-red-50-a50 u-hov-to-000000-a0">
                                         <div class="row-top gap-md">
                                             <div
-                                                class="u-w-5 u-h-5 u-rounded-full u-bg-red-100 u-text-red-500 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                                class="mark-x">
                                                 <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                                     stroke-width="3"><use href="/icons/site-icons.svg#close-rounded-spaced"></use></svg>
                                             </div>
@@ -2564,7 +2537,7 @@
                                         class="u-w-50pct u-p-4 u-lg-p-5 u-bg-AAD39C-a5 u-align-top u-transition-all u-duration-300 u-hov-bg-gradient-to-r u-hov-from-AAD39C-a25 u-hov-via-AAD39C-a15 u-hov-to-000000-a0">
                                         <div class="row-top gap-md">
                                             <div
-                                                class="pmex-color-background u-w-5 u-h-5 u-rounded-full u-bg-AAD39C-a35 u-text-2E4A25 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                                class="mark-check">
                                                 <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                                     stroke-width="3"><use href="/icons/site-icons.svg#check-rounded-spaced"></use></svg>
                                             </div>
@@ -2584,7 +2557,7 @@
                                         class="u-w-50pct u-p-4 u-lg-p-5 u-border-r u-border-AAD39C-a40 u-align-top u-transition-all u-duration-300 u-hov-bg-gradient-to-r u-hov-from-red-100-a70 u-hov-via-red-50-a50 u-hov-to-000000-a0">
                                         <div class="row-top gap-md">
                                             <div
-                                                class="u-w-5 u-h-5 u-rounded-full u-bg-red-100 u-text-red-500 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                                class="mark-x">
                                                 <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                                     stroke-width="3"><use href="/icons/site-icons.svg#close-rounded-spaced"></use></svg>
                                             </div>
@@ -2599,7 +2572,7 @@
                                         class="u-w-50pct u-p-4 u-lg-p-5 u-bg-AAD39C-a5 u-align-top u-transition-all u-duration-300 u-hov-bg-gradient-to-r u-hov-from-AAD39C-a25 u-hov-via-AAD39C-a15 u-hov-to-000000-a0">
                                         <div class="row-top gap-md">
                                             <div
-                                                class="pmex-color-background u-w-5 u-h-5 u-rounded-full u-bg-AAD39C-a35 u-text-2E4A25 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                                class="mark-check">
                                                 <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                                     stroke-width="3"><use href="/icons/site-icons.svg#check-rounded-spaced"></use></svg>
                                             </div>
@@ -2619,7 +2592,7 @@
                                         class="u-w-50pct u-p-4 u-lg-p-5 u-border-r u-border-AAD39C-a40 u-align-top u-transition-all u-duration-300 u-hov-bg-gradient-to-r u-hov-from-red-100-a70 u-hov-via-red-50-a50 u-hov-to-000000-a0">
                                         <div class="row-top gap-md">
                                             <div
-                                                class="u-w-5 u-h-5 u-rounded-full u-bg-red-100 u-text-red-500 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                                class="mark-x">
                                                 <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                                     stroke-width="3"><use href="/icons/site-icons.svg#close-rounded-spaced"></use></svg>
                                             </div>
@@ -2635,7 +2608,7 @@
                                         class="u-w-50pct u-p-4 u-lg-p-5 u-bg-AAD39C-a5 u-align-top u-transition-all u-duration-300 u-hov-bg-gradient-to-r u-hov-from-AAD39C-a25 u-hov-via-AAD39C-a15 u-hov-to-000000-a0">
                                         <div class="row-top gap-md">
                                             <div
-                                                class="pmex-color-background u-w-5 u-h-5 u-rounded-full u-bg-AAD39C-a35 u-text-2E4A25 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                                class="mark-check">
                                                 <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                                     stroke-width="3"><use href="/icons/site-icons.svg#check-rounded-spaced"></use></svg>
                                             </div>
@@ -2655,7 +2628,7 @@
                                         class="u-w-50pct u-p-4 u-lg-p-5 u-border-r u-border-AAD39C-a40 u-align-top u-transition-all u-duration-300 u-hov-bg-gradient-to-r u-hov-from-red-100-a70 u-hov-via-red-50-a50 u-hov-to-000000-a0">
                                         <div class="row-top gap-md">
                                             <div
-                                                class="u-w-5 u-h-5 u-rounded-full u-bg-red-100 u-text-red-500 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                                class="mark-x">
                                                 <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                                     stroke-width="3"><use href="/icons/site-icons.svg#close-rounded-spaced"></use></svg>
                                             </div>
@@ -2670,7 +2643,7 @@
                                         class="u-w-50pct u-p-4 u-lg-p-5 u-bg-AAD39C-a5 u-align-top u-transition-all u-duration-300 u-hov-bg-gradient-to-r u-hov-from-AAD39C-a25 u-hov-via-AAD39C-a15 u-hov-to-000000-a0">
                                         <div class="row-top gap-md">
                                             <div
-                                                class="pmex-color-background u-w-5 u-h-5 u-rounded-full u-bg-AAD39C-a35 u-text-2E4A25 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                                class="mark-check">
                                                 <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                                     stroke-width="3"><use href="/icons/site-icons.svg#check-rounded-spaced"></use></svg>
                                             </div>
@@ -2690,7 +2663,7 @@
                                         class="u-w-50pct u-p-4 u-lg-p-5 u-border-r u-border-AAD39C-a40 u-align-top u-transition-all u-duration-300 u-hov-bg-gradient-to-r u-hov-from-red-100-a70 u-hov-via-red-50-a50 u-hov-to-000000-a0">
                                         <div class="row-top gap-md">
                                             <div
-                                                class="u-w-5 u-h-5 u-rounded-full u-bg-red-100 u-text-red-500 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                                class="mark-x">
                                                 <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                                     stroke-width="3"><use href="/icons/site-icons.svg#close-rounded-spaced"></use></svg>
                                             </div>
@@ -2706,7 +2679,7 @@
                                         class="u-w-50pct u-p-4 u-lg-p-5 u-bg-AAD39C-a5 u-align-top u-transition-all u-duration-300 u-hov-bg-gradient-to-r u-hov-from-AAD39C-a25 u-hov-via-AAD39C-a15 u-hov-to-000000-a0">
                                         <div class="row-top gap-md">
                                             <div
-                                                class="pmex-color-background u-w-5 u-h-5 u-rounded-full u-bg-AAD39C-a35 u-text-2E4A25 u-flex u-items-center u-justify-center u-shrink-0 u-mt-0-5">
+                                                class="mark-check">
                                                 <svg class="icon icon-xs icon-stroke" fill="none" viewBox="0 0 24 24"
                                                     stroke-width="3"><use href="/icons/site-icons.svg#check-rounded-spaced"></use></svg>
                                             </div>
@@ -2749,7 +2722,7 @@
                 </div>
 
                 <!-- CPT Cards Grid (22 Cards matching attached Chiropractic design screenshot) -->
-                <div class="u-flex u-flex-wrap u-justify-center u-gap-3-5 u-sm-gap-4 u-max-w-1200px u-mx-auto">
+                <div class="pill-cloud">
 
                     <!-- 1 -->
                     <div
@@ -2977,7 +2950,7 @@
         </section>
 
         <!-- ===== The PMEX Chiropractic Revenue Pulse Check ===== -->
-        <section class="pmex-color-background pmex-section u-bg-FFFFFF u-border-b u-border-AAD39C u-relative u-overflow-hidden">
+        <section class="pmex-color-background pmex-section section-rule bg-white clip">
 
             <div class="u-max-w-1240px u-mx-auto u-px-4 u-sm-px-6 u-lg-px-8 u-relative u-z-10 u-space-y-12">
 
@@ -3207,17 +3180,17 @@
                 </div>
 
                 <!-- 4 Cards Grid with Exact Site Brand Color Palette -->
-                <div class="u-grid u-grid-cols-1 u-md-grid-cols-2 u-gap-6 u-lg-gap-8">
+                <div class="grid-2up">
 
                     <!-- Card 1: Medicare Claims -->
                     <div
-                        class="group u-relative u-overflow-hidden u-bg-gradient-to-b u-from-EDEFE8 u-to-D3D7DF u-border u-border-E0E0DA u-hov-border-AAD39C u-rounded-2xl u-sm-rounded-3xl u-p-6 u-sm-p-8 u-flex u-flex-col u-justify-between u-shadow-sm u-hov-shadow-xl u-transition-all u-duration-300">
+                        class="group gradient-card">
 
                         <!-- Problem Section (Top) -->
                         <div class="stack gap-lg">
                             <div class="row between">
                                 <span
-                                    class="u-text-10px u-sm-text-11px u-font-bold u-uppercase u-tracking-wider u-text-3F9A4B u-bg-F8FBF0 u-border u-border-AAD39C u-px-3 u-py-1 u-rounded-full">
+                                    class="tag-pill">
                                     PROBLEM 01
                                 </span>
                             </div>
@@ -3235,8 +3208,8 @@
 
                         <!-- PMEX Solution Box (Bottom) -->
                         <div
-                            class="pmex-color-background u-mt-6 u-bg-F8FBF0 u-border u-border-AAD39C u-rounded-2xl u-p-4 u-sm-p-5 u-space-y-2 u-gh-border-3F9A4B u-transition-colors">
-                            <div class="u-flex u-items-center u-gap-2 u-text-3F9A4B">
+                            class="pmex-color-background note-box note-box--list">
+                            <div class="row gap-sm t-accent">
                                 <svg class="icon icon-md icon-fill" viewBox="0 0 20 20"><use href="/icons/site-icons.svg#check-circle-filled-spaced"></use></svg>
                                 <span class="t-xs fw-bold t-caps t-strong">PMEX
                                     SOLUTION</span>
@@ -3259,7 +3232,7 @@
                         <div class="stack gap-lg">
                             <div class="row between">
                                 <span
-                                    class="u-text-10px u-sm-text-11px u-font-bold u-uppercase u-tracking-wider u-text-3F9A4B u-bg-F8FBF0 u-border u-border-AAD39C u-px-3 u-py-1 u-rounded-full">
+                                    class="tag-pill">
                                     PROBLEM 02
                                 </span>
                             </div>
@@ -3277,8 +3250,8 @@
 
                         <!-- PMEX Solution Box (Bottom) -->
                         <div
-                            class="pmex-color-background u-mt-6 u-bg-F8FBF0 u-border u-border-AAD39C u-rounded-2xl u-p-4 u-sm-p-5 u-space-y-2 u-gh-border-3F9A4B u-transition-colors">
-                            <div class="u-flex u-items-center u-gap-2 u-text-3F9A4B">
+                            class="pmex-color-background note-box note-box--list">
+                            <div class="row gap-sm t-accent">
                                 <svg class="icon icon-md icon-fill" viewBox="0 0 20 20"><use href="/icons/site-icons.svg#check-circle-filled-spaced"></use></svg>
                                 <span class="t-xs fw-bold t-caps t-strong">PMEX
                                     SOLUTION</span>
@@ -3300,7 +3273,7 @@
                         <div class="stack gap-lg">
                             <div class="row between">
                                 <span
-                                    class="u-text-10px u-sm-text-11px u-font-bold u-uppercase u-tracking-wider u-text-3F9A4B u-bg-F8FBF0 u-border u-border-AAD39C u-px-3 u-py-1 u-rounded-full">
+                                    class="tag-pill">
                                     PROBLEM 03
                                 </span>
                             </div>
@@ -3318,8 +3291,8 @@
 
                         <!-- PMEX Solution Box (Bottom) -->
                         <div
-                            class="pmex-color-background u-mt-6 u-bg-F8FBF0 u-border u-border-AAD39C u-rounded-2xl u-p-4 u-sm-p-5 u-space-y-2 u-gh-border-3F9A4B u-transition-colors">
-                            <div class="u-flex u-items-center u-gap-2 u-text-3F9A4B">
+                            class="pmex-color-background note-box note-box--list">
+                            <div class="row gap-sm t-accent">
                                 <svg class="icon icon-md icon-fill" viewBox="0 0 20 20"><use href="/icons/site-icons.svg#check-circle-filled-spaced"></use></svg>
                                 <span class="t-xs fw-bold t-caps t-strong">PMEX
                                     SOLUTION</span>
@@ -3342,7 +3315,7 @@
                         <div class="stack gap-lg">
                             <div class="row between">
                                 <span
-                                    class="u-text-10px u-sm-text-11px u-font-bold u-uppercase u-tracking-wider u-text-3F9A4B u-bg-F8FBF0 u-border u-border-AAD39C u-px-3 u-py-1 u-rounded-full">
+                                    class="tag-pill">
                                     PROBLEM 04
                                 </span>
                             </div>
@@ -3360,8 +3333,8 @@
 
                         <!-- PMEX Solution Box (Bottom) -->
                         <div
-                            class="pmex-color-background u-mt-6 u-bg-F8FBF0 u-border u-border-AAD39C u-rounded-2xl u-p-4 u-sm-p-5 u-space-y-2 u-gh-border-3F9A4B u-transition-colors">
-                            <div class="u-flex u-items-center u-gap-2 u-text-3F9A4B">
+                            class="pmex-color-background note-box note-box--list">
+                            <div class="row gap-sm t-accent">
                                 <svg class="icon icon-md icon-fill" viewBox="0 0 20 20"><use href="/icons/site-icons.svg#check-circle-filled-spaced"></use></svg>
                                 <span class="t-xs fw-bold t-caps t-strong">PMEX
                                     SOLUTION</span>
@@ -3385,12 +3358,12 @@
             <div class="pmex-container">
 
                 <!-- Section Header -->
-                <div class="pmex-section-head u-max-w-850px u-mx-auto u-text-center">
+                <div class="pmex-section-head section-head section-head--lg">
                     <p class="bh-eyebrow">
                         THE PROCESS
                     </p>
                     <h2
-                        class="u-text-22px u-sm-text-30px u-lg-text-36px u-font-normal u-text-505050 u-leading-1-2 u-mb-3 u-max-w-780px u-mx-auto">
+                        class="section-title section-title--wide">
                         From SOAP Note to Payment Posted <br class="u-hidden u-lg-inline"> Through Your Existing
                         Chiropractic EHR
                     </h2>
@@ -3605,24 +3578,24 @@
 
                         <!-- Card 1: $20 Billion -->
                         <div
-                            class="group u-relative u-bg-FFFFFF u-rounded-2xl u-sm-rounded-3xl u-p-2 u-sm-p-2-5 u-flex u-items-stretch u-gap-2-5 u-shadow-sm u-hov-shadow-md u-transition-all u-duration-300">
+                            class="group stat-pair">
                             <!-- Left Badge Block -->
                             <div
-                                class="stat-badge-block u-relative u-text-2E4A25 u-rounded-xl u-sm-rounded-2xl u-px-3 u-py-3 u-sm-px-4 u-sm-py-3 u-flex u-flex-col u-items-center u-justify-center u-min-w-95px u-sm-min-w-115px u-flex-shrink-0 u-text-center u-shadow-sm">
+                                class="stat-badge-block stat-badge">
                                 <span
-                                    class="u-text-9px u-sm-text-10px u-font-bold u-uppercase u-tracking-widest u-text-2E4A25-a80">STAT
+                                    class="stat-badge__label">STAT
                                     01</span>
                                 <span
                                     class="t-xl fw-bold lh-tight ls-tight mt-2xs">$20B</span>
                                 <!-- Pointed Arrow Pointer -->
                                 <div
-                                    class="stat-arrow-pointer u-absolute u-nright-2 u-top-50pct u-ntranslate-y-50pct u-w-0 u-h-0 u-border-y-7px u-border-y-transparent u-border-l-8px u-z-20">
+                                    class="stat-arrow-pointer stat-badge__pointer">
                                 </div>
                             </div>
 
                             <!-- Inner Overlapping Card -->
                             <div
-                                class="pmex-color-background u-flex-1 u-bg-AAD39C-a12 u-border u-border-AAD39C-a30 u-rounded-xl u-sm-rounded-2xl u-p-3 u-sm-p-3 u-relative u-z-10 u-flex u-items-center">
+                                class="stat-pair__body">
                                 <div>
                                     <h4
                                         class="u-text-11px u-sm-text-12px u-font-black u-text-2E4A25 u-uppercase u-tracking-1px u-mb-1">
@@ -3637,24 +3610,24 @@
 
                         <!-- Card 2: 25% -->
                         <div
-                            class="group u-relative u-bg-FFFFFF u-rounded-2xl u-sm-rounded-3xl u-p-2 u-sm-p-2-5 u-flex u-items-stretch u-gap-2-5 u-shadow-sm u-hov-shadow-md u-transition-all u-duration-300">
+                            class="group stat-pair">
                             <!-- Left Badge Block -->
                             <div
-                                class="stat-badge-block u-relative u-text-2E4A25 u-rounded-xl u-sm-rounded-2xl u-px-3 u-py-3 u-sm-px-4 u-sm-py-3 u-flex u-flex-col u-items-center u-justify-center u-min-w-95px u-sm-min-w-115px u-flex-shrink-0 u-text-center u-shadow-sm">
+                                class="stat-badge-block stat-badge">
                                 <span
-                                    class="u-text-9px u-sm-text-10px u-font-bold u-uppercase u-tracking-widest u-text-2E4A25-a80">STAT
+                                    class="stat-badge__label">STAT
                                     02</span>
                                 <span
                                     class="t-xl fw-bold lh-tight ls-tight mt-2xs">25%</span>
                                 <!-- Pointed Arrow Pointer -->
                                 <div
-                                    class="stat-arrow-pointer u-absolute u-nright-2 u-top-50pct u-ntranslate-y-50pct u-w-0 u-h-0 u-border-y-7px u-border-y-transparent u-border-l-8px u-z-20">
+                                    class="stat-arrow-pointer stat-badge__pointer">
                                 </div>
                             </div>
 
                             <!-- Inner Overlapping Card -->
                             <div
-                                class="pmex-color-background u-flex-1 u-bg-AAD39C-a12 u-border u-border-AAD39C-a30 u-rounded-xl u-sm-rounded-2xl u-p-3 u-sm-p-3 u-relative u-z-10 u-flex u-items-center">
+                                class="stat-pair__body">
                                 <div>
                                     <h4
                                         class="u-text-11px u-sm-text-12px u-font-black u-text-2E4A25 u-uppercase u-tracking-1px u-mb-1">
@@ -3669,25 +3642,25 @@
 
                         <!-- Card 3: 3x Higher -->
                         <div
-                            class="group u-relative u-bg-FFFFFF u-rounded-2xl u-sm-rounded-3xl u-p-2 u-sm-p-2-5 u-flex u-items-stretch u-gap-2-5 u-shadow-sm u-hov-shadow-md u-transition-all u-duration-300">
+                            class="group stat-pair">
                             <!-- Left Badge Block -->
                             <div
-                                class="stat-badge-block u-relative u-text-2E4A25 u-rounded-xl u-sm-rounded-2xl u-px-3 u-py-3 u-sm-px-4 u-sm-py-3 u-flex u-flex-col u-items-center u-justify-center u-min-w-95px u-sm-min-w-115px u-flex-shrink-0 u-text-center u-shadow-sm">
+                                class="stat-badge-block stat-badge">
                                 <span
-                                    class="u-text-9px u-sm-text-10px u-font-bold u-uppercase u-tracking-widest u-text-2E4A25-a80">STAT
+                                    class="stat-badge__label">STAT
                                     03</span>
                                 <span
                                     class="t-lg fw-bold lh-tight ls-tight mt-2xs">3x
                                     Higher</span>
                                 <!-- Pointed Arrow Pointer -->
                                 <div
-                                    class="stat-arrow-pointer u-absolute u-nright-2 u-top-50pct u-ntranslate-y-50pct u-w-0 u-h-0 u-border-y-7px u-border-y-transparent u-border-l-8px u-z-20">
+                                    class="stat-arrow-pointer stat-badge__pointer">
                                 </div>
                             </div>
 
                             <!-- Inner Overlapping Card -->
                             <div
-                                class="pmex-color-background u-flex-1 u-bg-AAD39C-a12 u-border u-border-AAD39C-a30 u-rounded-xl u-sm-rounded-2xl u-p-3 u-sm-p-3 u-relative u-z-10 u-flex u-items-center">
+                                class="stat-pair__body">
                                 <div>
                                     <h4
                                         class="u-text-11px u-sm-text-12px u-font-black u-text-2E4A25 u-uppercase u-tracking-1px u-mb-1">
@@ -3702,24 +3675,24 @@
 
                         <!-- Card 4: $90K Average -->
                         <div
-                            class="group u-relative u-bg-FFFFFF u-rounded-2xl u-sm-rounded-3xl u-p-2 u-sm-p-2-5 u-flex u-items-stretch u-gap-2-5 u-shadow-sm u-hov-shadow-md u-transition-all u-duration-300">
+                            class="group stat-pair">
                             <!-- Left Badge Block -->
                             <div
-                                class="stat-badge-block u-relative u-text-2E4A25 u-rounded-xl u-sm-rounded-2xl u-px-3 u-py-3 u-sm-px-4 u-sm-py-3 u-flex u-flex-col u-items-center u-justify-center u-min-w-95px u-sm-min-w-115px u-flex-shrink-0 u-text-center u-shadow-sm">
+                                class="stat-badge-block stat-badge">
                                 <span
-                                    class="u-text-9px u-sm-text-10px u-font-bold u-uppercase u-tracking-widest u-text-2E4A25-a80">STAT
+                                    class="stat-badge__label">STAT
                                     04</span>
                                 <span
                                     class="t-xl fw-bold lh-tight ls-tight mt-2xs">$90K</span>
                                 <!-- Pointed Arrow Pointer -->
                                 <div
-                                    class="stat-arrow-pointer u-absolute u-nright-2 u-top-50pct u-ntranslate-y-50pct u-w-0 u-h-0 u-border-y-7px u-border-y-transparent u-border-l-8px u-z-20">
+                                    class="stat-arrow-pointer stat-badge__pointer">
                                 </div>
                             </div>
 
                             <!-- Inner Overlapping Card -->
                             <div
-                                class="pmex-color-background u-flex-1 u-bg-AAD39C-a12 u-border u-border-AAD39C-a30 u-rounded-xl u-sm-rounded-2xl u-p-3 u-sm-p-3 u-relative u-z-10 u-flex u-items-center">
+                                class="stat-pair__body">
                                 <div>
                                     <h4
                                         class="u-text-11px u-sm-text-12px u-font-black u-text-2E4A25 u-uppercase u-tracking-1px u-mb-1">
@@ -3742,98 +3715,98 @@
         <!-- ===== U.S. PAYER NETWORK SECTION ===== -->
         <section class="pmex-section section-rule bg-white">
             <div class="pmex-container">
-                <div class="pmex-section-head u-max-w-700px u-mx-auto u-text-center">
+                <div class="pmex-section-head section-head section-head--narrow">
                     <p class="bh-eyebrow">
                         U.S PAYER NETWORK
                     </p>
                     <h2
-                        class="u-text-22px u-sm-text-30px u-lg-text-36px u-font-normal u-text-505050 u-leading-1-2 u-mb-3 u-max-w-650px u-mx-auto">
+                        class="section-title">
                         We Bill Every U.S Payer for Chiropractic Claims
                     </h2>
                 </div>
 
-                <div class="u-flex u-flex-wrap u-justify-center u-gap-3 u-max-w-1000px u-mx-auto">
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                <div class="pill-cloud pill-cloud--narrow">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">Medicare
+                            class="code-chip__text">Medicare
                             Part B</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">Medicaid</span>
+                            class="code-chip__text">Medicaid</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">UnitedHealthcare</span>
+                            class="code-chip__text">UnitedHealthcare</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">Aetna</span>
+                            class="code-chip__text">Aetna</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">Cigna</span>
+                            class="code-chip__text">Cigna</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">Blue
+                            class="code-chip__text">Blue
                             Cross Blue Shield</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">Humana</span>
+                            class="code-chip__text">Humana</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">Tricare</span>
+                            class="code-chip__text">Tricare</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">Anthem</span>
+                            class="code-chip__text">Anthem</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">Medicare
+                            class="code-chip__text">Medicare
                             Advantage</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">WC
+                            class="code-chip__text">WC
                             All 50 States</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">NY
+                            class="code-chip__text">NY
                             No-Fault PIP</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">Michigan
+                            class="code-chip__text">Michigan
                             No-Fault</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">Florida
+                            class="code-chip__text">Florida
                             PIP</span>
                     </div>
-                    <div class="payer-box group u-relative u-overflow-hidden u-px-4 u-py-2 u-cursor-default">
+                    <div class="payer-box group code-chip">
                         <div class="cpt-gradient"></div>
                         <span
-                            class="u-relative u-z-10 u-text-505050 u-text-13-5px u-font-medium u-gh-text-505050 u-transition-colors">Auto
+                            class="code-chip__text">Auto
                             Liability PI</span>
                     </div>
                 </div>
@@ -3843,41 +3816,28 @@
         <!-- ===== WHY CHOOSE US ===== -->
         <section class="pmex-section section-rule bg-white">
             <div class="pmex-container">
-                <div class="u-flex u-flex-col u-lg-flex-row u-gap-10 u-lg-gap-16 u-items-center">
+                <div class="split-row">
 
                     <!-- Single Image Container -->
-                    <div class="u-relative u-w-full u-lg-w-50pct">
+                    <div class="split-col rel">
                         <!-- gradient blob behind -->
                         <div
-                            class="u-absolute u-ninset-4 u-sm-ninset-6 u-rounded-32px u-bg-gradient-to-br u-from-EDEFE7 u-via-E8EAED u-to-D8DCE3 u-nz-10 u-rotate-2">
+                            class="showcase-blob">
                         </div>
 
                         <div
-                            class="group u-relative u-rounded-3xl u-overflow-hidden u-h-340px u-sm-h-420px u-md-h-480px u-shadow-0-20px-45px-b71eb6 u-ring-1 u-ring-000000-a5">
+                            class="group showcase-media">
                             <img src="/img/why-specialty.webp" alt="Revenue cycle management illustration"
-                                class="u-w-full u-h-full u-object-cover u-transition-transform u-duration-500 u-ease-out u-gh-scale-105">
+                                class="showcase-img">
                             <div class="pt-img-gradient"></div>
 
                             <!-- Floating accent card -->
-                            <!-- <div
-                                class="u-flex u-absolute u-bottom-1 u-right-1 u-sm-bottom-6 u-sm-right-6 u-bg-FFFFFF-a95 u-backdrop-blur-md u-rounded-2xl u-shadow-0-18px-40px-e2bbef u-ring-1 u-ring-000000-a5 u-px-5 u-py-4 u-items-center u-gap-3 u-whitespace-nowrap">
-                                <span
-                                    class="u-w-9 u-h-9 u-rounded-full u-bg-AAD39C u-flex u-items-center u-justify-center u-shrink-0">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--c-2A3828)"
-                                        stroke-width="2.5"><use href="/icons/site-icons.svg#check-polyline"></use></svg>
-                                </span>
-                                <div>
-                                    <p class="t-base fw-semibold t-text lh-tight">99%
-                                        Approval</p>
-                                    <p class="t-xs t-subtle lh-tight">on first submission</p>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
 
                     <!-- Text content -->
-                    <div class="u-w-full u-lg-w-50pct">
-                        <div class="u-flex u-items-center u-gap-3">
+                    <div class="split-col">
+                        <div class="row gap-md">
                             <p class="bh-eyebrow">
                                 Why Choose PMEX</p>
 
@@ -3887,7 +3847,7 @@
                             class="t-h2 fw-normal t-text lh-tight mb-xl">
                             Your Specialized, Accurate &amp; Revenue-Focused Billing Partner</h2>
 
-                        <ul class="u-space-y-3 u-sm-mb-8">
+                        <ul class="check-list">
                             <li class="row-top gap-md">
                                 <span
                                     class="check-dot">
@@ -3955,7 +3915,7 @@
                                     <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--c-2A3828)"
                                         stroke-width="3"><use href="/icons/site-icons.svg#check-polyline"></use></svg>
                                 </span>
-                                <span class="u-text-14px u-sm-text-16px u-text-676767 u-xl-leading-2">Expert denial
+                                <span class="t-md t-muted">Expert denial
                                     management team
                                     that
                                     corrects and
@@ -3971,32 +3931,32 @@
         </section>
 
 <!-- ===== WORKS WITH THE SYSTEMS YOU ALREADY USE ===== -->
-        <section class="pmex-section u-border-b u-border-AAD39C u-relative u-bg-FFFFFF u-overflow-hidden">
+        <section class="pmex-section section-rule bg-white clip">
             <!-- soft ambient background glow -->
             <div class="deco-layer">
-                <div class="pmex-color-background u-absolute u-top-50pct u-right-10 u-ntranslate-y-50pct u-w-96 u-h-96 u-rounded-full u-bg-AAD39C-a15 u-blur-3xl">
+                <div class="glow-blob">
                 </div>
             </div>
 
             <div class="pmex-container">
-                <div class="u-flex u-flex-col u-lg-flex-row u-gap-10 u-lg-gap-14 u-items-center">
+                <div class="split-row">
 
                     <!-- LEFT COLUMN: Technology Integration Content -->
-                    <div class="u-w-full u-lg-w-50pct u-flex u-flex-col u-justify-center">
+                    <div class="split-col stack split-col--center">
                         <p class="bh-eyebrow">
                             TECHNOLOGY &amp; INTEGRATION</p>
                         <h2
                             class="t-h2 fw-normal t-text lh-tight mb-md">
-                            Works With the System <br class="u-block u-sm-hidden">You Already Use
+                            Works With the System <br class="mobile-only">You Already Use
                         </h2>
-                        <p class="u-text-14px u-md-text-16px u-text-676767 u-leading-1-5 u-mb-8 u-max-w-540px">
+                        <p class="lead-text">
                             PMEX integrates seamlessly with all major chiropractic practice management tools and
                             clinical software so your billing data flows automatically, zero manual re-entry, zero lost
                             timed code revenue.
                         </p>
 
                         <!-- System Badges Row -->
-                        <div class="u-flex u-flex-wrap u-gap-2-5 u-max-w-540px">
+                        <div class="chip-row">
                             <span
                                 class="chip">Epic</span>
                             <span
@@ -4018,23 +3978,23 @@
 
                     <!-- RIGHT COLUMN: 5-Box Radial Connected Diagram -->
                     <div
-                        class="u-w-full u-lg-w-50pct u-relative u-min-h-480px u-sm-min-h-520px u-flex u-items-center u-justify-center u-py-6">
+                        class="orbit-stage">
 
                         <!-- SVG Connecting Dashed Lines -->
-                        <svg class="u-absolute u-inset-0 u-w-full u-h-full u-pointer-events-none" viewBox="0 0 500 500"
+                        <svg class="orbit-lines" viewBox="0 0 500 500"
                             fill="none"><use href="/icons/site-icons.svg#hub-diagram-lines"></use></svg>
 
                         <!-- Center Radial Glowing PMEX Hub -->
-                        <div class="u-relative u-z-10 u-flex u-items-center u-justify-center u-mb-6">
+                        <div class="orbit-center">
                             <!-- Outer glow ring -->
                             <div
-                                class="pmex-color-background u-w-32 u-h-32 u-sm-w-40 u-sm-h-40 u-rounded-full u-bg-AAD39C-a20 u-border u-border-AAD39C-a40 u-flex u-items-center u-justify-center u-animate-pulse">
+                                class="orbit-pulse">
                                 <!-- Middle ring -->
                                 <div
-                                    class="u-w-24 u-h-24 u-sm-w-28 u-sm-h-28 u-rounded-full u-bg-FFFFFF u-border u-border-AAD39C-a60 u-shadow-0-8px-30px-AAD39C-a40 u-flex u-items-center u-justify-center">
+                                    class="orbit-core">
                                     <!-- Inner PMEX Badge -->
                                     <div
-                                        class="pmex-color-background u-px-3-5 u-py-1-5 u-sm-px-4 u-sm-py-2 u-rounded-xl u-bg-3F9A4B u-text-FFFFFF u-font-extrabold u-text-15px u-sm-text-17px u-tracking-wider u-shadow-sm">
+                                        class="pmex-color-background orbit-label">
                                         PMEX
                                     </div>
                                 </div>
@@ -4043,7 +4003,7 @@
 
                         <!-- 1. PMEX Eligibility (Top-Left) -->
                         <div
-                            class="u-absolute u-top-5pct u-left-2pct u-sm-top-6pct u-sm-left-6pct u-z-20 u-bg-FFFFFF u-rounded-xl u-border u-border-gray-200-a90 u-border-t-3-5px u-border-t-AAD39C u-shadow-md u-px-3-5 u-py-2-5 u-sm-px-4 u-sm-py-3 u-text-center u-min-w-135px u-sm-min-w-155px u-transition-transform u-duration-300 u-hov-scale-105">
+                            class="orbit-card">
                             <h4 class="t-base fw-bold t-text lh-tight">
                                 Eligibility</h4>
                             <p class="t-xs t-subtle mt-2xs fw-medium">Verification</p>
@@ -4051,7 +4011,7 @@
 
                         <!-- 2. PMEX Billing (Top-Right) -->
                         <div
-                            class="u-absolute u-top-5pct u-right-2pct u-sm-top-6pct u-sm-right-6pct u-z-20 u-bg-FFFFFF u-rounded-xl u-border u-border-gray-200-a90 u-border-t-3-5px u-border-t-AAD39C u-shadow-md u-px-3-5 u-py-2-5 u-sm-px-4 u-sm-py-3 u-text-center u-min-w-135px u-sm-min-w-155px u-transition-transform u-duration-300 u-hov-scale-105">
+                            class="orbit-card orbit-card--tr">
                             <h4 class="t-base fw-bold t-text lh-tight"> Billing
                             </h4>
                             <p class="t-xs t-subtle fw-medium mt-2xs">Claims Engine
@@ -4060,7 +4020,7 @@
 
                         <!-- 3. PMEX Prior Auth (Bottom-Left) -->
                         <div
-                            class="u-absolute u-bottom-24pct u-left-2pct u-sm-bottom-25pct u-sm-left-6pct u-z-20 u-bg-FFFFFF u-rounded-xl u-border u-border-gray-200-a90 u-border-t-3-5px u-border-t-AAD39C u-shadow-md u-px-3-5 u-py-2-5 u-sm-px-4 u-sm-py-3 u-text-center u-min-w-135px u-sm-min-w-155px u-transition-transform u-duration-300 u-hov-scale-105">
+                            class="orbit-card orbit-card--bl">
                             <h4 class="t-base fw-bold t-text lh-tight"> Prior
                                 Auth</h4>
                             <p class="t-xs t-subtle mt-2xs fw-medium">Authorization
@@ -4069,7 +4029,7 @@
 
                         <!-- 4. PMEX RCM (Bottom-Right) -->
                         <div
-                            class="u-absolute u-bottom-24pct u-right-2pct u-sm-bottom-25pct u-sm-right-6pct u-z-20 u-bg-FFFFFF u-rounded-xl u-border u-border-gray-200-a90 u-border-t-3-5px u-border-t-AAD39C u-shadow-md u-px-3-5 u-py-2-5 u-sm-px-4 u-sm-py-3 u-text-center u-min-w-135px u-sm-min-w-155px u-transition-transform u-duration-300 u-hov-scale-105">
+                            class="orbit-card orbit-card--br">
                             <h4 class="t-base fw-bold t-text lh-tight">RCM</h4>
                             <p class="t-xs t-subtle fw-medium mt-2xs">Revenue Cycle
                             </p>
@@ -4077,7 +4037,7 @@
 
                         <!-- 5. PMEX Front Desk (Bottom-Center) -->
                         <div
-                            class="u-absolute u-bottom-4pct u-left-50pct u-ntranslate-x-50pct u-z-20 u-bg-FFFFFF u-rounded-xl u-border u-border-gray-200-a90 u-border-t-3-5px u-border-t-AAD39C u-shadow-md u-px-3-5 u-py-2-5 u-sm-px-4 u-sm-py-3 u-text-center u-min-w-145px u-sm-min-w-165px u-transition-transform u-duration-300 u-hov-scale-105">
+                            class="orbit-card orbit-card--b">
                             <h4 class="t-base fw-bold t-text lh-tight"> Front
                                 Desk</h4>
                             <p class="t-xs t-subtle mt-2xs fw-medium">Remote Services
@@ -4098,7 +4058,7 @@
             <div class="pmex-container">
 
                 <!-- Top Header Content (Subheading, Heading, Description) -->
-                <div class="pmex-section-head u-max-w-850px u-mx-auto u-text-center">
+                <div class="pmex-section-head section-head section-head--lg">
                     <p class="t-xs t-accent fw-medium t-caps">
                         REAL RESULTS
                     </p>
@@ -4131,7 +4091,7 @@
                     </div>
 
                     <!-- Table Rows -->
-                    <div class="u-divide-y u-divide-AAD39C-a30">
+                    <div class="divided-green">
 
                         <!-- Row 1: Medicare Denial Rate -->
                         <div class="pmex-color-background u-grid u-grid-cols-12 u-items-center u-px-6 u-py-3-5 u-hov-bg-F7FCF5-a60 u-transition-colors">
@@ -4243,7 +4203,7 @@
             <div class="pmex-container">
 
                 <!-- Section Header -->
-                <div class="pmex-section-head u-max-w-700px u-mx-auto u-text-center">
+                <div class="pmex-section-head section-head section-head--narrow">
                     <p class="bh-eyebrow">
                         WHY OUTSOURCE
                     </p>
@@ -4261,11 +4221,11 @@
                         class="pmex-card group u-relative u-overflow-hidden u-rounded-xl u-border u-border-gray-200 u-border-t-4 u-border-t-AAD39C u-bg-FFFFFF u-p-6 u-shadow-sm u-transition-shadow u-duration-300 u-hov-shadow-lg">
                         <div class="pmex-card-gradient"></div>
                         <div class="raise stack fill-h">
-                            <div class="u-mb-4 u-flex u-items-center u-gap-3-5">
+                            <div class="card-title-row">
                                 <div
-                                    class="pmex-color-background u-flex u-h-12 u-w-12 u-shrink-0 u-items-center u-justify-center u-rounded-lg u-bg-EEF0E8">
+                                    class="pmex-color-background icon-tile">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="1.5" class="u-h-6 u-w-6 u-text-505050"><use href="/icons/site-icons.svg#server"></use></svg>
+                                        stroke="currentColor" stroke-width="1.5" class="icon-xl t-text"><use href="/icons/site-icons.svg#server"></use></svg>
                                 </div>
                                 <h3 class="t-xl fw-bold t-text">USA-Based Company, Your
                                     EHR
@@ -4284,11 +4244,11 @@
                         class="pmex-card group u-relative u-overflow-hidden u-rounded-xl u-border u-border-gray-200 u-border-t-4 u-border-t-AAD39C u-bg-FFFFFF u-p-6 u-shadow-sm u-transition-shadow u-duration-300 u-hov-shadow-lg">
                         <div class="pmex-card-gradient"></div>
                         <div class="raise stack fill-h">
-                            <div class="u-mb-4 u-flex u-items-center u-gap-3-5">
+                            <div class="card-title-row">
                                 <div
-                                    class="pmex-color-background u-flex u-h-12 u-w-12 u-shrink-0 u-items-center u-justify-center u-rounded-lg u-bg-EEF0E8">
+                                    class="pmex-color-background icon-tile">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="1.5" class="u-h-6 u-w-6 u-text-505050"><use href="/icons/site-icons.svg#check-circle"></use></svg>
+                                        stroke="currentColor" stroke-width="1.5" class="icon-xl t-text"><use href="/icons/site-icons.svg#check-circle"></use></svg>
                                 </div>
                                 <h3 class="t-xl fw-bold t-text">AT Modifier Expertise
                                 </h3>
@@ -4306,11 +4266,11 @@
                         class="pmex-card group u-relative u-overflow-hidden u-rounded-xl u-border u-border-gray-200 u-border-t-4 u-border-t-AAD39C u-bg-FFFFFF u-p-6 u-shadow-sm u-transition-shadow u-duration-300 u-hov-shadow-lg">
                         <div class="pmex-card-gradient"></div>
                         <div class="raise stack fill-h">
-                            <div class="u-mb-4 u-flex u-items-center u-gap-3-5">
+                            <div class="card-title-row">
                                 <div
-                                    class="pmex-color-background u-flex u-h-12 u-w-12 u-shrink-0 u-items-center u-justify-center u-rounded-lg u-bg-EEF0E8">
+                                    class="pmex-color-background icon-tile">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="1.5" class="u-h-6 u-w-6 u-text-505050"><use href="/icons/site-icons.svg#trending-up-rounded"></use></svg>
+                                        stroke="currentColor" stroke-width="1.5" class="icon-xl t-text"><use href="/icons/site-icons.svg#trending-up-rounded"></use></svg>
                                 </div>
                                 <h3 class="t-xl fw-bold t-text">Medicare Audit
                                     Protection</h3>
@@ -4328,11 +4288,11 @@
                         class="pmex-card group u-relative u-overflow-hidden u-rounded-xl u-border u-border-gray-200 u-border-t-4 u-border-t-AAD39C u-bg-FFFFFF u-p-6 u-shadow-sm u-transition-shadow u-duration-300 u-hov-shadow-lg">
                         <div class="pmex-card-gradient"></div>
                         <div class="raise stack fill-h">
-                            <div class="u-mb-4 u-flex u-items-center u-gap-3-5">
+                            <div class="card-title-row">
                                 <div
-                                    class="pmex-color-background u-flex u-h-12 u-w-12 u-shrink-0 u-items-center u-justify-center u-rounded-lg u-bg-EEF0E8">
+                                    class="pmex-color-background icon-tile">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="1.5" class="u-h-6 u-w-6 u-text-505050"><use href="/icons/site-icons.svg#shield-check-rounded"></use></svg>
+                                        stroke="currentColor" stroke-width="1.5" class="icon-xl t-text"><use href="/icons/site-icons.svg#shield-check-rounded"></use></svg>
                                 </div>
                                 <h3 class="t-xl fw-bold t-text">All 50 States WC and PI
                                 </h3>
@@ -4350,11 +4310,11 @@
                         class="pmex-card group u-relative u-overflow-hidden u-rounded-xl u-border u-border-gray-200 u-border-t-4 u-border-t-AAD39C u-bg-FFFFFF u-p-6 u-shadow-sm u-transition-shadow u-duration-300 u-hov-shadow-lg">
                         <div class="pmex-card-gradient"></div>
                         <div class="raise stack fill-h">
-                            <div class="u-mb-4 u-flex u-items-center u-gap-3-5">
+                            <div class="card-title-row">
                                 <div
-                                    class="pmex-color-background u-flex u-h-12 u-w-12 u-shrink-0 u-items-center u-justify-center u-rounded-lg u-bg-EEF0E8">
+                                    class="pmex-color-background icon-tile">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="1.5" class="u-h-6 u-w-6 u-text-505050"><use href="/icons/site-icons.svg#user-group"></use></svg>
+                                        stroke="currentColor" stroke-width="1.5" class="icon-xl t-text"><use href="/icons/site-icons.svg#user-group"></use></svg>
                                 </div>
                                 <h3 class="t-xl fw-bold t-text">One Team, Everything
                                     Covered</h3>
@@ -4372,11 +4332,11 @@
                         class="pmex-card group u-relative u-overflow-hidden u-rounded-xl u-border u-border-gray-200 u-border-t-4 u-border-t-AAD39C u-bg-FFFFFF u-p-6 u-shadow-sm u-transition-shadow u-duration-300 u-hov-shadow-lg">
                         <div class="pmex-card-gradient"></div>
                         <div class="raise stack fill-h">
-                            <div class="u-mb-4 u-flex u-items-center u-gap-3-5">
+                            <div class="card-title-row">
                                 <div
-                                    class="pmex-color-background u-flex u-h-12 u-w-12 u-shrink-0 u-items-center u-justify-center u-rounded-lg u-bg-EEF0E8">
+                                    class="pmex-color-background icon-tile">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="1.5" class="u-h-6 u-w-6 u-text-505050"><use href="/icons/site-icons.svg#trending-up-rounded"></use></svg>
+                                        stroke="currentColor" stroke-width="1.5" class="icon-xl t-text"><use href="/icons/site-icons.svg#trending-up-rounded"></use></svg>
                                 </div>
                                 <h3 class="t-xl fw-bold t-text">Scales as Your Practice
                                     Grows</h3>
@@ -4395,17 +4355,17 @@
         </section>
 
         <!-- ===== TESTIMONIALS SLIDER SECTION ===== -->
-        <section class="pmex-section u-relative u-border-b u-border-b-AAD39C">
+        <section class="pmex-section section-rule">
 
             <!-- soft ambient accent -->
             <div class="deco-layer">
-                <div class="pmex-color-background u-absolute u-top-10 u-right-0 u-w-80 u-h-80 u-rounded-full u-bg-AAD39C-a15 u-blur-3xl"></div>
+                <div class="glow-blob glow-blob--top"></div>
             </div>
 
             <div class="pmex-container rel">
 
                 <!-- Heading -->
-                <div class="pmex-section-head u-max-w-780px u-mx-auto u-text-center">
+                <div class="pmex-section-head section-head section-head--md">
                     <p class="bh-eyebrow">
                         What Our Clients Say</p>
                     <h2 class="t-h2 fw-normal t-text lh-snug">
@@ -4418,31 +4378,31 @@
 
                     <!-- Prev arrow -->
                     <button onclick="testiPrev()" aria-label="Previous testimonial"
-                        class="group u-hidden u-sm-flex u-absolute u-left-n14px u-lg-left-n22px u-top-50pct u-ntranslate-y-50pct u-z-20 u-w-11 u-h-11 u-rounded-full u-bg-FFFFFF u-border u-border-AAD39C u-shadow-0-8px-24px--45128e u-items-center u-justify-center u-hov-bg-2A3828 u-transition-colors">
+                        class="group slider-arrow">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-2A3828)" stroke-width="2"
                             class="u-gh-stroke-FFFFFF"><use href="/icons/site-icons.svg#chevron-left-spaced"></use></svg>
                     </button>
 
                     <!-- Next arrow -->
                     <button onclick="testiNext()" aria-label="Next testimonial"
-                        class="group u-hidden u-sm-flex u-absolute u-right-n14px u-lg-right-n22px u-top-50pct u-ntranslate-y-50pct u-z-20 u-w-11 u-h-11 u-rounded-full u-bg-FFFFFF u-border u-border-AAD39C u-shadow-0-8px-24px--45128e u-items-center u-justify-center u-hov-bg-2A3828 u-transition-colors">
+                        class="group slider-arrow slider-arrow--next">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-2A3828)" stroke-width="2"
                             class="u-gh-stroke-FFFFFF"><use href="/icons/site-icons.svg#chevron-right-spaced"></use></svg>
                     </button>
 
                     <!-- Viewport -->
-                    <div id="testiViewport" class="u-overflow-hidden u-py-5">
+                    <div id="testiViewport" class="slider-viewport">
                         <div id="testiTrack" class="u-flex u-will-change-transform">
 
                             <!-- Card 1 -->
                             <div class="testi-slide u-shrink-0 u-w-full u-sm-w-50pct u-lg-w-33-3pct u-px-3">
                                 <div
-                                    class="u-relative u-flex u-flex-col u-h-full u-bg-FFFFFF u-rounded-2xl u-border u-border-EDEAE0 u-shadow-0-8px-24px--e0feec u-p-7">
+                                    class="quote-card">
                                     <span
-                                        class="u-absolute u-ntop-4 u-left-7 u-w-9 u-h-9 u-rounded-full u-bg-2A3828 u-flex u-items-center u-justify-center">
+                                        class="quote-card__mark">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#quote-filled-spaced"></use></svg>
                                     </span>
-                                    <div class="u-flex u-items-center u-gap-1 u-mb-4 u-mt-2">
+                                    <div class="quote-card__stars">
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
@@ -4454,9 +4414,9 @@
                                         understand cardiology billing – it doesn't feel like we're training a vendor
                                         from scratch anymore.
                                     </p>
-                                    <div class="u-mt-auto u-flex u-items-center u-gap-3 u-pt-5 u-border-t u-border-EDEAE0">
+                                    <div class="quote-card__foot">
                                         <span
-                                            class="u-w-11 u-h-11 u-rounded-full u-bg-EDEAE0 u-text-505050 u-text-14px u-font-semibold u-flex u-items-center u-justify-center u-flex-shrink-0">SW</span>
+                                            class="avatar-circle">SW</span>
                                         <div>
                                             <p class="t-md fw-semibold t-text">Dr. Sarah Whitman</p>
                                             <p class="t-sm t-subtle">Cardiology Practice Owner</p>
@@ -4468,12 +4428,12 @@
                             <!-- Card 2 -->
                             <div class="testi-slide u-shrink-0 u-w-full u-sm-w-50pct u-lg-w-33-3pct u-px-3">
                                 <div
-                                    class="u-relative u-flex u-flex-col u-h-full u-bg-FFFFFF u-rounded-2xl u-border u-border-EDEAE0 u-shadow-0-8px-24px--e0feec u-p-7">
+                                    class="quote-card">
                                     <span
-                                        class="u-absolute u-ntop-4 u-left-7 u-w-9 u-h-9 u-rounded-full u-bg-2A3828 u-flex u-items-center u-justify-center">
+                                        class="quote-card__mark">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#quote-filled-spaced"></use></svg>
                                     </span>
-                                    <div class="u-flex u-items-center u-gap-1 u-mb-4 u-mt-2">
+                                    <div class="quote-card__stars">
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
@@ -4485,9 +4445,9 @@
                                         that off our plate completely, and our claims go out clean the first time,
                                         every time.
                                     </p>
-                                    <div class="u-mt-auto u-flex u-items-center u-gap-3 u-pt-5 u-border-t u-border-EDEAE0">
+                                    <div class="quote-card__foot">
                                         <span
-                                            class="u-w-11 u-h-11 u-rounded-full u-bg-EDEAE0 u-text-505050 u-text-14px u-font-semibold u-flex u-items-center u-justify-center u-flex-shrink-0">MT</span>
+                                            class="avatar-circle">MT</span>
                                         <div>
                                             <p class="t-md fw-semibold t-text">Michael Torres</p>
                                             <p class="t-sm t-subtle">Practice Manager, Orthopedic Clinic
@@ -4500,12 +4460,12 @@
                             <!-- Card 3 -->
                             <div class="testi-slide u-shrink-0 u-w-full u-sm-w-50pct u-lg-w-33-3pct u-px-3">
                                 <div
-                                    class="u-relative u-flex u-flex-col u-h-full u-bg-FFFFFF u-rounded-2xl u-border u-border-EDEAE0 u-shadow-0-8px-24px--e0feec u-p-7">
+                                    class="quote-card">
                                     <span
-                                        class="u-absolute u-ntop-4 u-left-7 u-w-9 u-h-9 u-rounded-full u-bg-2A3828 u-flex u-items-center u-justify-center">
+                                        class="quote-card__mark">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#quote-filled-spaced"></use></svg>
                                     </span>
-                                    <div class="u-flex u-items-center u-gap-1 u-mb-4 u-mt-2">
+                                    <div class="quote-card__stars">
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
@@ -4516,9 +4476,9 @@
                                         We switched from an in-house biller to PMEX and saw our revenue increase within
                                         the first quarter. The reporting alone gives us visibility we never had before.
                                     </p>
-                                    <div class="u-mt-auto u-flex u-items-center u-gap-3 u-pt-5 u-border-t u-border-EDEAE0">
+                                    <div class="quote-card__foot">
                                         <span
-                                            class="u-w-11 u-h-11 u-rounded-full u-bg-EDEAE0 u-text-505050 u-text-14px u-font-semibold u-flex u-items-center u-justify-center u-flex-shrink-0">AR</span>
+                                            class="avatar-circle">AR</span>
                                         <div>
                                             <p class="t-md fw-semibold t-text">Amanda Reyes</p>
                                             <p class="t-sm t-subtle">Billing Director, Multi-Specialty
@@ -4531,12 +4491,12 @@
                             <!-- Card 4 -->
                             <div class="testi-slide u-shrink-0 u-w-full u-sm-w-50pct u-lg-w-33-3pct u-px-3">
                                 <div
-                                    class="u-relative u-flex u-flex-col u-h-full u-bg-FFFFFF u-rounded-2xl u-border u-border-EDEAE0 u-shadow-0-8px-24px--e0feec u-p-7">
+                                    class="quote-card">
                                     <span
-                                        class="u-absolute u-ntop-4 u-left-7 u-w-9 u-h-9 u-rounded-full u-bg-2A3828 u-flex u-items-center u-justify-center">
+                                        class="quote-card__mark">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#quote-filled-spaced"></use></svg>
                                     </span>
-                                    <div class="u-flex u-items-center u-gap-1 u-mb-4 u-mt-2">
+                                    <div class="quote-card__stars">
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
@@ -4548,9 +4508,9 @@
                                         us into theirs. Claims follow-up is finally something we don't have to think
                                         about.
                                     </p>
-                                    <div class="u-mt-auto u-flex u-items-center u-gap-3 u-pt-5 u-border-t u-border-EDEAE0">
+                                    <div class="quote-card__foot">
                                         <span
-                                            class="u-w-11 u-h-11 u-rounded-full u-bg-EDEAE0 u-text-505050 u-text-14px u-font-semibold u-flex u-items-center u-justify-center u-flex-shrink-0">JO</span>
+                                            class="avatar-circle">JO</span>
                                         <div>
                                             <p class="t-md fw-semibold t-text">Dr. James Okafor</p>
                                             <p class="t-sm t-text">Pediatric Clinic Owner</p>
@@ -4562,12 +4522,12 @@
                             <!-- Card 5 -->
                             <div class="testi-slide u-shrink-0 u-w-full u-sm-w-50pct u-lg-w-33-3pct u-px-3">
                                 <div
-                                    class="u-relative u-flex u-flex-col u-h-full u-bg-FFFFFF u-rounded-2xl u-border u-border-EDEAE0 u-shadow-0-8px-24px--e0feec u-p-7">
+                                    class="quote-card">
                                     <span
-                                        class="u-absolute u-ntop-4 u-left-7 u-w-9 u-h-9 u-rounded-full u-bg-2A3828 u-flex u-items-center u-justify-center">
+                                        class="quote-card__mark">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#quote-filled-spaced"></use></svg>
                                     </span>
-                                    <div class="u-flex u-items-center u-gap-1 u-mb-4 u-mt-2">
+                                    <div class="quote-card__stars">
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
@@ -4578,9 +4538,9 @@
                                         Credentialing used to hold up new hires for months. PMEX streamlined the whole
                                         process, and we started billing new payers faster than we expected.
                                     </p>
-                                    <div class="u-mt-auto u-flex u-items-center u-gap-3 u-pt-5 u-border-t u-border-EDEAE0">
+                                    <div class="quote-card__foot">
                                         <span
-                                            class="u-w-11 u-h-11 u-rounded-full u-bg-EDEAE0 u-text-505050 u-text-14px u-font-semibold u-flex u-items-center u-justify-center u-flex-shrink-0">LC</span>
+                                            class="avatar-circle">LC</span>
                                         <div>
                                             <p class="t-md fw-semibold t-text">Lisa Chen</p>
                                             <p class="t-sm t-text">Operations Lead, Physical Therapy
@@ -4593,12 +4553,12 @@
                             <!-- Card 6 -->
                             <div class="testi-slide u-shrink-0 u-w-full u-sm-w-50pct u-lg-w-33-3pct u-px-3">
                                 <div
-                                    class="u-relative u-flex u-flex-col u-h-full u-bg-FFFFFF u-rounded-2xl u-border u-border-EDEAE0 u-shadow-0-8px-24px--e0feec u-p-7">
+                                    class="quote-card">
                                     <span
-                                        class="u-absolute u-ntop-4 u-left-7 u-w-9 u-h-9 u-rounded-full u-bg-2A3828 u-flex u-items-center u-justify-center">
+                                        class="quote-card__mark">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#quote-filled-spaced"></use></svg>
                                     </span>
-                                    <div class="u-flex u-items-center u-gap-1 u-mb-4 u-mt-2">
+                                    <div class="quote-card__stars">
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--c-AAD39C)"><use href="/icons/site-icons.svg#star-indented"></use></svg>
@@ -4609,9 +4569,9 @@
                                         The monthly audits catch things our old biller never flagged. It's the first
                                         time billing has actually felt proactive instead of reactive.
                                     </p>
-                                    <div class="u-mt-auto u-flex u-items-center u-gap-3 u-pt-5 u-border-t u-border-EDEAE0">
+                                    <div class="quote-card__foot">
                                         <span
-                                            class="u-w-11 u-h-11 u-rounded-full u-bg-EDEAE0 u-text-505050 u-text-14px u-font-semibold u-flex u-items-center u-justify-center u-flex-shrink-0">RH</span>
+                                            class="avatar-circle">RH</span>
                                         <div>
                                             <p class="t-md fw-semibold t-text">Robert Hail</p>
                                             <p class="t-sm t-text">Founder, Sports Medicine Clinic</p>
@@ -4624,14 +4584,14 @@
                     </div>
 
                     <!-- Mobile arrows -->
-                    <div class="u-flex u-sm-hidden u-items-center u-justify-center u-gap-4 u-mt-4">
+                    <div class="slider-nav-mobile">
                         <button onclick="testiPrev()" aria-label="Previous testimonial"
-                            class="u-w-11 u-h-11 u-rounded-full u-bg-FFFFFF u-border u-border-AAD39C u-shadow-0-8px-24px--45128e u-flex u-items-center u-justify-center">
+                            class="slider-btn">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-2A3828)"
                                 stroke-width="2"><use href="/icons/site-icons.svg#chevron-left-spaced"></use></svg>
                         </button>
                         <button onclick="testiNext()" aria-label="Next testimonial"
-                            class="u-w-11 u-h-11 u-rounded-full u-bg-FFFFFF u-border u-border-AAD39C u-shadow-0-8px-24px--45128e u-flex u-items-center u-justify-center">
+                            class="slider-btn">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-2A3828)"
                                 stroke-width="2"><use href="/icons/site-icons.svg#chevron-right-spaced"></use></svg>
                         </button>
@@ -4645,7 +4605,7 @@
         <!-- ===== Customer Stories ===== -->
         <section class="pmex-section u-border-b u-border-b-AAD39C u-bg-FFFFFF">
             <div class="pmex-container">
-                <div class="pmex-section-head u-max-w-780px u-mx-auto u-text-center">
+                <div class="pmex-section-head section-head section-head--md">
                     <p class="bh-eyebrow">
                         Case Studies</p>
                     <h2 class="t-h2 fw-normal t-text lh-snug">
@@ -4659,7 +4619,6 @@
                             class="t-sm fw-medium t-muted t-caps mb-sm">
                             Customer
                             Stories</p>
-                        <!-- <h2 class="t-3xl fw-normal t-text">Proven in clinics and boardrooms</h2> -->
                     </div>
                     <!-- Arrows -->
                     <div class="u-flex u-items-center u-gap-2">
