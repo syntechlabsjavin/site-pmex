@@ -47,7 +47,16 @@ const THEME = [
     ['--theme-info', '#3B82F6', 'info'],
   ]],
 ];
+// The hex values above are the ORIGINAL palette: every legacy shade is derived as an offset from them, so they
+// never change. The value a token has today is read from the THEME block of root.css (edit it there).
 const TOKENS = THEME.flatMap(([, list]) => list.map(([name, hex]) => ({ name, hex })));
+const CURRENT = new Map();
+{
+  const css = fs.readFileSync(path.join(__dirname, '../../dist/css/root.css'), 'utf8');
+  const block = css.slice(css.indexOf('/* ===== THEME'), css.indexOf('/* Legacy color names'));
+  for (const m of block.matchAll(/(--theme-[\w-]+):\s*([^;]+);/g)) CURRENT.set(m[1], m[2].trim());
+}
+const valueOf = (name, hex) => CURRENT.get(name) || hex;
 const MERGE_DE = 0.008; // OKLab distance below which a shade simply becomes the token (not visible)
 
 // ---- color math ----
@@ -139,7 +148,7 @@ let out = `/* ===== THEME: the only place where colors are written =============
 `;
 for (const [group, list] of THEME) {
   out += `  /* ${group} */\n`;
-  for (const [name, hex, note] of list) out += `  ${pad(name + ': ' + hex + ';', 34)}/* ${note} */\n`;
+  for (const [name, hex, note] of list) out += `  ${pad(name + ': ' + valueOf(name, hex) + ';', 34)}/* ${note} */\n`;
 }
 out += `}
 /* Legacy color names, derived from the THEME tokens (generated). Same: equal to the token. Merged: an invisible
