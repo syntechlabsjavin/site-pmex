@@ -322,4 +322,29 @@ c(D, 'kv-row__label', 'u-text-12px u-sm-text-13px u-text-505050 u-min-w-0');
 c(D, 'kv-row__tag', 'u-shrink-0 u-text-10-5px u-font-semibold u-text-3F9A4B u-bg-F8FBF0 u-border u-border-AAD39C u-px-2-5 u-py-0-5 u-rounded-full');
 c(D, 'kv-row__value', 'u-shrink-0 u-text-12px u-sm-text-13px u-font-semibold u-text-2E4A25 u-text-right u-min-w-64px');
 
+// ---------------------------------------------------------------- logo marquee (partials/marquee.html)
+const MQ = 'logo marquee';
+c(MQ, 'marquee-logo', 'u-h-5 u-sm-h-6 u-max-w-120px u-w-auto u-shrink-0 u-object-contain u-grayscale u-opacity-60 u-transition-all u-duration-300 u-ease-out u-hov-scale-105 u-hov-grayscale-0 u-hov-opacity-100');
+c(MQ, 'marquee-logo marquee-logo--w110', 'u-h-5 u-sm-h-6 u-max-w-110px u-w-auto u-shrink-0 u-object-contain u-grayscale u-opacity-60 u-transition-all u-duration-300 u-ease-out u-hov-scale-105 u-hov-grayscale-0 u-hov-opacity-100', { define: 'marquee-logo--w110', css: `
+.marquee-logo--w110 { max-width: 110px; }` });
+c(MQ, 'marquee-logo marquee-logo--md marquee-logo--w130', 'u-h-6 u-sm-h-7 u-max-w-130px u-w-auto u-shrink-0 u-object-contain u-grayscale u-opacity-60 u-transition-all u-duration-300 u-ease-out u-hov-scale-105 u-hov-grayscale-0 u-hov-opacity-100', { define: 'marquee-logo--md', css: `
+.marquee-logo--md { height: 1.5rem; @media (min-width: 640px) { height: 1.75rem; } }` });
+c(MQ, 'marquee-logo--w130', [], { css: `
+.marquee-logo--w130 { max-width: 130px; }` });
+c(MQ, 'marquee-logo marquee-logo--w130', 'u-h-5 u-sm-h-6 u-max-w-130px u-w-auto u-shrink-0 u-object-contain u-grayscale u-opacity-60 u-transition-all u-duration-300 u-ease-out u-hov-scale-105 u-hov-grayscale-0 u-hov-opacity-100');
+c(MQ, 'marquee-logo marquee-logo--lg marquee-logo--w140', 'u-h-7 u-sm-h-8 u-max-w-140px u-w-auto u-shrink-0 u-object-contain u-grayscale u-opacity-60 u-transition-all u-duration-300 u-ease-out u-hov-scale-105 u-hov-grayscale-0 u-hov-opacity-100', { define: 'marquee-logo--lg', css: `
+.marquee-logo--lg { height: 1.75rem; @media (min-width: 640px) { height: 2rem; } }` });
+c(MQ, 'marquee-logo--w140', [], { css: `
+.marquee-logo--w140 { max-width: 140px; }` });
+c(MQ, 'marquee-logo marquee-logo--w100', 'u-h-5 u-sm-h-6 u-max-w-100px u-w-auto u-shrink-0 u-object-contain u-grayscale u-opacity-60 u-transition-all u-duration-300 u-ease-out u-hov-scale-105 u-hov-grayscale-0 u-hov-opacity-100', { define: 'marquee-logo--w100', css: `
+.marquee-logo--w100 { max-width: 100px; }` });
+c(MQ, 'marquee-logo marquee-logo--lg marquee-logo--w150', 'u-h-7 u-sm-h-8 u-max-w-150px u-w-auto u-shrink-0 u-object-contain u-grayscale u-opacity-60 u-transition-all u-duration-300 u-ease-out u-hov-scale-105 u-hov-grayscale-0 u-hov-opacity-100', { define: 'marquee-logo--w150', css: `
+.marquee-logo--w150 { max-width: 150px; }` });
+c(MQ, 'marquee-logo marquee-logo--lg marquee-logo--w130', 'u-h-7 u-sm-h-8 u-max-w-130px u-w-auto u-shrink-0 u-object-contain u-grayscale u-opacity-60 u-transition-all u-duration-300 u-ease-out u-hov-scale-105 u-hov-grayscale-0 u-hov-opacity-100');
+c(MQ, 'marquee-logo marquee-logo--md', 'u-h-6 u-sm-h-7 u-max-w-120px u-w-auto u-shrink-0 u-object-contain u-grayscale u-opacity-60 u-transition-all u-duration-300 u-ease-out u-hov-scale-105 u-hov-grayscale-0 u-hov-opacity-100');
+c(MQ, 'marquee-row', 'u-flex u-shrink-0 u-items-center u-gap-16 u-pr-16');
+c(MQ, 'logo-band', 'u-border-y u-border-AAD39C u-bg-FFFFFF u-py-6');
+c(MQ, 'marquee-viewport', 'u-w-full u-overflow-hidden');
+c(MQ, 'marquee-track', 'u-flex u-w-max u-whitespace-nowrap');
+
 module.exports = S;

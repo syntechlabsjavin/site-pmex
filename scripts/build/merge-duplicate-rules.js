@@ -9,7 +9,8 @@
 //   the regression check found: the rule must keep its place).
 const fs = require('fs');
 const { pageFiles } = require('../lib/pages');
-const FILE = 'dist/css/root.css', NAME = 'page-kit', MAX_PAGES = 9;
+const optArg = (n, d) => { const a = process.argv.find(x => x.startsWith('--' + n + '=')); return a ? a.slice(n.length + 3) : d; };
+const FILE = 'dist/css/root.css', NAME = optArg('name', 'page-kit'), MAX_PAGES = +optArg('max-pages', 9), ONLY = optArg('blocks', '').split(',').filter(Boolean);
 const DRY = process.argv.includes('--dry');
 const MIN = +((process.argv.find(a => a.startsWith('--min=')) || '--min=3').split('=')[1]);
 const SKIP = ((process.argv.find(a => a.startsWith('--skip=')) || '--skip=').slice(7)).split(',').filter(Boolean);
@@ -47,6 +48,7 @@ for (const g of groups.values()) {
   const blocks = [...new Set(g.map(r => r.block))];
   if (blocks.length < 2 || g.length !== blocks.length) continue; // one copy per block
   if (blocks.some(b => !pagesOf.has(b) || pagesOf.get(b).size > MAX_PAGES)) continue;
+  if (ONLY.length && blocks.some(b => !ONLY.includes(b))) continue;
   const clash = [...pageBlocks.values()].some(bs => blocks.filter(b => bs.includes(b)).length > 1);
   if (clash) continue;
   if (g.some(r => SKIP.some(t => r.sel.includes(t)))) continue;
@@ -61,7 +63,7 @@ if (DRY || !take.length) process.exit(0);
 const plain = take.filter(g => !g[0].media), byMedia = new Map();
 for (const g of take.filter(g => g[0].media)) { if (!byMedia.has(g[0].media)) byMedia.set(g[0].media, []); byMedia.get(g[0].media).push(g); }
 const rule = (g, ind) => ind + g.map(r => r.sel).join(', ') + ' { ' + g[0].decl + '; }';
-const kit = [`/* ===== shared by the reference service and company pages  [data-css~="${NAME}"] ===== */`,
+const kit = [`/* ===== shared by the pages of ${served.join(', ')}  [data-css~="${NAME}"] ===== */`,
   '/* Rules these pages repeated word for word (scripts/build/merge-duplicate-rules.js). Each selector keeps its page scope. */',
   ...plain.map(g => rule(g, '')),
   ...[...byMedia].flatMap(([m, gs]) => [m, ...gs.map(g => rule(g, '  ')), '}'])];
