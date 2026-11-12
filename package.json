@@ -27,7 +27,9 @@
     "gradients:pin": "node scripts/build/pin-gradient-space.js",
     "gradients:check": "node scripts/build/pin-gradient-space.js --check",
     "check:regression": "node scripts/checks/check-regression.js",
-    "check:css": "node scripts/checks/check-css.js"
+    "check:css": "node scripts/checks/check-css.js",
+    "radius:pin": "node scripts/build/pin-radius.js",
+    "radius:check": "node scripts/build/pin-radius.js --check"
   },
   "dependencies": {
     "colors": "*",
