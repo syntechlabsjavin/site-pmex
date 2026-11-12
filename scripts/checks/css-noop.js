@@ -20,9 +20,10 @@ let BLOCKS = opt('blocks', '').split(',').filter(Boolean);
 const WIDTHS = opt('widths', '390,700,900,1100,1440').split(',').map(Number);
 const TABS = +opt('tabs', 4);
 const FILE = 'dist/css/root.css';
+const CUR = opt('cur', 'dist'); // folder that is served and read (a copy of dist lets you keep editing during a scan)
 if (!BLOCKS.length) { console.log('usage: --blocks=a,b'); process.exit(1); }
 
-const css = fs.readFileSync(FILE, 'utf8').replace(/\r\n/g, '\n');
+const css = fs.readFileSync(path.join(CUR, 'css/root.css'), 'utf8').replace(/\r\n/g, '\n');
 const lines = css.split('\n');
 const dsLine = lines.findIndex(l => /^@layer ds\s*\{/.test(l));
 if (BLOCKS.includes('all')) BLOCKS = [...new Set(lines.map(l => (l.match(/^\/\* =====.*\[data-css~="([^"]+)"\]/) || [])[1]).filter(Boolean))];
@@ -53,10 +54,12 @@ const src = sourceRules();
 const blockAt = []; { let b = null; lines.forEach((l, i) => { const m = l.match(/^\/\* =====.*\[data-css~="([^"]+)"\]/); if (m) b = m[1]; blockAt[i + 1] = b; }); }
 
 // pages that load any scanned block
-const PAGES = [];
+const PAGES = [], PAGE_BLOCKS = new Map();
 for (const f of pageFiles()) {
   const m = fs.readFileSync(f, 'utf8').match(/<html[^>]*data-css="([^"]*)"/);
-  if (m && m[1].split(/\s+/).some(b => BLOCKS.includes(b))) PAGES.push(path.relative('dist', f).split(path.sep).join('/'));
+  if (!m || !m[1].split(/\s+/).some(b => BLOCKS.includes(b))) continue;
+  const rel = path.relative('dist', f).split(path.sep).join('/');
+  PAGES.push(rel); PAGE_BLOCKS.set(rel, new Set(m[1].split(/\s+/)));
 }
 // candidates: one-line rules of the scanned blocks before the ds layer, scoped to that block
 const STATE = /:(hover|focus|focus-visible|focus-within|active|checked|disabled|target|visited|placeholder-shown|invalid|valid)\b|::(selection|backdrop|-webkit-|-moz-)|\.(is-[\w-]+|open|active|faq-open|show|visible|scrolled|sticky|expanded|current|selected|in-view|revealed|loaded)\b|\[(aria-[\w-]+|open|hidden|data-state|data-open|data-active)/;
@@ -68,6 +71,8 @@ src.forEach((r, idx) => {
   if (!r.selector.split(/,(?![^()]*\))/).every(s => s.includes(`[data-css~="${b}"]`))) return;
   if (!/\{.*\}\s*$/.test(lines[r.line - 1])) return; // whole rule on its line (compact-css.js), so it can be deleted
   if (/(^|[;{ ])(transition|animation)[\w-]*\s*:/.test(lines[r.line - 1])) return;
+  if (/[{;]\s*--[\w-]+\s*:/.test(lines[r.line - 1])) return; // custom properties reach any descendant: kept
+  r.block = b;
   cand.set(idx, r);
 });
 console.log(`${PAGES.length} pages, ${WIDTHS.length} widths, ${cand.size} candidate rules in ${BLOCKS.join(' ')}`);
@@ -105,7 +110,7 @@ const PROBE = (targets, srcSel) => {
     const vars = props.some(p => p.startsWith('--'));
     const inh = vars || props.some(p => INHERITED.test(p));
     let targetsEls = els.map(el => [el, pseudo]);
-    if (inh) for (const el of els) { const d = el.querySelectorAll('*'); for (let k = 0; k < d.length && k < 1500; k++) targetsEls.push([d[k], null]); }
+    if (inh) for (const el of els) { const d = el.querySelectorAll('*'); for (let k = 0; k < d.length && k < 300; k++) targetsEls.push([d[k], null]); }
     const check = vars ? null : props;
     const snap = () => targetsEls.map(([el, ps]) => { const cs = getComputedStyle(el, ps); if (check) return check.map(p => cs.getPropertyValue(p)).join('|'); let s = ''; for (let k = 0; k < cs.length; k++) s += cs.getPropertyValue(cs[k]) + '|'; return s; }).join('\n');
     const before = snap(); const txt = e.r.style.cssText; e.r.style.cssText = '';
@@ -116,7 +121,7 @@ const PROBE = (targets, srcSel) => {
 };
 
 (async () => {
-  const server = await serve(path.resolve('dist')), base = `http://127.0.0.1:${server.address().port}/`;
+  const server = await serve(path.resolve(CUR)), base = `http://127.0.0.1:${server.address().port}/`;
   const port = 9300 + Math.floor(Math.random() * 300);
   const chrome = spawn('C:/Program Files/Google/Chrome/Application/chrome.exe', ['--headless=new', '--disable-gpu', '--hide-scrollbars', '--remote-debugging-port=' + port, '--user-data-dir=' + fs.mkdtempSync(path.join(os.tmpdir(), 'noop-')), 'about:blank'], { stdio: 'ignore' });
   for (let i = 0; i < 100; i++) { try { await fetch(`http://127.0.0.1:${port}/json/version`); break; } catch { await sleep(200); } }
@@ -130,7 +135,7 @@ const PROBE = (targets, srcSel) => {
     return send;
   }
   const tabs = await Promise.all(Array.from({ length: TABS }, tab));
-  const targets = [...cand].map(([idx, r]) => [idx, r.selector, r.media.join('&')]);
+  const targets = [...cand].map(([idx, r]) => [idx, r.selector, r.media.join('&'), r.block]);
   const status = new Map(); // idx -> {matched, changed, bad}
   const jobs = PAGES.flatMap(p => WIDTHS.map(w => ({ p, w }))); const total = jobs.length; let done = 0;
   await Promise.all(tabs.map(async send => {
@@ -139,7 +144,7 @@ const PROBE = (targets, srcSel) => {
       await send('Emulation.setDeviceMetricsOverride', { width: w, height: 900, deviceScaleFactor: 1, mobile: w < 600 });
       await send('Page.navigate', { url: base + p }); await sleep(2500);
       await send('Runtime.evaluate', { awaitPromise: true, expression: `(async()=>{for(let y=0;y<document.documentElement.scrollHeight;y+=700){scrollTo(0,y);await new Promise(r=>setTimeout(r,40))}scrollTo(0,0);await new Promise(r=>setTimeout(r,600))})()` });
-      const res = await send('Runtime.evaluate', { returnByValue: true, expression: `(${PROBE})(${JSON.stringify(targets)})` });
+      const res = await send('Runtime.evaluate', { returnByValue: true, expression: `(${PROBE})(${JSON.stringify(targets.filter(t => PAGE_BLOCKS.get(p).has(t[3])).map(t => t.slice(0, 3)))})` });
       const out = (res.result && res.result.value) || {};
       for (const [idx, v] of Object.entries(out)) {
         const s = status.get(+idx) || { matched: 0, changed: 0, bad: 0 };
@@ -151,17 +156,27 @@ const PROBE = (targets, srcSel) => {
   }));
   chrome.kill(); server.close();
   const bad = [...status.values()].filter(s => s.bad).length;
-  const noop = [...cand].filter(([idx]) => { const s = status.get(idx); return s && s.matched && !s.changed && !s.bad; }).map(([, r]) => r);
+  const noop = [...cand].filter(([idx]) => { const s = status.get(idx); return s && s.matched && !s.changed && !s.bad; })
+    .map(([, r]) => ({ line: r.line, selector: r.selector, text: lines[r.line - 1] }));
   fs.mkdirSync('.regression', { recursive: true });
   fs.writeFileSync('.regression/css-noop.json', JSON.stringify({ blocks: BLOCKS, pages: PAGES.length, widths: WIDTHS, noop }, null, 1));
   console.log(`no effect: ${noop.length} rules (${bad} candidates could not be mapped or queried, kept)`);
   if (args.includes('--why')) for (const [idx, s] of status) if (s.bad) console.log(' ', s.why, cand.get(idx).line, cand.get(idx).selector.slice(0, 100));
-  if (args.includes('--remove') && noop.length) {
-    const drop = new Set(noop.map(r => r.line));
-    let next = lines.filter((l, i) => !drop.has(i + 1)).join('\n');
-    for (let k = 0; k < 3; k++) next = next.replace(/^(\s*)@media[^{\n]*\{\n\s*\}\n/gm, '');
-    fs.writeFileSync(FILE, next);
-    console.log(`removed ${drop.size} lines; root.css ${lines.length} -> ${next.split('\n').length} lines`);
-  }
+  if (args.includes('--remove')) removeListed();
   process.exit(0);
 })();
+
+// deletes the listed rules from dist/css/root.css by their exact line text (the file may have moved on since the
+// scan; a rule whose line changed is left alone)
+function removeListed() {
+  const { noop } = JSON.parse(fs.readFileSync('.regression/css-noop.json', 'utf8'));
+  const cur = fs.readFileSync(FILE, 'utf8').replace(/\r\n/g, '\n').split('\n');
+  const want = new Map(); for (const r of noop) want.set(r.text, (want.get(r.text) || 0) + 1);
+  let n = 0;
+  const kept = cur.filter(l => { if (want.get(l)) { want.set(l, want.get(l) - 1); n++; return false; } return true; });
+  let next = kept.join('\n');
+  for (let k = 0; k < 3; k++) next = next.replace(/^(\s*)@media[^{\n]*\{\n\s*\}\n/gm, '');
+  fs.writeFileSync(FILE, next);
+  console.log(`removed ${n} of ${noop.length} rules; root.css ${cur.length} -> ${next.split('\n').length} lines`);
+}
+if (args.includes('--remove-only')) { removeListed(); process.exit(0); }
