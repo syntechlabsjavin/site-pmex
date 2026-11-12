@@ -3153,13 +3153,8 @@ html[data-css~="pricing"][data-css~="layout"] body #main-content > section.pmex-
 /* Services page styles (Behavioral Health design). Replaces the old palette, homepage-layout, services and refinement sheets. */
 [data-css~="services-bh"] #main-content.services-content { --w: var(--c-FFFFFF); --bg: var(--c-F8FBF0); --bg-s: var(--c-EEF0E8); --navy: var(--c-505050); --body: var(--c-676767); --muted: var(--c-676767); --soft: var(--c-AAD39C); --border: var(--c-E0E0DA); --green: var(--c-3F9A4B); --rose: var(--c-E85D3F); --blue: var(--c-3F9A4B); color: var(--c-676767); }
 /* Services follows the existing specialty hero, marquee and content palette. */
-[data-css~="services-bh"] .services-content :is(h2, h3) { color:var(--navy); }
 [data-css~="services-bh"] .services-content :is(section[id], #audit-form) { scroll-margin-top:calc(var(--spacing) * 36); }
 [data-css~="services-bh"] .services-content :is(.sticky, .u-sticky) { position:relative; top:auto; }
-[data-css~="services-bh"] .services-content :is(.fluid.raise, .u-flex-1),[data-css~="services-bh"] .services-content :is(.grid, .grid-3.gap-lg, .u-grid) > * { min-width:0; }
-[data-css~="services-bh"] .services-content #audit-form { max-width:660px; }
-[data-css~="services-bh"] .services-content :is(input, select) { min-height:48px; font-size:var(--text-base); }
-[data-css~="services-bh"] .services-content button[type=submit] { min-height:48px; }
 [data-css~="services-bh"] .services-content a:is([class*="bg-[var(--border)]"], .u-bg-var-border, .u-hov-bg-var-border):hover,[data-css~="services-bh"] .services-content button[type=submit]:hover { background:var(--bg); color:var(--navy); }
 [data-css~="services-bh"] .services-content [class*="bg-white/"] { background:var(--w); }
 [data-css~="services-bh"] .services-content [class*="text-white/"] { color:var(--body); }
@@ -3167,7 +3162,6 @@ html[data-css~="pricing"][data-css~="layout"] body #main-content > section.pmex-
 [data-css~="services-bh"] .services-content .faq-item.open .faq-content { display:block; }
 @media(max-width:639px) {
   [data-css~="services-bh"] .services-content [data-specialty-hero] [data-hero-copy] > :is(.flex, .row-top.gap-md, .row.between, .row-stretch.gap-sm, .card.card--lift.stack.gap-md, .row-top.gap-sm, .card-foot, .check-dot, .raise.stack.fill-h, .u-flex, .stack, .stack.gap-md) > a { max-width:100%; white-space:normal; }
-  [data-css~="services-bh"] .services-content select { width:100%; min-width:0; }
 }
 @media(prefers-reduced-motion:reduce) {
   html[data-css~="services-bh"]:has(.services-content) { scroll-behavior:auto; }
@@ -3175,8 +3169,6 @@ html[data-css~="pricing"][data-css~="layout"] body #main-content > section.pmex-
 /* Services-only presentation using the Cardiology cards and consultation form.
    All copy, anchors, fields, handlers and search attributes stay in services.html. */
 [data-css~="services-bh"] #main-content.services-content>section { padding-block:32px; border-color:var(--c-E0E0DA); }
-[data-css~="services-bh"] #main-content.services-content>section>div { max-width:1260px; margin-inline:auto; padding-inline:20px; min-width:0; }
-[data-css~="services-bh"] #main-content.services-content .svc-group { background:var(--c-FFFFFF); }
 [data-css~="services-bh"] #main-content.services-content .svc-group:nth-of-type(even) { background:var(--c-EEF0E8); }
 [data-css~="services-bh"] #main-content.services-content .svc-group>div>div { display:block; }
 [data-css~="services-bh"] #main-content.services-content .svc-group>div>div>div:first-child { width:100%; max-width:900px; margin:0 auto 32px; text-align:center; }
@@ -3189,7 +3181,6 @@ html[data-css~="pricing"][data-css~="layout"] body #main-content > section.pmex-
 [data-css~="services-bh"] #main-content.services-content .svc-group :is(.grid, .grid-3.gap-lg, .u-grid)>a::before { content:""; position:absolute; inset:0; z-index:-1; background:var(--grad-hover-up); opacity:0; transition:var(--transition-fade); pointer-events:none; }
 [data-css~="services-bh"] #main-content.services-content .svc-group :is(.grid, .grid-3.gap-lg, .u-grid)>a:hover::before { opacity:1; }
 [data-css~="services-bh"] #main-content.services-content .svc-group :is(.grid, .grid-3.gap-lg, .u-grid)>a:hover { box-shadow:0 10px 15px -3px var(--c-000000-a10),0 4px 6px -4px var(--c-000000-a10); transform:none; }
-[data-css~="services-bh"] #main-content.services-content .svc-group :is(.grid, .grid-3.gap-lg, .u-grid)>a [data-consistent-card-title] { margin:0; }
 /* Keep category links as navigation controls, separate from CTA buttons. */
 [data-css~="services-bh"] #main-content.services-content .svc-category-nav { background:var(--c-FFFFFF); padding-block:20px; border-block:1px solid var(--c-E0E0DA); box-shadow:none; }
 [data-css~="services-bh"] #main-content.services-content .svc-category-nav>div>div { flex-wrap:wrap; gap:8px; overflow:visible; }
@@ -3220,12 +3211,10 @@ html[data-css~="services-bh"] body #main-content.services-content [data-hero-cop
 [data-css~="services-bh"] #main-content.services-content .all-svc>span:first-of-type { font-size:14px; font-weight:600; color:var(--c-505050); }
 [data-css~="services-bh"] #main-content.services-content .all-svc>span:last-child { font-size:11px; max-width:90px; white-space:normal; text-align:right; color:var(--c-676767); }
 [data-css~="services-bh"] #main-content.services-content .all-svc:hover { border-color:var(--c-AAD39C); background:linear-gradient(to left in srgb,var(--c-D8DCE3),var(--c-F8FBF0),var(--c-FFFFFF)); box-shadow:0 4px 14px var(--c-000000-a5); }
-[data-css~="services-bh"] #main-content.services-content .svc-trust { background:var(--c-FFFFFF); }
 [data-css~="services-bh"] #main-content.services-content .svc-trust :is(.grid, .grid-3.gap-lg, .u-grid) { gap:24px; border:0; overflow:visible; }
 [data-css~="services-bh"] #main-content.services-content .svc-trust :is(.grid, .grid-3.gap-lg, .u-grid)>div { border:1px solid var(--c-E0E0DA); border-radius:24px; padding:24px; background:var(--grad-grey-v); box-shadow:var(--shadow-card); transition:border-color .3s,box-shadow .3s; }
 [data-css~="services-bh"] #main-content.services-content .svc-trust :is(.grid, .grid-3.gap-lg, .u-grid)>div:nth-child(even) { background:var(--grad-green-v); }
 [data-css~="services-bh"] #main-content.services-content .svc-trust :is(.grid, .grid-3.gap-lg, .u-grid)>div:hover { border-color:var(--c-AAD39C); box-shadow:var(--shadow-lift); }
-[data-css~="services-bh"] #main-content.services-content .svc-trust h3 { margin-bottom:8px; }
 [data-css~="services-bh"] #main-content.services-content :is(a, button, input, select):focus-visible { outline:2px solid var(--c-3F9A4B); outline-offset:4px; }
 @layer pmex-buttons {
   html[data-css~="services-bh"] body #main-content.services-content [data-site-button]:not([data-site-button="link"]),html[data-css~="services-bh"] body #main-content.services-content [data-site-button]:not([data-site-button="link"]):hover { background:var(--grad-pill)!important; }
@@ -3233,18 +3222,14 @@ html[data-css~="services-bh"] body #main-content.services-content [data-hero-cop
 @layer reference-typography {
   html[data-css~="services-bh"] body #main-content.services-content :is(h1, h2) { font-weight:400!important; line-height:1.25!important; color:var(--c-505050)!important; }
   html[data-css~="services-bh"] body #main-content.services-content h1 span { color:var(--c-3F9A4B)!important; }
-  html[data-css~="services-bh"] body #main-content.services-content .svc-group :is(.grid, .grid-3.gap-lg, .u-grid)>a [data-consistent-card-title] { font-size:16px!important; font-weight:600!important; line-height:1.4!important; color:var(--c-505050)!important; }
-  html[data-css~="services-bh"] body #main-content.services-content .svc-group :is(.grid, .grid-3.gap-lg, .u-grid)>a [data-consistent-card-body] { font-size:14px!important; line-height:1.65!important; font-weight:400!important; color:var(--c-676767)!important; }
 }
 @media(min-width:640px) {
   [data-css~="services-bh"] #main-content.services-content>section>div { padding-inline:24px; }
-  html[data-css~="services-bh"] body #main-content.services-content [data-specialty-hero] { background:var(--grad-q),var(--bh-hero-image,url('../img/Behaviorbg.webp')) center/cover!important; }
   [data-css~="services-bh"] #main-content.services-content form button { grid-column:1/-1; justify-self:stretch; width:100%; }
   [data-css~="services-bh"] #main-content.services-content .svc-group>div>div>:is(.grid, .grid-3.gap-lg, .u-grid) { grid-template-columns:repeat(2,minmax(0,1fr)); }
   [data-css~="services-bh"] #main-content.services-content #audit-form,[data-css~="services-bh"] #main-content.services-content .svc-final div:has(>form) { padding:36px; }
 }
 @media(min-width:1024px) {
-  [data-css~="services-bh"] #main-content.services-content>section { padding-block:40px; }
   [data-css~="services-bh"] #main-content.services-content>section>div { padding-inline:40px; }
   [data-css~="services-bh"] #main-content.services-content .svc-group>div>div>:is(.grid, .grid-3.gap-lg, .u-grid) { grid-template-columns:repeat(3,minmax(0,1fr)); }
 }
@@ -3258,7 +3243,6 @@ html[data-css~="services-bh"] body #main-content.services-content [data-hero-cop
 [data-css~="services-bh"] #main-content.services-content form :is(input, select)::placeholder { color:var(--c-959085); }
 [data-css~="services-bh"] #main-content.services-content form :is(input, select):focus { border-color:var(--c-959085); }
 [data-css~="services-bh"] #main-content.services-content :is(#audit-form, .svc-final div:has(>form))>:is(p, h3):first-child { font-size:16px; font-weight:600; line-height:1.5; color:var(--c-505050); letter-spacing:0; text-transform:none; margin-bottom:12px; }
-[data-css~="services-bh"] #main-content.services-content form button { text-transform:uppercase; white-space:normal; }
 @media(min-width:1024px) {
   html[data-css~="services-bh"] body #main-content.services-content [data-hero-layout] { grid-template-columns:minmax(0,1fr)!important; align-items:center; gap:0!important; }
   [data-css~="services-bh"] #main-content.services-content .svc-final>div>div { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); gap:56px; align-items:center; }
@@ -3275,14 +3259,11 @@ html[data-css~="services-bh"] body #main-content.services-content [data-hero-cop
   }
 }
 @layer pmex-buttons {
-  html[data-css~="services-bh"] body #main-content.services-content form [data-site-button] { width:100%!important; text-transform:uppercase!important; white-space:normal!important; }
 }
 /* Screenshot reference: wide audit card immediately after the hero marquee. */
 [data-css~="services-bh"] #main-content.services-content .services-audit-section { background:var(--c-FFFFFF); padding-block:40px; }
 [data-css~="services-bh"] #main-content.services-content .services-audit-section #audit-form { max-width:none; padding:28px 20px; border:1px solid var(--c-E0E0DA); border-radius:28px; background:var(--grad-callout); box-shadow:0 10px 35px var(--c-000000-a14_9); scroll-margin-top:130px; }
-[data-css~="services-bh"] #main-content.services-content .services-audit-section #audit-form form { display:grid!important; grid-template-columns:minmax(0,1fr)!important; gap:16px; margin-top:28px; align-items:center; }
 [data-css~="services-bh"] #main-content.services-content .services-audit-section #audit-form :is(input, select) { background:var(--c-FFFFFF); border:1px solid var(--c-FFFFFF); border-radius:15px; min-height:56px; padding:16px; font-size:14px; box-shadow:0 1px 2px var(--c-000000-a3_1); }
-[data-css~="services-bh"] #main-content.services-content .services-audit-section #audit-form form button { grid-column:auto; }
 [data-css~="services-bh"] #main-content.services-content .services-audit-section #audit-form>p:last-child { margin-top:24px; font-size:14px; color:var(--c-505050); }
 @layer reference-typography {
   html[data-css~="services-bh"] body #main-content.services-content .services-audit-section #audit-form>h3:first-child { font-size:22px!important; font-weight:400!important; line-height:1.25!important; }
@@ -3294,23 +3275,14 @@ html[data-css~="services-bh"] body #main-content.services-content [data-hero-cop
   }
 }
 @layer pmex-buttons {
-  html[data-css~="services-bh"] body #main-content.services-content .services-audit-section #audit-form [data-site-button] { min-height:56px!important; border-radius:15px!important; padding:12px 18px!important; }
 }
 @media(min-width:640px) {
   [data-css~="services-bh"] #main-content.services-content .services-audit-section #audit-form { padding:40px; }
-  [data-css~="services-bh"] #main-content.services-content .services-audit-section #audit-form form { grid-template-columns:repeat(2,minmax(0,1fr))!important; }
-  [data-css~="services-bh"] #main-content.services-content .services-audit-section #audit-form form button { grid-column:1/-1; }
-}
-@media(min-width:1024px) {
-  [data-css~="services-bh"] #main-content.services-content .services-audit-section { padding-block:48px; }
-  [data-css~="services-bh"] #main-content.services-content .services-audit-section #audit-form form { grid-template-columns:repeat(4,minmax(0,1fr)) minmax(180px,1fr)!important; }
-  [data-css~="services-bh"] #main-content.services-content .services-audit-section #audit-form form button { grid-column:auto; }
 }
 /* Hero and marquee base (formerly from the shared homepage layout sheet). */
 [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] { position:relative!important; display:block!important; width:100%!important; padding:128px 0!important; background:var(--c-FFFFFF) radial-gradient(ellipse at right bottom in srgb,var(--c-4A8C3F) 0%,var(--c-AAD39C) 15%,var(--c-D4EDCC) 35%,transparent 55%)!important; border:0!important; isolation:isolate; }
 [data-css~="services-bh"] #main-content.services-content [data-specialty-hero]::before, [data-css~="services-bh"] #main-content.services-content [data-specialty-hero]::after, [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] > [class*="hero-blob"], [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] > [class^="hero-b"], [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] :is(.absolute, .deco-layer, .u-absolute):is(.deco-layer, .u-inset-0) { display:none!important; }
 [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] > .wrap, [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] > div:is([class*="max-w-"], .section-head, .section-head.section-head--wide) { width:100%!important; max-width:1260px!important; margin:0 auto!important; padding:0 40px!important; }
-[data-css~="services-bh"] #main-content.services-content [data-hero-layout] { display:block!important; }
 [data-css~="services-bh"] #main-content.services-content [data-hero-copy] { width:100%!important; max-width:none!important; position:relative; }
 [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] h1:not(.bh-hero-title) { color:var(--c-505050)!important; font-family:Inter,sans-serif!important; font-size:22px!important; font-weight:400!important; line-height:1.25!important; letter-spacing:normal!important; max-width:1000px!important; margin:0 0 24px!important; display:block!important; overflow:visible!important; -webkit-line-clamp:unset!important; }
 [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] h1 span { background:none!important; border:0!important; padding:0!important; }
@@ -3318,7 +3290,6 @@ html[data-css~="services-bh"] body #main-content.services-content [data-hero-cop
 [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] [data-hero-copy] > p, [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] .hero-sub { max-width:550px!important; font-size:16px!important; line-height:1.65!important; color:var(--c-676767)!important; }
 [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] [data-hero-copy] > p:first-child, [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] .hero-lbl { max-width:none!important; font-size:14px!important; line-height:1.5!important; margin:0 0 24px!important; }
 [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] :is(.lbl, .hero-lbl span) { color:var(--c-505050)!important; font-size:14px!important; letter-spacing:normal!important; text-transform:none!important; }
-[data-css~="services-bh"] #main-content.services-content [data-specialty-marquee] { background:var(--c-FFFFFF)!important; border-top:1px solid var(--c-AAD39C)!important; border-bottom:1px solid var(--c-AAD39C)!important; padding:24px 0!important; }
 @media(max-width:639px) {
   [data-css~="services-bh"] #main-content.services-content [data-specialty-hero] h1:not(.bh-hero-title) { overflow-wrap:break-word; }
 }
@@ -3341,7 +3312,6 @@ html[data-css~="services-bh"] body #main-content.services-content [data-hero-cop
 [data-css~="services-bh"] #main-content.services-content .svc-group .services-card-heading>svg { width:36px; height:36px; padding:9px; border:1px solid var(--c-AAD39C); border-radius:10px; background:var(--c-F8FBF0); color:var(--c-2E4A25); box-shadow:none; transition:var(--transition-bg); }
 [data-css~="services-bh"] #main-content.services-content .svc-group :is(.grid, .grid-3.gap-lg, .u-grid)>a:hover .services-card-heading>svg { background:var(--c-AAD39C); }
 @layer reference-typography {
-  html[data-css~="services-bh"] body #main-content.services-content .svc-group :is(.grid, .grid-3.gap-lg, .u-grid)>a [data-consistent-card-title] { color:var(--c-505050)!important; }
   html[data-css~="services-bh"] body #main-content.services-content .svc-group :is(.grid, .grid-3.gap-lg, .u-grid)>a:hover [data-consistent-card-title] { color:var(--c-2E4A25)!important; }
 }
 @media(min-width:640px) {
@@ -3356,7 +3326,6 @@ html[data-css~="services-bh"] body #main-content.services-content .services-audi
 html[data-css~="services-bh"] body #main-content.services-content .services-audit-section #audit-form form :is(input, select) { width:100%; height:51px!important; min-height:0!important; padding:14px 16px!important; border:1px solid transparent!important; border-radius:12px!important; font:400 14px/21px Inter,sans-serif!important; box-shadow:none!important; }
 @media(min-width:640px) {
   html[data-css~="services-bh"] body #main-content.services-content .services-audit-section #audit-form form { display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr))!important; gap:16px!important; }
-  html[data-css~="services-bh"] body #main-content.services-content .services-audit-section #audit-form form button { grid-column:1/-1!important; }
 }
 @media(min-width:1024px) {
   html[data-css~="services-bh"] body #main-content.services-content .services-audit-section #audit-form form { display:flex!important; flex-direction:row!important; flex-wrap:nowrap!important; align-items:center!important; gap:16px!important; }
@@ -3380,8 +3349,6 @@ html[data-css~="services-bh"][data-css~="layout"] body #main-content.services-co
 html[data-css~="services-bh"] body #main-content.services-content .svc-final div:has(>form) { background: linear-gradient(180deg in srgb, var(--c-FFFFFF) 0%, var(--c-FAFAFA) 100%) !important; border-color: var(--c-E0E0DA) !important; box-shadow: 0 12px 32px var(--c-2E4A25-a8) !important; transition: box-shadow .3s ease, border-color .3s ease !important; }
 html[data-css~="services-bh"] body #main-content.services-content .svc-final div:has(>form):hover { box-shadow: 0 16px 40px var(--c-2E4A25-a12) !important; border-color: var(--c-AAD39C) !important; }
 html[data-css~="services-bh"] body #main-content.services-content .svc-final div:has(>form) > h3 + p { margin-bottom: 0 !important; }
-html[data-css~="services-bh"] body #main-content.services-content .svc-final form { gap: 16px !important; }
-html[data-css~="services-bh"] body #main-content.services-content .svc-final form > * { margin-top: 0 !important; }
 html[data-css~="services-bh"] body #main-content.services-content .svc-final form :is(input, select) { background-color: var(--c-FFFFFF) !important; border: 1px solid var(--c-E0E0DA) !important; border-radius: 8px !important; box-shadow: none !important; }
 /* Focus (click or keyboard): like the home form, no outline, the grey border stays, a soft 3px green ring shows. */
 html[data-css~="services-bh"] body #main-content.services-content .svc-final form :is(input, select):is(:focus, :focus-visible) { outline: none !important; border-color: var(--c-E0E0DA) !important; box-shadow: 0 0 0 3px var(--c-3F9A4B-a12) !important; }
