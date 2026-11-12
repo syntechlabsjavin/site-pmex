@@ -3,15 +3,14 @@
 Goal: one centralized, reusable stylesheet (`dist/css/root.css`), 100% plain CSS, no Tailwind classes in any page,
 target 3,000-5,000 lines. Small visual changes during the migration are accepted; structure and reuse come first.
 
-## Resume here (state on 2026-11-13 03:00, branch `ds-phase-4`, pushed to `main` at 68f52a3)
+## Resume here (state on 2026-11-13, branch `ds-phase-4`, pushed to `main` at 5e93768)
 
 Phase 4 is done for every family: specialties, services + platform template, company, and the homepage (its CSS moved
 to `css/legacy-home.css` because the homepage will be rebuilt; do not refactor the old homepage, do not touch that file).
 root.css: 8,863 lines, 46.6% central (`node scripts/checks/css-report.js`).
 
-Decisions: every border-radius becomes 6px through one token (`--radius: 6px`): cards, buttons, pills, inputs, badges,
-images, everything that has a radius today. Exceptions: 0 stays 0, and true circles (50%: dots, avatars, round icons)
-stay circles. After that the radius of the whole site changes in one line. Deep regression is not needed for
+Done: one corner radius, `--radius: 6px` in the tokens of root.css (commit 5e93768); every border-radius uses it except
+0 and 50% circles. `npm run radius:check` / `radius:pin`. Deep regression is not needed for
 intentional design changes (the owner redesigns every page one by one afterwards); refactors that should not change
 the look still get a quick regression against HEAD on the pages they touch.
 
@@ -25,10 +24,7 @@ Next: phase 6, the final cleanup:
 3. Hooks: `:is()` lists and `[class*=...]` selectors that point at utilities (`prune-hooks.js`, then by hand).
 4. `!important`: remove where the @layer order already decides.
 5. Losing rules: `css-noop.js --blocks=all` then `--remove-only` (leave navbar, booking-modal, site-footer, services-mega).
-6. Radius: one token `--radius: 6px` in the tokens of root.css; every border-radius declaration (root.css,
-   legacy-home.css, u-rounded-* utilities, component CSS, style="" in pages and scripts) uses it, except 0 and 50%.
-   Add the rule to AGENTS.md and a check to check-css.js (no radius value other than the token, 0 or 50%).
-7. Update this file, AGENTS.md if a rule changes, and report lines, KB and central share.
+6. Update this file, AGENTS.md if a rule changes, and report lines, KB and central share.
 
 Tools: `scripts/build/` ds-compose.js (+ ds-components.js), class-noop.js, compact-css.js, prune-hooks.js,
 merge-duplicate-rules.js, convert-service-template.js, remove-dead-css.js; `scripts/checks/` css-noop.js, css-report.js,
