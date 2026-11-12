@@ -347,4 +347,11 @@ c(MQ, 'logo-band', 'u-border-y u-border-AAD39C u-bg-FFFFFF u-py-6');
 c(MQ, 'marquee-viewport', 'u-w-full u-overflow-hidden');
 c(MQ, 'marquee-track', 'u-flex u-w-max u-whitespace-nowrap');
 
+// ---------------------------------------------------------------- service template (imported service and platform pages)
+const ST = 'service template';
+c(ST, 'hero-text', [], { css: `
+.hero-text { max-width: 600px; }` });
+c(ST, 'hero-actions-row', [], { css: `
+.hero-actions-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2rem; }` });
+
 module.exports = S;

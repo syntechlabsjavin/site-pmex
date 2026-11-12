@@ -177,7 +177,7 @@ const VERIFY = ids => {
     const ws = new WebSocket(t.webSocketDebuggerUrl); await new Promise(r => ws.onopen = r);
     let id = 0; const pend = {};
     ws.onmessage = e => { const m = JSON.parse(e.data); if (m.id && pend[m.id]) { pend[m.id](m); delete pend[m.id]; } };
-    const send = (method, params = {}) => new Promise(r => { pend[++id] = r; ws.send(JSON.stringify({ id, method, params })); }).then(m => m.result);
+    const send = (method, params = {}) => new Promise((r, rej) => { const k = ++id; pend[k] = r; ws.send(JSON.stringify({ id: k, method, params })); setTimeout(() => { if (pend[k]) { delete pend[k]; rej(new Error('timeout ' + method)); } }, 180000); }).then(m => m.result);
     await send('Page.enable');
     return send;
   }
@@ -189,11 +189,19 @@ const VERIFY = ids => {
   await Promise.all(tabs.map(async send => {
     while (jobs.length) {
       const { p, w } = jobs.shift();
-      await send('Emulation.setDeviceMetricsOverride', { width: w, height: 900, deviceScaleFactor: 1, mobile: w < 600 });
-      await send('Page.navigate', { url: base + p }); await sleep(2500);
-      await send('Runtime.evaluate', { awaitPromise: true, expression: `(async()=>{for(let y=0;y<document.documentElement.scrollHeight;y+=700){scrollTo(0,y);await new Promise(r=>setTimeout(r,40))}scrollTo(0,0);await new Promise(r=>setTimeout(r,600))})()` });
-      const res = await send('Runtime.evaluate', { returnByValue: true, expression: `(${PROBE})(${JSON.stringify(targets.filter(t => PAGE_BLOCKS.get(p).has(t[3])).map(t => t.slice(0, 3)))})` });
-      const out = (res.result && res.result.value) || {};
+      const mine = targets.filter(t => PAGE_BLOCKS.get(p).has(t[3]));
+      let out = {};
+      try {
+        await send('Emulation.setDeviceMetricsOverride', { width: w, height: 900, deviceScaleFactor: 1, mobile: w < 600 });
+        await send('Page.navigate', { url: base + p }); await sleep(2500);
+        await send('Runtime.evaluate', { awaitPromise: true, expression: `(async()=>{for(let y=0;y<Math.min(document.documentElement.scrollHeight,40000);y+=700){scrollTo(0,y);await new Promise(r=>setTimeout(r,40))}scrollTo(0,0);await new Promise(r=>setTimeout(r,600))})()` });
+        const res = await send('Runtime.evaluate', { returnByValue: true, expression: `(${PROBE})(${JSON.stringify(mine.map(t => t.slice(0, 3)))})` });
+        out = (res.result && res.result.value) || {};
+      } catch (err) { // a page that hangs: its rules count as untested (kept); carry on in a fresh tab
+        console.log(`skipped ${p} @${w}: ${err.message}`);
+        for (const t of mine) out[t[0]] = 'error';
+        send = await tab();
+      }
       for (const [idx, v] of Object.entries(out)) {
         const s = status.get(+idx) || { matched: 0, changed: 0, bad: 0 };
         if (v === 'same') s.matched++; else if (v === 'changed') { s.matched++; s.changed++; } else if (v === 'mismatch' || v === 'error') { s.bad++; s.why = v; }
@@ -212,11 +220,13 @@ const VERIFY = ids => {
         const { p, w } = vjobs.shift();
         const ids = targets.filter(t => idle.has(t[0]) && PAGE_BLOCKS.get(p).has(t[3])).map(t => t[0]);
         if (!ids.length) continue;
-        await send('Emulation.setDeviceMetricsOverride', { width: w, height: 900, deviceScaleFactor: 1, mobile: w < 600 });
-        await send('Page.navigate', { url: base + p }); await sleep(2500);
-        await send('Runtime.evaluate', { awaitPromise: true, expression: `(async()=>{for(let y=0;y<document.documentElement.scrollHeight;y+=700){scrollTo(0,y);await new Promise(r=>setTimeout(r,40))}scrollTo(0,0);await new Promise(r=>setTimeout(r,600))})()` });
-        const res = await send('Runtime.evaluate', { returnByValue: true, expression: `(${VERIFY})(${JSON.stringify(ids)})` });
-        for (const id of (res.result && res.result.value) || []) unsafe.add(id);
+        try {
+          await send('Emulation.setDeviceMetricsOverride', { width: w, height: 900, deviceScaleFactor: 1, mobile: w < 600 });
+          await send('Page.navigate', { url: base + p }); await sleep(2500);
+          await send('Runtime.evaluate', { awaitPromise: true, expression: `(async()=>{for(let y=0;y<Math.min(document.documentElement.scrollHeight,40000);y+=700){scrollTo(0,y);await new Promise(r=>setTimeout(r,40))}scrollTo(0,0);await new Promise(r=>setTimeout(r,600))})()` });
+          const res = await send('Runtime.evaluate', { returnByValue: true, expression: `(${VERIFY})(${JSON.stringify(ids)})` });
+          for (const id of (res.result && res.result.value) || []) unsafe.add(id);
+        } catch (err) { console.log(`verify skipped ${p} @${w}: ${err.message}`); ids.forEach(id => unsafe.add(id)); send = await tab(); }
         if (++vdone % 50 === 0) console.log(`verify ${round}: ${vdone}`);
       }
     }));

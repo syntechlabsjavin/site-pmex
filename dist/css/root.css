@@ -8566,6 +8566,9 @@ html[data-css~="site-footer"] body footer.pmex-footer .pf-talk-btn span { color:
   }
   .marquee-viewport { width: 100%; overflow: hidden; }
   .marquee-track { display: flex; width: max-content; white-space: nowrap; }
+  /* ---- service template ---- */
+  .hero-text { max-width: 600px; }
+  .hero-actions-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2rem; }
   /* ---- generated utilities (node scripts/build/tw-migrate.js --fallback): do not edit by hand ---- */
   .u-pointer-events-auto { pointer-events: auto; }
   .u-pointer-events-none { pointer-events: none; }

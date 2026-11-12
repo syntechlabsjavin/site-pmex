@@ -4,6 +4,8 @@
 //
 // Sections converted so far:
 //   form   the consultation card below the marquee -> the approved horizontal audit form card (audit-card ...)
+//   hero   layout wrapper without utilities (the template shows it as a block), copy -> hero-text,
+//          actions -> hero-actions-row, the outline link keeps only data-site-button="link" (it styles it)
 //
 // Usage: node scripts/build/convert-service-template.js [--dry] [page ...]   (default: every template page)
 const fs = require('fs');
@@ -54,12 +56,22 @@ function convertForm(html) {
   return html.replace(block, () => next);
 }
 
+
+function convertHero(html) {
+  return html
+    .replace('<div data-hero-layout class="u-flex u-flex-col u-lg-flex-row u-lg-items-center u-lg-justify-between u-gap-10">', '<div data-hero-layout>')
+    .replace('<div data-hero-copy class="u-max-w-600px">', '<div data-hero-copy class="hero-text">')
+    .replace(/(<div data-hero-copy class="hero-text">[\s\S]*?)<div class="u-flex u-flex-wrap u-gap-3 u-mb-8">/, '$1<div class="hero-actions-row">')
+    .replace(/(<a data-site-button="link"[^>]*?)\sclass="u-inline-flex u-items-center u-gap-2 u-border u-border-AAD39C u-text-(?:505050|2E4A25) u-hov-bg-F8FBF0 u-text-14px u-font-semibold u-px-6 u-py-3-5 u-rounded-xl u-transition-colors"/, '$1')
+    .replace('<section data-specialty-hero class="pmex-section hero-glow hero-bg-gradient u-w-full">', '<section data-specialty-hero class="pmex-section hero-glow hero-bg-gradient">');
+}
+
 let changed = 0;
 for (const f of pageFiles()) {
   if (only.length && !only.some(o => f.endsWith(o))) continue;
   const html = fs.readFileSync(f, 'utf8');
   if (!/data-bh-imported|data-platform-family/.test(html)) continue;
-  const next = convertForm(html);
+  const next = convertHero(convertForm(html));
   if (next !== html) { changed++; if (!DRY) fs.writeFileSync(f, next); }
 }
 console.log(`${changed} pages changed`);
