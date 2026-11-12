@@ -224,9 +224,14 @@ for (const c of SPEC) for (const f of [].concat(c.from || [])) {
 }
 
 // 1. markup
+// The service and platform template pages are restyled by injury-billing-bh / pmex-platform-bh, whose selectors hook on
+// the u-* class names (.u-x in :is() lists, [class*=...]); renaming their classes breaks those pages. They are left
+// alone until phase 6 replaces those blocks (see docs/DESIGN-SYSTEM-PLAN.md).
+const TEMPLATE_PAGE = /data-bh-imported|data-platform-family/;
 const used = new Map(); let changedFiles = 0;
 for (const f of files()) {
   const src = fs.readFileSync(f, 'utf8');
+  if (TEMPLATE_PAGE.test(src)) continue;
   const next = eachClassList(f, (toks, isLocked) => {
     const u = toks.filter(isU); if (!u.length || isLocked) return null;
     const c = byKey.get([...u].sort().join(' ')); if (!c) return null;
