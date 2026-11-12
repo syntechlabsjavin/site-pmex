@@ -78,7 +78,8 @@ src.forEach((r, idx) => {
 console.log(`${PAGES.length} pages, ${WIDTHS.length} widths, ${cand.size} candidate rules in ${BLOCKS.join(' ')}`);
 
 const T = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.woff2': 'font/woff2', '.gif': 'image/gif', '.mp4': 'video/mp4', '.json': 'application/json' };
-const serve = root => new Promise(r => { const s = http.createServer((q, res) => { let p = decodeURIComponent(q.url.split('?')[0]); if (p.endsWith('/')) p += 'index.html'; const f = path.join(root, p); if (!fs.existsSync(f) || fs.statSync(f).isDirectory()) { res.writeHead(404); return res.end(); } res.writeHead(200, { 'Content-Type': T[path.extname(f).toLowerCase()] || 'application/octet-stream', 'Cache-Control': 'no-store' }); fs.createReadStream(f).pipe(res); }); s.listen(0, '127.0.0.1', () => r(s)); });
+let MARKED = null; // root.css with the candidate markers, served in place of the file
+const serve = root => new Promise(r => { const s = http.createServer((q, res) => { let p = decodeURIComponent(q.url.split('?')[0]); if (p.endsWith('/')) p += 'index.html'; if (p === '/css/root.css' && MARKED) { res.writeHead(200, { 'Content-Type': 'text/css', 'Cache-Control': 'no-store' }); return res.end(MARKED); } const f = path.join(root, p); if (!fs.existsSync(f) || fs.statSync(f).isDirectory()) { res.writeHead(404); return res.end(); } res.writeHead(200, { 'Content-Type': T[path.extname(f).toLowerCase()] || 'application/octet-stream', 'Cache-Control': 'no-store' }); fs.createReadStream(f).pipe(res); }); s.listen(0, '127.0.0.1', () => r(s)); });
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // runs in the page: for each candidate (CSSOM ordinal), matched? changed when switched off?
@@ -96,28 +97,74 @@ const PROBE = (targets, srcSel) => {
   const INHERITED = /^(color|font|line-height|letter-spacing|word-spacing|text-(align|indent|transform|shadow|decoration-color|rendering)|white-space|visibility|cursor|list-style|direction|quotes|caret-color|-webkit-text)/;
   const out = {};
   const mnorm = s => s.replace(/\s+/g, '').toLowerCase();
-  for (const [idx, sel, med] of targets) {
-    // the ordinal can drift (a rule the browser drops or splits): look around it for the same selector
-    let e = null;
-    for (let k = 0; k <= 60 && !e; k++) for (const j of [idx + k, idx - k]) if (list[j] && norm(list[j].r.selectorText) === norm(sel) && mnorm(list[j].media.join('&')) === mnorm(med)) { e = list[j]; break; }
+  // every candidate carries --noop-id: <idx> in the served stylesheet, so its CSSOM rule is found exactly
+  const byId = new Map();
+  for (const x of list) { const id = x.r.style.getPropertyValue('--noop-id').trim(); if (id) byId.set(+id, x); }
+  for (const [idx] of targets) {
+    const e = byId.get(idx);
     if (!e) { out[idx] = 'mismatch'; continue; }
     if (e.media.some(m => !matchMedia(m).matches)) { out[idx] = 'inactive'; continue; }
     const pm = e.r.selectorText.match(/::?(before|after|marker|placeholder)\b/);
     const pseudo = pm ? '::' + pm[1] : null;
     let els; try { els = [...document.querySelectorAll(pseudo ? e.r.selectorText.replace(/::?(before|after|marker|placeholder)\b/g, '') : e.r.selectorText)]; } catch { out[idx] = 'error'; continue; }
     if (!els.length) { out[idx] = 'unmatched'; continue; }
-    const props = [...e.r.style];
+    const props = [...e.r.style].filter(p => p !== '--noop-id');
     const vars = props.some(p => p.startsWith('--'));
     const inh = vars || props.some(p => INHERITED.test(p));
     let targetsEls = els.map(el => [el, pseudo]);
     if (inh) for (const el of els) { const d = el.querySelectorAll('*'); for (let k = 0; k < d.length && k < 300; k++) targetsEls.push([d[k], null]); }
     const check = vars ? null : props;
     const snap = () => targetsEls.map(([el, ps]) => { const cs = getComputedStyle(el, ps); if (check) return check.map(p => cs.getPropertyValue(p)).join('|'); let s = ''; for (let k = 0; k < cs.length; k++) s += cs.getPropertyValue(cs[k]) + '|'; return s; }).join('\n');
-    const before = snap(); const txt = e.r.style.cssText; e.r.style.cssText = '';
-    const after = snap(); e.r.style.cssText = txt;
-    out[idx] = before === after ? 'same' : 'changed';
+    // rules found idle stay off while the next ones are tested: two rules that do the same job are not both idle
+    // a running transition shows the old value right after a change: cancel every animation before reading
+    const settle = () => { for (const a of document.getAnimations()) try { a.cancel(); } catch {} };
+    settle(); const before = snap(); const txt = e.r.style.cssText; e.r.style.cssText = '';
+    settle(); const after = snap();
+    if (before === after) out[idx] = 'same'; else { e.r.style.cssText = txt; out[idx] = 'changed'; }
   }
   return out;
+};
+
+// runs in the page: switch all given rules off together; return the ids of rules on elements that changed
+const VERIFY = ids => {
+  const sheet = [...document.styleSheets].find(s => s.href && s.href.endsWith('/css/root.css'));
+  const byId = new Map();
+  (function walk(rules, media) {
+    for (const r of rules) {
+      if (r instanceof CSSStyleRule) { const id = r.style.getPropertyValue('--noop-id').trim(); if (id) byId.set(+id, { r, media }); }
+      else if (r instanceof CSSMediaRule) walk(r.cssRules, media.concat(r.media.mediaText));
+      else if (r.cssRules && !(r instanceof CSSKeyframesRule)) walk(r.cssRules, media);
+    }
+  })(sheet.cssRules, []);
+  const INHERITED = /^(color|font|line-height|letter-spacing|word-spacing|text-(align|indent|transform|shadow|decoration-color|rendering)|white-space|visibility|cursor|list-style|direction|quotes|caret-color|-webkit-text)/;
+  const settle = () => { for (const a of document.getAnimations()) try { a.cancel(); } catch {} };
+  // targets: [element, pseudo] -> {props, ids}
+  const T = new Map(); const key = (el, ps) => { let m = T.get(el); if (!m) T.set(el, m = {}); return m[ps || ''] || (m[ps || ''] = { props: new Set(), ids: new Set() }); };
+  const rules = [];
+  for (const id of ids) {
+    const e = byId.get(id); if (!e || e.media.some(m => !matchMedia(m).matches)) continue;
+    const pm = e.r.selectorText.match(/::?(before|after|marker|placeholder)\b/); const ps = pm ? '::' + pm[1] : null;
+    let els = []; try { els = [...document.querySelectorAll(ps ? e.r.selectorText.replace(/::?(before|after|marker|placeholder)\b/g, '') : e.r.selectorText)]; } catch { continue; }
+    const props = [...e.r.style].filter(p => p !== '--noop-id');
+    for (const el of els) {
+      const t = key(el, ps); props.forEach(p => t.props.add(p)); t.ids.add(id);
+      const inh = props.filter(p => INHERITED.test(p));
+      if (inh.length) { const d = el.querySelectorAll('*'); for (let k = 0; k < d.length && k < 300; k++) { const u = key(d[k], null); inh.forEach(p => u.props.add(p)); u.ids.add(id); } }
+    }
+    rules.push(e.r);
+  }
+  const entries = []; for (const [el, m] of T) for (const ps in m) entries.push([el, ps || null, [...m[ps].props], m[ps].ids]);
+  const snap = () => entries.map(([el, ps, props]) => { const cs = getComputedStyle(el, ps); return props.map(p => cs.getPropertyValue(p)); });
+  settle(); const before = snap();
+  const saved = rules.map(r => r.style.cssText); rules.forEach(r => { r.style.cssText = ''; });
+  settle(); const after = snap();
+  rules.forEach((r, i) => { r.style.cssText = saved[i]; });
+  const unsafe = new Set();
+  entries.forEach(([, , props, ids], i) => {
+    const changed = props.filter((p, k) => before[i][k] !== after[i][k]);
+    if (changed.length) for (const id of ids) { const e = byId.get(id); if ([...e.r.style].some(p => changed.includes(p))) unsafe.add(id); }
+  });
+  return [...unsafe];
 };
 
 (async () => {
@@ -136,6 +183,7 @@ const PROBE = (targets, srcSel) => {
   }
   const tabs = await Promise.all(Array.from({ length: TABS }, tab));
   const targets = [...cand].map(([idx, r]) => [idx, r.selector, r.media.join('&'), r.block]);
+  { const marked = lines.slice(); for (const [idx, r] of cand) marked[r.line - 1] = marked[r.line - 1].replace('{', `{ --noop-id: ${idx};`); MARKED = marked.join('\n'); }
   const status = new Map(); // idx -> {matched, changed, bad}
   const jobs = PAGES.flatMap(p => WIDTHS.map(w => ({ p, w }))); const total = jobs.length; let done = 0;
   await Promise.all(tabs.map(async send => {
@@ -154,6 +202,29 @@ const PROBE = (targets, srcSel) => {
       if (++done % 20 === 0 || done === total) console.log(`${done}/${total}`);
     }
   }));
+  // verify: each page decided alone, so a rule idle on one page (because a rule kept for another page was off
+  // there) can still matter. Switch the whole idle set off at once; rules on elements that change go back in.
+  let idle = new Set([...cand.keys()].filter(idx => { const s = status.get(idx); return s && s.matched && !s.changed && !s.bad; }));
+  for (let round = 1; round <= 5 && idle.size; round++) {
+    const unsafe = new Set(); const vjobs = PAGES.flatMap(p => WIDTHS.map(w => ({ p, w }))); let vdone = 0;
+    await Promise.all(tabs.map(async send => {
+      while (vjobs.length) {
+        const { p, w } = vjobs.shift();
+        const ids = targets.filter(t => idle.has(t[0]) && PAGE_BLOCKS.get(p).has(t[3])).map(t => t[0]);
+        if (!ids.length) continue;
+        await send('Emulation.setDeviceMetricsOverride', { width: w, height: 900, deviceScaleFactor: 1, mobile: w < 600 });
+        await send('Page.navigate', { url: base + p }); await sleep(2500);
+        await send('Runtime.evaluate', { awaitPromise: true, expression: `(async()=>{for(let y=0;y<document.documentElement.scrollHeight;y+=700){scrollTo(0,y);await new Promise(r=>setTimeout(r,40))}scrollTo(0,0);await new Promise(r=>setTimeout(r,600))})()` });
+        const res = await send('Runtime.evaluate', { returnByValue: true, expression: `(${VERIFY})(${JSON.stringify(ids)})` });
+        for (const id of (res.result && res.result.value) || []) unsafe.add(id);
+        if (++vdone % 50 === 0) console.log(`verify ${round}: ${vdone}`);
+      }
+    }));
+    console.log(`verify round ${round}: ${unsafe.size} of ${idle.size} idle rules matter together, kept`);
+    if (!unsafe.size) break;
+    for (const id of unsafe) idle.delete(id);
+  }
+  for (const idx of cand.keys()) if (!idle.has(idx)) { const s = status.get(idx); if (s && s.matched && !s.changed && !s.bad) s.changed = 1; }
   chrome.kill(); server.close();
   const bad = [...status.values()].filter(s => s.bad).length;
   const noop = [...cand].filter(([idx]) => { const s = status.get(idx); return s && s.matched && !s.changed && !s.bad; })
