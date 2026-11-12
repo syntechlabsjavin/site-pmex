@@ -19,7 +19,9 @@ const isTw = c => c && !DS.has(c) && TW.test(c);
 for (const f of files) {
   const html = fs.readFileSync(f, 'utf8');
   for (const m of html.matchAll(/\sclass="([^"]*)"/g)) for (const c of m[1].split(/\s+/)) if (isTw(c)) { problems.push(`${f}: Tailwind class "${c}"`); break; }
-  const links = [...html.matchAll(/<link[^>]+rel="stylesheet"[^>]*>/g)].filter(l => !l[0].includes('/css/root.css') && !l[0].includes('fonts.googleapis'));
+  // exception: the old homepage keeps its own CSS in legacy-home.css until the new homepage replaces it
+  const legacyOk = l => l.includes('/css/legacy-home.css') && path.basename(f) === 'index.html' && path.dirname(f) === 'dist';
+  const links = [...html.matchAll(/<link[^>]+rel="stylesheet"[^>]*>/g)].filter(l => !l[0].includes('/css/root.css') && !l[0].includes('fonts.googleapis') && !legacyOk(l[0]));
   if (links.length) problems.push(`${f}: extra stylesheet ${links[0][0]}`);
   if (/<style[\s>]/.test(html)) problems.push(`${f}: inline <style> block`);
 }
@@ -39,6 +41,14 @@ const outside = (css.slice(0, themeStart) + css.slice(themeEnd)).replace(/\/\*[\
 const colorValues = [...outside.matchAll(/:[^;{}]*?(#[0-9a-fA-F]{3,8}\b|(?<![\w-])(?:rgba?|hsla?|oklch|oklab|lab|lch)\((?!from)[^)]*\))/g)].map(m => m[1])
   .filter(v => !/^(?:rgb|rgba)\(0 0 0 \/ 0%\)$/.test(v));
 if (colorValues.length) problems.push(`root.css: ${colorValues.length} color literals outside THEME, e.g. ${[...new Set(colorValues)].slice(0, 5).join(', ')}`);
+// legacy-home.css follows the same color rule (it uses the THEME variables of root.css)
+if (fs.existsSync('dist/css/legacy-home.css')) {
+  const home = fs.readFileSync('dist/css/legacy-home.css', 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+  const hc = [...home.matchAll(/:[^;{}]*?(#[0-9a-fA-F]{3,8}\b|(?<![\w-])(?:rgba?|hsla?|oklch|oklab|lab|lch)\((?!from)[^)]*\))/g)].map(m => m[1]);
+  if (hc.length) problems.push(`legacy-home.css: ${hc.length} color literals, e.g. ${[...new Set(hc)].slice(0, 5).join(', ')}`);
+}
+const otherCss = fs.readdirSync('dist/css').filter(x => !['root.css', 'legacy-home.css'].includes(x));
+if (otherCss.length) problems.push(`dist/css: unexpected stylesheet(s) ${otherCss.join(', ')}`);
 const lines = css.split('\n').length;
 if (lines > MAX) problems.push(`root.css: ${lines} lines (budget ${MAX})`);
 
