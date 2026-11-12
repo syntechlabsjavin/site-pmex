@@ -3,14 +3,14 @@
 Goal: one centralized, reusable stylesheet (`dist/css/root.css`), 100% plain CSS, no Tailwind classes in any page,
 target 3,000-5,000 lines. Small visual changes during the migration are accepted; structure and reuse come first.
 
-## Resume here (state on 2026-11-13, branch `ds-phase-4`, pushed to `main` at 5e93768)
+## Resume here (state on 2026-11-13, branch `ds-phase-4`, pushed to `main` at d98b66c)
 
 Phase 4 is done for every family: specialties, services + platform template, company, and the homepage (its CSS moved
 to `css/legacy-home.css` because the homepage will be rebuilt; do not refactor the old homepage, do not touch that file).
 root.css: 8,863 lines, 46.6% central (`node scripts/checks/css-report.js`).
 
-Done: one corner radius, `--radius: 6px` in the tokens of root.css (commit 5e93768); every border-radius uses it except
-0 and 50% circles. `npm run radius:check` / `radius:pin`. Deep regression is not needed for
+Radius: the owner tried one 6px radius for everything (commit 5e93768) and asked for the previous corners back
+(reverted in d337f1e). Keep the corner radii as they are; do not apply a single radius unless asked again. Deep regression is not needed for
 intentional design changes (the owner redesigns every page one by one afterwards); refactors that should not change
 the look still get a quick regression against HEAD on the pages they touch.
 
