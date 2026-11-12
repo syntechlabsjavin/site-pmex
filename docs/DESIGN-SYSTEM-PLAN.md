@@ -3,6 +3,24 @@
 Goal: one centralized, reusable stylesheet (`dist/css/root.css`), 100% plain CSS, no Tailwind classes in any page,
 target 3,000-5,000 lines. Small visual changes during the migration are accepted; structure and reuse come first.
 
+## Resume here (state on 2026-11-13, branch `ds-phase-4`)
+
+Done: specialties family; one-rule-per-line formatting; hook-list pruning; `page-kit` (shared duplicate rules of
+36 pages); no-op cleanup of services-bh and the platform blocks; service and platform template (24 pages): forms on
+`audit-card`, hero on `hero-text` / `hero-actions-row`, logo marquee components, ~4,230 overridden u-* classes removed.
+
+In progress: full-site `css-noop.js` scan (rules that match but always lose). Apply its list with
+`node scripts/checks/css-noop.js --blocks=x --remove-only` (leave navbar, booking-modal, site-footer and services-mega
+rules out), run the full regression against HEAD, restore any rule behind a difference, commit.
+
+Next: company pages, then the homepage, then phase 6 (dissolve the restyle layers injury-billing-bh,
+pmex-platform-bh, service-pages-bh into components; remaining u-* utilities and hooks; `!important`).
+
+Per family: `class-noop.js` (drop overridden u-* from markup) -> `ds-compose.js` (u-* groups -> components) ->
+`css-noop.js` (drop losing rules) -> `merge-duplicate-rules.js` -> checks (`check:css`, `gradients:check`,
+`shell:check`, `check-regression.js --ref=HEAD`) -> commit -> `node scripts/checks/css-report.js` for the numbers.
+Every removal is verified in the browser and by the regression check before it is committed.
+
 ## Where we started (tag `css-baseline`, commit cf542c9)
 
 | Problem | Size |
@@ -45,7 +63,7 @@ Rules:
 | 1b | Remove duplicate blocks (`scripts/build/dedupe-css-blocks.js`, `scripts/build/merge-css-blocks.js`) | done |
 | 2 | Scale tokens + base layer | tokens done; base layer comes with step 5 (replaces Tailwind preflight) |
 | 3 | Components library + migration of the pages (`@layer ds`) | done: 0 Tailwind classes in pages and scripts |
-| 4 | Replace groups of `u-*` classes with components, family by family: specialties (template, ~70 pages) -> services -> platform -> company -> homepage | specialties done (branch `ds-phase-4`); services next |
+| 4 | Replace groups of `u-*` classes with components, family by family: specialties (template, ~70 pages) -> services -> platform -> company -> homepage | specialties done; services + platform template in progress (see Resume here) |
 | 5 | Delete the Tailwind block and the tailwindcss packages | done |
 | 6 | Remove `!important`, hacks and dead selectors; settle `@layer` order | |
 | 7 | `npm run check:css` guard (no Tailwind classes, no color literals, size limit) + docs | |
