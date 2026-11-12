@@ -3,23 +3,32 @@
 Goal: one centralized, reusable stylesheet (`dist/css/root.css`), 100% plain CSS, no Tailwind classes in any page,
 target 3,000-5,000 lines. Small visual changes during the migration are accepted; structure and reuse come first.
 
-## Resume here (state on 2026-11-13, branch `ds-phase-4`)
+## Resume here (state on 2026-11-13 03:00, branch `ds-phase-4`, pushed to `main` at 68f52a3)
 
-Done: specialties family; one-rule-per-line formatting; hook-list pruning; `page-kit` (shared duplicate rules of
-36 pages); no-op cleanup of services-bh and the platform blocks; service and platform template (24 pages): forms on
-`audit-card`, hero on `hero-text` / `hero-actions-row`, logo marquee components, ~4,230 overridden u-* classes removed.
+Phase 4 is done for every family: specialties, services + platform template, company, and the homepage (its CSS moved
+to `css/legacy-home.css` because the homepage will be rebuilt; do not refactor the old homepage, do not touch that file).
+root.css: 8,863 lines, 46.6% central (`node scripts/checks/css-report.js`).
 
-In progress: full-site `css-noop.js` scan (rules that match but always lose). Apply its list with
-`node scripts/checks/css-noop.js --blocks=x --remove-only` (leave navbar, booking-modal, site-footer and services-mega
-rules out), run the full regression against HEAD, restore any rule behind a difference, commit.
+Decisions: border-radius values stay as they are for now (no 6px change). Deep regression is not needed for
+intentional design changes (the owner redesigns every page one by one afterwards); refactors that should not change
+the look still get a quick regression against HEAD on the pages they touch.
 
-Next: company pages, then the homepage, then phase 6 (dissolve the restyle layers injury-billing-bh,
-pmex-platform-bh, service-pages-bh into components; remaining u-* utilities and hooks; `!important`).
+Next: phase 6, the final cleanup:
+1. Restyle layers -> components: `injury-billing-bh` (18 service pages), `pmex-platform-bh` / `pmex-platform` /
+   `pmex-platform-family` (7 platform pages), `service-pages-bh` + `service-detail` (8 pages). They override the
+   template markup with structural selectors and `:is(... .u-x)` hooks. Give the elements named components with the
+   final look (find it with the computed style), then delete the rules and the u-* classes they made redundant.
+2. u-* utilities (~1,525 lines at the end of root.css): replace the remaining groups with components (`ds-compose.js`),
+   drop the ones no page uses (`remove-dead-css.js` after `css-coverage.js`). Keep the ones scripts toggle.
+3. Hooks: `:is()` lists and `[class*=...]` selectors that point at utilities (`prune-hooks.js`, then by hand).
+4. `!important`: remove where the @layer order already decides.
+5. Losing rules: `css-noop.js --blocks=all` then `--remove-only` (leave navbar, booking-modal, site-footer, services-mega).
+6. Update this file, AGENTS.md if a rule changes, and report lines, KB and central share.
 
-Per family: `class-noop.js` (drop overridden u-* from markup) -> `ds-compose.js` (u-* groups -> components) ->
-`css-noop.js` (drop losing rules) -> `merge-duplicate-rules.js` -> checks (`check:css`, `gradients:check`,
-`shell:check`, `check-regression.js --ref=HEAD`) -> commit -> `node scripts/checks/css-report.js` for the numbers.
-Every removal is verified in the browser and by the regression check before it is committed.
+Tools: `scripts/build/` ds-compose.js (+ ds-components.js), class-noop.js, compact-css.js, prune-hooks.js,
+merge-duplicate-rules.js, convert-service-template.js, remove-dead-css.js; `scripts/checks/` css-noop.js, css-report.js,
+css-coverage.js, check-regression.js, check-css.js. Checks before a commit: `npm run check:css`, `gradients:check`,
+`shell:check`, and `node scripts/checks/check-regression.js --ref=HEAD --widths=1440,390 <pages>`.
 
 ## Where we started (tag `css-baseline`, commit cf542c9)
 
